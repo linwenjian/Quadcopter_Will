@@ -1,0 +1,31 @@
+{ Using PSTWRITER 16.6.0 d001Aug-17-2014 at 15:34:03 }
+
+#1 WARNING(ORCAP-36038): "No_connect" property on Pin "J1.10" ignored for J1: SCHEMATIC1, 01 MCU (7.60, 13.80). Connecting pin to net "RESET_B".
+#2 WARNING(ORCAP-36006): Part Name "CAP_NP_CC0603_OV_DISCRETE_0.01UF_20%" is renamed to "CAP_NP_CC0603_OV_DISCRETE_0.01U".
+#3 WARNING(ORCAP-36006): Part Name "CAP_NP_CC0603_OV_DISCRETE_0.01UF" is renamed to "CAP_NP_CC0603_OV_DISCRETE_0.0_1".
+#4 WARNING(ORCAP-36006): Part Name "CAP_NP_CAPC4532X185_DISCRETE_47UF" is renamed to "CAP_NP_CAPC4532X185_DISCRETE_47".
+#5 WARNING(ORCAP-36006): Part Name "CONN_HDR_5X2_HDR_5X2_FTSH_TH_NSP_IO_HDR 2X5" is renamed to "CONN_HDR_5X2_HDR_5X2_FTSH_TH_NS".
+#6 WARNING(ORCAP-36006): Part Name "SW2_STM151XX_SW2_4X3MM_SM_IC_SW2_STM151XX" is renamed to "SW2_STM151XX_SW2_4X3MM_SM_IC_SW".
+#7 WARNING(ORCAP-36006): Part Name "K64_LQ_LQFP_1_LQFP144_0P5_20X20MM_IC_K64_LQ_LQFP_144P" is renamed to "K64_LQ_LQFP_1_LQFP144_0P5_20X20".
+#8 WARNING(ORCAP-36006): Part Name "FXOS8700CQ_QFN_16P_QFN5X3_0P5_3X3_IC_FXOS8700CQ" is renamed to "FXOS8700CQ_QFN_16P_QFN5X3_0P5_3".
+#9 WARNING(ORCAP-36006): Part Name "L3G4200D_QFN65P400X400X80-17_L3G4200D" is renamed to "L3G4200D_QFN65P400X400X80-17_L3".
+#10 WARNING(ORCAP-36042): Pin "RES" is renamed to "RES#8" as visible power pin of same name already exists in Package L3G4200D , U3: SCHEMATIC1, 02 Sensor (347.98, 154.94).
+#11 WARNING(ORCAP-36042): Pin "RES" is renamed to "RES#9" as visible power pin of same name already exists in Package L3G4200D , U3: SCHEMATIC1, 02 Sensor (347.98, 154.94).
+#12 WARNING(ORCAP-36042): Pin "RES" is renamed to "RES#10" as visible power pin of same name already exists in Package L3G4200D , U3: SCHEMATIC1, 02 Sensor (347.98, 154.94).
+#13 WARNING(ORCAP-36042): Pin "RES" is renamed to "RES#11" as visible power pin of same name already exists in Package L3G4200D , U3: SCHEMATIC1, 02 Sensor (347.98, 154.94).
+#14 WARNING(ORCAP-36042): Pin "RES" is renamed to "RES#12" as visible power pin of same name already exists in Package L3G4200D , U3: SCHEMATIC1, 02 Sensor (347.98, 154.94).
+#15 WARNING(ORCAP-36042): Pin "RES" is renamed to "RES#15" as visible power pin of same name already exists in Package L3G4200D , U3: SCHEMATIC1, 02 Sensor (347.98, 154.94).
+#16 WARNING(ORCAP-36006): Part Name "TPS7B6733_TSSOP65P300X110-20_TPS7B6733" is renamed to "TPS7B6733_TSSOP65P300X110-20_TP".
+#17 WARNING(ORCAP-36042): Pin "GND" is renamed to "GND#8" as visible power pin of same name already exists in Package TPS7B6733 , U4: SCHEMATIC1, 03 PWM (274.32, 91.44).
+#18 WARNING(ORCAP-36042): Pin "GND" is renamed to "GND#13" as visible power pin of same name already exists in Package TPS7B6733 , U4: SCHEMATIC1, 03 PWM (274.32, 91.44).
+#19 WARNING(ORCAP-36006): Part Name "TXB0104_TSSOP65P300X110-14_TXB0104" is renamed to "TXB0104_TSSOP65P300X110-14_TXB0".
+INFO(ORCAP-36080): Scanning netlist files ...
+
+Loading... E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\allegro/pstchip.dat
+
+Loading... E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\allegro/pstchip.dat
+
+Loading... E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\allegro/pstxprt.dat
+
+Loading... E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\allegro/pstxnet.dat
+packaging the design view...

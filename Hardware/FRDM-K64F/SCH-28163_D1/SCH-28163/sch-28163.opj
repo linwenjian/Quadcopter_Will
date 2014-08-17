@@ -1,0 +1,250 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\sch-28163.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (DRC_Scope "0")
+    (DRC_Action "0")
+    (DRC_Create_Warnings "FALSE")
+    (DRC_View_Output "TRUE")
+    (DRC_Preserved_Waived "FALSE")
+    (DRC_Run_Electrical_Rules "TRUE")
+    (DRC_Run_Physical_Rules "TRUE")
+    (DRC_Report_File
+       "D:\PROFILES\B36609\MY DOCUMENTS\PROJECTS\FREEDOM\FRDM-K64\SCH-28163.DRC")
+    (DRC_Check_Ports "TRUE")
+    (DRC_Check_Off-Page_Connectors "TRUE")
+    (DRC_Report_Ports_and_Off-page_Connectors "TRUE")
+    (DRC_SDT_Compatibility "FALSE")
+    (DRC_Report_Off-grid_Objects "FALSE")
+    (DRC_Check_Unconnected_Nets "TRUE")
+    (DRC_Check_for_Misleading_TAP "TRUE")
+    (DRC_Report_Netnames "TRUE")
+    (DRC_Check_Single_Node_Nets "TRUE")
+    (DRC_Run_Electrical_Custom_DRC "FALSE")
+    (DRC_Check_No_Driving_Source "TRUE")
+    (DRC_Check_Duplicate_NetNames "TRUE")
+    (DRC_Check_Floating_Pins "TRUE")
+    (DRC_Check_Physical_Power_Pins_Visibility "TRUE")
+    (DRC_Check_PCB_Footprint_Property "TRUE")
+    (DRC_Check_Normal_Convert_View_Sync "TRUE")
+    (DRC_Check_Incorrect_PinGroup_Assignment "TRUE")
+    (DRC_Check_High_Speed_Props_Syntax "TRUE")
+    (DRC_Check_Missing_Pin_Numbers "TRUE")
+    (DRC_Check_Device_With_No_Pins "TRUE")
+    (DRC_Check_Power_Ground_Short "TRUE")
+    (DRC_Identical_References "TRUE")
+    (DRC_Type_Mismatch "TRUE")
+    (DRC_Visible_Power_pins "TRUE")
+    (DRC_Report_Unused_Part_Packages "TRUE")
+    (DRC_Check_Name_Prop_For_HierBlocks "TRUE")
+    (DRC_Run_Physical_Custom_DRC "FALSE")
+    (NoModify)
+    (Netlist_TAB "0")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "C:\Users\b36609\Documents\Projects\Freedom\FRDM-K64\SCH-28163.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Item}\t{Quantity}\t{AGILE_PN}\t{ASSY_OPT}\t{}\t{PRE_APN}\t{Reference}")
+    (BOM_Header "Item\tQuantity\tAgilePN\tASSY_OPT\tFIND#\tPRE_APN\tReference")
+    (BOM_Include_File
+       "D:\PROFILES\B36609\MY DOCUMENTS\PROJECTS\FREEDOM\FRDM-K64\SCH-28163.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "TRUE")
+    (IREFViewOutput "0")
+    ("Allegro Backannotation Run Genfeed" "TRUE")
+    ("Allegro Backannotation Board File"
+       "D:\Profiles\b36609\My Documents\Projects\Freedom\FRDM-K64\LAY-28163 110613rs.brd")
+    ("Allegro Backannotation Netlist Directory" "allegro")
+    ("Allegro Backannotation Output File" "allegro\SCH-28163.swp")
+    ("Allegro Backannotation Update Schematic" "TRUE")
+    ("Allegro Backannotation View Output" "FALSE")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Output Warnings" "FALSE")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    (GATE_&_PIN_SWAP_Scope "0")
+    (GATE_&_PIN_SWAP_File_Name
+       "D:\PROFILES\B36609\MY DOCUMENTS\PROJECTS\FREEDOM\FRDM-K64\SCH-28163.SWP")
+    (Backannotation_TAB "0")
+    (IREFReportFile
+       "C:\USERS\B36609\DOCUMENTS\PROJECTS\FREEDOM\FRDM-K64\SCH-28163.csv")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "3")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "FALSE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80"))
+  (Folder "Outputs"
+    (File ".\sch-28163.drc"
+      (Type "Report"))
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\sch-28163.bom"
+      (Type "Report"))
+    (File ".\sch-28163.csv"
+      (Type "Report"))
+    (File ".\allegro\pinview.dat"
+      (Type "Report")
+      (DisplayName "pinView.dat"))
+    (File ".\allegro\netview.dat"
+      (Type "Report")
+      (DisplayName "netView.dat"))
+    (File ".\allegro\funcview.dat"
+      (Type "Report")
+      (DisplayName "funcView.dat"))
+    (File ".\allegro\compview.dat"
+      (Type "Report")
+      (DisplayName "compView.dat"))
+    (File ".\allegro\sch-28163.swp"
+      (Type "Report")
+      (DisplayName "SCH-28163.swp"))
+    (Sort User)
+    (File ".\sch-28163.prp"
+      (Type "Report")
+      (DisplayName "SCH-28163.PRP"))
+    (File ""
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (CONN_HDR_10X2
+      (FullPartName "CONN_HDR_10X2.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (SW2_STM151XX
+      (FullPartName "SW2_STM151XX.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_SWITCH.OLB")
+      (DeviceIndex "0"))
+    (CONN_HDR_6X2
+      (FullPartName "CONN_HDR_6X2.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HDR_2X8_M
+      (FullPartName "HDR_2X8_M.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (CONN_HDR_2X1
+      (FullPartName "CONN_HDR_2X1.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (BEAD
+      (FullPartName "BEAD.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_INDUCTOR.OLB")
+      (DeviceIndex "0"))
+    (RES
+      (FullPartName "RES.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_RESISTOR.OLB")
+      (DeviceIndex "0"))
+    (CAP_NP
+      (FullPartName "CAP_NP.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_CAPACITOR.OLB")
+      (DeviceIndex "0"))
+    (MICRO_USB_CONN_10PIN
+      (FullPartName "MICRO_USB_CONN_10PIN.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_CONNECTOR2.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "E:\linwenjian\Quadcopter_Will\Hardware\FRDM-K64F\SCH-28163_D1\SCH-28163\sch-28163.dsn")
+      (Path "Design Resources"
+         "E:\linwenjian\Quadcopter_Will\Hardware\FRDM-K64F\SCH-28163_D1\SCH-28163\sch-28163.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources"
+         "E:\linwenjian\Quadcopter_Will\Hardware\FRDM-K64F\SCH-28163_D1\SCH-28163\sch-28163.dsn"
+         "Design Cache")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "E:\linwenjian\Quadcopter_Will\Hardware\FRDM-K64F\SCH-28163_D1\SCH-28163\sch-28163.dsn"
+         "SCHEMATIC1" "3. OpenSDA interface"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 250 0 555"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 911 75 429")
+        (Scroll "171 222")
+        (Zoom "48")
+        (Occurrence "/"))
+      (Path
+         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\FRDM-K64F\SCH-28163_D1\SCH-28163\SCH-28163.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "2. KL64F MCU"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 25 377 25 379")
+        (Scroll "0 0")
+        (Zoom "19")
+        (Occurrence "/"))
+      (Path
+         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\FRDM-K64F\SCH-28163_D1\SCH-28163\SCH-28163.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "3. OpenSDA interface"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 50 402 50 404")
+        (Scroll "0 0")
+        (Zoom "32")
+        (Occurrence "/"))
+      (Path
+         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\FRDM-K64F\SCH-28163_D1\SCH-28163\SCH-28163.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "5. SD_Card"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 427 75 429")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\FRDM-K64F\SCH-28163_D1\SCH-28163\SCH-28163.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "6. RMII Section"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 100 452 100 454")
+        (Scroll "1223 163")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\FRDM-K64F\SCH-28163_D1\SCH-28163\SCH-28163.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "4. I/O Headers and Power Supply")))
+  (ISPCBBASICLICENSE "false")
+  (MPSSessionName "Administrator"))

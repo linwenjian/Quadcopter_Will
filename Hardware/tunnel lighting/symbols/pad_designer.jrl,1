@@ -1,0 +1,13 @@
+\t (00:00:24) pad_designer 16.5 P002 (v16-5-13B) i86
+\t (00:00:24)     Journal start - Wed Apr 18 14:30:28 2012
+\t (00:00:24)         Host=LWJ-HNU User=lwj Pid=1408 CPUs=4
+\t (00:00:24) 
+\i (00:00:25) FORM padedit grid row soldermask_top 
+\i (00:00:27) FORM padedit geometry Null 
+\i (00:00:28) FORM padedit grid row pastemask_top 
+\i (00:00:28) FORM padedit grid row soldermask_bottom 
+\i (00:00:30) FORM padedit geometry Null 
+\i (00:00:32) pse_save 
+\i (00:00:32) fillin yes 
+\i (00:00:34) pse_exit
+\t (00:00:34)     Journal end - Wed Apr 18 14:30:38 2012

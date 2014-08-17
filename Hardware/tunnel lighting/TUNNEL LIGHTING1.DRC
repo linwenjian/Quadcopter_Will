@@ -1,0 +1,198 @@
+Date and Time : 10/26/12 10:38:14
+
+--------------------------------------------------
+Checking Schematic: SCHEMATIC1
+--------------------------------------------------
+Checking Electrical Rules 
+
+Checking For Single Node Nets
+WARNING(ORCAP-1600): Net has fewer than two connections PTC14 
+                    SCHEMATIC1, PHY  (1041.40, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA7 
+                    SCHEMATIC1, PHY  (1033.78, 325.12) 
+WARNING(ORCAP-1600): Net has fewer than two connections PP1 
+                    SCHEMATIC1, PHY  (642.62, 436.88) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC2 
+                    SCHEMATIC1, PHY  (1104.90, 205.74) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC8 
+                    SCHEMATIC1, PHY  (1056.64, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB4 
+                    SCHEMATIC1, PHY  (1104.90, 256.54) 
+WARNING(ORCAP-1600): Net has fewer than two connections PJ1 
+                    SCHEMATIC1, PHY  (642.62, 482.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections PP7 
+                    SCHEMATIC1, PHY  (665.48, 406.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PH4 
+                    SCHEMATIC1, PHY  (673.10, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC13 
+                    SCHEMATIC1, PHY  (1043.94, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC12 
+                    SCHEMATIC1, PHY  (1046.48, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC15 
+                    SCHEMATIC1, PHY  (1038.86, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD4 
+                    SCHEMATIC1, PHY  (741.68, 454.66) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD4 
+                    SCHEMATIC1, PHY  (1010.92, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD3 
+                    SCHEMATIC1, PHY  (741.68, 459.74) 
+WARNING(ORCAP-1600): Net has fewer than two connections PP2 
+                    SCHEMATIC1, PHY  (642.62, 434.34) 
+WARNING(ORCAP-1600): Net has fewer than two connections PK5 
+                    SCHEMATIC1, PHY  (642.62, 477.52) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD2 
+                    SCHEMATIC1, PHY  (741.68, 464.82) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD5 
+                    SCHEMATIC1, PHY  (741.68, 449.58) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE0 
+                    SCHEMATIC1, PHY  (952.50, 198.12) 
+WARNING(ORCAP-1600): Net has fewer than two connections PJ0 
+                    SCHEMATIC1, PHY  (642.62, 485.14) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD6 
+                    SCHEMATIC1, PHY  (741.68, 444.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB21 
+                    SCHEMATIC1, PHY  (1104.90, 218.44) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB19 
+                    SCHEMATIC1, PHY  (1104.90, 223.52) 
+WARNING(ORCAP-1600): Net has fewer than two connections PB5 
+                    SCHEMATIC1, PHY  (657.86, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PB6 
+                    SCHEMATIC1, PHY  (660.40, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB22 
+                    SCHEMATIC1, PHY  (1104.90, 215.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB20 
+                    SCHEMATIC1, PHY  (1104.90, 220.98) 
+WARNING(ORCAP-1600): Net has fewer than two connections PT5 
+                    SCHEMATIC1, PHY  (642.62, 469.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PT7 
+                    SCHEMATIC1, PHY  (642.62, 474.98) 
+WARNING(ORCAP-1600): Net has fewer than two connections PH7 
+                    SCHEMATIC1, PHY  (665.48, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE11 
+                    SCHEMATIC1, PHY  (952.50, 231.14) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA8 
+                    SCHEMATIC1, PHY  (1036.32, 325.12) 
+WARNING(ORCAP-1600): Net has fewer than two connections PP3 
+                    SCHEMATIC1, PHY  (642.62, 431.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE12 
+                    SCHEMATIC1, PHY  (952.50, 233.68) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA4 
+                    SCHEMATIC1, PHY  (1021.08, 325.12) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD13 
+                    SCHEMATIC1, PHY  (741.68, 447.04) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC0 
+                    SCHEMATIC1, PHY  (1104.90, 210.82) 
+WARNING(ORCAP-1600): Net has fewer than two connections PP5 
+                    SCHEMATIC1, PHY  (660.40, 406.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PP6 
+                    SCHEMATIC1, PHY  (662.94, 406.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE7 
+                    SCHEMATIC1, PHY  (952.50, 220.98) 
+WARNING(ORCAP-1600): Net has fewer than two connections PE2 
+                    SCHEMATIC1, PHY  (721.36, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB5 
+                    SCHEMATIC1, PHY  (1104.90, 254.00) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD10 
+                    SCHEMATIC1, PHY  (741.68, 462.28) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB18 
+                    SCHEMATIC1, PHY  (1104.90, 226.06) 
+WARNING(ORCAP-1600): Net has fewer than two connections PK2 
+                    SCHEMATIC1, PHY  (642.62, 444.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PP4 
+                    SCHEMATIC1, PHY  (657.86, 406.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB9 
+                    SCHEMATIC1, PHY  (1104.90, 243.84) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB6 
+                    SCHEMATIC1, PHY  (1104.90, 251.46) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD12 
+                    SCHEMATIC1, PHY  (741.68, 452.12) 
+WARNING(ORCAP-1600): Net has fewer than two connections PE6 
+                    SCHEMATIC1, PHY  (678.18, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PE5 
+                    SCHEMATIC1, PHY  (680.72, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PK3 
+                    SCHEMATIC1, PHY  (642.62, 441.96) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC7 
+                    SCHEMATIC1, PHY  (1059.18, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD15 
+                    SCHEMATIC1, PHY  (741.68, 436.88) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB7 
+                    SCHEMATIC1, PHY  (1104.90, 248.92) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD2 
+                    SCHEMATIC1, PHY  (1016.00, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD0 
+                    SCHEMATIC1, PHY  (1021.08, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD6 
+                    SCHEMATIC1, PHY  (1005.84, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD7 
+                    SCHEMATIC1, PHY  (998.22, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC1 
+                    SCHEMATIC1, PHY  (1104.90, 208.28) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC9 
+                    SCHEMATIC1, PHY  (1054.10, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PK4 
+                    SCHEMATIC1, PHY  (642.62, 480.06) 
+WARNING(ORCAP-1600): Net has fewer than two connections PK7 
+                    SCHEMATIC1, PHY  (668.02, 416.56) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA27 
+                    SCHEMATIC1, PHY  (1104.90, 274.32) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB11 
+                    SCHEMATIC1, PHY  (1104.90, 238.76) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD11 
+                    SCHEMATIC1, PHY  (741.68, 457.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA9 
+                    SCHEMATIC1, PHY  (1038.86, 325.12) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA25 
+                    SCHEMATIC1, PHY  (1104.90, 279.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC6 
+                    SCHEMATIC1, PHY  (1061.72, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC5 
+                    SCHEMATIC1, PHY  (1064.26, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD7 
+                    SCHEMATIC1, PHY  (741.68, 439.42) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA6 
+                    SCHEMATIC1, PHY  (1031.24, 325.12) 
+WARNING(ORCAP-1600): Net has fewer than two connections PE7 
+                    SCHEMATIC1, PHY  (675.64, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB23 
+                    SCHEMATIC1, PHY  (1104.90, 213.36) 
+WARNING(ORCAP-1600): Net has fewer than two connections PB7 
+                    SCHEMATIC1, PHY  (662.94, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PH6 
+                    SCHEMATIC1, PHY  (668.02, 515.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PK0 
+                    SCHEMATIC1, PHY  (642.62, 449.58) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB17 
+                    SCHEMATIC1, PHY  (1104.90, 228.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA26 
+                    SCHEMATIC1, PHY  (1104.90, 276.86) 
+WARNING(ORCAP-1600): Net has fewer than two connections AD14 
+                    SCHEMATIC1, PHY  (741.68, 441.96) 
+WARNING(ORCAP-1600): Net has fewer than two connections PT6 
+                    SCHEMATIC1, PHY  (642.62, 472.44) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB8 
+                    SCHEMATIC1, PHY  (1104.90, 246.38) 
+WARNING(ORCAP-1600): Net has fewer than two connections PK1 
+                    SCHEMATIC1, PHY  (642.62, 447.04) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB16 
+                    SCHEMATIC1, PHY  (1104.90, 231.14) 
+WARNING(ORCAP-1600): Net has fewer than two connections PP0 
+                    SCHEMATIC1, PHY  (642.62, 439.42) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB3 
+                    SCHEMATIC1, PHY  (1104.90, 259.08) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB2 
+                    SCHEMATIC1, PHY  (1104.90, 261.62) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB10 
+                    SCHEMATIC1, PHY  (1104.90, 241.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD5 
+                    SCHEMATIC1, PHY  (1008.38, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE28 
+                    SCHEMATIC1, PHY  (1008.38, 325.12) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD3 
+                    SCHEMATIC1, PHY  (1013.46, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD1 
+                    SCHEMATIC1, PHY  (1018.54, 177.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PH5 
+                    SCHEMATIC1, PHY  (670.56, 515.62) 
+
+Checking For Unconnected Bus Nets

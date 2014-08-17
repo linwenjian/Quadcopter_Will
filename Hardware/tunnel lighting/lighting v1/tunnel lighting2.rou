@@ -1,0 +1,11 @@
+;EXTENTS: -2.500  -2.500  25.500  6.500   
+;LEADER: 12 
+;HEADER: 
+;CODE  : ASCII 
+;FILE  : tunnel lighting2.rou for board tunnel lighting2.brd
+%
+G90
+F1
+M16
+G40
+M30

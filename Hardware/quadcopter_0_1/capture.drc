@@ -1,0 +1,158 @@
+Date and Time : 08/17/14 15:26:20
+
+--------------------------------------------------
+Checking Schematic: SCHEMATIC1
+--------------------------------------------------
+Checking Electrical Rules 
+
+Checking For Single Node Nets
+WARNING(ORCAP-1600): Net has fewer than two connections PTC11 
+                    SCHEMATIC1, 01 MCU  (2.00, 6.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC10 
+                    SCHEMATIC1, 01 MCU  (2.00, 6.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC0_DP0/AD1_DP3 
+                    SCHEMATIC1, 01 MCU  (9.90, 4.10) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB8 
+                    SCHEMATIC1, 01 MCU  (2.00, 4.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD13 
+                    SCHEMATIC1, 01 MCU  (2.00, 9.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE5 
+                    SCHEMATIC1, 01 MCU  (2.00, 10.10) 
+WARNING(ORCAP-1600): Net has fewer than two connections VOUT_3V3 
+                    SCHEMATIC1, 01 MCU  (10.50, 2.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE2 
+                    SCHEMATIC1, 01 MCU  (2.00, 9.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB23 
+                    SCHEMATIC1, 01 MCU  (2.00, 5.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB21 
+                    SCHEMATIC1, 01 MCU  (2.00, 5.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC1_DP0/ADC0_DP3 
+                    SCHEMATIC1, 01 MCU  (9.90, 4.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC15 
+                    SCHEMATIC1, 01 MCU  (2.00, 7.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE9 
+                    SCHEMATIC1, 01 MCU  (2.00, 10.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB9 
+                    SCHEMATIC1, 01 MCU  (2.00, 4.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC9 
+                    SCHEMATIC1, 01 MCU  (2.00, 6.70) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE26 
+                    SCHEMATIC1, 01 MCU  (2.00, 11.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC17 
+                    SCHEMATIC1, 01 MCU  (2.00, 7.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC0_SE16/ADC0_SE21 
+                    SCHEMATIC1, 01 MCU  (9.90, 3.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA28 
+                    SCHEMATIC1, 01 MCU  (2.00, 3.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB17 
+                    SCHEMATIC1, 01 MCU  (2.00, 5.00) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB20 
+                    SCHEMATIC1, 01 MCU  (2.00, 5.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA12 
+                    SCHEMATIC1, 01 MCU  (2.00, 1.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE4 
+                    SCHEMATIC1, 01 MCU  (2.00, 10.00) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD9 
+                    SCHEMATIC1, 01 MCU  (2.00, 8.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC18 
+                    SCHEMATIC1, 01 MCU  (2.00, 7.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections DAC1_OUT 
+                    SCHEMATIC1, 01 MCU  (10.90, 5.10) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC1_DM1 
+                    SCHEMATIC1, 01 MCU  (9.90, 3.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA4 
+                    SCHEMATIC1, 01 MCU  (2.00, 1.10) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE27 
+                    SCHEMATIC1, 01 MCU  (2.00, 11.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC16 
+                    SCHEMATIC1, 01 MCU  (2.00, 7.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE10 
+                    SCHEMATIC1, 01 MCU  (2.00, 10.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA25 
+                    SCHEMATIC1, 01 MCU  (2.00, 2.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC1_DM0/ADC0_DM3 
+                    SCHEMATIC1, 01 MCU  (9.90, 4.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA27 
+                    SCHEMATIC1, 01 MCU  (2.00, 3.10) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB16 
+                    SCHEMATIC1, 01 MCU  (2.00, 4.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA11 
+                    SCHEMATIC1, 01 MCU  (2.00, 1.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE3 
+                    SCHEMATIC1, 01 MCU  (2.00, 9.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD12 
+                    SCHEMATIC1, 01 MCU  (2.00, 9.10) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE7 
+                    SCHEMATIC1, 01 MCU  (2.00, 10.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC19 
+                    SCHEMATIC1, 01 MCU  (2.00, 7.70) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE0 
+                    SCHEMATIC1, 01 MCU  (2.00, 9.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC1_SE16/ADC0_SE22 
+                    SCHEMATIC1, 01 MCU  (9.90, 3.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections DAC0_OUT 
+                    SCHEMATIC1, 01 MCU  (10.90, 4.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC8 
+                    SCHEMATIC1, 01 MCU  (2.00, 6.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTB22 
+                    SCHEMATIC1, 01 MCU  (2.00, 5.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE6 
+                    SCHEMATIC1, 01 MCU  (2.00, 10.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE1 
+                    SCHEMATIC1, 01 MCU  (2.00, 9.70) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA13 
+                    SCHEMATIC1, 01 MCU  (2.00, 2.00) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC6 
+                    SCHEMATIC1, 01 MCU  (2.00, 6.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA9 
+                    SCHEMATIC1, 01 MCU  (2.00, 1.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTE8 
+                    SCHEMATIC1, 01 MCU  (2.00, 10.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC1_DP1 
+                    SCHEMATIC1, 01 MCU  (9.90, 3.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD11 
+                    SCHEMATIC1, 01 MCU  (2.00, 9.00) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC0_DM0/ADC1_DM3 
+                    SCHEMATIC1, 01 MCU  (9.90, 4.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC14 
+                    SCHEMATIC1, 01 MCU  (2.00, 7.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD10 
+                    SCHEMATIC1, 01 MCU  (2.00, 8.90) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC7 
+                    SCHEMATIC1, 01 MCU  (2.00, 6.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC12 
+                    SCHEMATIC1, 01 MCU  (2.00, 7.00) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC5 
+                    SCHEMATIC1, 01 MCU  (2.00, 6.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA29 
+                    SCHEMATIC1, 01 MCU  (2.00, 3.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA16 
+                    SCHEMATIC1, 01 MCU  (2.00, 2.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA26 
+                    SCHEMATIC1, 01 MCU  (2.00, 3.00) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC0_DP1 
+                    SCHEMATIC1, 01 MCU  (9.90, 3.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTD4 
+                    SCHEMATIC1, 01 MCU  (2.00, 8.30) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC13 
+                    SCHEMATIC1, 01 MCU  (2.00, 7.10) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA15 
+                    SCHEMATIC1, 01 MCU  (2.00, 2.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA5 
+                    SCHEMATIC1, 01 MCU  (2.00, 1.20) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTC0 
+                    SCHEMATIC1, 01 MCU  (2.00, 5.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA17 
+                    SCHEMATIC1, 01 MCU  (2.00, 2.40) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA10 
+                    SCHEMATIC1, 01 MCU  (2.00, 1.70) 
+WARNING(ORCAP-1600): Net has fewer than two connections ADC0_DM1 
+                    SCHEMATIC1, 01 MCU  (9.90, 3.60) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA8 
+                    SCHEMATIC1, 01 MCU  (2.00, 1.50) 
+WARNING(ORCAP-1600): Net has fewer than two connections PTA24 
+                    SCHEMATIC1, 01 MCU  (2.00, 2.80) 
+WARNING(ORCAP-1600): Net has fewer than two connections VBAT 
+                    SCHEMATIC1, 01 MCU  (9.90, 2.10) 
+
+Checking For Unconnected Bus Nets

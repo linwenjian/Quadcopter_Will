@@ -1,0 +1,383 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Dump Library Log                                                 )
+(                                                                     )
+(    Software Version : 16.6S005                                      )
+(    Date/Time        : Sat Aug 09 21:07:32 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+*** file: E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/700-27167_Rev_B/LAY-27167_C.brd ***
+
+
+
+  *** Creating all device files (see create_devices.log) ***
+
+
+  *** Creating padstacks. ***
+
+  SH_R050X145S being dumped.
+
+  C018-008TEST_POINT being dumped.
+
+  C024-012TENTED being dumped.
+
+  C020SXP being dumped.
+
+  C040SXP being dumped.
+
+  C018-008TENTED being dumped.
+
+  C060SXP_SM120 being dumped.
+
+  C035SXP being dumped.
+
+  R028X126SXP_B being dumped.
+
+  R028X155SXP_B being dumped.
+
+  C620SXP_SM787 being dumped.
+
+  C630SXP_SM787 being dumped.
+
+  C025-025N being dumped.
+
+  C125-125N being dumped.
+
+  C035-035N being dumped.
+
+  C060-040T being dumped.
+
+  C063-063N being dumped.
+
+  C036-036N being dumped.
+
+  R590X275SXP_B being dumped.
+
+  C060-036T being dumped.
+
+  C065-040T being dumped.
+
+  C068-068N being dumped.
+
+  C048-028T being dumped.
+
+  S060-040T being dumped.
+
+  S060-036T being dumped.
+
+  S065-040T being dumped.
+
+  R100X040S being dumped.
+
+  R022X030S being dumped.
+
+  R070X020S being dumped.
+
+  R020X070S being dumped.
+
+  R062X011S being dumped.
+
+  O035X060S being dumped.
+
+  R090X020S being dumped.
+
+  R220X080S being dumped.
+
+  R110X029S being dumped.
+
+  R125X050S being dumped.
+
+  R056X011S being dumped.
+
+  R051X052S being dumped.
+
+  R050X125S being dumped.
+
+  R070X016S being dumped.
+
+  R040X055S being dumped.
+
+  O035X045S being dumped.
+
+  R080X016S being dumped.
+
+  R070X017S being dumped.
+
+  R060X018S being dumped.
+
+  R050X145S being dumped.
+
+  R080X025S being dumped.
+
+  R030X048S being dumped.
+
+  R063X060S being dumped.
+
+  R063X043S being dumped.
+
+  R055X016S being dumped.
+
+  R039X032S being dumped.
+
+  R051X056S being dumped.
+
+  R115X029S being dumped.
+
+  R050X085S being dumped.
+
+  R016X083S being dumped.
+
+  R080X055S being dumped.
+
+  R032X067S being dumped.
+
+  R036X028S being dumped.
+
+  R060X067S being dumped.
+
+  R067X060S being dumped.
+
+  R086X024S being dumped.
+
+  R051X059S being dumped.
+
+  R032X079S being dumped.
+
+  R075X090S being dumped.
+
+  R138X081S being dumped.
+
+  R071X095S being dumped.
+
+  R055X048S being dumped.
+
+  R079X051S being dumped.
+
+  R157X081S being dumped.
+
+  R063X059S being dumped.
+
+  R047X059S being dumped.
+
+  R028X079S being dumped.
+
+  R047X087S being dumped.
+
+  R067X095S being dumped.
+
+  R147X087S being dumped.
+
+  R236X098S being dumped.
+
+  C022-012T_R590X270_B_TENTED being dumped.
+
+  O070X140-070X140N being dumped.
+
+  VIA022-012TENTED being dumped.
+
+  C033-033N_TOL1_1 being dumped.
+
+  C060-060N_TOL4_0 being dumped.
+
+  C053-053N_TOL3_0 being dumped.
+
+  C065-039T_TOL4_0 being dumped.
+
+  S065-039T_TOL4_0 being dumped.
+
+  C025S being dumped.
+
+  C035S being dumped.
+
+  C045S being dumped.
+
+  S200S being dumped.
+
+  S040S being dumped.
+
+  S032S being dumped.
+
+  S035S being dumped.
+
+  S063S being dumped.
+
+  R028X126SXP being dumped.
+
+  R028X155SXP being dumped.
+
+  SH_R050X145S_MIR being dumped.
+
+  R590X275SXP being dumped.
+
+  R032X012S_SP031X011 being dumped.
+
+  C060SX being dumped.
+
+  R033X012S_SP032X011 being dumped.
+
+  SH_R032X102S being dumped.
+
+
+  *** Creating shape symbols (.dra and .ssm) ***
+
+  sh_r590x270s_offset being dumped.
+
+  sh0p8x2p6 being dumped.
+
+  sh0p9x2p7 being dumped.
+
+  sh1p27x3p68 being dumped.
+
+  sh3p68x1p27 being dumped.
+
+  sh1p37x3p78 being dumped.
+
+  sh3p78x1p37 being dumped.
+
+
+  *** Creating package symbols (.dra and .psm) ***
+
+  sot416 being dumped.
+
+  soic14 being dumped.
+
+  tqfp44 being dumped.
+
+  xtl2_ecs_csm7_sm being dumped.
+
+  cn2x82_finger_ass being dumped.
+
+  xtl2_ecs_sm being dumped.
+
+  lqfp144_0p5_20x20mm being dumped.
+
+  con_tfm_20m_50_sm being dumped.
+
+  qtlp610 being dumped.
+
+  cc3528-21 being dumped.
+
+  sot_143 being dumped.
+
+  diode_3p2x2p2 being dumped.
+
+  led_0603 being dumped.
+
+  tssop14 being dumped.
+
+  ind_0603 being dumped.
+
+  ind_0805 being dumped.
+
+  sw4_4mm being dumped.
+
+  cc0402_25 being dumped.
+
+  tpad_040 being dumped.
+
+  rc0402_25 being dumped.
+
+  tssop-14 being dumped.
+
+  con_ftsh_19m_50_sm being dumped.
+
+  hdr203_tsm_sm being dumped.
+
+  qfn5x3_0p5_3x3 being dumped.
+
+  cc0603_ov being dumped.
+
+  cc0805_ov being dumped.
+
+  xtal4_3p3x2p6_sm_fl being dumped.
+
+  rc0603_ov being dumped.
+
+  rc0805_ov being dumped.
+
+  so8 being dumped.
+
+  led2_electrode being dumped.
+
+  con_sdcard_8f_sm_ra being dumped.
+
+  pot3_3352t being dumped.
+
+  tsop48_18p5x12p4 being dumped.
+
+  skt_bat_780x1210 being dumped.
+
+  con5_usb_mini_a_smt being dumped.
+
+  test_loop being dumped.
+
+  sot23 being dumped.
+
+  hdr102 being dumped.
+
+  hdr103 being dumped.
+
+  smb_2p7x1p4 being dumped.
+
+  xtlosc4_sm being dumped.
+
+  sot-23 being dumped.
+
+  sot223 being dumped.
+
+
+  *** Creating mechanical symbols (.dra and .bsm) ***
+
+  pci_bevel_detail being dumped.
+
+  fid_060 being dumped.
+
+  ul_box being dumped.
+
+  c025-025n being dumped.
+
+  2_impedances_table being dumped.
+
+  c125-125n1 being dumped.
+
+  freescale_momentum_mark being dumped.
+
+  twrpi-lay-27111 being dumped.
+
+  twrpi-lay-26468 being dumped.
+
+  stackup_6 being dumped.
+
+  weee_logo being dumped.
+
+  copyright being dumped.
+
+  twr_brd_slot_detail being dumped.
+
+
+  *** Creating format symbols (.dra and .bsm) ***
+
+  hand_s being dumped.
+
+  film_title_block_top being dumped.
+
+  d_size_pg1 being dumped.
+
+  fab_notes_multi_rohs being dumped.
+
+
+
+*********************** Summary *********************
+ERRORs reported:                           0
+
+Number of padstacks dumped:              101
+Number of package symbols dumped:         44
+Number of mechanical symbols dumped:      13
+Number of format symbols dumped:           4
+Number of shape symbols dumped:            7
+
+Total number of symbols dumped:           68
+*****************************************************
+

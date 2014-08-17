@@ -1,0 +1,19 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    DRILL LEGEND                                                     )
+(                                                                     )
+(    Drawing          : tunnel lighting2.brd                          )
+(    Software Version : 16.5P003                                      )
+(    Date/Time        : Sat Oct 27 20:07:36 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Begin processing of drill legend template file 'E:/Cadence/SPB_16.5/share/pcb/text/nclegend/default-mil.dlt' ...
+End of drill legend template file processing.
+
+Begin processing drill holes.
+Warning : Hole 35.000-0.000-C-P-0.000-0.000 uses multiple drill figures.
+Warning : Hole 35.433-0.000-C-P-0.000-0.000 uses multiple drill figures.
+Warning : Hole 19.685-0.000-C-P-0.000-0.000 uses multiple drill figures.
+End processing drill holes.

@@ -1,0 +1,1408 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 16.6.0 d001Aug-17-2014 at 15:26:02 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='QUADCOPTER_0_1';
+ POST_TIME='Sep 10 2012 04:46:09';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C1 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051759@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051759@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051759@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051677@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051677@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051677@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'CAP_NP_CC0603_OV_DISCRETE_10UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051295@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051295@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051295@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C12 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051306@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051306@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051306@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C13 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051342@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051342@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051342@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051169@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051169@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051169@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051606@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051606@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051606@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C16 'CAP NP_CC0603_OV_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17085886@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17085886@discrete.\cap np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17085886@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C17 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17061638@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17061638@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17061638@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C18 'CAP_NP_CC0603_OV_DISCRETE_0.01U':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17061518@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17061518@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17061518@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C19 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069405@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069405@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069405@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051705@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051705@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051705@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C20 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069218@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069218@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069218@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C21 'CAP_NP_CC0603_OV_DISCRETE_4.7UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069449@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069449@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069449@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C22 'CAP_NP_CC0603_OV_DISCRETE_10NF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17070064@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17070064@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17070064@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C23 'CAP_NP_CC0603_OV_DISCRETE_470NF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17070048@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17070048@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17070048@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C24 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17071013@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17071013@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17071013@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C25 'CAP_NP_CC0603_OV_DISCRETE_4.7UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17071039@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17071039@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17071039@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C26 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069185@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069185@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069185@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C27 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069264@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069264@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069264@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C28 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17078157@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17078157@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17078157@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C29 'CAP_NP_CC0603_OV_DISCRETE_4.7UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17078179@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17078179@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17078179@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C3 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051669@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051669@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051669@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C30 'CAP_NP_CC0603_OV_DISCRETE_4.7UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17078355@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17078355@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17078355@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C31 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17078343@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17078343@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17078343@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C32 'CAP_NP_CC0603_OV_DISCRETE_1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17106203@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17106203@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17106203@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C33 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17103932@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17103932@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17103932@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C34 'CAP_NP_CC0603_OV_DISCRETE_47UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17104225@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17104225@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17104225@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C35 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17105110@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17105110@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17105110@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C36 'CAP_NP_CC0603_OV_DISCRETE_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17105122@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17105122@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17105122@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C37 'CAP_NP_CC0603_OV_DISCRETE_?':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17103742@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17103742@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17103742@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C38 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094051@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094051@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094051@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C39 'CAP_NP_CC0603_OV_DISCRETE_4.7UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094069@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094069@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094069@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C4 'CAP_NP_CC0603_OV_DISCRETE_0.0_1':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051316@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051316@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051316@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C40 'CAP_NP_CC0603_OV_DISCRETE_4.7UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094109@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094109@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094109@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_4.7e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C41 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094093@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094093@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094093@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C42 'CAP_NP_CAPC4532X185_DISCRETE_47':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094297@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094297@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094297@fcl_capacitor.\cap_np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C43 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17112946@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17112946@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17112946@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C44 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113433@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113433@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113433@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C45 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113488@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113488@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113488@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C46 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113551@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113551@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113551@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C47 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113611@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113611@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113611@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C48 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113669@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113669@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113669@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C49 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113728@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113728@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113728@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C5 'CAP_NP_CC0603_OV_DISCRETE_0.0_1':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051330@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051330@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051330@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C50 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113787@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113787@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113787@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C51 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17132180@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17132180@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17132180@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C52 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17132193@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17132193@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17132193@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C53 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17132206@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17132206@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17132206@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C6 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051787@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051787@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051787@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C7 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051743@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051743@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051743@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C8 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051779@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051779@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051779@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'CAP_NP_CC0603_OV_DISCRETE_0.1UF':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051727@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051727@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051727@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'LED_LED_0603_IC_ORANGE':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17123212@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17123212@fcl_optical.\led.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17123212@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'LED_LED_0603_IC_ORANGE':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17123634@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17123634@fcl_optical.\led.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17123634@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D3 'LED_LED_0603_IC_ORANGE':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17123694@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17123694@fcl_optical.\led.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17123694@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D4 'LED_LED_0603_IC_ORANGE':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17123754@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17123754@fcl_optical.\led.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17123754@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D5 'LED_LED_0603_IC_ORANGE':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17123814@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17123814@fcl_optical.\led.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17123814@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D6 'LED_LED_0603_IC_ORANGE':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17124185@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17124185@fcl_optical.\led.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17124185@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D7 'LED_LED_0603_IC_ORANGE':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17124376@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17124376@fcl_optical.\led.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17124376@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'CONN_HDR_5X2_HDR_5X2_FTSH_TH_NS':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17062928@FCL_CONNECTOR.CONN_HDR_5X2.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17062928@fcl_connector.\conn_hdr_5x2.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17062928@fcl_connector.\conn_hdr_5x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J10 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094231@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094231@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094231@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J11 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094280@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094280@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094280@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J12 'CON16A_HDR254M-2X8_CON16A':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17092923@CONNECTOR.CON16A.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17092923@connector.\con16a.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17092923@connector.\con16a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J13 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17134110@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17134110@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17134110@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J14 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17134261@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17134261@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17134261@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J15 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17134354@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17134354@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17134354@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J16 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17134451@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17134451@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17134451@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'CON4_HDR254M-1X4_CON4':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17112504@CONNECTOR.CON4.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17112504@connector.\con4.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17112504@connector.\con4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J4 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17077746@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17077746@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17077746@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J5 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17079198@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17079198@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17079198@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17079531@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17079531@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17079531@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J7 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17079580@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17079580@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17079580@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J8 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17093972@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17093972@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17093972@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J9 'CON3_HDR254M-1X3_CON3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094191@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094191@connector.\con3.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094191@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L1 'IND_IND_0603_100 OHM@100MHZ':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051810@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051810@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051810@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L2 'IND_IND_0603_100 OHM@100MHZ':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051356@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051356@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051356@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L3 'IND_IND_0603_100 OHM@100MHZ':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051370@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051370@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051370@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L4 'IND_IND_0603_100 OHM@100MHZ':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051408@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051408@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051408@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'RES_RC0603_OV_DISCRETE_0_1%_':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17062481@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17062481@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17062481@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RES_RC0603_OV_DISCRETE_4.7K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17061896@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17061896@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17061896@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'RES_RC0603_OV_DISCRETE_4.7K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17061904@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17061904@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17061904@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17070035@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17070035@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17070035@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'RES_RC0603_OV_DISCRETE_4.7K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_4700OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069423@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069423@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069423@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_4700OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R14 'RES_RC0603_OV_DISCRETE_4.7K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_4700OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069415@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069415@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069415@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_4700OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R15 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069893@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069893@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069893@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17071849@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17071849@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17071849@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069319@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069319@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069319@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17071858@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17071858@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17071858@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069327@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069327@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069327@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'RES_RC0603_OV_DISCRETE_10K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051258@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051258@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051258@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069336@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069336@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069336@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R21 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069345@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069345@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069345@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R22 'R_RC0603_OV_3.3K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17116714@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17116714@discrete.\r.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17116714@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R23 'R_RC0603_OV_3.3K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17116936@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17116936@discrete.\r.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17116936@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R24 'R_RC0603_OV_3.3K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17117017@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17117017@discrete.\r.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17117017@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R25 'R_RC0603_OV_3.3K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17117099@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17117099@discrete.\r.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17117099@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R26 'R_RC0603_OV_3.3K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17115936@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17115936@discrete.\r.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17115936@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R27 'R_RC0603_OV_3.3K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17116447@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17116447@discrete.\r.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17116447@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R28 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17105963@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17105963@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17105963@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R29 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17078539@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17078539@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17078539@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'RES_RC0603_OV_DISCRETE_10K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051266@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051266@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051266@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R30 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17078552@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17078552@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17078552@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R31 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094138@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094138@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094138@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R32 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17094130@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17094130@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17094130@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R33 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17112976@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17112976@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17112976@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R34 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113441@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113441@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113441@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R35 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113503@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113503@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113503@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R36 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113562@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113562@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113562@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R37 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113619@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113619@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113619@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R38 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113677@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113677@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113677@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R39 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113736@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113736@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113736@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R40 'RES_RC0603_OV_DISCRETE_10.0K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17113795@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17113795@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page4_ins17113795@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R41 'RES_RC0603_OV_DISCRETE_10K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17132138@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17132138@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17132138@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R42 'RES_RC0603_OV_DISCRETE_10K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17132146@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17132146@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17132146@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R43 'RES_RC0603_OV_DISCRETE_0OHM':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17133932@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17133932@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17133932@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R44 'RES_RC0603_OV_DISCRETE_0OHM':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17134031@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17134031@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17134031@fcl_resistor.\res.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'R_RC0603_OV_3.3K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17086150@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17086150@discrete.\r.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17086150@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'R2_RC0603_OV_10K':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17085894@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17085894@discrete.\r2.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17085894@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'R2_RC0603_OV_100R':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17085902@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17085902@discrete.\r2.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17085902@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'RES_RC0603_OV_DISCRETE_22':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17061571@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17061571@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17061571@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW1 'SW2_STM151XX_SW2_4X3MM_SM_IC_SW':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17115839@FCL_SWITCH.SW2_STM151XX.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17115839@fcl_switch.\sw2_stm151xx.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17115839@fcl_switch.\sw2_stm151xx.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP1 'TESTLOOP_TPAD_040_IC_TPAD_040':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17051799@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17051799@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17051799@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'K64_LQ_LQFP_1_LQFP144_0P5_20X20':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17045963@QUADCOPTER_0_1.K64_LQ_LQFP_1.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17045963@quadcopter_0_1.\k64_lq_lqfp_1.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17045963@quadcopter_0_1.\k64_lq_lqfp_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 'FXOS8700CQ_QFN_16P_QFN5X3_0P5_3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069377@FCL_IC_FREESCALE.FXOS8700CQ_QFN_16P.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069377@fcl_ic_freescale.\fxos8700cq_qfn_16p.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069377@fcl_ic_freescale.\fxos8700cq_qfn_16p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 'L3G4200D_QFN65P400X400X80-17_L3':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17069550@QUADCOPTER_0_1.L3G4200D.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17069550@quadcopter_0_1.\l3g4200d.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page2_ins17069550@quadcopter_0_1.\l3g4200d.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'TPS7B6733_TSSOP65P300X110-20_TP':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17101830@QUADCOPTER_0_1.TPS7B6733.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17101830@quadcopter_0_1.\tps7b6733.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17101830@quadcopter_0_1.\tps7b6733.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'TXB0104_TSSOP65P300X110-14_TXB0':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17077772@QUADCOPTER_0_1.TXB0104.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17077772@quadcopter_0_1.\txb0104.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17077772@quadcopter_0_1.\txb0104.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'TXB0104_TSSOP65P300X110-14_TXB0':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17093981@QUADCOPTER_0_1.TXB0104.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17093981@quadcopter_0_1.\txb0104.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page3_ins17093981@quadcopter_0_1.\txb0104.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y1 'OSC4_KC2520_XTLOSC4_SM_IC_50MHZ':;
+
+SECTION_NUMBER 1
+ '@QUADCOPTER_0_1.SCHEMATIC1(SCH_1):INS17061545@FCL_XTAL_OSC.OSC4_KC2520.NORMAL(CHIPS)':
+ C_PATH='@quadcopter_0_1.schematic1(sch_1):ins17061545@fcl_xtal_osc.\osc4_kc2520.normal\(chips)',
+ P_PATH='@quadcopter_0_1.schematic1(sch_1):page1_ins17061545@fcl_xtal_osc.\osc4_kc2520.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.

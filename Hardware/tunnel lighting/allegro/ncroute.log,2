@@ -1,0 +1,55 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    NC ROUTE Log                                                     )
+(                                                                     )
+(    Drawing          : #Taaaaaa11648.tmp                             )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Sat Oct 27 20:07:31 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ Processing NC Parameters file ...
+
+ NC PARAMETERS
+ -------------
+
+ FORMAT   		2.3
+ MACHINE-OFFSET		x:0.000000	y:0.000000
+ FEEDRATE		1
+ COORDINATES		ABSOLUTE
+ OUTPUT-UNITS		ENGLISH
+ TOOL-ORDER		INCREASING
+ REPEAT-CODES		YES
+ SUPPRESS-LEAD-ZEROES	NO
+ SUPPRESS-TRAIL-ZEROES	NO
+ SUPPRESS-EQUAL		NO
+ TOOL-SELECT		NO
+ HEADER			none
+ LEADER			12
+ CODE			ASCII
+ SEPARATE		NO
+ OPTIMIZE_DRILLING	NO
+ ENHANCED_EXCELLON	NO
+ SCALE			1.000000
+
+-------------------------------------------------------------
+
+ Processing route path data ...
+
+ WARNING: No route path data was found for processing.
+
+-------------------------------------------------------------
+
+ Processing slot hole data ...
+
+ WARNING: Can't find NC Route bit file (ncroutebits.txt)!
+          Using T01 to route ALL route cuts.
+
+ WARNING: No slot holes were found for processing!
+
+-------------------------------------------------------------
+
+ NC Route file tunnel lighting2.rou created ... Program completed.
+

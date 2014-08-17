@@ -1,0 +1,34 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\ftu_k64 evk.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "e:\linwenjian\quadcopter_will\hardware\quadcopter_0_1\ftu_k64 evk.dsn")
+      (Path "Design Resources"
+         "e:\linwenjian\quadcopter_will\hardware\quadcopter_0_1\ftu_k64 evk.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources"
+         "e:\linwenjian\quadcopter_will\hardware\quadcopter_0_1\ftu_k64 evk.dsn"
+         "Design Cache")
+      (Select "Design Resources"
+         "e:\linwenjian\quadcopter_will\hardware\quadcopter_0_1\ftu_k64 evk.dsn"
+         "Design Cache" "K60_LQ_LQFP_0"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 404 0 489"))
+      (Tab 0)))
+  (MPSSessionName "Administrator"))

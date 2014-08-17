@@ -1,0 +1,14 @@
+\t (00:00:00) allegro 16.6 S005 (v16-6-112W) Windows 32
+\t (00:00:00)     Journal start - Sat Aug 16 17:04:04 2014
+\t (00:00:00)         Host=SARAH User=Administrator Pid=3776 CPUs=2
+\t (00:00:00) 
+\t (00:00:00) Opening existing design...
+\d (00:00:00) Database opened: E:/linwenjian/Quadcopter_Will/Hardware/quadcopter_0_1/symbols/qfn5x3_0p5_3x3.dra
+\i (00:00:01) trapsize 432
+\i (00:00:01) trapsize 424
+\i (00:00:01) trapsize 433
+\i (00:00:01) trapsize 376
+\i (00:00:01) trapsize 376
+\i (00:00:02) generaledit 
+\i (00:00:04) exit 
+\t (00:00:05)     Journal end - Sat Aug 16 17:04:08 2014

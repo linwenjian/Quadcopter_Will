@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : SOT95P237X112-3.dra                           )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Wed Oct 24 13:44:07 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = G:/lwj/My project/PCB/Lighting controller/symbols
+    Name      = sot95p237x112-3.psm
+    User      = lwj
+    Machine   = LWJ-HNU
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

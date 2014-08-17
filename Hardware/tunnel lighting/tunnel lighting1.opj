@@ -1,0 +1,208 @@
+(ExpressProject "tunnel lighting1"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\tunnel lighting1.olb"
+        (Type "Schematic Library"))
+      (File "e:\cadence\spb_16.5\tools\capture\library\capsym.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\tunnel lighting1.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (Board_sim_option "VHDL_flow")
+    (DRC_Scope "0")
+    (DRC_Action "0")
+    (DRC_Create_Warnings "FALSE")
+    (DRC_View_Output "FALSE")
+    (DRC_Run_Electrical_Rules "TRUE")
+    (DRC_Run_Physical_Rules "FALSE")
+    (DRC_Report_File
+       "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.DRC")
+    (DRC_Check_Ports "FALSE")
+    (DRC_Check_Off-Page_Connectors "FALSE")
+    (DRC_Report_Ports_and_Off-page_Connectors "FALSE")
+    (DRC_SDT_Compatibility "FALSE")
+    (DRC_Report_Off-grid_Objects "FALSE")
+    (DRC_Check_Unconnected_Nets "TRUE")
+    (DRC_Check_for_Misleading_TAP "FALSE")
+    (DRC_Report_Netnames "FALSE")
+    (DRC_Check_Single_Node_Nets "TRUE")
+    (DRC_Check_No_Driving_Source "FALSE")
+    (DRC_Check_Duplicate_NetNames "TRUE")
+    (DRC_Check_Floating_Pins "TRUE")
+    (DRC_Check_Physical_Power_Pins_Visibility "TRUE")
+    (DRC_Check_PCB_Footprint_Property "TRUE")
+    (DRC_Check_Normal_Convert_View_Sync "TRUE")
+    (DRC_Check_Incorrect_PinGroup_Assignment "TRUE")
+    (DRC_Check_High_Speed_Props_Syntax "TRUE")
+    (DRC_Check_Missing_Pin_Numbers "TRUE")
+    (DRC_Check_Device_With_No_Pins "TRUE")
+    (DRC_Check_Power_Ground_Short "TRUE")
+    (DRC_Identical_References "TRUE")
+    (DRC_Type_Mismatch "TRUE")
+    (DRC_Visible_Power_pins "FALSE")
+    (DRC_Report_Unused_Part_Packages "TRUE")
+    (DRC_Check_Name_Prop_For_HierBlocks "TRUE")
+    (Netlist_TAB "0")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_Header "Item\tQuantity\tReference\tPart")
+    (BOM_Include_File
+       "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE"))
+  (Folder "Outputs"
+    (File ".\tunnel lighting1.drc"
+      (Type "Report"))
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\tunnel lighting1.bom"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (CON3
+      (FullPartName "CON3.Normal")
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (ADDC
+      (FullPartName "ADDC.Normal")
+      (LibraryName "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-R
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (IRFI540N/TO
+      (FullPartName "IRFI540N/TO.Normal")
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
+      (DeviceIndex "0"))
+    (IRF9Z14/TO
+      (FullPartName "IRF9Z14/TO.Normal")
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
+      (DeviceIndex "0"))
+    (2N6823
+      (FullPartName "2N6823.Normal")
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
+      (DeviceIndex "0"))
+    (1N4678
+      (FullPartName "1N4678.Normal")
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE.OLB")
+      (DeviceIndex "0"))
+    (1N4376
+      (FullPartName "1N4376.Normal")
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE.OLB")
+      (DeviceIndex "0"))
+    (PLR0504F
+      (FullPartName "PLR0504F.Normal")
+      (LibraryName "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.OLB")
+      (DeviceIndex "0"))
+    (AT25512
+      (FullPartName "AT25512.Normal")
+      (LibraryName "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.OLB")
+      (DeviceIndex "0"))
+    (AT45DB321E
+      (FullPartName "AT45DB321E.Normal")
+      (LibraryName "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.OLB")
+      (DeviceIndex "0"))
+    (txb0106
+      (FullPartName "txb0106.Normal")
+      (LibraryName "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.OLB")
+      (DeviceIndex "0"))
+    (DS1338C
+      (FullPartName "DS1338C.Normal")
+      (LibraryName "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.OLB")
+      (DeviceIndex "0"))
+    (DS1338
+      (FullPartName "DS1338.Normal")
+      (LibraryName "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.OLB")
+      (DeviceIndex "0"))
+    (TLP624
+      (FullPartName "TLP624.Normal")
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (DS138
+      (FullPartName "DS138.Normal")
+      (LibraryName "G:\LWJ\MY PROJECT\PCB\TUNNEL LIGHTING\TUNNEL LIGHTING1.OLB")
+      (DeviceIndex "0"))
+    (2N2219A
+      (FullPartName "2N2219A.Normal")
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
+      (DeviceIndex "0"))
+    (CAP_NP
+      (FullPartName "CAP_NP.Normal")
+      (LibraryName "Q:\ORCADCIS\SYMBOLS\FCL_CAPACITOR.OLB")
+      (DeviceIndex "0"))
+    (TitleBlock0
+      (LibraryName "E:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\tunnel lighting1.dsn")
+      (Path "Design Resources" ".\tunnel lighting1.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library" ".\tunnel lighting1.olb")
+      (Path "Outputs")
+      (Select "Design Resources" "Library" ".\tunnel lighting1.olb"
+         "K64FN1M0VLL12_100P"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 332"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 50 1240 50 307")
+        (Scroll "439 0")
+        (Zoom "34")
+        (Occurrence "/"))
+      (Path
+         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\TUNNEL LIGHTING\TUNNEL LIGHTING1.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PHY"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 251 1441 26 283")
+        (Scroll "1061 426")
+        (Zoom "160")
+        (Occurrence "/"))
+      (Path
+         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\TUNNEL LIGHTING\TUNNEL LIGHTING1.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (ISPCBBASICLICENSE "false")
+  (MPSSessionName "Administrator"))

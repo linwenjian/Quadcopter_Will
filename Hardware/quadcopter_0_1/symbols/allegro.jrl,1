@@ -1,0 +1,119 @@
+\t (00:00:00) allegro 16.6 S005 (v16-6-112W) Windows 32
+\t (00:00:00)     Journal start - Sat Aug 16 16:46:54 2014
+\t (00:00:00)         Host=SARAH User=Administrator Pid=6728 CPUs=2
+\t (00:00:00) 
+\t (00:00:00) Opening existing design...
+\d (00:00:00) Database opened: E:/linwenjian/Quadcopter_Will/Hardware/quadcopter_0_1/symbols/qfn5x3_0p5_3x3.dra
+\i (00:00:01) trapsize 813
+\i (00:00:01) trapsize 798
+\i (00:00:01) trapsize 816
+\i (00:00:01) trapsize 707
+\i (00:00:01) trapsize 752
+\i (00:00:02) generaledit 
+\i (00:00:04) zoom in 1 
+\i (00:00:04) setwindow pcb
+\i (00:00:04) zoom in -133.42 -56.61
+\i (00:00:04) trapsize 376
+\i (00:00:04) zoom in 1 
+\i (00:00:04) setwindow pcb
+\i (00:00:04) zoom in -79.30 -40.83
+\i (00:00:04) trapsize 188
+\i (00:00:10) zoom in 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom in -145.81 -26.93
+\i (00:00:10) trapsize 94
+\i (00:00:19) zoom out 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom out -155.20 -18.28
+\i (00:00:19) trapsize 188
+\i (00:00:20) zoom out 1 
+\i (00:00:20) setwindow pcb
+\i (00:00:20) zoom out -155.20 -18.29
+\i (00:00:20) trapsize 376
+\i (00:12:58) zoom in 1 
+\i (00:12:58) setwindow pcb
+\i (00:12:58) zoom in -136.41 -141.54
+\i (00:12:58) trapsize 188
+\i (00:13:02) delete 
+\i (00:13:04) zoom in 1 
+\i (00:13:04) setwindow pcb
+\i (00:13:04) zoom in -69.53 -170.47
+\i (00:13:04) trapsize 94
+\i (00:13:05) pick grid -67.46 -154.87
+\t (00:13:05) last pick:  -100.00  -200.00
+\t (00:13:05) Filled Rectangle "Manufacturing/No_Probe_Top"
+\i (00:13:05) pick grid dbl -67.46 -154.87
+\t (00:13:05) last pick:  -100.00  -200.00
+\i (00:13:07) pick grid -72.91 -144.54
+\t (00:13:07) last pick:  -100.00  -100.00
+\t (00:13:07) Filled Rectangle "Package Geometry/Place_Bound_Top"
+\i (00:13:07) pick grid dbl -72.91 -144.54
+\t (00:13:07) last pick:  -100.00  -100.00
+\t (00:13:07) Filled Rectangle "Package Geometry/Dfa_Bound_Top"
+\i (00:13:08) pick grid -72.91 -144.54
+\t (00:13:08) last pick:  -100.00  -100.00
+\t (00:13:08) Filled Rectangle "Via Keepout/All"
+\i (00:13:08) zoom out 1 
+\i (00:13:08) setwindow pcb
+\i (00:13:08) zoom out -72.91 -144.54
+\i (00:13:08) trapsize 188
+\i (00:13:08) zoom out 1 
+\i (00:13:08) setwindow pcb
+\i (00:13:08) zoom out -87.94 -165.20
+\i (00:13:08) trapsize 376
+\i (00:13:10) delete 
+\i (00:13:10) zoom in 1 
+\i (00:13:10) setwindow pcb
+\i (00:13:10) zoom in 90.92 -139.65
+\i (00:13:10) trapsize 188
+\i (00:13:11) zoom out 1 
+\i (00:13:11) setwindow pcb
+\i (00:13:11) zoom out -7.15 -122.36
+\i (00:13:11) trapsize 376
+\i (00:13:12) zoom out 1 
+\i (00:13:12) setwindow pcb
+\i (00:13:12) zoom out 10.87 -112.59
+\i (00:13:12) trapsize 752
+\i (00:13:13) undo 
+\i (00:13:14) trapsize 376
+\i (00:13:14) generaledit 
+\i (00:13:15) undo 
+\i (00:13:15) trapsize 188
+\i (00:13:16) generaledit 
+\i (00:13:17) delete 
+\i (00:13:18) zoom in 1 
+\i (00:13:18) setwindow pcb
+\i (00:13:18) zoom in -149.19 -140.03
+\i (00:13:18) trapsize 94
+\i (00:13:20) pick grid -71.03 -154.87
+\t (00:13:20) last pick:  -100.00  -200.00
+\t (00:13:20) Filled Rectangle "Manufacturing/No_Probe_Top"
+\i (00:13:21) pick grid -71.03 -154.87
+\t (00:13:21) last pick:  -100.00  -200.00
+\i (00:13:22) pick grid -73.85 -144.72
+\t (00:13:22) last pick:  -100.00  -100.00
+\t (00:13:22) Filled Rectangle "Package Geometry/Place_Bound_Top"
+\i (00:13:22) pick grid -73.85 -144.72
+\t (00:13:22) last pick:  -100.00  -100.00
+\t (00:13:22) Filled Rectangle "Package Geometry/Dfa_Bound_Top"
+\i (00:13:23) pick grid -73.85 -144.72
+\t (00:13:23) last pick:  -100.00  -100.00
+\t (00:13:23) Filled Rectangle "Via Keepout/All"
+\i (00:13:24) zoom out 1 
+\i (00:13:24) setwindow pcb
+\i (00:13:24) zoom out -83.06 -148.10
+\i (00:13:24) trapsize 188
+\i (00:13:24) zoom out 1 
+\i (00:13:24) setwindow pcb
+\i (00:13:24) zoom out -91.69 -154.12
+\i (00:13:24) trapsize 376
+\i (00:13:25) delete 
+\i (00:13:26) prepopup -202.18 4.45
+\i (00:13:27) done 
+\i (00:13:27) generaledit 
+\i (00:13:28) save 
+\i (00:13:30) fillin yes 
+\t (00:13:31) Symbol 'qfn5x3_0p5_3x3.psm' created.
+\i (00:13:31) generaledit 
+\i (00:13:35) exit 
+\t (00:13:36)     Journal end - Sat Aug 16 17:00:29 2014

@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : CMT1050.dra                                   )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Mon Apr 16 17:36:22 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = G:/lwj/My project/PCB/K60 graduation project/symbols
+    Name      = cmt1050.psm
+    User      = lwj
+    Machine   = LWJ-HNU
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

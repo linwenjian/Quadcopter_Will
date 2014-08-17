@@ -1,0 +1,58 @@
+{ Using PSTWRITER 16.5.0 p001Oct-27-2012 at 15:36:28 }
+
+#1 WARNING(ORCAP-36006): Part Name "CONN_DB9F_MTGTABS_CON_DB9S_RA_318_DB9" is renamed to "CONN_DB9F_MTGTABS_CON_DB9S_RA_3".
+#2 WARNING(ORCAP-36006): Part Name "J1011F01PNL_CON8_RJ45_TH1_RJ45-8" is renamed to "J1011F01PNL_CON8_RJ45_TH1_RJ45-".
+#3 WARNING(ORCAP-36006): Part Name "BEAD_FERRITE_0805_DISCRETE_120OHM" is renamed to "BEAD_FERRITE_0805_DISCRETE_120O".
+#4 WARNING(ORCAP-36006): Part Name "HEADER2X5_CON10_2X5_2MM_HEADER2X5" is renamed to "HEADER2X5_CON10_2X5_2MM_HEADER2".
+#5 WARNING(ORCAP-36006): Part Name "IRF9Z14/TO_3_SOT95P237X112-3_IRLML5203" is renamed to "IRF9Z14/TO_3_SOT95P237X112-3_IR".
+#6 WARNING(ORCAP-36006): Part Name "2N6823_1_SOT95P237X112-3_IRLML2803" is renamed to "2N6823_1_SOT95P237X112-3_IRLML2".
+#7 WARNING(ORCAP-36006): Part Name "SW KEY-SPST_SMTSWITCH_SW KEY-SPST" is renamed to "SW KEY-SPST_SMTSWITCH_SW KEY-SP".
+#8 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#5" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#9 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#6" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#10 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#16" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#11 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#17" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#12 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#18" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#13 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#43" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#14 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#44" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#15 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#56" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#16 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#57" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#17 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#70" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#18 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#71" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#19 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#94" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#20 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#93" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#21 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#135" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#22 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#134" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#23 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#122" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#24 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#121" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#25 WARNING(ORCAP-36042): Pin "VDD" is renamed to "VDD#108" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#26 WARNING(ORCAP-36042): Pin "VSS" is renamed to "VSS#107" as visible power pin of same name already exists in Package K60 , U10: SCHEMATIC1, PHY (960.12, 185.42).
+#27 WARNING(ORCAP-36006): Part Name "TXB0106_TSOP65P640X120-16_TXB0106" is renamed to "TXB0106_TSOP65P640X120-16_TXB01".
+#28 WARNING(ORCAP-36006): Part Name "AT45DB321E_AT45DB321D_SU_AT45DB321D" is renamed to "AT45DB321E_AT45DB321D_SU_AT45DB".
+#29 WARNING(ORCAP-36006): Part Name "ADM2587E_SOIC127P1032X265-20_ADM2587E" is renamed to "ADM2587E_SOIC127P1032X265-20_AD".
+#30 WARNING(ORCAP-36042): Pin "GND1" is renamed to "GND1#1" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#31 WARNING(ORCAP-36042): Pin "Vcc" is renamed to "VCC#2" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#32 WARNING(ORCAP-36042): Pin "GND1" is renamed to "GND1#3" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#33 WARNING(ORCAP-36042): Pin "Vcc" is renamed to "VCC#8" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#34 WARNING(ORCAP-36042): Pin "GND1" is renamed to "GND1#9" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#35 WARNING(ORCAP-36042): Pin "GND1" is renamed to "GND1#10" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#36 WARNING(ORCAP-36042): Pin "GND2" is renamed to "GND2#11" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#37 WARNING(ORCAP-36042): Pin "GND2" is renamed to "GND2#14" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#38 WARNING(ORCAP-36042): Pin "GND2" is renamed to "GND2#16" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#39 WARNING(ORCAP-36042): Pin "GND2" is renamed to "GND2#20" as visible power pin of same name already exists in Package ADM2587E , U16: SCHEMATIC1, PHY (93.98, 408.94).
+#40 WARNING(ORCAP-36006): Part Name "XS128_1_LQFP112_MC9S12XS 112LPFQ" is renamed to "XS128_1_LQFP112_MC9S12XS 112LPF".
+#41 WARNING(ORCAP-36006): Part Name "TPS7A45XX_0_TO170P1524X483-6_TPS7A4533" is renamed to "TPS7A45XX_0_TO170P1524X483-6_TP".
+#42 WARNING(ORCAP-36042): Pin "GND" is renamed to "GND#3" as visible power pin of same name already exists in Package TPS7A45XX_0 , U30: SCHEMATIC1, PHY (985.52, 513.08).
+#43 WARNING(ORCAP-36042): Pin "GND" is renamed to "GND#6" as visible power pin of same name already exists in Package TPS7A45XX_0 , U30: SCHEMATIC1, PHY (985.52, 513.08).
+#44 WARNING(ORCAP-36006): Part Name "DS1338C_SOIC127P1032X265-16_DS1338C" is renamed to "DS1338C_SOIC127P1032X265-16_DS1".
+#45 WARNING(ORCAP-36006): Part Name "AT25512_SOIC127P600X175-8_AT25512" is renamed to "AT25512_SOIC127P600X175-8_AT255".
+#46 WARNING(ORCAP-36006): Part Name "MAX3232_0_SOP16_MAX232_MAX3232ECAE" is renamed to "MAX3232_0_SOP16_MAX232_MAX3232E".
+Scanning netlist files ...
+
+Loading... g:\lwj\my project\pcb\tunnel lighting\allegro/pstchip.dat
+
+Loading... g:\lwj\my project\pcb\tunnel lighting\allegro/pstchip.dat
+
+Loading... g:\lwj\my project\pcb\tunnel lighting\allegro/pstxprt.dat
+
+Loading... g:\lwj\my project\pcb\tunnel lighting\allegro/pstxnet.dat
+packaging the design view...

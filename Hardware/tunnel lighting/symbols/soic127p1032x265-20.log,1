@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : SOIC127P1032X265-20.dra                       )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Wed Oct 24 13:43:28 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = G:/lwj/My project/PCB/Lighting controller/symbols
+    Name      = soic127p1032x265-20.psm
+    User      = lwj
+    Machine   = LWJ-HNU
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

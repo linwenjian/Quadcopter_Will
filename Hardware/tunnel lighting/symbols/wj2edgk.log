@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : WJ2EDGK.dra                                   )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Thu Oct 25 22:23:54 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = G:/lwj/My project/PCB/tunnel lighting/symbols
+    Name      = wj2edgk.psm
+    User      = lwj
+    Machine   = LWJ-HNU
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

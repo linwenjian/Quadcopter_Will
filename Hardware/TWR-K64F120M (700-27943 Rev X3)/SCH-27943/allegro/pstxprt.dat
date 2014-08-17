@@ -1,0 +1,2697 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 16.5.0 p001Sep-20-2013 at 12:58:28 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='SCH-27943';
+ POST_TIME='Mar 26 2012 19:10:13';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ BT500 'BATTERY_SKT_3V_SKT_BAT_780X1210':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22517969@FCL_MISC.BATTERY_SKT_3V.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22517969@fcl_misc.\battery_skt_3v.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22517969@fcl_misc.\battery_skt_3v.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C1 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22664595@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22664595@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22664595@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'CAP_NP_CC0603_OV_DISCRETE_0.97':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893663@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893663@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893663@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'CAP_NP_CC0805_OV_DISCRETE_1.397':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893536@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893536@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893536@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C13 'CAP_NP_CC0603_OV_DISCRETE_0.97':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893671@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893671@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893671@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'CAP_NP_CC0402_25_DISCRETE_0.56M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22407210@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22407210@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22407210@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'CAP_NP_CC0402_25_DISCRETE_0.56M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22407218@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22407218@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22407218@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C16 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22404076@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22404076@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22404076@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C17 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22665570@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22665570@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22665570@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22476100@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22476100@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22476100@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C20 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22404042@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22404042@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22404042@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C21 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22404438@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22404438@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22404438@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C22 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22666078@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22666078@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22666078@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C33 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22411286@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22411286@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22411286@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C35 'CAP_NP_CC0603_OV_DISCRETE_0.9_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22407713@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22407713@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22407713@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C36 'CAP_NP_CC0402_25_DISCRETE_0.5_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23061353@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23061353@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23061353@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C37 'CAP_NP_CC0402_25_DISCRETE_0.5_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23061368@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23061368@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23061368@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C38 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22450282@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22450282@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22450282@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C39 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22773103@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22773103@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22773103@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C40 'CAP_NP_CC0603_OV_DISCRETE_0.97':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23080903@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23080903@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23080903@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C41 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22662930@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22662930@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22662930@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C44 'CAP_NP_CC0402_25_DISCRETE_0.5_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23059779@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23059779@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23059779@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C45 'CAP_NP_CC0402_25_DISCRETE_0.5_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23059771@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23059771@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23059771@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C46 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23231466@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23231466@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23231466@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C47 'CAP_NP_CC0603_OV_DISCRETE_0.97':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22492092@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22492092@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22492092@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C48 'CAP_NP_CC0402_25_DISCRETE_0.5_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23234831@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23234831@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23234831@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C49 'CAP_NP_CC0603_OV_DISCRETE_0.97':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22492231@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22492231@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22492231@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C500 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22413051@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22413051@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22413051@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C501 'CAP_NP_CC0603_OV_DISCRETE_0.90M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22412905@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22412905@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22412905@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C502 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22404706@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22404706@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22404706@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C503 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22725151@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22725151@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22725151@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C504 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22404714@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22404714@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22404714@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C505 'CAP_NP_CC0402_25_DISCRETE_0.5_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23179818@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23179818@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23179818@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C506 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22435467@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22435467@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22435467@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C507 'CAP_NP_CC0402_25_DISCRETE_0.5_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23166124@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23166124@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23166124@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C508 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22557519@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22557519@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22557519@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C509 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22557527@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22557527@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22557527@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C51 'CAP_NP_CC0603_OV_DISCRETE_0.97':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22491985@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22491985@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22491985@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C510 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22557461@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22557461@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22557461@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C511 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22557469@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22557469@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22557469@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C512 'CAP_NP_CC0402_25_DISCRETE_0.64M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22918388@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22918388@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22918388@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C513 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22559022@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22559022@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22559022@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C514 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23194546@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23194546@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23194546@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C515 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23193956@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23193956@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23193956@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C516 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22664311@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22664311@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22664311@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C517 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22662723@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22662723@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22662723@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C518 'CAP_NP_CC0402_25_DISCRETE_0.5_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518008@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518008@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518008@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C519 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518162@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518162@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518162@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C520 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518154@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518154@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518154@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C521 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518234@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518234@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518234@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C522 'CAP_NP_CC0402_25_DISCRETE_0.5_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518194@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518194@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518194@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C523 'CAP_NP_CC0402_25_DISCRETE_0.5_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518104@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518104@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518104@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C524 'CAP_NP_CC0402_25_DISCRETE_0.5_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518028@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518028@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518028@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C525 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518138@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518138@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518138@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C526 'CAP_NP_CC0402_25_DISCRETE_0.6_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518265@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518265@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518265@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C527 'CAP_NP_CC0402_25_DISCRETE_0.5_3':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518020@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518020@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518020@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C528 'CAP_NP_CC0603_OV_DISCRETE_1MM_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22663551@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22663551@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22663551@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C54 'CAP_NP_CC0603_OV_DISCRETE_0.97':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22492106@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22492106@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22492106@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'CAP_NP_CC0603_OV_DISCRETE_0.97':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893716@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893716@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893716@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'DIODE_SCHTKY_SMB_2P7X1P4_IC_0.7':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22412977@FCL_SEMICONDUCTOR.DIODE_SCHTKY.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22412977@fcl_semiconductor.\diode_schtky.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22412977@fcl_semiconductor.\diode_schtky.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D3 'LED_LED_0603_IC_0.67MM_370-7656':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22412012@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22412012@fcl_optical.\led.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22412012@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D4 'LED_LED_0603_IC_0.8MM_370-76537':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23105856@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23105856@fcl_optical.\led.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23105856@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D5 'LED_LED_0603_IC_0.8MM_370-76537':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22660945@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22660945@fcl_optical.\led.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22660945@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D500 'BAT721B_SOT-23_IC_1.3MM_480-779':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22517930@FCL_SEMICONDUCTOR.BAT721B.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22517930@fcl_semiconductor.\bat721b.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22517930@fcl_semiconductor.\bat721b.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D6 'LED_LED_0603_IC_0.8MM_370-75076':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22618298@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22618298@fcl_optical.\led.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22618298@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D7 'LED_LED_0603_IC_0.8MM_370-75080':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22618306@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22618306@fcl_optical.\led.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22618306@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D8 'LED_LED2_2P1X1P5_IC_1.4MM_370-7':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23181301@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23181301@fcl_optical.\led.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins23181301@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D9 'LED_0603LED_IC_0.8MM_370-76477_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22618325@FCL_OPTICAL.LED.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22618325@fcl_optical.\led.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22618325@fcl_optical.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'CONN_HDR_3X1_HDR103_IO_8.65MM_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22784341@FCL_CONNECTOR.CONN_HDR_3X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22784341@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22784341@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J10 'CONN_HDR_3X1_HDR103_IO_8.65MM_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22445285@FCL_CONNECTOR.CONN_HDR_3X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22445285@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22445285@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J11 'CONN_PCI_XPRESS_X16_328P_CN2X82':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22676893@FCL_CONNECTOR.CONN_PCI_XPRESS_X16_328PA.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22676893@fcl_connector.\conn_pci_xpress_x16_328pa.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22676893@fcl_connector.\conn_pci_xpress_x16_328pa.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='A';
+
+SECTION_NUMBER 2
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22677300@FCL_CONNECTOR.CONN_PCI_XPRESS_X16_328PB.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22677300@fcl_connector.\conn_pci_xpress_x16_328pb.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22677300@fcl_connector.\conn_pci_xpress_x16_328pb.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='B';
+
+PART_NAME
+ J12 'CONN_HDR_4X2_HDR204_TSM_SM_IO_9':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23111379@FCL_CONNECTOR.CONN_HDR_4X2.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23111379@fcl_connector.\conn_hdr_4x2.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23111379@fcl_connector.\conn_hdr_4x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J13 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22727601@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22727601@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22727601@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J14 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22597715@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22597715@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22597715@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J15 'CONN_HDR_3X1_HDR103_IO_8.65MM_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22442902@FCL_CONNECTOR.CONN_HDR_3X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22442902@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22442902@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J16 'CONN_HDR_3X1_HDR103_IO_8.65MM_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22450068@FCL_CONNECTOR.CONN_HDR_3X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22450068@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22450068@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J17 'USB_MINI_AB_RECEPTACLE_CON5_MIC':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22478912@FCL_CONNECTOR.USB_MINI_AB_RECEPTACLE.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22478912@fcl_connector.\usb_mini_ab_receptacle.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22478912@fcl_connector.\usb_mini_ab_receptacle.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J18 'CONN_HDR_3X2_HDR203_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23443851@FCL_CONNECTOR.CONN_HDR_3X2.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23443851@fcl_connector.\conn_hdr_3x2.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins23443851@fcl_connector.\conn_hdr_3x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J19 'CONN_HDR_3X1_HDR103_IO_8.65MM_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22772019@FCL_CONNECTOR.CONN_HDR_3X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22772019@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22772019@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'USB_MINI_B_SKT_CON_USB_5_548190':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23104131@FCL_CONNECTOR2.USB_MINI_B_SKT.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23104131@fcl_connector2.\usb_mini_b_skt.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23104131@fcl_connector2.\usb_mini_b_skt.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J20 'CONN_HDR_3X1_HDR103_IO_8.65MM_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22517946@FCL_CONNECTOR.CONN_HDR_3X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22517946@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22517946@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J21 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23139519@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23139519@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23139519@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J22 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518170@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518170@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518170@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J23 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22479518@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22479518@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22479518@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J24 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23080491@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23080491@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23080491@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J25 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22479104@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22479104@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22479104@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J26 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22478979@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22478979@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22478979@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J27 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23117759@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23117759@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23117759@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J28 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518293@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518293@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518293@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J29 'CONN_HDR_4X2_HDR204_TSM_SM_IO_9':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23099805@FCL_CONNECTOR.CONN_HDR_4X2.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23099805@fcl_connector.\conn_hdr_4x2.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins23099805@fcl_connector.\conn_hdr_4x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'CONN_SHRHDR_10X2_CON_TFM_20M_50':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22620994@FCL_CONNECTOR.CONN_SHRHDR_10X2.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22620994@fcl_connector.\conn_shrhdr_10x2.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22620994@fcl_connector.\conn_shrhdr_10x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J30 'CONN_HDR_4X2_HDR204_TSM_SM_IO_9':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23107434@FCL_CONNECTOR.CONN_HDR_4X2.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23107434@fcl_connector.\conn_hdr_4x2.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23107434@fcl_connector.\conn_hdr_4x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J31 'CONN_HDR_3X1_HDR103_IO_8.65MM_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23116938@FCL_CONNECTOR.CONN_HDR_3X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23116938@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23116938@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J32 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23231369@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23231369@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23231369@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J33 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23231182@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23231182@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23231182@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J34 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23117860@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23117860@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23117860@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J35 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23117917@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23117917@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23117917@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J36 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23116493@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23116493@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23116493@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J38 'CONN_HDR_3X1_HDR103_IO_8.65MM_2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23397150@FCL_CONNECTOR.CONN_HDR_3X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23397150@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23397150@fcl_connector.\conn_hdr_3x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J39 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23411755@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23411755@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23411755@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J4 'CONN_SHRHDR_10X2_CON_TFM_20M_50':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22620897@FCL_CONNECTOR.CONN_SHRHDR_10X2.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22620897@fcl_connector.\conn_shrhdr_10x2.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22620897@fcl_connector.\conn_shrhdr_10x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J5 'CONN_HDR_19_CON_FTSH_19M_50_SM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22524276@FCL_CONNECTOR.CONN_HDR_19.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22524276@fcl_connector.\conn_hdr_19.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22524276@fcl_connector.\conn_hdr_19.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22621107@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22621107@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22621107@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J7 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893765@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893765@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893765@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J8 'CONN_HDR_2X1_HDR102_IO_8.71 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893749@FCL_CONNECTOR.CONN_HDR_2X1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893749@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893749@fcl_connector.\conn_hdr_2x1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J9 'CONN_HDR_5X2_CON_2RH_10_50_IO_3':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22408874@FCL_CONNECTOR.CONN_HDR_5X2.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22408874@fcl_connector.\conn_hdr_5x2.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22408874@fcl_connector.\conn_hdr_5x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L500 'IND_IND_1608_DISCRETE_0.95MM_18':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518130@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518130@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518130@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L501 'IND_IND_1608_DISCRETE_0.95MM_18':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518146@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518146@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518146@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L502 'IND_IND_1608_DISCRETE_0.95MM_18':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518210@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518210@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518210@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L503 'IND_IND_1608_DISCRETE_0.95MM_18':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518202@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518202@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518202@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L504 'IND_IND_1608_DISCRETE_0.95MM_18':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518218@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518218@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518218@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L6 'BEAD_IND_0805_DISCRETE_1.05 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22476207@FCL_INDUCTOR.BEAD.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22476207@fcl_inductor.\bead.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22476207@fcl_inductor.\bead.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L7 'BEAD_IND_0805_DISCRETE_1.05 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22476195@FCL_INDUCTOR.BEAD.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22476195@fcl_inductor.\bead.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22476195@fcl_inductor.\bead.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L8 'BEAD_IND_0805_DISCRETE_1.05 M_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22478963@FCL_INDUCTOR.BEAD.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22478963@fcl_inductor.\bead.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22478963@fcl_inductor.\bead.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L9 'BEAD_IND_0805_DISCRETE_1.05 M_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22479059@FCL_INDUCTOR.BEAD.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22479059@fcl_inductor.\bead.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22479059@fcl_inductor.\bead.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ P500 'MMC_SD_CONN_2405_CONN-MMC_SD_OP':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22478528@FCL_CONNECTOR2.MMC_SD_CONN_2405.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22478528@fcl_connector2.\mmc_sd_conn_2405.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22478528@fcl_connector2.\mmc_sd_conn_2405.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q2 'NPN_SOT23_IC_1.11 MM_480-75151_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23166576@FCL_SEMICONDUCTOR.NPN.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23166576@fcl_semiconductor.\npn.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins23166576@fcl_semiconductor.\npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q500 'NPN_SOT23_IC_1.11 MM_480-75151_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22412896@FCL_SEMICONDUCTOR.NPN.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22412896@fcl_semiconductor.\npn.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22412896@fcl_semiconductor.\npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22677792@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22677792@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22677792@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22860332@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22860332@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22860332@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R103 'RES_RC0603_OV_DISCRETE_470-7591':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23181460@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23181460@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins23181460@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R105 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22814202@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22814202@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22814202@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R106 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22814624@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22814624@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22814624@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R107 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22814655@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22814655@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22814655@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R108 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22814750@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22814750@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22814750@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R109 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22814768@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22814768@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22814768@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22860324@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22860324@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22860324@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R110 'RES_RC0402_25_DISCRETE_0.4MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23167315@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23167315@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins23167315@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22676881@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22676881@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22676881@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23129142@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23129142@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23129142@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23127548@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23127548@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23127548@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23127540@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23127540@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23127540@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23129134@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23129134@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23129134@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23127532@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23127532@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23127532@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22677715@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22677715@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22677715@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22766964@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22766964@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22766964@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R21 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23127524@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23127524@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23127524@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R22 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22766939@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22766939@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22766939@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R23 'RES_RC0603_OV_DISCRETE_0.55 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23134190@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23134190@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23134190@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R25 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23127556@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23127556@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23127556@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R26 'RES_RC0603_OV_DISCRETE_0.55 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22789502@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22789502@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22789502@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R27 'RES_RC0603_OV_DISCRETE_0.55 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22789515@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22789515@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22789515@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R28 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22676838@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22676838@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22676838@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R29 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22746697@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22746697@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22746697@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22998990@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22998990@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22998990@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R31 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22524746@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22524746@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22524746@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R34 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22620695@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22620695@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22620695@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R35 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22620687@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22620687@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22620687@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R36 'RES_RC0603_OV_DISCRETE_0.55 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893524@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893524@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893524@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R37 'RES_RC0603_OV_DISCRETE_470-7584':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22406551@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22406551@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22406551@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R38 'RES_RC0603_OV_DISCRETE_470-7584':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22406602@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22406602@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22406602@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R39 'RES_RC0603_OV_DISCRETE_0.6MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22524359@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22524359@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22524359@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R4 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22998921@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22998921@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22998921@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R40 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23215131@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23215131@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23215131@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R41 'RES_RC0603_OV_DISCRETE_0.55 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893544@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893544@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893544@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R42 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893651@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893651@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893651@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R43 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893638@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893638@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893638@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R44 'RES_RC0402_25_DISCRETE_0.4MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22412941@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22412941@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22412941@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R45 'RES_RC0402_25_DISCRETE_0.40 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22644859@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22644859@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22644859@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R46 'RES_RC0603_OV_DISCRETE_0.6MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22620642@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22620642@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22620642@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R47 'RES_RC0402_25_DISCRETE_0.4MM__2':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22412888@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22412888@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22412888@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R48 'RES_RC0402_25_DISCRETE_470-7541':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22435427@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22435427@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22435427@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R49 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22629446@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22629446@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22629446@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R5 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22774705@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22774705@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22774705@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R50 'RES_RC0603_OV_DISCRETE_0.6MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22641966@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22641966@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22641966@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R500 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22774030@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22774030@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22774030@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R501 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22774071@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22774071@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22774071@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R502 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22859718@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22859718@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22859718@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R503 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23008816@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23008816@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23008816@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R504 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22774053@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22774053@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22774053@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R505 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22677635@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22677635@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22677635@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R506 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22779578@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22779578@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22779578@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R507 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22779616@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22779616@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22779616@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R508 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22779674@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22779674@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22779674@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R509 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22779682@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22779682@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22779682@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R510 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22862235@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22862235@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22862235@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R511 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22862249@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22862249@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22862249@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R512 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22862257@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22862257@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22862257@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R513 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22862265@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22862265@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22862265@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R514 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22784216@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22784216@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22784216@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R515 'RES_RC0402_25_DISCRETE_0.4MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22412871@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22412871@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22412871@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R516 'RES_RC0402_25_DISCRETE_0.4MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22644522@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22644522@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22644522@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R517 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22478415@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22478415@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22478415@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R518 'RES_RC0603_OV_DISCRETE_470-7545':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23179810@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23179810@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23179810@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R519 'RES_RC0402_25_DISCRETE_0.4MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23102838@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23102838@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23102838@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R52 'RES_RC0402_25_DISCRETE_0.4MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22512526@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22512526@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22512526@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R520 'RES_RC0603_OV_DISCRETE_470-7802':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23179689@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23179689@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23179689@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R521 'RES_RC0603_OV_DISCRETE_0.55 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22478399@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22478399@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22478399@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R522 'RES_RC0603_OV_DISCRETE_470-7584':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22610479@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22610479@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22610479@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R523 'RES_RC0603_OV_DISCRETE_470-7584':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22610449@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22610449@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22610449@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R524 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22478933@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22478933@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22478933@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R525 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22479000@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22479000@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22479000@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R526 'POT_POT3_3352T_DISCRETE_470-801':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23080742@FCL_RESISTOR.POT.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23080742@fcl_resistor.\pot.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23080742@fcl_resistor.\pot.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R527 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22987811@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22987811@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22987811@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R528 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22987914@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22987914@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22987914@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R529 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22987966@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22987966@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22987966@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R53 'RES_RC0603_OV_DISCRETE_0.55MM_4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22415125@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22415125@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22415125@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R530 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22988018@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22988018@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22988018@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R531 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22988070@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22988070@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22988070@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R532 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22988101@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22988101@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22988101@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R533 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22988132@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22988132@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22988132@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R534 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22988162@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22988162@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22988162@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R56 'RES_RC0402_25_DISCRETE_0.4MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22642663@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22642663@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22642663@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R57 'RES_RC0402_25_DISCRETE_0.4MM__3':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23105842@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23105842@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23105842@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R58 'RES_RC0603_OV_DISCRETE_0.55 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22643383@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22643383@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22643383@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R59 'RES_RC0402_25_DISCRETE_470-7541':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22435437@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22435437@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22435437@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22774693@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22774693@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22774693@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R60 'RES_RC0603_OV_DISCRETE_0.6MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22642088@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22642088@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22642088@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R61 'RES_RC0402_25_DISCRETE_470-7541':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22729689@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22729689@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22729689@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R62 'RES_RC0402_25_DISCRETE_470-7541':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22643003@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22643003@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22643003@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R63 'RES_RC0603_OV_DISCRETE_470-7584':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22610369@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22610369@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22610369@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R64 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22629320@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22629320@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22629320@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R65 'RES_RC0603_OV_DISCRETE_470-7584':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22610350@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22610350@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22610350@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R66 'RES_RC0603_OV_DISCRETE_0.6MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23250354@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23250354@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23250354@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R67 'RES_RC0603_OV_DISCRETE_470-7584':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23293953@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23293953@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23293953@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R69 'RES_RC0402_25_DISCRETE_0.4MM__1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23104312@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23104312@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23104312@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22677869@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22677869@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22677869@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R70 'RES_RC0603_OV_DISCRETE_0.6MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22771415@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22771415@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22771415@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R71 'RES_RC0603_OV_DISCRETE_0.6MM_47':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22771407@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22771407@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22771407@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R73 'RES_RC0603_OV_DISCRETE_470-7584':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23293940@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23293940@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23293940@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R75 'RES_RC0603_OV_DISCRETE_470-75_1':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22771334@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22771334@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22771334@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R77 'RES_RC0402_25_DISCRETE_0.4MM__4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22618370@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22618370@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22618370@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R79 'RES_RC0402_25_DISCRETE_0.4MM__4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22618352@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22618352@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22618352@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22859726@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22859726@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins22859726@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R81 'RES_RC0402_25_DISCRETE_470-7541':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22495845@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22495845@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22495845@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R83 'RES_RC0402_25_DISCRETE_0.4MM__3':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22618344@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22618344@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22618344@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'RES_RC0603_OV_DISCRETE_470-7540':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23008635@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23008635@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page8_ins23008635@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R95 'RES_RC0402_25_DISCRETE_0.40 MM_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22618336@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22618336@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22618336@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R97 'RES_RC0603_OV_DISCRETE_470-7579':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23181332@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23181332@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins23181332@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW1 'SW_TACT-SPST-2_SM_SW4_4MM_IC_4.':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22526165@FCL_SWITCH.SW_TACT-SPST-2_SM.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22526165@fcl_switch.\sw_tact-spst-2_sm.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22526165@fcl_switch.\sw_tact-spst-2_sm.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW2 'SW_TACT-SPST-2_SM_SW4_4MM_IC_4.':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22450272@FCL_SWITCH.SW_TACT-SPST-2_SM.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22450272@fcl_switch.\sw_tact-spst-2_sm.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22450272@fcl_switch.\sw_tact-spst-2_sm.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW3 'SW_TACT-SPST-2_SM_SW4_4MM_IC_4.':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22526143@FCL_SWITCH.SW_TACT-SPST-2_SM.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22526143@fcl_switch.\sw_tact-spst-2_sm.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22526143@fcl_switch.\sw_tact-spst-2_sm.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP1 'TESTLOOP_TPAD_040_IC_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23120863@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23120863@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23120863@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP10 'TESTLOOP_TPAD_040_IC_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23120853@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23120853@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23120853@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP11 'TESTLOOP_TPAD_040_IC_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23120858@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23120858@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23120858@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP3 'TESTLOOP_TPAD_040_IC_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22476182@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22476182@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22476182@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP4 'TESTLOOP_TEST_LOOP_IC_4.8 MM_21':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22413070@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22413070@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22413070@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP5 'TESTLOOP_TEST_LOOP_IO_4.8 MM_21':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22492190@FCL_CONNECTOR.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22492190@fcl_connector.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22492190@fcl_connector.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP500 'TESTLOOP_TPAD_040_IC_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23120845@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23120845@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23120845@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP501 'TESTLOOP_TPAD_040_IC_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518280@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518280@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518280@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP502 'TESTLOOP_TPAD_040_IC_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518275@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518275@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518275@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP6 'TESTLOOP_TPAD_040_IO_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22408073@FCL_CONNECTOR.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22408073@fcl_connector.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22408073@fcl_connector.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP7 'TESTLOOP_TEST_LOOP_IO_4.8 MM_21':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22518124@FCL_CONNECTOR.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22518124@fcl_connector.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22518124@fcl_connector.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP8 'TESTLOOP_TPAD_040_IC_0.1MM_211-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23194205@FCL_MISC.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23194205@fcl_misc.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23194205@fcl_misc.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP9 'TESTLOOP_TEST_LOOP_IO_4.8 MM_21':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22492064@FCL_CONNECTOR.TESTLOOP.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22492064@fcl_connector.\testloop.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22492064@fcl_connector.\testloop.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'DIODE_TVS_BIDIR_0402_MLP_IC_0.4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23256978@FCL_SEMICONDUCTOR.DIODE_TVS_BIDIR.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23256978@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23256978@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U10 '74LVC125_DHVQFN_14P_DQFN14_3X2P':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23449324@FCL_IC.74LVC125_DHVQFN_14P.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23449324@fcl_ic.\74lvc125_dhvqfn_14p.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23449324@fcl_ic.\74lvc125_dhvqfn_14p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U11 'PK64FN1M0VMD12_BGA_144P_SKT_BGA':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23329493@FCL_IC_FREESCALE.PK64FN1M0VMD12_BGA_144P.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23329493@fcl_ic_freescale.\pk64fn1m0vmd12_bga_144p.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23329493@fcl_ic_freescale.\pk64fn1m0vmd12_bga_144p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U17 'NTSX2102GU8H_8P_XQFN8_1P45X1P25':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23448118@FCL_IC5.NTSX2102GU8H_8P.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23448118@fcl_ic5.\ntsx2102gu8h_8p.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23448118@fcl_ic5.\ntsx2102gu8h_8p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U18 'DIODE_TVS_BIDIR_0402_MLP_IC_0.4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23254844@FCL_SEMICONDUCTOR.DIODE_TVS_BIDIR.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23254844@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23254844@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U19 'DIODE_TVS_BIDIR_0402_MLP_IC_0.4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23258162@FCL_SEMICONDUCTOR.DIODE_TVS_BIDIR.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23258162@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23258162@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U20 'DIODE_TVS_BIDIR_0402_MLP_IC_0.4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23254857@FCL_SEMICONDUCTOR.DIODE_TVS_BIDIR.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23254857@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins23254857@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'DIODE_TVS_BIDIR_0402_MLP_IC_0.4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23256589@FCL_SEMICONDUCTOR.DIODE_TVS_BIDIR.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23256589@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23256589@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U500 'MIC2005-0.8YM6_SOT23-6_A_IC_1.4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22413031@FCL_IC4.MIC2005-0.8YM6.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22413031@fcl_ic4.\mic2005-0.8ym6.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22413031@fcl_ic4.\mic2005-0.8ym6.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U501 '1T45_SO6_A_IC_1.1MM_312-75172_S':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22444783@FCL_IC.1T45.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22444783@fcl_ic.\1t45.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22444783@fcl_ic.\1t45.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U502 'SN74LVC2T45DCUT_8P_SSOP8_DCU_IC':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22438971@FCL_IC.SN74LVC2T45DCUT_8P.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22438971@fcl_ic.\sn74lvc2t45dcut_8p.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22438971@fcl_ic.\sn74lvc2t45dcut_8p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U503 '1T45_SO6_A_IC_1.1MM_312-75172_S':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22446378@FCL_IC.1T45.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22446378@fcl_ic.\1t45.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22446378@fcl_ic.\1t45.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U504 '1T45_SO6_A_IC_1.1MM_312-75172_S':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22438985@FCL_IC.1T45.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22438985@fcl_ic.\1t45.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22438985@fcl_ic.\1t45.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U505 'MIC2526_8P_SO8_IC_1.73MM_312-75':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22479079@FCL_IC.MIC2526_8P.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22479079@fcl_ic.\mic2526_8p.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page6_ins22479079@fcl_ic.\mic2526_8p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U506 'MIC37139-1.8BS-1_SOT223_IC_1.8M':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22492005@FCL_IC2.MIC37139-1.8BS-1.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22492005@fcl_ic2.\mic37139-1.8bs-1.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22492005@fcl_ic2.\mic37139-1.8bs-1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U507 'LT1129CST-3.3_SOT223_IC_1.8MM_3':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22492026@FCL_IC2.LT1129CST-3.3.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22492026@fcl_ic2.\lt1129cst-3.3.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22492026@fcl_ic2.\lt1129cst-3.3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'MMA8451Q_16P_A_QFN5X3_0P5_3X3_I':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22893609@FCL_IC_FREESCALE.MMA8451Q_16P_A.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22893609@fcl_ic_freescale.\mma8451q_16p_a.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page5_ins22893609@fcl_ic_freescale.\mma8451q_16p_a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U7 'DIODE_TVS_BIDIR_0402_MLP_IC_0.4':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23256617@FCL_SEMICONDUCTOR.DIODE_TVS_BIDIR.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23256617@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23256617@fcl_semiconductor.\diode_tvs_bidir.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U8 'PK20DX128V_QFN_32P_QFN32_S142EP':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22403407@FCL_IC_FREESCALE.PK20DX128V_QFN_32P.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22403407@fcl_ic_freescale.\pk20dx128v_qfn_32p.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22403407@fcl_ic_freescale.\pk20dx128v_qfn_32p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U9 'NTSX2102GU8H_8P_XQFN8_1P45X1P25':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23443957@FCL_IC5.NTSX2102GU8H_8P.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23443957@fcl_ic5.\ntsx2102gu8h_8p.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins23443957@fcl_ic5.\ntsx2102gu8h_8p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ X1 'XTAL_CS_XTAL3_3P35X1P45_SM_IC_0':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22415142@FCL_XTAL_OSC.XTAL_CS.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22415142@fcl_xtal_osc.\xtal_cs.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page7_ins22415142@fcl_xtal_osc.\xtal_cs.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y1 'OSC4_KC2520_OSC4_2P6X2P1_SM_IC_':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS23240699@FCL_XTAL_OSC.OSC4_KC2520.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins23240699@fcl_xtal_osc.\osc4_kc2520.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins23240699@fcl_xtal_osc.\osc4_kc2520.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y2 'XTAL_XTL2_ECS_SM_IC_8.84MM_230-':;
+
+SECTION_NUMBER 1
+ '@SCH-27943.TWR-K64F120M(SCH_1):INS22771359@FCL_XTAL_OSC.XTAL.NORMAL(CHIPS)':
+ C_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):ins22771359@fcl_xtal_osc.\xtal.normal\(chips)',
+ P_PATH='@\sch-27943\.\twr-k64f120m\(sch_1):page4_ins22771359@fcl_xtal_osc.\xtal.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.

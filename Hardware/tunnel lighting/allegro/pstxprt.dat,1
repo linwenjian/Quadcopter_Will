@@ -1,0 +1,4576 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 16.5.0 p001Oct-27-2012 at 01:50:33 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='TUNNEL LIGHTING1';
+ POST_TIME='Apr 21 2011 10:02:30';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C1 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904794@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904794@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904794@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'CAP_POL_0805_22UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16781755@FCL_CAPACITOR.CAP_POL.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16781755@fcl_capacitor.\cap_pol.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16781755@fcl_capacitor.\cap_pol.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C100 'CAP NP_0805_220N':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913494@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913494@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913494@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C101 'CAP NP_0805_102':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913486@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913486@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913486@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C102 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909495@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909495@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909495@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C103 'CAP NP_0805_0.01UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909511@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909511@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909511@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C104 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911305@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911305@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911305@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C105 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911323@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911323@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911323@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C106 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911068@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911068@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911068@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C107 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911052@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911052@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911052@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C108 'C_CAPA_10UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16929758@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16929758@discrete.\c.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16929758@discrete.\c.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C109 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16929748@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16929748@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16929748@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16781799@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16781799@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16781799@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C110 'C_CAPA_10UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16928370@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16928370@discrete.\c.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16928370@discrete.\c.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C111 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16928312@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16928312@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16928312@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C112 'C_CAPB_22UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16928382@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16928382@discrete.\c.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16928382@discrete.\c.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C113 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16928334@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16928334@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16928334@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C114 'CAP NP_0805_103':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913909@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913909@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913909@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C115 'CAP NP_0805_104':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913921@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913921@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913921@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C116 'CAP NP_0805_10U':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913929@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913929@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913929@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C117 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909698@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909698@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909698@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C118 'CAP NP_0805_0.01UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909715@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909715@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909715@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C119 'C_CAPA_10UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16930181@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16930181@discrete.\c.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16930181@discrete.\c.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C12 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16781783@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16781783@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16781783@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C120 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16930171@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16930171@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16930171@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C121 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911382@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911382@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911382@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C122 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908828@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908828@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908828@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C123 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911557@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911557@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911557@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C124 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911565@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911565@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911565@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C125 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909828@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909828@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909828@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C126 'CAP NP_0805_0.01UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909845@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909845@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909845@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C127 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909943@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909943@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909943@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C128 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909890@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909890@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909890@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C129 'CAP NP_0805_104':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914184@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914184@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914184@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C13 'CAP_POL_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16781791@FCL_CAPACITOR.CAP_POL.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16781791@fcl_capacitor.\cap_pol.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16781791@fcl_capacitor.\cap_pol.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C130 'CAP NP_0805_22P':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913981@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913981@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913981@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C131 'CAP NP_0805_220N':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913999@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913999@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913999@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C132 'CAP NP_0805_22P':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913989@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913989@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913989@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C133 'CAP NP_0805_102':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914007@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914007@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914007@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C134 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909961@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909961@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909961@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C135 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911587@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911587@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911587@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C136 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911599@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911599@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911599@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C137 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910023@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910023@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910023@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904847@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904847@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904847@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904863@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904863@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904863@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C16 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904612@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904612@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904612@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C17 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904620@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904620@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904620@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C18 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903599@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903599@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903599@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C19 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903623@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903623@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903623@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904812@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904812@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904812@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C20 'CAP NP_0805_100PF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783209@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783209@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783209@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C21 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903651@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903651@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903651@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C22 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903635@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903635@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903635@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C23 'CAP NP_0805_10UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783883@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783883@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783883@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C24 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905198@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905198@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905198@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C25 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905180@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905180@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905180@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C26 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905402@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905402@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905402@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C27 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905420@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905420@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905420@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C28 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917190@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917190@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917190@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C29 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917328@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917328@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917328@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C3 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904580@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904580@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904580@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C30 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917254@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917254@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917254@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C31 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917119@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917119@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917119@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C32 'CAP NP_0805_0.01UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905012@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905012@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905012@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C33 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904988@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904988@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904988@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C34 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905027@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905027@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905027@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C35 'CAP_POL_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782727@FCL_CAPACITOR.CAP_POL.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782727@fcl_capacitor.\cap_pol.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782727@fcl_capacitor.\cap_pol.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C36 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905462@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905462@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905462@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C37 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905495@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905495@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905495@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C38 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905235@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905235@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905235@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C39 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905210@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905210@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905210@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C4 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904588@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904588@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904588@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C40 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904948@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904948@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904948@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C41 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904960@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904960@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904960@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C42 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904996@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904996@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904996@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C43 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904976@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904976@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904976@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C44 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917304@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917304@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917304@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C45 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917096@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917096@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917096@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C46 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917142@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917142@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917142@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C47 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917272@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917272@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917272@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C48 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782624@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782624@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782624@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C49 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782632@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782632@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782632@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C5 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16784177@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16784177@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16784177@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C50 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917288@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917288@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917288@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C51 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917166@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917166@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917166@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C52 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917280@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917280@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917280@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C53 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917158@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917158@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917158@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C54 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904447@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904447@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904447@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C55 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904455@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904455@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904455@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C56 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904505@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904505@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904505@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C57 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904513@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904513@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904513@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C58 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916334@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916334@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916334@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C59 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916314@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916314@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916314@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C6 'CAP_POL_0805_22UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16784163@FCL_CAPACITOR.CAP_POL.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16784163@fcl_capacitor.\cap_pol.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16784163@fcl_capacitor.\cap_pol.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C60 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916306@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916306@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916306@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C61 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916322@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916322@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916322@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C62 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916362@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916362@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916362@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C63 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904431@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904431@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904431@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C64 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904411@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904411@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904411@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C65 'CAP NP_0805_10UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916354@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916354@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916354@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C66 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916346@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916346@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916346@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C67 'CAP_NP_0805_DISCRETE_18PF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16955546@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16955546@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16955546@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C68 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917336@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917336@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917336@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C69 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917246@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917246@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917246@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C7 'CAP NP_0805_0.01UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903671@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903671@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903671@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C70 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917214@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917214@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917214@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C71 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917134@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917134@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917134@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C72 'CAP NP_0805_0.1UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917320@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917320@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917320@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C73 'CAP NP_0805_0.01UF':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917238@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917238@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917238@discrete.\cap np.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C74 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917070@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917070@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917070@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C75 'CAP_NP_0805_DISCRETE_18PF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16955537@FCL_CAPACITOR.CAP_NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16955537@fcl_capacitor.\cap_np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16955537@fcl_capacitor.\cap_np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C76 'CAP NP_0805_103':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914130@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914130@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914130@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C77 'CAP NP_0805_104':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914138@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914138@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914138@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C78 'CAP NP_0805_10U':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914154@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914154@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914154@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C79 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910455@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910455@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910455@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C8 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903663@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903663@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903663@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C80 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910441@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910441@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910441@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C81 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910787@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910787@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910787@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C82 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910761@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910761@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910761@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C83 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909225@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909225@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909225@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C84 'CAP NP_0805_0.01UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909240@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909240@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909240@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C85 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910489@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910489@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910489@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C86 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910835@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910835@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910835@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C87 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910851@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910851@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910851@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C88 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910473@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910473@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910473@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C89 'CAP NP_0805_103':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913502@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913502@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913502@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903687@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903687@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903687@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C90 'CAP NP_0805_104':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913549@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913549@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913549@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C91 'CAP NP_0805_10U':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913541@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913541@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913541@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C92 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909310@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909310@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909310@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C93 'CAP NP_0805_0.01UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909328@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909328@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909328@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C94 'CAP NP_0805_220N':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914108@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914108@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914108@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C95 'CAP NP_0805_102':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914100@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914100@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914100@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C96 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911034@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911034@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911034@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C97 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911020@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911020@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911020@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C98 'CAP NP_0805_10UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911245@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911245@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911245@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C99 'CAP NP_0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911221@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911221@discrete.\cap np.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911221@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904891@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904891@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904891@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D10 'LED_0805_LED_BLUE':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905563@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905563@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905563@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D11 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905487@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905487@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905487@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D12 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904287@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904287@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904287@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D13 'LED_0805_LED_BLUE':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905521@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905521@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905521@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D14 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904190@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904190@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904190@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D15 'LED_0805_LED_BLUE':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904205@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904205@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904205@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D16 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904231@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904231@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904231@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D17 '1N6392_SOD-323_1N6392':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916376@DIODE.1N6392.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916376@diode.\1n6392.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916376@diode.\1n6392.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D18 'LED_0805_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917515@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917515@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917515@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D19 '1N4376_SOD-323_1N4376':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908836@DIODE.1N4376.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908836@diode.\1n4376.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908836@diode.\1n4376.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'LED_0805_LED_BLUE':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904907@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904907@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904907@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D20 '1N4376_SOD-323_1N4376':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909262@DIODE.1N4376.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909262@diode.\1n4376.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909262@diode.\1n4376.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D21 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910863@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910863@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910863@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D22 'LED_0805_LED_BLUE':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910879@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910879@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910879@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D23 '1N4376_SOD-323_1N4376':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909441@DIODE.1N4376.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909441@diode.\1n4376.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909441@diode.\1n4376.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D24 '1N4678_SOD-323_1N4678':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16933591@DIODE.1N4678.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16933591@diode.\1n4678.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16933591@diode.\1n4678.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D25 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911335@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911335@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911335@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D26 '1N4376_SOD-323_1N4376':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909644@DIODE.1N4376.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909644@diode.\1n4376.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909644@diode.\1n4376.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D27 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914249@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914249@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914249@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D28 'LED_0805_LED_BLUE':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911346@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911346@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911346@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D29 '1N4678_SOD-323_1N4678':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16933981@DIODE.1N4678.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16933981@diode.\1n4678.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16933981@diode.\1n4678.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D3 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904123@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904123@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904123@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D30 '1N4678_SOD-323_1N4678':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909870@DIODE.1N4678.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909870@diode.\1n4678.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909870@diode.\1n4678.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D31 '1N4376_SOD-323_1N4376':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909781@DIODE.1N4376.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909781@diode.\1n4376.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909781@diode.\1n4376.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D32 '1N6392_SOD-323_1N6392':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913353@DIODE.1N6392.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913353@diode.\1n6392.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913353@diode.\1n6392.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D33 '1N4678_SOD-323_1N4678':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909932@DIODE.1N4678.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909932@diode.\1n4678.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909932@diode.\1n4678.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D34 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909207@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909207@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909207@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D35 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909396@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909396@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909396@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D36 '1N4678_SOD-323_1N4678':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909999@DIODE.1N4678.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909999@diode.\1n4678.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909999@diode.\1n4678.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D37 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909417@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909417@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909417@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D38 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909554@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909554@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909554@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D39 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909570@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909570@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909570@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D4 'LED_0805_LED_BLUE':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904141@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904141@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904141@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D40 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909584@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909584@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909584@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D41 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909618@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909618@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909618@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D42 '1N4678_SOD-323_1N4678':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910054@DIODE.1N4678.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910054@diode.\1n4678.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910054@diode.\1n4678.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D43 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909738@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909738@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909738@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D44 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973367@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973367@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973367@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D45 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973698@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973698@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973698@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D46 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973770@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973770@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973770@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D47 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973802@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973802@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973802@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D48 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973834@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973834@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973834@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D49 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976469@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976469@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976469@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D5 'DIODE_SCHTKY_SOD-323_SCS120V':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783840@FCL_SEMICONDUCTOR.DIODE_SCHTKY.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783840@fcl_semiconductor.\diode_schtky.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783840@fcl_semiconductor.\diode_schtky.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D50 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976538@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976538@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976538@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D51 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976607@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976607@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976607@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D52 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976675@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976675@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976675@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D53 'LED_0805_LED_LED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976717@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976717@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976717@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D6 'DIODE_SCHTKY_SOD-323_SCS120V':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783848@FCL_SEMICONDUCTOR.DIODE_SCHTKY.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783848@fcl_semiconductor.\diode_schtky.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783848@fcl_semiconductor.\diode_schtky.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D7 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905553@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905553@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905553@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D8 'LED_0805_LED_RED':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905140@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905140@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905140@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D9 'LED_0805_LED_BLUE':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905156@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905156@discrete.\led.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905156@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'CON2_WJ127_2_CON2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903544@CONNECTOR.CON2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903544@connector.\con2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903544@connector.\con2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'CONN_DB9F_MTGTABS_CON_DB9S_RA_3':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903802@FCL_CONNECTOR.CONN_DB9F_MTGTABS.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903802@fcl_connector.\conn_db9f_mtgtabs.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903802@fcl_connector.\conn_db9f_mtgtabs.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'CON2_WJ127_2_CON2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903556@CONNECTOR.CON2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903556@connector.\con2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903556@connector.\con2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J4 'CONN_DB9F_MTGTABS_CON_DB9S_RA_3':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905099@FCL_CONNECTOR.CONN_DB9F_MTGTABS.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905099@fcl_connector.\conn_db9f_mtgtabs.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905099@fcl_connector.\conn_db9f_mtgtabs.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J5 'J1011F01PNL_CON8_RJ45_TH1_RJ45-':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782762@FCL_CONNECTOR2.J1011F01PNL.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782762@fcl_connector2.\j1011f01pnl.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782762@fcl_connector2.\j1011f01pnl.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'CON2_WJ127_2_CON2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908788@CONNECTOR.CON2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908788@connector.\con2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908788@connector.\con2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J7 'CON2_WJ127_2_CON2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908798@CONNECTOR.CON2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908798@connector.\con2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908798@connector.\con2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J8 'CON3_WJ2EDGK_CON3':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16926005@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16926005@connector.\con3.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16926005@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L1 'IND_0805_100MHZ':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16781735@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16781735@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16781735@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L10 'INDUCTOR_0805_100UH':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914168@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914168@discrete.\inductor.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914168@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L11 'INDUCTOR_0805_100UH':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913577@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913577@discrete.\inductor.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913577@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L12 'INDUCTOR_0805_100UH':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913949@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913949@discrete.\inductor.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913949@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L2 'INDUCTOR_0805_470OHM':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903782@FCL_INDUCTOR.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903782@fcl_inductor.\inductor.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903782@fcl_inductor.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L3 'IND_0805_100MHZ':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782835@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782835@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782835@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L4 'INDUCTOR_0805_470OHM':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905089@FCL_INDUCTOR.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905089@fcl_inductor.\inductor.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905089@fcl_inductor.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L5 'IND_0805_100MHZ':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917150@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917150@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917150@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L6 'IND_0805_100MHZ':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917230@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917230@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917230@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L7 'IND_0805_100MHZ':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917312@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917312@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917312@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L8 'IND_0805_100MHZ':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917222@FCL_INDUCTOR.IND.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917222@fcl_inductor.\ind.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917222@fcl_inductor.\ind.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L9 'BEAD_FERRITE_0805_DISCRETE_120O':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917182@FCL_INDUCTOR.BEAD_FERRITE.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917182@fcl_inductor.\bead_ferrite.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917182@fcl_inductor.\bead_ferrite.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ P1 'HEADER2X5_CON10_2X5_2MM_HEADER2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917198@SMARTCAR.HEADER2X5.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917198@smartcar.\header2x5.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917198@smartcar.\header2x5.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ P2 'HEADER1X4_SIP4_HEADER1X4':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904495@DSP56858.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904495@dsp56858.\header1x4.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904495@dsp56858.\header1x4.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q1 'IRF9Z14/TO_3_SOT95P237X112-3_IR':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910137@TUNNEL LIGHTING1.IRF9Z14/TO_3.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910137@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910137@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q10 '2N6823_1_SOT95P237X112-3_IRLML2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910939@TUNNEL LIGHTING1.2N6823_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910939@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910939@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q2 '2N6823_1_SOT95P237X112-3_IRLML2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910106@TUNNEL LIGHTING1.2N6823_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910106@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910106@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q3 'IRF9Z14/TO_3_SOT95P237X112-3_IR':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910256@TUNNEL LIGHTING1.IRF9Z14/TO_3.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910256@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910256@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q4 '2N6823_1_SOT95P237X112-3_IRLML2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910241@TUNNEL LIGHTING1.2N6823_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910241@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910241@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q5 'IRF9Z14/TO_3_SOT95P237X112-3_IR':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910383@TUNNEL LIGHTING1.IRF9Z14/TO_3.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910383@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910383@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q6 '2N6823_1_SOT95P237X112-3_IRLML2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910368@TUNNEL LIGHTING1.2N6823_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910368@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910368@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q7 'IRF9Z14/TO_3_SOT95P237X112-3_IR':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910685@TUNNEL LIGHTING1.IRF9Z14/TO_3.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910685@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910685@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q8 '2N6823_1_SOT95P237X112-3_IRLML2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910647@TUNNEL LIGHTING1.2N6823_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910647@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910647@\tunnel lighting1\.\2n6823_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q9 'IRF9Z14/TO_3_SOT95P237X112-3_IR':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910954@TUNNEL LIGHTING1.IRF9Z14/TO_3.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910954@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910954@\tunnel lighting1\.\irf9z14/to_3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'R_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904667@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904667@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904667@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'R_0805_6.49K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783179@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783179@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783179@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R100 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914241@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914241@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914241@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R101 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910360@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910360@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910360@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R102 'R2_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909654@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909654@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909654@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R103 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911365@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911365@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911365@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R104 'R2_0805_1K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910328@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910328@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910328@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R105 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911354@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911354@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911354@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R106 'R_0805_3.3K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909662@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909662@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909662@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R107 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909011@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909011@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909011@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R108 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908768@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908768@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908768@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R109 'R2_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909788@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909788@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909788@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783486@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783486@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783486@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R110 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910600@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910600@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910600@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R111 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908776@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908776@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908776@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R112 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910677@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910677@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910677@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R113 'R2_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914262@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914262@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914262@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R114 'R_0805_3.3K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909796@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909796@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909796@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R115 'R2_0805_1K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910592@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910592@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910592@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R116 'R2_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913957@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913957@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913957@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R117 'R2_0805_10M':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913965@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913965@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913965@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R118 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909913@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909913@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909913@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R119 'R_0805_?':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16941569@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16941569@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16941569@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16784288@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16784288@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16784288@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R120 'R_0805_1K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16941587@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16941587@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16941587@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R121 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909215@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909215@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909215@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R122 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909976@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909976@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909976@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R123 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909380@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909380@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909380@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R124 'R_0805_?':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16941595@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16941595@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16941595@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R125 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910917@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910917@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910917@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R126 'R_0805_?':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16941577@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16941577@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16941577@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R127 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911478@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911478@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911478@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R128 'R_0805_200R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910063@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910063@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910063@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R129 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911470@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911470@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911470@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16784298@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16784298@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16784298@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R130 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911506@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911506@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911506@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R131 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909433@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909433@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909433@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R132 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911486@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911486@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911486@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R133 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911514@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911514@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911514@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R134 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910969@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910969@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910969@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R135 'R2_0805_3.3K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914090@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914090@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914090@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R136 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911522@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911522@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911522@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R137 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909527@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909527@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909527@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R138 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909562@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909562@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909562@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R139 'R2_0805_1K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910909@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910909@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910909@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R14 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904915@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904915@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904915@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R140 'R2_0805_51R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914082@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914082@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914082@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R141 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909599@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909599@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909599@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R142 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909636@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909636@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909636@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R143 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910039@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910039@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910039@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R144 'R_0805_200R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910073@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910073@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910073@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R145 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909750@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909750@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909750@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R146 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908857@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908857@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908857@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R147 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908874@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908874@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908874@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R148 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908943@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908943@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908943@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R149 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908935@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908935@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908935@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R15 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904131@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904131@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904131@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R150 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909046@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909046@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909046@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R151 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909060@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909060@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909060@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R152 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909113@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909113@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909113@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R153 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909130@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909130@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909130@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R154 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973359@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973359@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973359@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R155 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973690@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973690@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973690@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R156 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973758@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973758@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973758@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R157 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973794@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973794@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973794@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R158 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16973826@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16973826@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16973826@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R159 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976477@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976477@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976477@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783710@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783710@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783710@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R160 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976546@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976546@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976546@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R161 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976615@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976615@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976615@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R162 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976667@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976667@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976667@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R163 'R2_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16976709@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16976709@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16976709@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783718@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783718@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783718@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16783866@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16783866@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16783866@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904149@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904149@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904149@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904782@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904782@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904782@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'R_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905270@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905270@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905270@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R21 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905390@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905390@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905390@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R22 'R_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905262@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905262@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905262@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R23 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905410@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905410@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905410@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R24 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905428@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905428@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905428@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R25 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905571@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905571@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905571@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R26 'R_0805_330':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782711@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782711@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782711@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R27 'R_0805_49.9':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782679@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782679@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782679@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R28 'R_0805_49.9':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782695@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782695@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782695@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R29 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905148@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905148@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905148@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904774@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904774@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904774@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R30 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905164@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905164@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905164@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R31 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905579@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905579@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905579@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R32 'R_0805_49.9':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782687@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782687@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782687@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R33 'R_0805_49.9':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782703@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782703@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782703@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R34 'R_0805_330':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16782719@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16782719@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16782719@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R35 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905529@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905529@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905529@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R36 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904343@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904343@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904343@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R37 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903908@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903908@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903908@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R38 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903976@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903976@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903976@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R39 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903890@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903890@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903890@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R4 'R_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904659@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904659@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904659@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R40 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904359@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904359@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904359@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R41 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903968@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903968@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903968@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R42 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903878@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903878@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903878@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R43 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903960@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903960@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903960@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R44 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904295@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904295@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904295@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R45 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903870@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903870@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903870@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R46 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903948@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903948@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903948@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R47 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905545@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905545@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905545@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R48 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903862@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903862@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903862@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R49 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903936@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903936@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903936@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R5 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904804@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904804@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904804@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R50 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903854@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903854@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903854@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R51 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903924@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903924@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903924@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R52 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903846@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903846@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903846@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R53 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904221@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904221@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904221@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R54 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904213@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904213@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904213@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R55 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904244@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904244@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904244@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R56 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904305@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904305@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904305@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R57 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904252@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904252@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904252@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R58 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904057@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904057@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904057@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R59 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904260@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904260@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904260@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16784853@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16784853@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16784853@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R60 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904069@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904069@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904069@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R61 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904319@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904319@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904319@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R62 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904272@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904272@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904272@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R63 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904327@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904327@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904327@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R64 'R2_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917174@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917174@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917174@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R65 'RES_0805_DISCRETE_0':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16955555@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16955555@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16955555@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R66 'R2_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917296@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917296@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917296@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R67 'RES_0805_DISCRETE_1.0M':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16955528@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16955528@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16955528@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R68 'RES_0805_DISCRETE_0':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16955512@FCL_RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16955512@fcl_resistor.\res.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16955512@fcl_resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R69 'R_0805_4.7K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917504@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917504@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917504@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16784881@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16784881@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16784881@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R70 'R2_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909021@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909021@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909021@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R71 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909388@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909388@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909388@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R72 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910126@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910126@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910126@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R73 'R_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910525@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910525@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910525@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R74 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910740@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910740@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910740@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R75 'R2_0805_1K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909366@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909366@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909366@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R76 'R_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910517@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910517@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910517@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R77 'R_0805_3.3K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909001@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909001@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909001@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R78 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910753@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910753@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910753@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R79 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910803@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910803@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910803@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16784436@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16784436@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16784436@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R80 'R2_0805_0R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913531@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913531@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913531@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R81 'R2_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909273@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909273@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909273@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R82 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910887@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910887@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910887@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R83 'R_0805_3.3K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909281@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909281@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909281@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R84 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910219@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910219@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910219@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R85 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910871@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910871@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910871@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R86 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910271@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910271@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910271@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R87 'R2_0805_1K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910203@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910203@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910203@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R88 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911213@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911213@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911213@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R89 'R2_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909462@DISCRETE.R2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909462@discrete.\r2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909462@discrete.\r2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904899@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904899@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904899@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R90 'R_0805_3.3K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16939258@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16939258@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16939258@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R91 'R_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911093@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911093@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911093@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R92 'R_0805_1K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16939278@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16939278@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16939278@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R93 'R_0805_?':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16939304@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16939304@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16939304@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R94 'R_0805_100R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911101@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911101@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911101@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R95 'R_0805_3.3K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16939266@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16939266@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16939266@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R96 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911229@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911229@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911229@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R97 'R_0805_33R':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911263@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911263@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911263@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R98 'R_0805_3.3K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909454@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909454@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909454@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R99 'R_0805_10K':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910340@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910340@discrete.\r.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910340@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW1 'SW KEY-SPST_SMTSWITCH_SW KEY-SP':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917530@DISCRETE.SW KEY-SPST.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917530@discrete.\sw key-spst.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917530@discrete.\sw key-spst.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW2 'SW KEY-SPST_SMTSWITCH_SW KEY-SP':
+ ROOM='DSP';
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16920393@DISCRETE.SW KEY-SPST.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16920393@discrete.\sw key-spst.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16920393@discrete.\sw key-spst.normal\(chips)',
+ ROOM='DSP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903712@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903712@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903712@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U10 'K60_LQFP144NEW_MK60DN512ZVLQ10':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16916659@LIBRARY1.K60.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16916659@library1.\k60.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16916659@library1.\k60.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U11 'TXB0106_TSOP65P640X120-16_TXB01':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903564@TUNNEL LIGHTING1.TXB0106.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903564@\tunnel lighting1\.\txb0106.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903564@\tunnel lighting1\.\txb0106.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U12 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904372@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904372@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904372@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U13 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904394@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904394@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904394@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U14 'AT45DB321E_AT45DB321D_SU_AT45DB':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903996@TUNNEL LIGHTING1.AT45DB321E.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903996@\tunnel lighting1\.\at45db321e.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903996@\tunnel lighting1\.\at45db321e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U15 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909185@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909185@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909185@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U16 'ADM2587E_SOIC127P1032X265-20_AD':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910552@LIGHTING.ADM2587E.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910552@lighting.\adm2587e.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910552@lighting.\adm2587e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U17 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910184@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910184@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910184@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U18 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911271@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911271@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911271@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U19 'PSM712_SOT95P237X112-3_PSM712':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910081@TUNNEL LIGHTING1.PSM712.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910081@\tunnel lighting1\.\psm712.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910081@\tunnel lighting1\.\psm712.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 'ADM2587E_SOIC127P1032X265-20_AD':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904688@LIGHTING.ADM2587E.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904688@lighting.\adm2587e.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904688@lighting.\adm2587e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U20 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909758@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909758@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909758@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U21 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909345@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909345@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909345@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U22 'XS128_1_LQFP112_MC9S12XS 112LPF':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913368@TUNNEL LIGHTING1.XS128_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913368@\tunnel lighting1\.\xs128_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913368@\tunnel lighting1\.\xs128_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U23 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909295@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909295@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909295@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U24 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910304@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910304@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910304@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U25 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909535@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909535@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909535@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U26 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910231@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910231@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910231@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U27 'ADM2587E_SOIC127P1032X265-20_AD':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911120@LIGHTING.ADM2587E.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911120@lighting.\adm2587e.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911120@lighting.\adm2587e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U28 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909479@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909479@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909479@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U29 'PSM712_SOT95P237X112-3_PSM712':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910097@TUNNEL LIGHTING1.PSM712.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910097@\tunnel lighting1\.\psm712.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910097@\tunnel lighting1\.\psm712.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 'KSZ8041NL_QFN32EP_KSZ8041NL':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16781364@FCL_IC4.KSZ8041NL.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16781364@fcl_ic4.\ksz8041nl.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16781364@fcl_ic4.\ksz8041nl.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U30 'TPS7A45XX_0_TO170P1524X483-6_TP':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16928284@K60 GRADUATION PROJECT.TPS7A45XX_0.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16928284@\k60 graduation project\.\tps7a45xx_0.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16928284@\k60 graduation project\.\tps7a45xx_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U31 'ADDC_0_ACDC_ADDC':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16925411@TUNNEL LIGHTING1.ADDC_0.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16925411@\tunnel lighting1\.\addc_0.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16925411@\tunnel lighting1\.\addc_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U32 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909678@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909678@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909678@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U33 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909728@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909728@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909728@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U34 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910421@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910421@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910421@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U35 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910352@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910352@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910352@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U36 'ADDC_0_ACDC_ADDC':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16925705@TUNNEL LIGHTING1.ADDC_0.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16925705@\tunnel lighting1\.\addc_0.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16925705@\tunnel lighting1\.\addc_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U37 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908820@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908820@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908820@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U38 'DS1338C_SOIC127P1032X265-16_DS1':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911394@TUNNEL LIGHTING1.DS1338C.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911394@\tunnel lighting1\.\ds1338c.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911394@\tunnel lighting1\.\ds1338c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U39 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909812@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909812@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909812@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'PSM712_SOT95P237X112-3_PSM712':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904548@TUNNEL LIGHTING1.PSM712.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904548@\tunnel lighting1\.\psm712.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904548@\tunnel lighting1\.\psm712.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U40 'HEADER1X2_DIANCHI_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16924466@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16924466@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16924466@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U41 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909853@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909853@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909853@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U42 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910769@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910769@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910769@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U43 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909898@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909898@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909898@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U44 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910623@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910623@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910623@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U45 'AT25512_SOIC127P600X175-8_AT255':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911437@TUNNEL LIGHTING1.AT25512.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911437@\tunnel lighting1\.\at25512.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911437@\tunnel lighting1\.\at25512.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U46 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909953@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909953@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909953@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U47 'HEADER2X3_HDR254M-2X3_HEADER2X3':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16914059@MYLIBRARY.HEADER2X3.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16914059@mylibrary.\header2x3.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16914059@mylibrary.\header2x3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U48 'TLP624_1_TLP127_TLPXXX':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16911000@TUNNEL LIGHTING1.TLP624_1.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16911000@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16911000@\tunnel lighting1\.\tlp624_1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U49 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910008@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910008@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910008@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'MAX3232_0_SOP16_MAX232_MAX3232E':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16903728@TUNNEL LIGHTING1.MAX3232_0.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16903728@\tunnel lighting1\.\max3232_0.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16903728@\tunnel lighting1\.\max3232_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U50 'HEADER1X2_WJ127_2_HEADER1X2':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16910931@BF533.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16910931@bf533.\header1x2.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16910931@bf533.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U51 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908888@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908888@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908888@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U52 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908906@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908906@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908906@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U53 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908967@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908967@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908967@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U54 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16908987@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16908987@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16908987@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U55 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909074@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909074@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909074@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U56 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909095@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909095@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909095@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U57 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909144@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909144@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909144@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U58 'BTN_BUTTON4PIN_BTN':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16909160@SMARTCAR.BTN.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16909160@smartcar.\btn.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16909160@smartcar.\btn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'PLR0504F_PLR0504F_PLR0504F':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16850952@TUNNEL LIGHTING1.PLR0504F.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16850952@\tunnel lighting1\.\plr0504f.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16850952@\tunnel lighting1\.\plr0504f.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U7 'ADM2587E_SOIC127P1032X265-20_AD':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905289@LIGHTING.ADM2587E.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905289@lighting.\adm2587e.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905289@lighting.\adm2587e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U8 'PSM712_SOT95P237X112-3_PSM712':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16904562@TUNNEL LIGHTING1.PSM712.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16904562@\tunnel lighting1\.\psm712.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16904562@\tunnel lighting1\.\psm712.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U9 'MAX3232_0_SOP16_MAX232_MAX3232E':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16905047@TUNNEL LIGHTING1.MAX3232_0.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16905047@\tunnel lighting1\.\max3232_0.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16905047@\tunnel lighting1\.\max3232_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y1 'CLKGEN-SM_XTLOSC4_SM_IC_50MHZ':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16917262@FCL_XTAL_OSC.CLKGEN-SM.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16917262@fcl_xtal_osc.\clkgen-sm.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16917262@fcl_xtal_osc.\clkgen-sm.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y2 'XTAL_DIP2_CRYSTAL_IC_32.768KHZ':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16955520@FCL_XTAL_OSC.XTAL.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16955520@fcl_xtal_osc.\xtal.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16955520@fcl_xtal_osc.\xtal.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y3 'CRYSTAL_XTAL_16M':;
+
+SECTION_NUMBER 1
+ '@TUNNEL LIGHTING1.SCHEMATIC1(SCH_1):INS16913973@DISCRETE.CRYSTAL.NORMAL(CHIPS)':
+ C_PATH='@\tunnel lighting1\.schematic1(sch_1):ins16913973@discrete.\crystal.normal\(chips)',
+ P_PATH='@\tunnel lighting1\.schematic1(sch_1):page1_ins16913973@discrete.\crystal.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.

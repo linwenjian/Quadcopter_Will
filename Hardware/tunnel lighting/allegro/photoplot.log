@@ -1,0 +1,530 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : tunnel lighting2.brd                          )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Sat Oct 27 20:26:59 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+ ---- Photoplot outline rectangle not found ... using drawing extents
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          INCHES
+    FILM-SIZE             2400000 1600000
+    FORMAT                2.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  YES
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < TOP >
+     TO FILE < G:/lwj/My project/PCB/tunnel lighting/allegro/TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+    WARNING: 0 width line found at (450.000 4250.000)
+           ... using undefined line width of 6.000
+
+    WARNING: text composed 0 width line found at (1100.000 3800.000)
+           ... using undefined line width of 6.000
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 6.000
+
+    WARNING: Segment with same start and end points at
+	(3719.991 1285.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(4344.994 465.502) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(4638.500 219.908) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(4610.093 191.500) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(4843.937 2437.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(5156.063 2437.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(7252.190 2407.218) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(5501.576 -557.480) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(6292.597 0.001) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(6801.576 -557.480) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(7451.576 -557.480) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01200                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02165                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.02559                                  DARK 
+  CIRCLE     0.03000                                  DARK 
+  CIRCLE     0.03150                                  DARK 
+  CIRCLE     0.03543                                  DARK 
+  CIRCLE     0.04134                                  DARK 
+  CIRCLE     0.05000                                  DARK 
+  CIRCLE     0.05906                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.06600                                  DARK 
+  CIRCLE     0.07300                                  DARK 
+  CIRCLE     0.07874                                  DARK 
+  CIRCLE     0.08400                                  DARK 
+  CIRCLE     0.08661                                  DARK 
+  CIRCLE     0.10000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  CIRCLE     0.13780                                  DARK 
+  CIRCLE     0.15000                                  DARK 
+  SQUARE     0.05906                     0.000 NO     DARK 
+  SQUARE     0.06500                     0.000 NO     DARK 
+  SQUARE     0.06600                     0.000 NO     DARK 
+  SQUARE     0.07874                     0.000 NO     DARK 
+  SQUARE     0.08661                     0.000 NO     DARK 
+  SQUARE     0.13780                     0.000 NO     DARK 
+  RECTANGLE  0.03500     x 0.01100       0.000 NO     DARK 
+  RECTANGLE  0.03500     x 0.01100      90.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.06000       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.06000      90.000 NO     DARK 
+  RECTANGLE  0.05906     x 0.05118       0.000 NO     DARK 
+  RECTANGLE  0.05906     x 0.05118      90.000 NO     DARK 
+  RECTANGLE  0.08000     x 0.05500      90.000 NO     DARK 
+  RECTANGLE  0.08661     x 0.02362      90.000 NO     DARK 
+  RECTANGLE  0.13600     x 0.13600      90.000 NO     DARK 
+  OBLONG     0.02362     x 0.05118       0.000 NO     DARK 
+  OBLONG     0.02362     x 0.05118      90.000 NO     DARK 
+  OBLONG     0.02362     x 0.08543       0.000 NO     DARK 
+  OBLONG     0.02402     x 0.06890      90.000 NO     DARK 
+  OBLONG     0.02402     x 0.08543       0.000 NO     DARK 
+  OBLONG     0.02402     x 0.08543      90.000 NO     DARK 
+  OBLONG     0.06063     x 0.09449       0.000 NO     DARK 
+  OBLONG     0.06496     x 0.01063       0.000 NO     DARK 
+  OBLONG     0.06496     x 0.01063      90.000 NO     DARK 
+  OBLONG     0.06890     x 0.01772       0.000 NO     DARK 
+  OBLONG     0.06890     x 0.01772      90.000 NO     DARK 
+  PAD SHAPE  SRX10_77Y10_20R0_10         0.000 NO     DARK 
+  PAD SHAPE  SRX1_01Y3_49R0_10           0.000 NO     DARK 
+  PAD SHAPE  SRX1_15Y1_80R0_10          90.000 NO     DARK 
+  PAD SHAPE  SRX1_55Y2_80R0_10          90.000 NO     DARK 
+
+     TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < GND >
+     TO FILE < G:/lwj/My project/PCB/tunnel lighting/allegro/GND.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+    WARNING: Multiple 0 width lines; all will be treated the same as the first.
+           ... ignored!
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02165                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.02559                                  DARK 
+  CIRCLE     0.03150                                  DARK 
+  CIRCLE     0.03543                                  DARK 
+  CIRCLE     0.04134                                  DARK 
+  CIRCLE     0.04500                                  DARK 
+  CIRCLE     0.05500                                  DARK 
+  CIRCLE     0.05512                                  DARK 
+  CIRCLE     0.05906                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.06600                                  DARK 
+  CIRCLE     0.07300                                  DARK 
+  CIRCLE     0.07874                                  DARK 
+  CIRCLE     0.08400                                  DARK 
+  CIRCLE     0.08661                                  DARK 
+  CIRCLE     0.10000                                  DARK 
+  CIRCLE     0.11024                                  DARK 
+  CIRCLE     0.15000                                  DARK 
+
+     GND created with warnings
+
+
+================================================================
+     PROCESSING FILM < POWER >
+     TO FILE < G:/lwj/My project/PCB/tunnel lighting/allegro/POWER.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02165                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.02559                                  DARK 
+  CIRCLE     0.03150                                  DARK 
+  CIRCLE     0.03543                                  DARK 
+  CIRCLE     0.04134                                  DARK 
+  CIRCLE     0.04500                                  DARK 
+  CIRCLE     0.05500                                  DARK 
+  CIRCLE     0.05512                                  DARK 
+  CIRCLE     0.05906                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.06600                                  DARK 
+  CIRCLE     0.07300                                  DARK 
+  CIRCLE     0.07874                                  DARK 
+  CIRCLE     0.08400                                  DARK 
+  CIRCLE     0.08661                                  DARK 
+  CIRCLE     0.11024                                  DARK 
+  CIRCLE     0.15000                                  DARK 
+
+     POWER created.
+
+
+================================================================
+     PROCESSING FILM < BOTTOM >
+     TO FILE < G:/lwj/My project/PCB/tunnel lighting/allegro/BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+    WARNING: Segment with same start and end points at
+	(4312.477 -134.917) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(5550.870 887.871) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(5434.001 1949.323) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(6750.999 2036.811) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01200                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02165                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.02559                                  DARK 
+  CIRCLE     0.03000                                  DARK 
+  CIRCLE     0.03150                                  DARK 
+  CIRCLE     0.03543                                  DARK 
+  CIRCLE     0.04134                                  DARK 
+  CIRCLE     0.05906                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.06600                                  DARK 
+  CIRCLE     0.07300                                  DARK 
+  CIRCLE     0.07874                                  DARK 
+  CIRCLE     0.08400                                  DARK 
+  CIRCLE     0.08661                                  DARK 
+  CIRCLE     0.10000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  CIRCLE     0.13780                                  DARK 
+  CIRCLE     0.15000                                  DARK 
+  SQUARE     0.05906                     0.000 NO     DARK 
+  SQUARE     0.06500                     0.000 NO     DARK 
+  SQUARE     0.06600                     0.000 NO     DARK 
+  SQUARE     0.07874                     0.000 NO     DARK 
+  SQUARE     0.08661                     0.000 NO     DARK 
+  SQUARE     0.13780                     0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.06000       0.000 NO     DARK 
+  RECTANGLE  0.05906     x 0.05118       0.000 NO     DARK 
+  RECTANGLE  0.05906     x 0.05118      90.000 NO     DARK 
+  OBLONG     0.01575     x 0.05354       0.000 NO     DARK 
+  OBLONG     0.01575     x 0.06496      90.000 NO     DARK 
+  PAD SHAPE  SRX1_15Y1_80R0_10         270.000 YES    DARK 
+
+     BOTTOM created with warnings
+
+
+================================================================
+     PROCESSING FILM < SILKSCREEN_TOP >
+     TO FILE < G:/lwj/My project/PCB/tunnel lighting/allegro/SILKSCREEN_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00300                                  DARK 
+  CIRCLE     0.00394                                  DARK 
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00787                                  DARK 
+  CIRCLE     0.00984                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01575                                  DARK 
+
+     SILKSCREEN_TOP created.
+
+
+================================================================
+     PROCESSING FILM < SILKSCREEN_BOTTOM >
+     TO FILE < G:/lwj/My project/PCB/tunnel lighting/allegro/SILKSCREEN_BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00787                                  DARK 
+  CIRCLE     0.00984                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+
+     SILKSCREEN_BOTTOM created.
+
+
+================================================================
+     PROCESSING FILM < SOLDERMASK_TOP >
+     TO FILE < G:/lwj/My project/PCB/tunnel lighting/allegro/SOLDERMASK_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.03543                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06299                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.06900                                  DARK 
+  CIRCLE     0.07000                                  DARK 
+  CIRCLE     0.07700                                  DARK 
+  CIRCLE     0.08268                                  DARK 
+  CIRCLE     0.08800                                  DARK 
+  CIRCLE     0.09055                                  DARK 
+  CIRCLE     0.13200                                  DARK 
+  CIRCLE     0.14173                                  DARK 
+  CIRCLE     0.14500                                  DARK 
+  CIRCLE     0.15400                                  DARK 
+  SQUARE     0.06299                     0.000 NO     DARK 
+  SQUARE     0.06900                     0.000 NO     DARK 
+  SQUARE     0.07000                     0.000 NO     DARK 
+  SQUARE     0.08268                     0.000 NO     DARK 
+  SQUARE     0.09055                     0.000 NO     DARK 
+  SQUARE     0.14173                     0.000 NO     DARK 
+  RECTANGLE  0.03900     x 0.01500       0.000 NO     DARK 
+  RECTANGLE  0.03900     x 0.01500      90.000 NO     DARK 
+  RECTANGLE  0.04400     x 0.06400       0.000 NO     DARK 
+  RECTANGLE  0.04400     x 0.06400      90.000 NO     DARK 
+  RECTANGLE  0.06299     x 0.05512       0.000 NO     DARK 
+  RECTANGLE  0.06299     x 0.05512      90.000 NO     DARK 
+  RECTANGLE  0.08400     x 0.05900      90.000 NO     DARK 
+  RECTANGLE  0.09055     x 0.02953      90.000 NO     DARK 
+  RECTANGLE  0.14000     x 0.14000      90.000 NO     DARK 
+  OBLONG     0.03150     x 0.05906       0.000 NO     DARK 
+  OBLONG     0.03150     x 0.05906      90.000 NO     DARK 
+  OBLONG     0.03150     x 0.09331       0.000 NO     DARK 
+  OBLONG     0.03189     x 0.07677      90.000 NO     DARK 
+  OBLONG     0.03189     x 0.09331       0.000 NO     DARK 
+  OBLONG     0.03189     x 0.09331      90.000 NO     DARK 
+  OBLONG     0.06850     x 0.10236       0.000 NO     DARK 
+  OBLONG     0.07283     x 0.01850       0.000 NO     DARK 
+  OBLONG     0.07283     x 0.01850      90.000 NO     DARK 
+  OBLONG     0.07283     x 0.02165       0.000 NO     DARK 
+  OBLONG     0.07283     x 0.02165      90.000 NO     DARK 
+  PAD SHAPE  SRX10_87Y10_30R0_10         0.000 NO     DARK 
+  PAD SHAPE  SRX1_11Y3_59R0_10           0.000 NO     DARK 
+  PAD SHAPE  SRX1_25Y1_90R0_10          90.000 NO     DARK 
+  PAD SHAPE  SRX1_65Y2_90R0_10          90.000 NO     DARK 
+
+     SOLDERMASK_TOP created.
+
+
+================================================================
+     PROCESSING FILM < SOLDERMASK_BOTTOM >
+     TO FILE < G:/lwj/My project/PCB/tunnel lighting/allegro/SOLDERMASK_BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.03543                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06299                                  DARK 
+  CIRCLE     0.06300                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.06900                                  DARK 
+  CIRCLE     0.07000                                  DARK 
+  CIRCLE     0.07700                                  DARK 
+  CIRCLE     0.08268                                  DARK 
+  CIRCLE     0.08800                                  DARK 
+  CIRCLE     0.09055                                  DARK 
+  CIRCLE     0.13200                                  DARK 
+  CIRCLE     0.14173                                  DARK 
+  CIRCLE     0.14500                                  DARK 
+  CIRCLE     0.15400                                  DARK 
+  SQUARE     0.06299                     0.000 NO     DARK 
+  SQUARE     0.06900                     0.000 NO     DARK 
+  SQUARE     0.07000                     0.000 NO     DARK 
+  SQUARE     0.08268                     0.000 NO     DARK 
+  SQUARE     0.09055                     0.000 NO     DARK 
+  SQUARE     0.14173                     0.000 NO     DARK 
+  RECTANGLE  0.04400     x 0.06400       0.000 NO     DARK 
+  RECTANGLE  0.06299     x 0.05512       0.000 NO     DARK 
+  RECTANGLE  0.06299     x 0.05512      90.000 NO     DARK 
+  OBLONG     0.02362     x 0.06142       0.000 NO     DARK 
+  OBLONG     0.02362     x 0.07283      90.000 NO     DARK 
+  PAD SHAPE  SRX1_25Y1_90R0_10         270.000 YES    DARK 
+
+     SOLDERMASK_BOTTOM created.
+
+
+------------------------------------------------------
+ SUMMARY:
+        TOP created with warnings
+        GND created with warnings
+        POWER created.
+        BOTTOM created with warnings
+        SILKSCREEN_TOP created.
+        SILKSCREEN_BOTTOM created.
+        SOLDERMASK_TOP created.
+        SOLDERMASK_BOTTOM created.
+
+ ARTWORK finished

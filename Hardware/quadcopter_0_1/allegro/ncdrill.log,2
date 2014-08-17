@@ -1,0 +1,63 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    NC DRILL Log                                                     )
+(                                                                     )
+(    Drawing          : #Taaaaab09684.tmp                             )
+(    Software Version : 16.6S005                                      )
+(    Date/Time        : Sat Aug 16 20:53:14 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ Processing NC Parameters file 'nc_param.txt' ...
+
+ NC PARAMETERS
+ -------------
+
+ FORMAT   		2.5
+ MACHINE-OFFSET		x:0.000000	y:0.000000
+ FEEDRATE		1
+ COORDINATES		ABSOLUTE
+ OUTPUT-UNITS		ENGLISH
+ TOOL-ORDER		INCREASING
+ REPEAT-CODES		YES
+ SUPPRESS-LEAD-ZEROES	NO
+ SUPPRESS-TRAIL-ZEROES	NO
+ SUPPRESS-EQUAL		NO
+ TOOL-SELECT		NO
+ HEADER			none
+ LEADER			12
+ CODE			ASCII
+ SEPARATE		NO
+ SEPARATE-ROUTING	NO
+ OPTIMIZE_DRILLING	NO
+ ENHANCED_EXCELLON	NO
+ SCALE			1.000000
+
+ WARNING(SPMHMF-360): Design precision is greater than that of the drill output file data.
+ WARNING(SPMHMF-361): Data rounding errors are very possible.
+
+
+ Drill files being output to directory 'E:/linwenjian/Quadcopter_Will/Hardware/quadcopter_0_1/allegro' ...
+
+
+
+     'quadcopter_0_1-1-4.drl' created for holes connecting TOP and BOTTOM
+     --------------------------------------------------------------------
+
+           Num     Size      +/- Tolerance     Plating   Quantity
+
+            1.  11.8110    0.0000/  0.0000      PLATED         78
+            2.  15.7480    0.0000/  0.0000      PLATED         71
+            3.  19.6850    0.0000/  0.0000      PLATED          5
+            4.  23.6220    0.0000/  0.0000      PLATED          4
+            5.  28.0000    2.0000/  2.0000      PLATED         10
+            6.  35.4330    0.0000/  0.0000      PLATED         48
+            7.  28.0000    2.0000/  2.0000  NON_PLATED          2
+            8. 125.0000    0.0000/  0.0000  NON_PLATED          4
+
+     ---- Total holes:                                        222
+
+     ---- Total head travel:              8.32 feet (2.53 meters)
+

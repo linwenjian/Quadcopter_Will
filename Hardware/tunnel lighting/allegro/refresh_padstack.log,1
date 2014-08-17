@@ -1,0 +1,358 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Padstack                                                 )
+(                                                                     )
+(    Drawing          : tunnel lighting.brd                           )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Thu Oct 25 22:27:19 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Thu Oct 25 22:27:19 2012				Page     1
+
+
+------ Pad Stack Refresh Options ------
+
+Input design = 'G:/lwj/My project/PCB/tunnel lighting/allegro/tunnel lighting.brd'
+Output design = ''
+Reset symbol text and size locations = 'NO'
+
+
+------ Library Paths ------
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           E:/Cadence/SPB_16.5/share/local/pcb/symbols 
+           E:/Cadence/SPB_16.5/share/pcb/pcb_lib/symbols 
+           E:/Cadence/SPB_16.5/share/pcb/allegrolib/symbols 
+           G:\lwj\My project\PCB\K60 graduation project\symbols\ 
+
+PADPATH =  E:\Cadence\SPB_16.5\share\pcb\examples\board_design\symbols 
+           E:\Cadence\SPB_16.5\share\pcb\pcb_lib\symbols 
+           E:\Cadence\SPB_16.5\tools\fsp\examples\libraries\footprints\allegro 
+           G:\lwj\My project\PCB\K60 graduation project\symbols\ 
+           . 
+           .. 
+           ../symbols 
+           symbols 
+
+
+------ Pad Stack Refresh Messages ------
+
+'PAD3_50D1_60'  pad stack refresh starting.
+
+     'PAD3_50D1_60'  pad stack refreshed successfully.
+     
+'PAD3_50D1_60S'  pad stack refresh starting.
+
+     'PAD3_50D1_60S'  pad stack refreshed successfully.
+     
+'PAD2_20D1_30'  pad stack refresh starting.
+
+     'PAD2_20D1_30'  pad stack refreshed successfully.
+     
+'PAD2_20D1_30S'  pad stack refresh starting.
+
+     'PAD2_20D1_30S'  pad stack refreshed successfully.
+     
+'PAD_DIANCI'  pad stack refresh starting.
+
+     'PAD_DIANCI'  pad stack refreshed successfully.
+     
+'C065-039T'  pad stack refresh starting.
+
+     'C065-039T'  pad stack refreshed successfully.
+     
+'C128-128N'  pad stack refresh starting.
+
+     'C128-128N'  pad stack refreshed successfully.
+     
+'C073-043T'  pad stack refresh starting.
+
+     'C073-043T'  pad stack refreshed successfully.
+     
+'S065-039T'  pad stack refresh starting.
+
+     'S065-039T'  pad stack refreshed successfully.
+     
+'R035X011S'  pad stack refresh starting.
+
+     'R035X011S'  pad stack refreshed successfully.
+     
+'C084-064T'  pad stack refresh starting.
+
+     'C084-064T'  pad stack refreshed successfully.
+     
+'S066-040T'  pad stack refresh starting.
+
+     'S066-040T'  pad stack refreshed successfully.
+     
+'C150-125T'  pad stack refresh starting.
+
+     'C150-125T'  pad stack refreshed successfully.
+     
+'C066-040T'  pad stack refresh starting.
+
+     'C066-040T'  pad stack refreshed successfully.
+     
+'S136X136SXP'  pad stack refresh starting.
+
+     'S136X136SXP'  pad stack refreshed successfully.
+     
+'SMT1P75X0P45'  pad stack refresh starting.
+
+     'SMT1P75X0P45'  pad stack refreshed successfully.
+     
+'PAD30X60CIR'  pad stack refresh starting.
+
+     'PAD30X60CIR'  pad stack refreshed successfully.
+     
+'PAD2_00D1_20'  pad stack refresh starting.
+
+     'PAD2_00D1_20'  pad stack refreshed successfully.
+     
+'PAD2_00D1_20S'  pad stack refresh starting.
+
+     'PAD2_00D1_20S'  pad stack refreshed successfully.
+     
+'R040X060S'  pad stack refresh starting.
+
+     'R040X060S'  pad stack refreshed successfully.
+     
+'OX0_40Y1_36T'  pad stack refresh starting.
+
+     'OX0_40Y1_36T'  pad stack refreshed successfully.
+     
+'PAD_SOP16'  pad stack refresh starting.
+
+     'PAD_SOP16'  pad stack refreshed successfully.
+     
+'OX0_61Y2_17T'  pad stack refresh starting.
+
+     'OX0_61Y2_17T'  pad stack refreshed successfully.
+     
+'OX0_60Y2_17T'  pad stack refresh starting.
+
+     'OX0_60Y2_17T'  pad stack refreshed successfully.
+     
+'OX1_54Y2_40T'  pad stack refresh starting.
+
+     'OX1_54Y2_40T'  pad stack refreshed successfully.
+     Thu Oct 25 22:27:19 2012				Page     2
+
+
+     
+'OX0_61Y1_75T'  pad stack refresh starting.
+
+     'OX0_61Y1_75T'  pad stack refreshed successfully.
+     
+'OX0_60Y1_30T'  pad stack refresh starting.
+
+     'OX0_60Y1_30T'  pad stack refreshed successfully.
+     
+'VIA55-30-80'  pad stack refresh starting.
+
+     'VIA55-30-80'  pad stack refreshed successfully.
+     
+'OX0_59Y2_40T'  pad stack refresh starting.
+
+     'OX0_59Y2_40T'  pad stack refreshed successfully.
+     
+'VIA105-60-130'  pad stack refresh starting.
+
+     'VIA105-60-130'  pad stack refreshed successfully.
+     
+'VIA65-40-100'  pad stack refresh starting.
+
+     'VIA65-40-100'  pad stack refreshed successfully.
+     
+'PAD125'  pad stack refresh starting.
+
+     'PAD125'  pad stack refreshed successfully.
+     
+'PAD0_80D0_50'  pad stack refresh starting.
+
+     'PAD0_80D0_50'  pad stack refreshed successfully.
+     
+'PAD1_70D0_90'  pad stack refresh starting.
+
+     'PAD1_70D0_90'  pad stack refreshed successfully.
+     
+'PAD1_70D0_90S'  pad stack refresh starting.
+
+     'PAD1_70D0_90S'  pad stack refreshed successfully.
+     
+'PAD6_80D3_10'  pad stack refresh starting.
+
+     'PAD6_80D3_10'  pad stack refreshed successfully.
+     
+'PAD6_80D3_10S'  pad stack refresh starting.
+
+     'PAD6_80D3_10S'  pad stack refreshed successfully.
+     
+'VIA3560'  pad stack refresh starting.
+
+     'VIA3560'  pad stack refreshed successfully.
+     
+'PAD8_00D5_00'  pad stack refresh starting.
+
+     'PAD8_00D5_00'  pad stack refreshed successfully.
+     
+'PAD8_00D5_00S'  pad stack refresh starting.
+
+     'PAD8_00D5_00S'  pad stack refreshed successfully.
+     
+'PAD1_50D0_90'  pad stack refresh starting.
+
+     'PAD1_50D0_90'  pad stack refreshed successfully.
+     
+'PAD1_50D0_90S'  pad stack refresh starting.
+
+     'PAD1_50D0_90S'  pad stack refreshed successfully.
+     
+'PAD1_50D0_70'  pad stack refresh starting.
+
+     'PAD1_50D0_70'  pad stack refreshed successfully.
+     
+'PAD1_50D0_70S'  pad stack refresh starting.
+
+     'PAD1_50D0_70S'  pad stack refreshed successfully.
+     
+'VIA90-50-120'  pad stack refresh starting.
+
+     'VIA90-50-120'  pad stack refreshed successfully.
+     
+'C060-060N_TOL4_0'  pad stack refresh starting.
+
+     'C060-060N_TOL4_0'  pad stack refreshed successfully.
+     
+'VIA4580'  pad stack refresh starting.
+
+     'VIA4580'  pad stack refreshed successfully.
+     
+'VIA2X4V'  pad stack refresh starting.
+
+     'VIA2X4V'  pad stack refreshed successfully.
+     
+'PAD0P9X1P5CIR'  pad stack refresh starting.
+
+     'PAD0P9X1P5CIR'  pad stack refreshed successfully.
+     
+'RX0_65Y0_95R0_10T'  pad stack refresh starting.
+
+     'RX0_65Y0_95R0_10T'  pad stack refreshed successfully.
+     
+'SMT1P5X0P3'  pad stack refresh starting.
+
+     'SMT1P5X0P3'  pad stack refreshed successfully.
+     
+'SMT2P2X0P6'  pad stack refresh starting.
+
+     'SMT2P2X0P6'  pad stack refreshed successfully.
+     
+'SMT1P5X1P5'  pad stack refresh starting.
+Thu Oct 25 22:27:19 2012				Page     3
+
+
+
+     'SMT1P5X1P5'  pad stack refreshed successfully.
+     
+'SMT1P5X1P8'  pad stack refresh starting.
+
+     'SMT1P5X1P8'  pad stack refreshed successfully.
+     
+'SMT_RECT10_8X9_4'  pad stack refresh starting.
+
+     'SMT_RECT10_8X9_4'  pad stack refreshed successfully.
+     
+'SMT_RECT0_8X4_6'  pad stack refresh starting.
+
+     'SMT_RECT0_8X4_6'  pad stack refreshed successfully.
+     
+'RX1_85Y3_40R0_10T'  pad stack refresh starting.
+
+     'RX1_85Y3_40R0_10T'  pad stack refreshed successfully.
+     
+'RX1_55Y2_80R0_10T'  pad stack refresh starting.
+
+     'RX1_55Y2_80R0_10T'  pad stack refreshed successfully.
+     
+'RX2_25Y4_40R0_10T'  pad stack refresh starting.
+
+     'RX2_25Y4_40R0_10T'  pad stack refreshed successfully.
+     
+'OX0_40Y1_16T'  pad stack refresh starting.
+
+     'OX0_40Y1_16T'  pad stack refreshed successfully.
+     
+'RX0_79Y0_55R0_10T'  pad stack refresh starting.
+
+     'RX0_79Y0_55R0_10T'  pad stack refreshed successfully.
+     
+'SMT1P25X0P3'  pad stack refresh starting.
+
+     'SMT1P25X0P3'  pad stack refreshed successfully.
+     
+'RX1_15Y1_80R0_10T'  pad stack refresh starting.
+
+     'RX1_15Y1_80R0_10T'  pad stack refreshed successfully.
+     
+'OX0_40Y1_65T'  pad stack refresh starting.
+
+     'OX0_40Y1_65T'  pad stack refreshed successfully.
+     
+'R080X055S'  pad stack refresh starting.
+
+     'R080X055S'  pad stack refreshed successfully.
+     
+'OX1_65Y0_27T'  pad stack refresh starting.
+
+     'OX1_65Y0_27T'  pad stack refreshed successfully.
+     
+'OX0_55Y1_20T'  pad stack refresh starting.
+
+     'OX0_55Y1_20T'  pad stack refreshed successfully.
+     
+'SMT1P5X1P3'  pad stack refresh starting.
+
+     'SMT1P5X1P3'  pad stack refreshed successfully.
+     
+'OX0_60Y1_40T'  pad stack refresh starting.
+
+     'OX0_60Y1_40T'  pad stack refreshed successfully.
+     
+'OX0_27Y1_65T'  pad stack refresh starting.
+
+     'OX0_27Y1_65T'  pad stack refreshed successfully.
+     
+'SMD65REC13'  pad stack refresh starting.
+
+     'SMD65REC13'  pad stack refreshed successfully.
+     
+'R028X079S'  pad stack refresh starting.
+
+     'R028X079S'  pad stack refreshed successfully.
+     
+'R032X079S'  pad stack refresh starting.
+
+     'R032X079S'  pad stack refreshed successfully.
+     
+'R067X095S'  pad stack refresh starting.
+
+     'R067X095S'  pad stack refreshed successfully.
+     
+'R071X095S'  pad stack refresh starting.
+
+     'R071X095S'  pad stack refreshed successfully.
+     
+'RX10_77Y10_20R0_10T'  pad stack refresh starting.
+
+     'RX10_77Y10_20R0_10T'  pad stack refreshed successfully.
+     
+'RX1_01Y3_49R0_10T'  pad stack refresh starting.
+
+     'RX1_01Y3_49R0_10T'  pad stack refreshed successfully.
+     
+Completed refreshing all pad stacks successfully.

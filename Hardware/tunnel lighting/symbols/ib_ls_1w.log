@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : IB_LS_1W.dra                                  )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Wed Oct 24 13:51:15 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = G:/lwj/My project/PCB/Lighting controller/symbols
+    Name      = ib_ls_1w.psm
+    User      = lwj
+    Machine   = LWJ-HNU
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+

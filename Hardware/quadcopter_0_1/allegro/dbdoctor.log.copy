@@ -1,0 +1,103 @@
+<HTML><HEAD><STYLE TYPE="text/css">.errorMessage { color:darkred; font-weight:bold; font-style:italic; text-decoration:underline; }</STYLE></HEAD><BODY><PRE>
+(---------------------------------------------------------------------)
+(                                                                     )
+(    DBDOCTOR                                                         )
+(                                                                     )
+(    Drawing          : quadcopter_0_1.brd                            )
+(    Software Version : 16.6S005                                      )
+(    Date/Time        : Sat Aug 16 16:18:58 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ERROR IN PAD STACK name = VIA2X4V
+  <b><i><font color="darkred">WARNING(SPMHA1-101)</i></b></font>: Illegal figure shape.
+   Error was fixed.
+    Drill data has been updated for SLOT
+
+ERROR IN CONNECT LINE <a href="xprobe:xy:639.510 562.740">(639.510 562.740)</a> - <a href="xprobe:xy:639.510 549.000">(639.510 549.000)</a>
+  class = ETCH
+  subclass = BOTTOM 
+  <b><i><font color="darkred">ERROR(SPMHA1-415)</i></b></font>: Line segments cannot overlap.
+   Error was fixed.
+
+WARNING IN SHAPE <a href="xprobe:xy:359.139 458.000">(359.139 458.000)</a> - <a href="xprobe:xy:402.569 458.501">(402.569 458.501)</a>
+  class = ETCH
+  subclass = BOTTOM 
+  <b><i><font color="darkred">WARNING(SPMHDB-391)</i></b></font>: Fillet shape was deleted due to a change in connectivity.
+
+ERROR IN CONNECT LINE <a href="xprobe:xy:324.000 380.930">(324.000 380.930)</a> - <a href="xprobe:xy:324.000 428.930">(324.000 428.930)</a>
+  class = ETCH
+  subclass = BOTTOM 
+  <b><i><font color="darkred">ERROR(SPMHA1-415)</i></b></font>: Line segments cannot overlap.
+   Error was fixed.
+
+ERROR IN CONNECT LINE <a href="xprobe:xy:1194.000 1064.000">(1194.000 1064.000)</a> - <a href="xprobe:xy:1194.000 1030.000">(1194.000 1030.000)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">ERROR(SPMHA1-415)</i></b></font>: Line segments cannot overlap.
+   Error was fixed.
+
+ERROR IN CONNECT LINE <a href="xprobe:xy:1457.661 -59.661">(1457.661 -59.661)</a> - <a href="xprobe:xy:1390.000 -59.661">(1390.000 -59.661)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">ERROR(SPMHA1-415)</i></b></font>: Line segments cannot overlap.
+   Error was fixed.
+
+WARNING IN SHAPE <a href="xprobe:xy:1141.574 1010.575">(1141.574 1010.575)</a> - <a href="xprobe:xy:1148.370 1010.576">(1148.370 1010.576)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">WARNING(SPMHDB-391)</i></b></font>: Fillet shape was deleted due to a change in connectivity.
+
+ERROR IN CONNECT LINE <a href="xprobe:xy:1034.200 1003.690">(1034.200 1003.690)</a> - <a href="xprobe:xy:1128.690 1003.690">(1128.690 1003.690)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">ERROR(SPMHA1-415)</i></b></font>: Line segments cannot overlap.
+   Error was fixed.
+
+ERROR IN CONNECT LINE <a href="xprobe:xy:1265.339 -59.661">(1265.339 -59.661)</a> - <a href="xprobe:xy:1305.000 -59.661">(1305.000 -59.661)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">ERROR(SPMHA1-415)</i></b></font>: Line segments cannot overlap.
+   Error was fixed.
+
+ERROR IN CONNECT LINE <a href="xprobe:xy:1364.000 -21.000">(1364.000 -21.000)</a> - <a href="xprobe:xy:1364.000 -55.000">(1364.000 -55.000)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">ERROR(SPMHA1-415)</i></b></font>: Line segments cannot overlap.
+   Error was fixed.
+
+WARNING IN SHAPE <a href="xprobe:xy:321.380 434.328">(321.380 434.328)</a> - <a href="xprobe:xy:307.514 420.929">(307.514 420.929)</a>
+  class = ETCH
+  subclass = BOTTOM 
+  <b><i><font color="darkred">WARNING(SPMHDB-391)</i></b></font>: Fillet shape was deleted due to a change in connectivity.
+
+WARNING IN SHAPE <a href="xprobe:xy:1198.243 1050.147">(1198.243 1050.147)</a> - <a href="xprobe:xy:1203.047 1054.953">(1203.047 1054.953)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">WARNING(SPMHDB-391)</i></b></font>: Fillet shape was deleted due to a change in connectivity.
+
+WARNING IN SHAPE <a href="xprobe:xy:1443.808 -63.904">(1443.808 -63.904)</a> - <a href="xprobe:xy:1448.614 -68.708">(1448.614 -68.708)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">WARNING(SPMHDB-391)</i></b></font>: Fillet shape was deleted due to a change in connectivity.
+
+WARNING IN SHAPE <a href="xprobe:xy:1279.192 -55.418">(1279.192 -55.418)</a> - <a href="xprobe:xy:1274.386 -50.614">(1274.386 -50.614)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">WARNING(SPMHDB-391)</i></b></font>: Fillet shape was deleted due to a change in connectivity.
+
+WARNING IN SHAPE <a href="xprobe:xy:1368.243 -34.853">(1368.243 -34.853)</a> - <a href="xprobe:xy:1373.047 -30.047">(1373.047 -30.047)</a>
+  class = ETCH
+  subclass = TOP 
+  <b><i><font color="darkred">WARNING(SPMHDB-391)</i></b></font>: Fillet shape was deleted due to a change in connectivity.
+
+Regenerating DRC
+  Original DRC errors:   4
+  Updated DRC errors:    4
+  DRC elapsed time:      00:00:01
+
+7 warnings, 8 errors detected, 8 errors  fixed.
+</PRE>
+</BODY></HTML>

@@ -1,0 +1,203 @@
+Sat Aug 16 17:05:13 2014				Page     1
+
+
+ 
+Update Symbols/Modules Logfile
+	Sat Aug 16 17:05:13 2014
+
+------ Module Refresh Messages ------
+
+SUMMARY:    Updated 0 out of 0 modules
+
+------ End Module Messages     ------
+
+
+
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Symbol                                                   )
+(                                                                     )
+(    Drawing          : quadcopter_0_1.brd                            )
+(    Software Version : 16.6S005                                      )
+(    Date/Time        : Sat Aug 16 17:05:15 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Sat Aug 16 17:05:15 2014				Page     1
+
+
+------ Symbol Refresh Directives ------
+
+Input design = 'E:/linwenjian/Quadcopter_Will/Hardware/quadcopter_0_1/allegro/quadcopter_0_1.brd'
+Output design = ''
+Update mechanical symbols = 'YES'
+Update format symbols = 'NO'
+Update package symbols = 'YES'
+Update shape/flash symbols = 'YES'
+Update symbol padstacks = 'YES'
+Reset symbol text and size locations = 'NO'
+Reset Pin Escapes (fanouts) = 'NO'
+Ripup Etch = 'YES'
+Reset custom drill data = 'NO'
+
+
+------ Library Paths ------
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           f:/program/Cadence/SPB_16.6/share/local/pcb/symbols 
+           f:/program/Cadence/SPB_16.6/share/pcb/pcb_lib/symbols 
+           f:/program/Cadence/SPB_16.6/share/pcb/allegrolib/symbols 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           f:/program/Cadence/SPB_16.6/share/local/pcb/padstacks 
+           f:/program/Cadence/SPB_16.6/share/pcb/pcb_lib/symbols 
+           f:/program/Cadence/SPB_16.6/share/pcb/allegrolib/symbols 
+
+
+------ Symbol Refresh Messages ------
+
+'HDR_5X2_FTSH_TH_NSP'  symbol refreshed successfully.
+'TPAD_040'  symbol refreshed successfully.
+'MTG125'  symbol refreshed successfully.
+'CAPC4532X185'  symbol refreshed successfully.
+'CC0603_OV'  symbol refreshed successfully.
+'IND_0603'  symbol refreshed successfully.
+'SW2_4X3MM_SM'  symbol refreshed successfully.
+'LED_0603'  symbol refreshed successfully.
+'RC0603_OV'  symbol refreshed successfully.
+'XTLOSC4_SM'  symbol refreshed successfully.
+'QFN65P400X400X80-17'  symbol refreshed successfully.
+'QFN5X3_0P5_3X3'  symbol refreshed successfully.
+'LQFP144_0P5_20X20MM'  symbol refreshed successfully.
+'HDR254M-2X8'  symbol refreshed successfully.
+'HDR254M-1X4'  symbol refreshed successfully.
+'TSSOP65P300X110-20'  symbol refreshed successfully.
+'TSSOP65P300X110-14'  symbol refreshed successfully.
+'HDR254M-1X3'  symbol refreshed successfully.
+'SRX0_95Y3_50R0_10'  symbol refreshed successfully.
+'SRX1_05Y3_60R0_10'  symbol refreshed successfully.
+'AB00'  symbol refreshed successfully.
+'SRX0_35Y0_85R0_10'  symbol refreshed successfully.
+'SRX0_45Y0_95R0_10'  symbol refreshed successfully.
+
+'F280_350_40'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F280_350_40' symbol unable to find in directory search path.
+
+'F220_290_40'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F220_290_40' symbol unable to find in directory search path.
+
+'F200_270_40'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F200_270_40' symbol unable to find in directory search path.
+
+'F75_100_35'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F75_100_35' symbol unable to find in directory search path.
+
+'F65_90_35'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F65_90_35' symbol unable to find in directory search path.
+
+'F55_70_30'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F55_70_30' symbol unable to find in directory search path.
+
+'SRX0_65Y0_95R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX0_65Y0_95R0_10' symbol unable to find in directory search path.
+
+'SRX0_75Y1_05R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX0_75Y1_05R0_10' symbol unable to find in directory search path.
+
+'F80_140_40'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F80_140_40' symbol unable to find in directory search path.
+'F170_230_40'  symbol refreshed successfully.
+Sat Aug 16 17:05:15 2014				Page     2
+
+
+
+'F430_520_40'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F430_520_40' symbol unable to find in directory search path.
+
+'SRX1_85Y3_40R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX1_85Y3_40R0_10' symbol unable to find in directory search path.
+
+'SRX1_95Y3_50R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX1_95Y3_50R0_10' symbol unable to find in directory search path.
+
+'SRX1_55Y2_80R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX1_55Y2_80R0_10' symbol unable to find in directory search path.
+
+'SRX1_65Y2_90R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX1_65Y2_90R0_10' symbol unable to find in directory search path.
+
+'SRX2_25Y4_40R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX2_25Y4_40R0_10' symbol unable to find in directory search path.
+
+'SRX2_35Y4_50R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX2_35Y4_50R0_10' symbol unable to find in directory search path.
+
+'SRX0_79Y0_55R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX0_79Y0_55R0_10' symbol unable to find in directory search path.
+
+'SRX0_89Y0_65R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX0_89Y0_65R0_10' symbol unable to find in directory search path.
+
+'SRX1_15Y1_80R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX1_15Y1_80R0_10' symbol unable to find in directory search path.
+
+'SRX1_25Y1_90R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX1_25Y1_90R0_10' symbol unable to find in directory search path.
+
+'F620_730_40'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'F620_730_40' symbol unable to find in directory search path.
+'F150_210_40'  symbol refreshed successfully.
+
+'SRX10_77Y10_20R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX10_77Y10_20R0_10' symbol unable to find in directory search path.
+
+'SRX10_87Y10_30R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX10_87Y10_30R0_10' symbol unable to find in directory search path.
+
+'SRX1_01Y3_49R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX1_01Y3_49R0_10' symbol unable to find in directory search path.
+
+'SRX1_11Y3_59R0_10'  symbol starting to refresh:
+     WARNING(SPMHNI-252): 'SRX1_11Y3_59R0_10' symbol unable to find in directory search path.
+
+
+------ Pad Stack Refresh Messages ------
+
+'PAD1_70D0_90S'  pad stack refreshed successfully.
+'RX0_35Y0_85R0_10T'  pad stack refreshed successfully.
+'RX0_95Y3_50R0_10T'  pad stack refreshed successfully.
+'S040S'  pad stack refreshed successfully.
+'C040SXP'  pad stack refreshed successfully.
+'R032X012S_SP031X011'  pad stack refreshed successfully.
+'PAD1_50D0_90'  pad stack refreshed successfully.
+'PAD1_70D0_90'  pad stack refreshed successfully.
+'C028-028N'  pad stack refreshed successfully.
+'C038-028T'  pad stack refreshed successfully.
+'PAD125'  pad stack refreshed successfully.
+'S038-028T'  pad stack refreshed successfully.
+'OX0_40Y1_65T'  pad stack refreshed successfully.
+'R056X011S'  pad stack refreshed successfully.
+'O035X045S'  pad stack refreshed successfully.
+'R039X032S'  pad stack refreshed successfully.
+'R080X055S'  pad stack refreshed successfully.
+'R059X043S'  pad stack refreshed successfully.
+'PAD1_50D0_90S'  pad stack refreshed successfully.
+
+
+----- Symbol Update Summary ----
+
+Updated symbols: 50 out 50
+    Design updated.
+
+Completed refreshing symbols; some symbols may not have been updated due to warnings or errors.
+Sat Aug 16 17:05:15 2014				Page     3
+
+
+       0  errors detected.
+      25  warnings detected.

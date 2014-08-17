@@ -1,0 +1,72 @@
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   1  |
+|------------------------------------------------------------------------------|
+|  E:.../Quadcopter_Will/Hardware/quadcopter_0_1/allegro/quadcopter_0_1.brd    |
+|                                                    Sun Aug 17 15:34:16 2014  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |    pin_id     |   x   |   y   |   to  net    |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  ECHO         pins ADDED TO this new net
+                                 R46.2                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PTD14        pins MOVED FROM this net (to net name listed on right)
+                                 J2.3            1309.00 1695.00
+                                                                           ECHO
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+               pins ADDED TO this existing net (pins not previously on any net)
+                                 R46.1                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PTD15        pins MOVED FROM this net (to net name listed on right)
+                                 J2.2            1409.00 1695.00
+                                                                           TRIG
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+               pins ADDED TO this existing net (pins not previously on any net)
+                                 R45.1                          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  TRIG         pins ADDED TO this new net
+                                 R45.2                          
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   2  |
+|------------------------------------------------------------------------------|
+|  E:.../Quadcopter_Will/Hardware/quadcopter_0_1/allegro/quadcopter_0_1.brd    |
+|                                                    Sun Aug 17 15:34:16 2014  |
+|------------------------------------------------------------------------------|
+| COMPONENTS ADDED to board drawing                                            |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    ref des        |    device type                                           |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ R45                 RES_RC0603_OV_DISCRETE_10.0K 
+ R46                 RES_RC0603_OV_DISCRETE_10.0K 
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   3  |
+|------------------------------------------------------------------------------|
+|  E:.../Quadcopter_Will/Hardware/quadcopter_0_1/allegro/quadcopter_0_1.brd    |
+|                                                    Sun Aug 17 15:34:16 2014  |
+|------------------------------------------------------------------------------|
+| COMPONENT PROPERTIES added to board drawing                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   ref  des   |   x   |   y   |   property   |             value              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ R45                            SIGNAL_MODEL   DEFAULT_RESISTOR_10000OHM_2_1
+ R46                            SIGNAL_MODEL   DEFAULT_RESISTOR_10000OHM_2_1
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   4  |
+|------------------------------------------------------------------------------|
+|  E:.../Quadcopter_Will/Hardware/quadcopter_0_1/allegro/quadcopter_0_1.brd    |
+|                                                    Sun Aug 17 15:34:16 2014  |
+|------------------------------------------------------------------------------|
+| SLOT PROPERTIES added to board drawing                                       |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   slot_id    |   x   |   y   |   property   |             value              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ R45.2                          PRIM_FILE      .\pstchip.dat
+ R46.2                          PRIM_FILE      .\pstchip.dat
+|------------------------------------------------------------------------------|
+|   total ECO changes reported  12                                             |
+|------------------------------------------------------------------------------|

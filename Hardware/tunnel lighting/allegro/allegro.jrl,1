@@ -1,0 +1,49 @@
+\t (00:00:52) allegro 16.6 P004 (v16-6-112G) Windows 32
+\t (00:00:52)     Journal start - Sun Dec 02 18:05:46 2012
+\t (00:00:52)         Host=LWJ-HNU User=lwj Pid=33416 CPUs=4
+\t (00:00:52) 
+\d (00:00:52) Database opened: G:/lwj/My project/PCB/tunnel lighting/allegro/tunnel lighting2.brd
+\i (00:00:53) generaledit 
+\i (00:00:53) zoom out 1 
+\i (00:00:53) setwindow pcb
+\i (00:00:53) zoom out 6548.118 2602.439
+\t (00:00:53) Grids are drawn 256.000, 256.000 apart for enhanced viewability.
+\i (00:00:53) trapsize 126126
+\i (00:00:57) 3d_viewer 
+\i (00:00:58) setwindow pcb3D
+\i (00:00:58) trapsize 126126
+\i (00:00:58) setwindow pcb
+\i (00:00:58) generaledit 
+\i (00:00:59) setwindow pcb3D
+\i (00:00:59) trapsize 126126
+\i (00:03:51) setwindow pcb
+\i (00:03:51) zoom in 1 
+\i (00:03:51) setwindow pcb
+\i (00:03:51) zoom in 17856.757 773.874
+\t (00:03:51) Grids are drawn 64.000, 64.000 apart for enhanced viewability.
+\i (00:03:51) trapsize 63063
+\i (00:03:51) zoom in 1 
+\i (00:03:51) setwindow pcb
+\i (00:03:51) zoom in 18058.559 2532.432
+\i (00:03:51) trapsize 31532
+\i (00:03:51) zoom in 1 
+\i (00:03:51) setwindow pcb
+\i (00:03:51) zoom in 18109.010 2538.739
+\t (00:03:51) Grids are drawn 16.000, 16.000 apart for enhanced viewability.
+\i (00:03:51) trapsize 15766
+\i (00:03:51) zoom out 1 
+\i (00:03:51) setwindow pcb
+\i (00:03:51) zoom out 18036.487 2437.839
+\t (00:03:51) Grids are drawn 64.000, 64.000 apart for enhanced viewability.
+\i (00:03:51) trapsize 31532
+\i (00:03:51) zoom out 1 
+\i (00:03:51) setwindow pcb
+\i (00:03:51) zoom out 18017.569 2418.919
+\i (00:03:51) trapsize 63063
+\i (00:03:51) zoom out 1 
+\i (00:03:51) setwindow pcb
+\i (00:03:51) zoom out 18004.956 2406.308
+\t (00:03:51) Grids are drawn 256.000, 256.000 apart for enhanced viewability.
+\i (00:03:51) trapsize 126126
+\i (00:03:52) exit 
+\t (00:03:53)     Journal end - Sun Dec 02 18:08:47 2012

@@ -1,0 +1,102 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Create_devices LOG file                                          )
+(                                                                     )
+(    Drawing          : LAY-28163.brd                                 )
+(    Software Version : 16.6S005                                      )
+(    Date/Time        : Sun Aug 10 19:38:57 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/hdr_2x8_m_con_skt2x8_th_io_863.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/conn_hdr_2x1_hdr102_io_858mm_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/conn_hdr_6x2_con_skt2x6_th_io_8.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/sw2_stm151xx_sw2_4x3mm_sm_ic_2m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_05_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/usb_mini_ab_receptacle_con5_mic.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_055m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_05_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_470-3032.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/bead_ind_1608_discrete_095mm_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/conn_hdr_4x1_con1x4_100_th_ra_i.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_1mm_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_10mm.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_1016.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_10_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_1mm_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_10_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_04mm_47.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_04mm__1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_04mm__2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0603_ov_discrete_470-7584.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0603_ov_discrete_470-75_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0603_ov_discrete_470-75_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0603_ov_discrete_470-75_3.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_470-3080.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_470-3033.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/conn_hdr_4x2_hdr2x4_io_871mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/ksz8081rnaca_qfn_24p_qfn24_4x4m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_090m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/mic2005-08ym6_sot23-6_a_ic_14.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/diode_schtky_powerdi-123_3mmx2m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/ld1117as18_sot223_ic_18mm_312-.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_055.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/dualdiode_ca_sot23_sot323_3p_ic.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/rj45_rb1_125bag1a_con_rj45_8p_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/crystal13_xtal4_3p4x2p7_ic_08m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_065m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_0635.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_06_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_06_3.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/dcpowerjack_con_jack_pj1_022_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/resistor_array_rnet_38v_0603_di.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_470-3108.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_055mm_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0603_ov_discrete_055mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_06mm_47.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_064m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_06_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_09mm.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/led_led_0603_ic_09mm_370-75079.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/con8_sdcard_sw_con8_sdcard_push.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/bead_0_0603_cc_discrete_095mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_055mm_4.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_470-7541.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_045mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_055mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_04mm_4.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_470-7539.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_470-7606.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0603_ov_discrete_470-7541.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_055m_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0603_ov_discrete_470-7802.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_short-2_sh0603_discrete_470.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/k64fn1m0vll12_100p_lqfp100_0p5_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/diode_tvs_bidir_0402_mlp_ic_04.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/ntsx2102gu8h_8p_xqfn8_1p45x1p25.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/74lvc2t45gm_8p_qfn8_1p6x1p6mm_i.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/74lvch1t45_6p_udfn6_1x1p5mm_ic_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/nlu2gu04_ullga6_1p45x1_0p5mm_ic.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/xtal_cs_xtal3_3p35x1p45_sm_ic_0.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/xtal_xtal2-3p2x1p5-sm_ic_09mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_09m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/clv1a_led_4p_led4_3p4x3mm_smt_i.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/conn_hdr_10x2_con2x10_2p54_th_i.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/conn_hdr_3x1_hdr103_io_838mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/fxos8700cq_qfn_16p_qfn5x3_0p5_3.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/zdiode_sod-323-a_ic_11mm_480-7.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/conn_hdr_5x2_hdr_5x2_ftsh_th_ns.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/pk20dx128v_qfn_32p_qfn32_s142ep.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0603_ov_discrete_125m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/led_led_0603_ic_067mm_370-7656.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/testloop_tpad_030_io_01mm_211-.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/testloop_test_loop_io_48mm_21.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0402_25_discrete_470-7579.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/res_rc0603_ov_discrete_470-3029.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/conn_hdr_2x1_sh_hdr102_bottom_i.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/FRDM-K64F/LAY-28163/lib/cap_np_cc0402_25_discrete_06mm.txt': written successfully.
+
+  Created device files: 87
+

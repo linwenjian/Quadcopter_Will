@@ -1,0 +1,31 @@
+\t (00:00:05) allegro 16.5 P003 (v16-5-13C) i86
+\t (00:00:05)     Journal start - Sat Nov 03 16:20:04 2012
+\t (00:00:05)         Host=LWJ-HNU User=lwj Pid=11668 CPUs=4
+\t (00:00:05) 
+\t (00:00:07) Opening existing design...
+\d (00:00:08) Database opened: G:/lwj/My project/PCB/tunnel lighting/symbols/sod-323.dra
+\i (00:00:08) trapsize 241
+\i (00:00:08) trapsize 235
+\i (00:00:08) trapsize 242
+\i (00:00:08) trapsize 302
+\i (00:00:08) trapsize 302
+\i (00:00:09) placementedit 
+\i (00:00:12) zoom in 1 
+\i (00:00:12) setwindow pcb
+\i (00:00:12) zoom in -40.81 2.39
+\i (00:00:12) trapsize 151
+\i (00:00:12) zoom in 1 
+\i (00:00:12) setwindow pcb
+\i (00:00:12) zoom in -40.81 2.39
+\i (00:00:12) trapsize 76
+\i (00:00:13) zoom out 1 
+\i (00:00:13) setwindow pcb
+\i (00:00:13) zoom out -52.29 2.85
+\i (00:00:13) trapsize 151
+\i (00:37:45) setwindow worldview
+\i (00:37:45) trapsize 271
+\i (00:37:45) setwindow pcb
+\i (00:37:45) pick grid 38.83 -245.57
+\t (00:37:45) last pick:  0.00  -200.00
+\i (02:59:21) exit 
+\t (02:59:21)     Journal end - Sat Nov 03 19:19:19 2012

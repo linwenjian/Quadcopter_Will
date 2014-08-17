@@ -1,0 +1,91 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Allegro Netrev Import Logic                                      )
+(                                                                     )
+(    Drawing          : tunnel lighting2.brd                          )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Sat Oct 27 15:36:41 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+------ Directives ------
+
+RIPUP_ETCH FALSE;
+RIPUP_DELETE_FIRST_SEGMENT FALSE;
+RIPUP_RETAIN_BONDWIRE FALSE;
+RIPUP_SYMBOLS ALWAYS;
+Missing symbol has error FALSE;
+SCHEMATIC_DIRECTORY 'G:/lwj/My project/PCB/tunnel lighting/allegro';
+BOARD_DIRECTORY '';
+OLD_BOARD_NAME 'G:/lwj/My project/PCB/tunnel lighting/allegro/tunnel lighting2.brd';
+NEW_BOARD_NAME 'G:/lwj/My project/PCB/tunnel lighting/allegro/tunnel lighting2.brd';
+
+CmdLine: netrev -$ -i G:/lwj/My project/PCB/tunnel lighting/allegro -y 1 G:/lwj/My project/PCB/tunnel lighting/allegro/#Taaaaaa05808.tmp
+
+------ Preparing to read pst files ------
+
+Starting to read G:/lwj/My project/PCB/tunnel lighting/allegro/pstchip.dat 
+   Finished reading G:/lwj/My project/PCB/tunnel lighting/allegro/pstchip.dat (00:00:00.06)
+Starting to read G:/lwj/My project/PCB/tunnel lighting/allegro/pstxprt.dat 
+   Finished reading G:/lwj/My project/PCB/tunnel lighting/allegro/pstxprt.dat (00:00:00.01)
+Starting to read G:/lwj/My project/PCB/tunnel lighting/allegro/pstxnet.dat 
+   Finished reading G:/lwj/My project/PCB/tunnel lighting/allegro/pstxnet.dat (00:00:00.01)
+
+------ Oversights/Warnings/Errors ------
+
+
+------ Library Paths ------
+MODULEPATH =  . 
+           E:/Cadence/SPB_16.5/share/local/pcb/modules 
+
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           E:/Cadence/SPB_16.5/share/local/pcb/symbols 
+           E:/Cadence/SPB_16.5/share/pcb/pcb_lib/symbols 
+           E:/Cadence/SPB_16.5/share/pcb/allegrolib/symbols 
+           G:\lwj\My project\PCB\K60 graduation project\symbols\ 
+
+PADPATH =  E:\Cadence\SPB_16.5\share\pcb\examples\board_design\symbols 
+           E:\Cadence\SPB_16.5\share\pcb\pcb_lib\symbols 
+           E:\Cadence\SPB_16.5\tools\fsp\examples\libraries\footprints\allegro 
+           G:\lwj\My project\PCB\K60 graduation project\symbols\ 
+           . 
+           .. 
+           ../symbols 
+           symbols 
+
+
+------ Summary Statistics ------
+
+
+netrev run on Oct 27 15:36:41 2012
+   DESIGN NAME : 'TUNNEL LIGHTING1'
+   PACKAGING ON Apr 21 2011 10:02:30
+
+   COMPILE 'logic'
+   CHECK_PIN_NAMES OFF
+   CROSS_REFERENCE OFF
+   FEEDBACK OFF
+   INCREMENTAL OFF
+   INTERFACE_TYPE PHYSICAL
+   MAX_ERRORS 500
+   MERGE_MINIMUM 5
+   NET_NAME_CHARS '#%&()*+-./:=>?@[]^_`|'
+   NET_NAME_LENGTH 24
+   OVERSIGHTS ON
+   REPLACE_CHECK OFF
+   SINGLE_NODE_NETS ON
+   SPLIT_MINIMUM 0
+   SUPPRESS   20
+   WARNINGS ON
+
+ No error detected
+ No oversight detected
+ No warning detected
+
+cpu time      0:01:26
+elapsed time  0:00:01
+

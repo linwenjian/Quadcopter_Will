@@ -1,0 +1,32 @@
+#
+# Property of Cadence Design Systems, Inc.  All rights reserved.
+#
+# $Header: uaf_rep_view.txt.v 1.1 12/11/87 ddd Prealpha 
+#
+# File: uaf_rep_view.txt - Function data extract cmd file for 
+#				unassigned functions report
+#
+# Revision history:
+#	(0.10) ddd 12/14/87	Preliminary initial version
+#
+#
+FUNCTION
+#
+# Extract: 
+#      fcndes,slotnam,refdes,fcntyp,devtype,refasn, valtol
+#
+REFDES  =   ''
+#
+FUNC_DES_SORT
+FUNC_DES
+FUNC_SLOT_NAME
+FUNC_SLOTNAME
+REFDES
+FUNC_TYPE
+COMP_DEVICE_TYPE
+FUNC_REF_DES_FOR_ASSIGN
+COMP_VALUE
+COMP_TOL
+#
+# end of uaf_rep_view
+#

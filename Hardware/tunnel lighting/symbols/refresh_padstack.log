@@ -1,0 +1,50 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Padstack                                                 )
+(                                                                     )
+(    Drawing          : con10_2x5_2mm.dra                             )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Tue Apr 17 23:00:48 2012                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Tue Apr 17 23:00:48 2012				Page     1
+
+
+------ Pad Stack Refresh Options ------
+
+Input design = 'G:/lwj/My project/PCB/K60 graduation project/symbols/con10_2x5_2mm.dra'
+Output design = ''
+Reset symbol text and size locations = 'NO'
+
+
+------ Library Paths ------
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           E:/Cadence/SPB_16.5/share/local/pcb/symbols 
+           E:/Cadence/SPB_16.5/share/pcb/pcb_lib/symbols 
+           E:/Cadence/SPB_16.5/share/pcb/allegrolib/symbols 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           E:/Cadence/SPB_16.5/share/local/pcb/padstacks 
+           E:/Cadence/SPB_16.5/share/pcb/pcb_lib/symbols 
+           E:/Cadence/SPB_16.5/share/pcb/allegrolib/symbols 
+
+
+------ Pad Stack Refresh Messages ------
+
+'PAD1_50D0_90'  pad stack refresh starting.
+
+     'PAD1_50D0_90'  pad stack refreshed successfully.
+     
+'PAD1_50D0_90S'  pad stack refresh starting.
+
+     'PAD1_50D0_90S'  pad stack refreshed successfully.
+     
+Completed refreshing all pad stacks successfully.

@@ -1,0 +1,136 @@
+\t (00:00:02) allegro 16.6 S005 (v16-6-112W) Windows 32
+\t (00:00:02)     Journal start - Sat Aug 16 21:49:49 2014
+\t (00:00:02)         Host=SARAH User=Administrator Pid=7036 CPUs=2
+\t (00:00:02) 
+\t (00:00:04) Opening existing design...
+\d (00:00:04) Database opened: E:/linwenjian/Quadcopter_Will/Hardware/quadcopter_0_1/allegro/quadcopter_0_1.brd
+\t (00:00:05) Grids are drawn 80.000, 80.000 apart for enhanced viewability.
+\i (00:00:05) trapsize 43505
+\i (00:00:05) trapsize 42709
+\i (00:00:05) trapsize 43641
+\i (00:00:05) trapsize 44025
+\i (00:00:06) trapsize 38126
+\i (00:00:06) trapsize 38126
+\i (00:00:07) generaledit 
+\i (00:00:24) pick grid 587.739 -1316.401
+\t (00:00:24) last pick:  590.000  -1315.000
+\i (00:00:24) zoom in 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom in 488.610 353.534
+\t (00:00:24) Grids are drawn 20.000, 20.000 apart for enhanced viewability.
+\i (00:00:24) trapsize 19063
+\i (00:00:25) zoom in 1 
+\i (00:00:25) setwindow pcb
+\i (00:00:25) zoom in 488.610 353.534
+\i (00:00:25) trapsize 9532
+\i (00:00:31) ncdrill customization 
+\i (00:00:32) generaledit 
+\i (00:00:36) setwindow form.nc_drillcustomization
+\i (00:00:36) FORM nc_drillcustomization auto_symbols  
+\i (00:00:39) fillin yes 
+\i (00:00:46) FORM nc_drillcustomization done  
+\i (00:00:47) fillin yes 
+\i (00:00:54) setwindow pcb
+\i (00:00:54) ncdrill legend 
+\i (00:08:24) setwindow form.nc_drilllegend
+\i (00:08:24) FORM nc_drilllegend cancel  
+   (00:08:24) Loading cmds.cxt 
+   (00:08:24) Loading mfg.cxt 
+\i (00:08:24) setwindow pcb
+\i (00:08:24) generaledit 
+\i (00:08:27) ncdrill legend 
+\i (00:08:28) setwindow form.nc_drilllegend
+\i (00:08:28) FORM nc_drilllegend done  
+   (00:08:29) Loading axlcore.cxt 
+\i (00:08:29) setwindow pcb
+\i (00:08:29) zoom out 1 
+\i (00:08:29) setwindow pcb
+\i (00:08:29) zoom out 2027.009 1001.682
+\i (00:08:29) trapsize 19063
+\i (00:08:29) zoom out 1 
+\i (00:08:29) setwindow pcb
+\i (00:08:29) zoom out 1966.006 906.366
+\t (00:08:29) Grids are drawn 80.000, 80.000 apart for enhanced viewability.
+\i (00:08:29) trapsize 38126
+\i (00:08:30) pick grid 4774.013 3050.702
+\t (00:08:30) last pick:  4775.000  3050.000
+\t (00:08:30) NC Drill Legend generation successful
+\i (00:08:30) done 
+\i (00:08:30) generaledit 
+\i (00:08:31) prepopup 3203.207 2028.915
+\i (00:08:32) pick grid 3020.200 2189.046
+\t (00:08:32) last pick:  3020.000  2190.000
+\i (00:08:40) ncdrill param 
+\i (00:08:41) generaledit 
+\i (00:09:02) setwindow form.nc_parameters
+\i (00:09:02) FORM nc_parameters integer_places 3 
+\i (00:09:02) FORM nc_parameters enhanced_format YES 
+\i (00:09:06) FORM nc_parameters done  
+\i (00:09:16) setwindow pcb
+\i (00:09:16) nctape_full 
+\i (00:09:20) setwindow form.nc_drill
+\i (00:09:20) FORM nc_drill auto_tool_select YES 
+\i (00:09:23) FORM nc_drill separate_tapes YES 
+\i (00:09:26) FORM nc_drill optimize YES 
+\i (00:09:28) FORM nc_drill execute  
+\t (00:09:28) Starting NC Drill...
+\i (00:09:42) setwindow pcb
+\i (00:09:42) ncroute 
+\i (00:09:44) setwindow form.nc_route
+\i (00:09:44) FORM nc_route execute  
+\t (00:09:44) Starting NC Route...
+\i (00:09:50) FORM nc_route viewlog  
+\i (00:09:52) setwindow pcb
+\i (00:09:52) zoom out 1 
+\i (00:09:52) setwindow pcb
+\i (00:09:52) zoom out 5879.678 -777.185
+\i (00:09:52) trapsize 76253
+\i (00:09:52) zoom out 1 
+\i (00:09:52) setwindow pcb
+\i (00:09:52) zoom out 14351.356 -2833.830
+\i (00:09:52) trapsize 76253
+\i (00:09:52) zoom out 1 
+\i (00:09:52) setwindow pcb
+\i (00:09:52) zoom out 14351.356 -2833.830
+\i (00:09:52) trapsize 76253
+\i (00:09:52) zoom out 1 
+\i (00:09:52) setwindow pcb
+\i (00:09:52) zoom out 14351.356 -2833.830
+\i (00:09:52) trapsize 76253
+\i (00:10:01) setwindow text
+\i (00:10:01) close 
+\i (00:10:03) setwindow form.nc_route
+\i (00:10:03) FORM nc_route cancel  
+\i (00:10:03) setwindow pcb
+\i (00:10:03) generaledit 
+\i (00:10:04) zoom in 1 
+\i (00:10:04) setwindow pcb
+\i (00:10:04) zoom in -14.658 567.041
+\i (00:10:04) trapsize 38126
+\t (00:10:04) Performing autosave...
+\t (00:10:04) Autosave successful
+\i (00:10:05) zoom in 1 
+\i (00:10:05) setwindow pcb
+\i (00:10:05) zoom in -14.658 923.251
+\t (00:10:05) Grids are drawn 20.000, 20.000 apart for enhanced viewability.
+\i (00:10:05) trapsize 19063
+\i (00:10:07) artwork 
+\i (00:10:09) setwindow form.film_control
+\i (00:10:09) FORM film_control select_all  
+\i (00:10:09) FORM film_control create  
+\t (00:10:09) Checking db records
+\t (00:10:09)     checking for orphans...
+\t (00:10:09)     Checked  38 percent
+\t (00:10:09)     Checked  77 percent
+\t (00:10:10)     Checked 100 percent
+\t (00:10:10) Done dbdoctor.
+\t (00:10:10) Starting Create artwork films...
+\t (00:10:13) Plot generated.
+\i (00:10:14) FORM film_control ok  
+\i (00:10:14) setwindow pcb
+\i (00:10:14) generaledit 
+\i (00:10:27) save 
+\i (00:10:28) fillin yes 
+\i (00:10:28) generaledit 
+\i (00:10:31) exit 
+\t (00:10:32)     Journal end - Sat Aug 16 22:00:20 2014

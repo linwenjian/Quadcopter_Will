@@ -1,0 +1,85 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Create_devices LOG file                                          )
+(                                                                     )
+(    Drawing          : LAY-27167_C.brd                               )
+(    Software Version : 16.6S005                                      )
+(    Date/Time        : Sat Aug 09 21:07:35 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/crystal_jxs63_xtal4_3p3x2p6_sm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_470-3084.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/conn_hdr_3x1_hdr103_io_865mm_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/conn_pci_xpress_x16_328p_cn2x82.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_np_cc0402_25_discrete_074.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_np_cc0603_ov_discrete_09_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_np_cc0402_25_discrete_55mm.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_np_cc0805_ov_discrete_094m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/diode_schtky_smb_2p7x1p4_ic_07.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/led2_electrode_led2_electrode_i.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/led2_electrode_led2_electrode_1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/led_led_0603_ic_08mm_370-76537.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/bat721b_sot-23_ic_13mm_480-779.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/led2_electrode_led2_electrode_2.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/led2_electrode_led2_electrode_3.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/usb_mini_b_skt_con5_usb_mini_a_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/conn_micro_sd_card_reversed_con.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/ind_ind_0603_08mm_180-75495_10.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/tran_npn_res_sot416_ic_095mm_4.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_041mm_4.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0603_ov_discrete_470-7538.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_470-80310_10k.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_470-3128.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0603_ov_discrete_470-7541.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_470-3072.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0603_ov_discrete_470-8021.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/testloop_tpad_040_ic_01mm_211-.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/k60_lq_lqfp_144p_lqfp144_0p5_20.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/mt29f2g16aadwp_tsop48_18p5x12p4.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/mma8451q_16p_a_qfn5x3_0p5_3x3_i.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/conn_hdr_19_con_ftsh_19m_50_sm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/led_diode_3p2x2p2_ic_11mm_480-.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/led_led_0603_ic_08mm_370-75080.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/led_led_0603_ic_08mm_370-75076.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/conn_shrhdr_10x2_con_tfm_20m_50.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_np_cc0805_ov_discrete_145m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_np_cc0603_ov_discrete_097.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/bead_ferrite_ind_0603_discrete_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0603_ov_discrete_470-7543.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/testloop_test_loop_ic_48mm_210.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/lt1129cst-33_sot223_ic_18mm_3.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/clkgen-sm_xtlosc4_sm_ic_175mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_np_cc0603_ov_discrete_090m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_pol_cc3528-21_21mm_150-785.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/cap_np_cc0603_ov_discrete_125m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/conn_shrhdr_10x2_con_tfm_20m__1.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/conn_hdr_2x1_hdr102_io_871mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/conn_hdr_3x2_hdr203_tsm_sm_io_9.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/bead_ind_0805_discrete_105mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/npn_sot23_ic_112mm_480-75173_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/tran_photo_qtlp610_ic_11mm_480.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_470-7603.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_470-3078.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0603_ov_discrete_470-7540.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_470-3091.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_470-7646.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete__470-760.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0402_25_discrete_470-7835.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/res_rc0805_ov_discrete_470-7544.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/pot_pot3_3352t_discrete_470-801.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/sw_tact-spst-2_sm_sw4_4mm_ic_4.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/mic2526_8p_so8_ic_173mm_312-75.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/74lvc125_tssop14_ic_12mm_312-7.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/74-125_14p_soic14_ic_175mm_312.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/74_04_tssop-14_ic_12mm_312-753.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/spb0503_sot_143_ic_122mm_480-7.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/mc9s08jm60cfge_tqfp44_ic_160m.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/xtal_xtl2_ecs_sm_ic_225mm_230-.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/xtal_xtl2_ecs_csm7_sm_ic_43mm_.txt': written successfully.
+Device file 'E:/linwenjian/Quadcopter_Will/Hardware/TWR-K60F120M-PWB/layout_lib/battery_skt_3v_skt_bat_780x1210.txt': written successfully.
+
+  Created device files: 70
+
