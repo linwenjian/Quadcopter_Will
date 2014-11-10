@@ -1,0 +1,135 @@
+/*
+ * Copyright (c) 2011, Freescale Semiconductor, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ *
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of Freescale Semiconductor, Inc. nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
+#define		TL		0
+#define		TS		0
+#define		CASR	0
+#define		CAA		1
+#define		CA0		2
+#define		CA1		3
+#define		CA2		4
+#define		CA3		5
+#define		CA4		6
+#define		CA5		7
+#define		CA6		8
+#define		CA7		9
+#define		CA8		10
+#define		CNOP	0x000
+#define		LDR		0x010
+#define		STR		0x020
+#define		ADR		0x030
+#define		RADR	0x040
+#define		ADRA	0x050
+#define		XOR		0x060
+#define		ROTL	0x070
+#define		MVRA	0x080
+#define		MVAR	0x090
+#define		AESS	0x0a0
+#define		AESIS	0x0b0
+#define		AESC	0x0c0
+#define		AESIC	0x0d0
+#define		AESR	0x0e0
+#define		AESIR	0x0f0
+#define		DESR	0x100
+#define		DESK	0x110
+#define		HASH	0x120
+#define		SHS		0x130
+#define		MDS		0x140
+#define		SHS2	0x150
+#define		ILL		0x1f0
+#define		IP		8
+#define		FP		4
+#define		DC		1
+#define		CP		2
+#define		KSL1	0
+#define		KSL2	1
+#define		KSR1	2
+#define		KSR2	3
+#define		HFF		0
+#define		HFG		1
+#define		HFH		2
+#define		HFI		3
+#define		HFP		2
+#define		HFC		4
+#define		HFM		5
+#define		HF2C	6
+#define		HF2M	7
+#define		HF2S	8
+#define		HF2T	9
+#define		HF2U	10
+#define		HF2V	11
+
+/*******************************************************************************
+ * Macros
+ ******************************************************************************/
+#define mmcau_1_cmd(c1)        (0x80000000 + (c1<<22))
+#define mmcau_2_cmds(c1,c2)    (0x80100000 + (c1<<22) + (c2<<11))
+#define mmcau_3_cmds(c1,c2,c3) (0x80100200 + (c1<<22) + (c2<<11) + c3)
+#define byterev(d)             (d>>24)|(d>>8)&0xff00|(d<<8)&0xff0000|(d<<24)
+
+/*******************************************************************************
+ * Global Variables 
+ ******************************************************************************/
+extern volatile unsigned long *const MMCAU_PPB_DIRECT;
+extern volatile unsigned long *const MMCAU_PPB_INDIRECT;
+
+/*******************************************************************************
+ * Function declarations
+ ******************************************************************************/
+/* AES declarations */
+void mmcau_aes_set_key(unsigned int key[], int key_size, unsigned int key_sch[]);
+void mmcau_aes_encrypt(unsigned int in[], unsigned int key_sch[], int nr, unsigned int out[]);
+void mmcau_aes_decrypt(unsigned int in[], unsigned int key_sch[], int nr, unsigned int out[]);
+
+/* DES declarations */
+int mmcau_des_chk_parity(unsigned int key[]);
+void mmcau_des_encrypt(unsigned int in[], unsigned int key[],unsigned int out[]);
+void mmcau_des_decrypt(unsigned int in[], unsigned int key[],unsigned int out[]);
+
+/* MD5 declarations */
+void mmcau_md5_initialize_output(unsigned int md_state[]);
+void mmcau_md5_hash_n(unsigned int msg_data[], int num_blks,unsigned int md_state[]);
+void mmcau_md5_update(unsigned int msg_data[], int num_blks,unsigned int md_state[]);
+void mmcau_md5_hash(unsigned int msg_data[], unsigned int md_state[]);
+
+/* SHA1 declarations */
+void mmcau_sha1_initialize_output (unsigned int sha1_state[]);
+void mmcau_sha1_hash_n (unsigned int msg_data[], int num_blks, unsigned int sha1_state[]);
+void mmcau_sha1_update(unsigned int msg_data[], int num_blks, unsigned int sha1_state[]);
+void mmcau_sha1_hash (unsigned int msg_data[], unsigned int sha1_state[]);
+
+/* SHA256 declarations */
+int mmcau_sha256_initialize_output (unsigned int *output);
+void mmcau_sha256_hash_n (unsigned int input[], int num_blks, unsigned int output[]);
+void mmcau_sha256_update (unsigned int input[], int num_blks, unsigned int output[]);
+void mmcau_sha256_hash (unsigned int input[], unsigned int output[]);
