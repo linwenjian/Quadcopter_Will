@@ -40,12 +40,7 @@
 /* The FXOS8700 i2c instance and slave address */
 #define ACCE_I2C_INSTANCE  (0U)
 #define ACCE_ADDR             (0x1DU)
-#define ACCE_BAUDRATE (40)
-
-/* The L3G4200D i2c instance and slave address */
-#define GYRO_I2C_INSTANCE  (0U)
-#define GYRO_ADDR              (0x68U)  //1101000b
-#define GYRO_BAUDRATE (40)
+#define ACCE_BAUDRATE (100)
 
 #define ACCE_STATUS        0x00U
 #define ACCE_XYZ_DATA_CFG  0x0EU
@@ -58,6 +53,35 @@
 #define ACCE_OUT_Y_LSB     0x04U
 #define ACCE_OUT_Z_MSB     0x05U
 #define ACCE_OUT_Z_LSB     0x06U
+
+
+/* The L3G4200D i2c instance and slave address */
+#define GYRO_I2C_INSTANCE  (0U)
+#define GYRO_ADDR              (0x68U)  //1101000b
+#define GYRO_BAUDRATE (100)
+#define GYRO_ID         0xD3            /* Gyroscope ID (Who am I value)*/
+
+//#define GYRO_I2C_ADDR   0x68            /* Gyroscope 7-bit I2C address        */
+//#define GYRO_ID         0xD3            /* Gyroscope ID (Who am I value)      */
+//
+//#define GYRO_I2C_ADDR_2 0x6A            /* Gyroscope 7-bit I2C address 2      */
+//#define GYRO_ID_2       0xD4            /* This driver also works with L3GD20 */
+
+/* Register addresses */
+#define GYRO_WHO_AM_I        0x0F
+#define GYRO_CTRL_REG1       0x20
+#define GYRO_CTRL_REG4       0x23
+#define GYRO_CTRL_REG5       0x24
+#define GYRO_OUT_X_L         0x28
+#define GYRO_OUT_X_H         0x29
+#define GYRO_OUT_Y_L         0x2A
+#define GYRO_OUT_Y_H         0x2B
+#define GYRO_OUT_Z_L         0x2C
+#define GYRO_OUT_Z_H         0x2D
+
+
+
+
 
 #endif
 /*******************************************************************************

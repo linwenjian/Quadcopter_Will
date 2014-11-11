@@ -32,10 +32,15 @@
 
 
 i2c_master_state_t master;
-i2c_device_t device =
+i2c_device_t acce_device =
   {
     .address = ACCE_ADDR,
     .baudRate_kbps = ACCE_BAUDRATE
+  };
+i2c_device_t gyro_device =
+  {
+    .address = GYRO_ADDR,
+    .baudRate_kbps = GYRO_BAUDRATE
   };
 
 int16_t x = 0 ,y = 0, z = 0 ;
@@ -64,7 +69,7 @@ i2c_status_t I2C_acceInit(void)
   write_value = 0x00;
 
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &write_value, 1, 1000) )
+     I2C_DRV_MasterSendDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 1000) )
   {
     PRINTF("fail0");
     I2C_DRV_MasterDeinit(ACCE_I2C_INSTANCE);
@@ -73,7 +78,7 @@ i2c_status_t I2C_acceInit(void)
 
   acce_reg = ACCE_XYZ_DATA_CFG;
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &read_temp, 1, 1000) )
+     I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &read_temp, 1, 1000) )
   {
     PRINTF("fail1");
     I2C_DRV_MasterDeinit(ACCE_I2C_INSTANCE);
@@ -81,7 +86,7 @@ i2c_status_t I2C_acceInit(void)
   }
   write_value = (read_temp & (~RANGE_MASK)) | kRange8g  ;
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &write_value, 1, 1000) )
+     I2C_DRV_MasterSendDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 1000) )
   {
     PRINTF("fail2");
     I2C_DRV_MasterDeinit(ACCE_I2C_INSTANCE);
@@ -91,7 +96,7 @@ i2c_status_t I2C_acceInit(void)
   acce_reg = ACCE_CTRL_REG1;
   write_value =  0x01 ;
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &write_value, 1, 1000) )
+     I2C_DRV_MasterSendDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 1000) )
   {
     PRINTF("fail3");
     I2C_DRV_MasterDeinit(ACCE_I2C_INSTANCE);
@@ -99,6 +104,56 @@ i2c_status_t I2C_acceInit(void)
   }
     return kStatus_I2C_Success ;
 }
+
+
+i2c_status_t I2C_gyroInit(void)
+{
+  uint8_t write_value = 0;
+  uint8_t gyro_reg = 0;
+  uint8_t read_temp = 0;
+  uint8_t x_msb = 0 ,y_msb = 0, z_msb = 0 ;
+  uint8_t x_lsb = 0 ,y_lsb = 0, z_lsb = 0 ;
+  uint8_t show_time = 0;
+
+ // I2C_DRV_MasterInit(gyro_I2C_INSTANCE, &master);
+
+
+  uint8_t who = 0;
+
+  /*Init gyro chip*/
+  gyro_reg = GYRO_WHO_AM_I;
+  if( kStatus_I2C_Success !=
+     I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &read_temp, 1, 1000) )
+  {
+    PRINTF("fail0");
+  //  I2C_DRV_MasterDeinit(GYRO_I2C_INSTANCE);
+    return kStatus_I2C_Fail;
+  }
+  if(GYRO_ID != read_temp)
+  {
+    PRINTF("no GYRO chip");
+  }
+
+  /* ODR: 100Hz, Cut-Off: 12.5,         */
+  gyro_reg = GYRO_CTRL_REG1;
+  write_value = 0x0f;
+  I2C_DRV_MasterSendDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &write_value, 1, 1000);
+
+  /* Continous update,full scale 250dps */
+  gyro_reg = GYRO_CTRL_REG4;
+  write_value = 0x00;
+  I2C_DRV_MasterSendDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &write_value, 1, 1000);
+
+  /* FIFO Enable                        */
+  gyro_reg = GYRO_CTRL_REG5;
+  write_value = 0x40;
+  I2C_DRV_MasterSendDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &write_value, 1, 1000);
+
+   return kStatus_I2C_Success ;
+}
+
+
+
 
 
 i2c_status_t I2C_acceInterrupt(void)
@@ -114,7 +169,7 @@ i2c_status_t I2C_acceInterrupt(void)
 
     acce_reg = ACCE_STATUS ;
     if( kStatus_I2C_Success !=
-       I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &read_temp, 1, 1000))
+       I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &read_temp, 1, 1000))
     {
       PRINTF("fail4");
       I2C_DRV_MasterDeinit(ACCE_I2C_INSTANCE);
@@ -128,28 +183,28 @@ i2c_status_t I2C_acceInterrupt(void)
       z = 0 ;
 
       acce_reg = ACCE_OUT_X_MSB ;
-      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &x_msb, 1, 1000);
+      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &x_msb, 1, 1000);
 
       acce_reg = ACCE_OUT_X_LSB ;
-      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &x_lsb, 1, 1000);
+      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &x_lsb, 1, 1000);
 
       acce_reg = ACCE_OUT_Y_MSB ;
-      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &y_msb, 1, 1000);
+      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &y_msb, 1, 1000);
 
       acce_reg = ACCE_OUT_Y_LSB ;
-      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &y_lsb, 1, 1000);
+      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &y_lsb, 1, 1000);
 
       acce_reg = ACCE_OUT_Z_MSB ;
-      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &z_msb, 1, 1000);
+      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &z_msb, 1, 1000);
 
       acce_reg = ACCE_OUT_Z_LSB ;
-      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &device, &acce_reg, 1, &z_lsb, 1, 1000);
+      I2C_DRV_MasterReceiveDataBlocking(ACCE_I2C_INSTANCE, &acce_device, &acce_reg, 1, &z_lsb, 1, 1000);
 
       x = acceDataCombine(x_msb,x_lsb);
       y = acceDataCombine(y_msb,y_lsb);
       z = acceDataCombine(z_msb,z_lsb);
 
-      PRINTF("x = %d , y = %d , z = %d\r\n" ,x,y,z);
+      PRINTF("x = %5d , y = %5d , z = %5d\r\n" ,x,y,z);
   }
 
   return kStatus_I2C_Success ;
