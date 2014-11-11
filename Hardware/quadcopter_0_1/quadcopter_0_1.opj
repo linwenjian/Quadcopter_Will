@@ -234,58 +234,34 @@
       (Path "Design Resources" ".\quadcopter_0_1.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
-      (Select "Design Resources" ".\quadcopter_0_1.dsn" "SCHEMATIC1" "04 ADC"))
+      (Select "Design Resources" ".\quadcopter_0_1.dsn" "SCHEMATIC1" "03 PWM"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 250 0 537"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 250 0 851"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 175 1075 175 529")
-        (Scroll "0 504")
-        (Zoom "52")
+        (Placement "44 0 1 -1 -1 -8 -30 150 894 150 599")
+        (Scroll "0 0")
+        (Zoom "100")
         (Occurrence "/"))
-      (Path
-         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\QUADCOPTER_0_1.DSN")
+      (Path "D:\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\QUADCOPTER_0_1.DSN")
       (Schematic "SCHEMATIC1")
       (Page "02 Sensor"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 900 0 354")
-        (Scroll "-219 0")
-        (Zoom "21")
-        (Occurrence "/"))
-      (Path
-         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\QUADCOPTER_0_1.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "01 MCU"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 925 25 379")
+        (Placement "44 2 3 -1 -1 -8 -30 175 923 175 628")
         (Scroll "0 0")
-        (Zoom "40")
+        (Zoom "100")
         (Occurrence "/"))
-      (Path
-         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\QUADCOPTER_0_1.DSN")
+      (Path "D:\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\QUADCOPTER_0_1.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "03 PWM"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 50 950 50 404")
-        (Scroll "522 943")
-        (Zoom "104")
-        (Occurrence "/"))
-      (Path
-         "E:\LINWENJIAN\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\QUADCOPTER_0_1.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "04 ADC")))
+      (Page "03 PWM")))
   (ISPCBBASICLICENSE "false")
-  (MPSSessionName "Administrator")
+  (MPSSessionName "B46660")
   (LastUsedLibraryBrowseDirectory
      "F:\program\Cadence\SPB_16.6\tools\capture\library"))

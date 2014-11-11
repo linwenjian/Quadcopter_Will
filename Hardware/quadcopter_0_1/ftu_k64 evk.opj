@@ -14,21 +14,24 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "e:\linwenjian\quadcopter_will\hardware\quadcopter_0_1\ftu_k64 evk.dsn")
-      (Path "Design Resources"
-         "e:\linwenjian\quadcopter_will\hardware\quadcopter_0_1\ftu_k64 evk.dsn"
-         "SCHEMATIC1")
-      (Path "Design Resources"
-         "e:\linwenjian\quadcopter_will\hardware\quadcopter_0_1\ftu_k64 evk.dsn"
-         "Design Cache")
-      (Select "Design Resources"
-         "e:\linwenjian\quadcopter_will\hardware\quadcopter_0_1\ftu_k64 evk.dsn"
-         "Design Cache" "K60_LQ_LQFP_0"))
+      (Path "Design Resources" ".\ftu_k64 evk.dsn")
+      (Path "Design Resources" ".\ftu_k64 evk.dsn" "SCHEMATIC1")
+      (Select "Design Resources" ".\ftu_k64 evk.dsn" "SCHEMATIC1"
+         "PAGE01 Diagram&Revision History"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 404 0 489"))
-      (Tab 0)))
-  (MPSSessionName "Administrator"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 404 0 489"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 50 1054 50 463")
+        (Scroll "-177 -1")
+        (Zoom "35")
+        (Occurrence "/"))
+      (Path "D:\QUADCOPTER_WILL\HARDWARE\QUADCOPTER_0_1\FTU_K64 EVK.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE01 Diagram&Revision History")))
+  (MPSSessionName "B46660"))

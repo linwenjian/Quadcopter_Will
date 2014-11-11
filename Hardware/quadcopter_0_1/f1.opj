@@ -13,11 +13,11 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\quadcopter_0_1.olb")
       (Select "Design Resources" ".\quadcopter_0_1.olb"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 215"))
-      (Tab 0))))
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 215"))
+      (Tab 0)))
+  (MPSSessionName "B46660"))
