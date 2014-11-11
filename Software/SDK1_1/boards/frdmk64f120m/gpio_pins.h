@@ -20,23 +20,23 @@
 **         GPIO_DRV_ReadPinInput    - uint32_t GPIO_DRV_ReadPinInput(uint32_t pinName);
 **         GPIO_DRV_ClearPinIntFlag - void GPIO_DRV_ClearPinIntFlag(uint32_t pinName);
 **
-**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc.
 **     All Rights Reserved.
-**     
+**
 **     Redistribution and use in source and binary forms, with or without modification,
 **     are permitted provided that the following conditions are met:
-**     
+**
 **     o Redistributions of source code must retain the above copyright notice, this list
 **       of conditions and the following disclaimer.
-**     
+**
 **     o Redistributions in binary form must reproduce the above copyright notice, this
 **       list of conditions and the following disclaimer in the documentation and/or
 **       other materials provided with the distribution.
-**     
+**
 **     o Neither the name of Freescale Semiconductor, Inc. nor the names of its
 **       contributors may be used to endorse or promote products derived from this
 **       software without specific prior written permission.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 **     ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 **     WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -47,18 +47,18 @@
 **     ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 **     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 **     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-**     
+**
 **     http: www.freescale.com
 **     mail: support@freescale.com
 ** ###################################################################*/
 /*!
 ** @file gpio_pins.h
 ** @version 01.00
-*/         
+*/
 /*!
 **  @addtogroup gpio_pins_module gpio_pins module documentation
 **  @{
-*/         
+*/
 
 #ifndef __gpio_pins_H
 #define __gpio_pins_H
@@ -85,20 +85,21 @@ extern const gpio_input_pin_user_config_t gpioUartDemoRxPin[];
 
 /*! @brief Pin names */
 enum _gpio_pins_pinNames{
-  kGpioSW1 = GPIO_MAKE_PIN(HW_GPIOC, 6U),
-  kGpioSW2 = GPIO_MAKE_PIN(HW_GPIOA, 4U),
-  kGpioAccelINT1 = GPIO_MAKE_PIN(HW_GPIOC, 6U),
-  kGpioAccelINT2 = GPIO_MAKE_PIN(HW_GPIOC, 13U),
-  kGpioSdhc0Cd = GPIO_MAKE_PIN(HW_GPIOE, 6U),
-  kGpioLED1 = GPIO_MAKE_PIN(HW_GPIOE, 26U),
-  kGpioLED2 = GPIO_MAKE_PIN(HW_GPIOB, 22U),
-  kGpioLED3 = GPIO_MAKE_PIN(HW_GPIOB, 21U),
-  kGpioUartDemoRX = GPIO_MAKE_PIN(HW_GPIOB, 16),
-  kGpioSpi0Cs0 = GPIO_MAKE_PIN(HW_GPIOD, 0),
-  kGpioSpi0Cs1 = GPIO_MAKE_PIN(HW_GPIOD, 4),
+//  kGpioSW1 = GPIO_MAKE_PIN(HW_GPIOC, 6U),
+//  kGpioSW2 = GPIO_MAKE_PIN(HW_GPIOA, 4U),
+//  kGpioAccelINT1 = GPIO_MAKE_PIN(HW_GPIOC, 6U),
+//  kGpioAccelINT2 = GPIO_MAKE_PIN(HW_GPIOC, 13U),
+//  kGpioSdhc0Cd = GPIO_MAKE_PIN(HW_GPIOE, 6U),
+  kGpioLED2 = GPIO_MAKE_PIN(HW_GPIOD, 5U),
+  kGpioLED3 = GPIO_MAKE_PIN(HW_GPIOD, 6U),
+  kGpioLED4 = GPIO_MAKE_PIN(HW_GPIOD, 7U),
+  kGpioLED5 = GPIO_MAKE_PIN(HW_GPIOD, 8U),
+//  kGpioUartDemoRX = GPIO_MAKE_PIN(HW_GPIOB, 16),
+//  kGpioSpi0Cs0 = GPIO_MAKE_PIN(HW_GPIOD, 0),
+//  kGpioSpi0Cs1 = GPIO_MAKE_PIN(HW_GPIOD, 4),
 };
 
-  
+
 #endif
 
 /*!

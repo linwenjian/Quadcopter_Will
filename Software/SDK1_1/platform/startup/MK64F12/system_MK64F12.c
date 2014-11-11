@@ -135,14 +135,14 @@ void SystemInit (void) {
        PMC->REGSC |= PMC_REGSC_ACKISO_MASK; /* Release hold with ACKISO:  Only has an effect if recovering from VLLSx.*/
     }
   } else {
-#ifdef SYSTEM_RTC_CR_VALUE
-    SIM_SCGC6 |= SIM_SCGC6_RTC_MASK;
-    if ((RTC_CR & RTC_CR_OSCE_MASK) == 0x00U) { /* Only if the OSCILLATOR is not already enabled */
-      RTC_CR = (uint32_t)((RTC_CR & (uint32_t)~(uint32_t)(RTC_CR_SC2P_MASK | RTC_CR_SC4P_MASK | RTC_CR_SC8P_MASK | RTC_CR_SC16P_MASK)) | (uint32_t)SYSTEM_RTC_CR_VALUE);
-      RTC_CR |= (uint32_t)RTC_CR_OSCE_MASK;
-      RTC_CR &= (uint32_t)~(uint32_t)RTC_CR_CLKO_MASK;
-    }
-#endif
+//#ifdef SYSTEM_RTC_CR_VALUE
+//    SIM_SCGC6 |= SIM_SCGC6_RTC_MASK;
+//    if ((RTC_CR & RTC_CR_OSCE_MASK) == 0x00U) { /* Only if the OSCILLATOR is not already enabled */
+//      RTC_CR = (uint32_t)((RTC_CR & (uint32_t)~(uint32_t)(RTC_CR_SC2P_MASK | RTC_CR_SC4P_MASK | RTC_CR_SC8P_MASK | RTC_CR_SC16P_MASK)) | (uint32_t)SYSTEM_RTC_CR_VALUE);
+//      RTC_CR |= (uint32_t)RTC_CR_OSCE_MASK;
+//      RTC_CR &= (uint32_t)~(uint32_t)RTC_CR_CLKO_MASK;
+//    }
+//#endif
   }
 
   /* Power mode protection initialization */

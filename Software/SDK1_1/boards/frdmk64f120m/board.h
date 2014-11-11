@@ -130,21 +130,29 @@
 #define DISABLE_SW_PIN PORT_HAL_SetMuxMode(PORTA_BASE, 4, kPortPinDisabled)
 #define ENABLE_SW_PIN PORT_HAL_SetMuxMode(PORTA_BASE, 4, kPortMuxAsGpio)
 
-#define LED1_EN (PORT_HAL_SetMuxMode(PORTE_BASE, 26, kPortMuxAsGpio)) 	/*!< Enable target LED0 */
-#define LED2_EN (PORT_HAL_SetMuxMode(PORTB_BASE, 22, kPortMuxAsGpio)) 	/*!< Enable target LED1 */
-#define LED3_EN (PORT_HAL_SetMuxMode(PORTB_BASE, 21, kPortMuxAsGpio)) 	/*!< Enable target LED2 */
+#define LED2_EN  PORT_HAL_SetMuxMode(PORTD_BASE, 5, kPortMuxAsGpio);\
+                 GPIO_DRV_SetPinDir(ledPins[0].pinName, kGpioDigitalOutput) 	/*!< Enable target LED2 */
+#define LED3_EN  PORT_HAL_SetMuxMode(PORTD_BASE, 6, kPortMuxAsGpio);\
+                 GPIO_DRV_SetPinDir(ledPins[1].pinName, kGpioDigitalOutput) 	/*!< Enable target LED3 */
+#define LED4_EN  PORT_HAL_SetMuxMode(PORTD_BASE, 7, kPortMuxAsGpio);\
+                 GPIO_DRV_SetPinDir(ledPins[2].pinName, kGpioDigitalOutput) 	/*!< Enable target LED4 */
+#define LED5_EN  PORT_HAL_SetMuxMode(PORTD_BASE, 8, kPortMuxAsGpio);\
+                 GPIO_DRV_SetPinDir(ledPins[3].pinName, kGpioDigitalOutput) 	/*!< Enable target LED5 */
 
-#define LED1_DIS (PORT_HAL_SetMuxMode(PORTE_BASE, 26, kPortMuxAsGpio)) 	/*!< Enable target LED0 */
-#define LED2_DIS (PORT_HAL_SetMuxMode(PORTB_BASE, 22, kPortMuxAsGpio)) 	/*!< Enable target LED1 */
-#define LED3_DIS (PORT_HAL_SetMuxMode(PORTB_BASE, 21, kPortMuxAsGpio)) 	/*!< Enable target LED2 */
+#define LED2_DIS (PORT_HAL_SetMuxMode(PORTD_BASE, 5, kPortPinDisabled)) 	/*!< Enable target LED2 */
+#define LED3_DIS (PORT_HAL_SetMuxMode(PORTD_BASE, 6, kPortPinDisabled)) 	/*!< Enable target LED3 */
+#define LED4_DIS (PORT_HAL_SetMuxMode(PORTD_BASE, 7, kPortPinDisabled)) 	/*!< Enable target LED4 */
+#define LED5_DIS (PORT_HAL_SetMuxMode(PORTD_BASE, 8, kPortPinDisabled)) 	/*!< Enable target LED5 */
 
-#define LED1_OFF (GPIO_DRV_WritePinOutput(ledPins[0].pinName, 1))       /*!< Turn off target LED0 */
-#define LED2_OFF (GPIO_DRV_WritePinOutput(ledPins[1].pinName, 1))       /*!< Turn off target LED1 */
-#define LED3_OFF (GPIO_DRV_WritePinOutput(ledPins[2].pinName, 1))       /*!< Turn off target LED2 */
+#define LED2_OFF (GPIO_DRV_WritePinOutput(ledPins[0].pinName, 0))       /*!< Turn off target LED2 */
+#define LED3_OFF (GPIO_DRV_WritePinOutput(ledPins[1].pinName, 0))       /*!< Turn off target LED3 */
+#define LED4_OFF (GPIO_DRV_WritePinOutput(ledPins[2].pinName, 0))       /*!< Turn off target LED4 */
+#define LED5_OFF (GPIO_DRV_WritePinOutput(ledPins[3].pinName, 0))       /*!< Turn off target LED5 */
 
-#define LED1_ON (GPIO_DRV_WritePinOutput(ledPins[0].pinName, 0))        /*!< Turn on target LED0 */
-#define LED2_ON (GPIO_DRV_WritePinOutput(ledPins[1].pinName, 0))        /*!< Turn on target LED1 */
-#define LED3_ON (GPIO_DRV_WritePinOutput(ledPins[2].pinName, 0))        /*!< Turn on target LED2 */
+#define LED2_ON (GPIO_DRV_WritePinOutput(ledPins[0].pinName, 1))        /*!< Turn on target LED2 */
+#define LED3_ON (GPIO_DRV_WritePinOutput(ledPins[1].pinName, 1))        /*!< Turn on target LED3 */
+#define LED4_ON (GPIO_DRV_WritePinOutput(ledPins[2].pinName, 1))        /*!< Turn on target LED4 */
+#define LED5_ON (GPIO_DRV_WritePinOutput(ledPins[3].pinName, 1))        /*!< Turn on target LED5 */
 
 /* The SDHC instance/channel used for board */
 #define BOARD_SDHC_INSTANCE             0

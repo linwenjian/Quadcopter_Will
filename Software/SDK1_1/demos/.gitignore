@@ -1,0 +1,9 @@
+mdk
+kds
+kdsgcc
+armgcc
+atl
+*.dep
+debug
+release
+settings
