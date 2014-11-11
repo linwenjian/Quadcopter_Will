@@ -49,7 +49,7 @@
         </option>
         <option>
           <name>RunToEnable</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>RunToName</name>
@@ -81,7 +81,7 @@
         </option>
         <option>
           <name>OCProductVersion</name>
-          <state>6.50.6.4952</state>
+          <state>7.20.2.7418</state>
         </option>
         <option>
           <name>OCDynDriverList</name>
@@ -299,7 +299,7 @@
         <option>
           <name>CMSISDAPResetList</name>
           <version>1</version>
-          <state>5</state>
+          <state>10</state>
         </option>
         <option>
           <name>CMSISDAPHWResetDuration</name>
@@ -319,7 +319,7 @@
         </option>
         <option>
           <name>CMSISDAPInterfaceRadio</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>CMSISDAPInterfaceCmdLine</name>
@@ -356,7 +356,7 @@
         </option>
         <option>
           <name>RDICatchUndef</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>RDICatchSWI</name>
@@ -364,11 +364,11 @@
         </option>
         <option>
           <name>RDICatchData</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>RDICatchPrefetch</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>RDICatchIRQ</name>
@@ -384,31 +384,31 @@
         </option>
         <option>
           <name>CatchMMERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchNOCPERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchCHKERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchSTATERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchBUSERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchINTERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchHARDERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchDummy</name>
@@ -436,7 +436,7 @@
         </option>
         <option>
           <name>CMSISDAPSelectedCPUBehaviour</name>
-          <state></state>
+          <state>0</state>
         </option>
         <option>
           <name>ICpuName</name>
@@ -729,7 +729,7 @@
         <debug>1</debug>
         <option>
           <name>JLinkSpeed</name>
-          <state>32</state>
+          <state>1000</state>
         </option>
         <option>
           <name>CCJLinkDoLogfile</name>
@@ -749,7 +749,7 @@
         </option>
         <option>
           <name>JLinkInitialSpeed</name>
-          <state>32</state>
+          <state>1000</state>
         </option>
         <option>
           <name>CCDoJlinkMultiTarget</name>
@@ -1060,7 +1060,7 @@
         <option>
           <name>CCPEMicroInterfaceList</name>
           <version>0</version>
-          <state>7</state>
+          <state>0</state>
         </option>
         <option>
           <name>CCPEMicroResetDelay</name>
@@ -1068,7 +1068,7 @@
         </option>
         <option>
           <name>CCPEMicroJtagSpeed</name>
-          <state>5000</state>
+          <state>#UNINITIALIZED#</state>
         </option>
         <option>
           <name>CCJPEMicroShowSettings</name>
@@ -1106,7 +1106,7 @@
         </option>
         <option>
           <name>CCSTLinkInterfaceRadio</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>CCSTLinkInterfaceCmdLine</name>
@@ -1390,7 +1390,7 @@
         </option>
         <option>
           <name>MemFile</name>
-          <state>$TOOLKIT_DIR$\CONFIG\debugger\Freescale\MK70FN1M0xxx12.ddf</state>
+          <state></state>
         </option>
         <option>
           <name>RunToEnable</name>
@@ -1422,19 +1422,19 @@
         </option>
         <option>
           <name>OCDownloadVerifyAll</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>OCProductVersion</name>
-          <state>6.50.6.4952</state>
+          <state>7.20.2.7418</state>
         </option>
         <option>
           <name>OCDynDriverList</name>
-          <state>CMSISDAP_ID</state>
+          <state>ARMSIM_ID</state>
         </option>
         <option>
           <name>OCLastSavedByProductVersion</name>
-          <state>7.10.1.6733</state>
+          <state></state>
         </option>
         <option>
           <name>OCDownloadAttachToProgram</name>
@@ -1442,7 +1442,7 @@
         </option>
         <option>
           <name>UseFlashLoader</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>CLowLevel</name>
@@ -1462,7 +1462,7 @@
         </option>
         <option>
           <name>FlashLoadersV3</name>
-          <state>$TOOLKIT_DIR$\config\flashloader\Freescale\FlashK70Fxxx128K.board</state>
+          <state></state>
         </option>
         <option>
           <name>OCImagesSuppressCheck1</name>
@@ -1644,7 +1644,7 @@
         <option>
           <name>CMSISDAPResetList</name>
           <version>1</version>
-          <state>5</state>
+          <state>10</state>
         </option>
         <option>
           <name>CMSISDAPHWResetDuration</name>
@@ -1664,7 +1664,7 @@
         </option>
         <option>
           <name>CMSISDAPInterfaceRadio</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>CMSISDAPInterfaceCmdLine</name>
@@ -1701,7 +1701,7 @@
         </option>
         <option>
           <name>RDICatchUndef</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>RDICatchSWI</name>
@@ -1709,11 +1709,11 @@
         </option>
         <option>
           <name>RDICatchData</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>RDICatchPrefetch</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>RDICatchIRQ</name>
@@ -1729,31 +1729,31 @@
         </option>
         <option>
           <name>CatchMMERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchNOCPERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchCHKERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchSTATERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchBUSERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchINTERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchHARDERR</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CatchDummy</name>
@@ -1781,7 +1781,7 @@
         </option>
         <option>
           <name>CMSISDAPSelectedCPUBehaviour</name>
-          <state></state>
+          <state>0</state>
         </option>
         <option>
           <name>ICpuName</name>
@@ -2074,7 +2074,7 @@
         <debug>0</debug>
         <option>
           <name>JLinkSpeed</name>
-          <state>32</state>
+          <state>1000</state>
         </option>
         <option>
           <name>CCJLinkDoLogfile</name>
@@ -2094,7 +2094,7 @@
         </option>
         <option>
           <name>JLinkInitialSpeed</name>
-          <state>32</state>
+          <state>1000</state>
         </option>
         <option>
           <name>CCDoJlinkMultiTarget</name>
@@ -2405,7 +2405,7 @@
         <option>
           <name>CCPEMicroInterfaceList</name>
           <version>0</version>
-          <state>7</state>
+          <state>0</state>
         </option>
         <option>
           <name>CCPEMicroResetDelay</name>
@@ -2413,7 +2413,7 @@
         </option>
         <option>
           <name>CCPEMicroJtagSpeed</name>
-          <state>5000</state>
+          <state>#UNINITIALIZED#</state>
         </option>
         <option>
           <name>CCJPEMicroShowSettings</name>
@@ -2451,7 +2451,7 @@
         </option>
         <option>
           <name>CCSTLinkInterfaceRadio</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>CCSTLinkInterfaceCmdLine</name>

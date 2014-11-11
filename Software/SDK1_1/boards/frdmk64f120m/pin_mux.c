@@ -12,23 +12,23 @@
 **     Settings    :
 **
 **
-**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc.
 **     All Rights Reserved.
-**     
+**
 **     Redistribution and use in source and binary forms, with or without modification,
 **     are permitted provided that the following conditions are met:
-**     
+**
 **     o Redistributions of source code must retain the above copyright notice, this list
 **       of conditions and the following disclaimer.
-**     
+**
 **     o Redistributions in binary form must reproduce the above copyright notice, this
 **       list of conditions and the following disclaimer in the documentation and/or
 **       other materials provided with the distribution.
-**     
+**
 **     o Neither the name of Freescale Semiconductor, Inc. nor the names of its
 **       contributors may be used to endorse or promote products derived from this
 **       software without specific prior written permission.
-**     
+**
 **     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 **     ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 **     WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -39,7 +39,7 @@
 **     ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 **     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 **     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-**     
+**
 **     http: www.freescale.com
 **     mail: support@freescale.com
 ** ###################################################################*/
@@ -48,11 +48,11 @@
 ** @version 1.2
 ** @brief
 **
-*/         
+*/
 /*!
 **  @addtogroup pin_mux_module pin_mux module documentation
 **  @{
-*/         
+*/
 
 /* MODULE pin_mux. */
 
@@ -74,7 +74,7 @@ void configure_can_pins(uint32_t instance)
 
 void configure_cmp_pins(uint32_t instance)
 {
-  switch(instance) {    
+  switch(instance) {
     case HW_CMP0:                       /* CMP0 */
       /* Affects PORTB_PCR20 register */
       PORT_HAL_SetMuxMode(PORTB_BASE,20u,kPortMuxAlt6);
@@ -124,7 +124,7 @@ void configure_enet_pins(uint32_t instance)
 
 void configure_gpio_pins(uint32_t instance)
 {
-  switch(instance) {    
+  switch(instance) {
     case HW_PORTA:                      /* HW_PORTA */
       /* Affects PORTA_PCR4 register */
       PORT_HAL_SetPassiveFilterCmd(PORTA_BASE,4u,false);
@@ -134,11 +134,11 @@ void configure_gpio_pins(uint32_t instance)
       break;
     case HW_PORTB:                      /* HW_PORTB */
       /* Affects PORTB_PCR21 register */
-      PORT_HAL_SetDriveStrengthMode(PORTB_BASE,21u,kPortLowDriveStrength);  
+      PORT_HAL_SetDriveStrengthMode(PORTB_BASE,21u,kPortLowDriveStrength);
       PORT_HAL_SetMuxMode(PORTB_BASE,21u,kPortMuxAsGpio);
       PORT_HAL_SetSlewRateMode(PORTB_BASE,21u,kPortSlowSlewRate);
       /* Affects PORTB_PCR22 register */
-      PORT_HAL_SetDriveStrengthMode(PORTB_BASE,22u,kPortLowDriveStrength);  
+      PORT_HAL_SetDriveStrengthMode(PORTB_BASE,22u,kPortLowDriveStrength);
       PORT_HAL_SetMuxMode(PORTB_BASE,22u,kPortMuxAsGpio);
       PORT_HAL_SetSlewRateMode(PORTB_BASE,22u,kPortSlowSlewRate);
       break;
@@ -163,7 +163,7 @@ void configure_gpio_pins(uint32_t instance)
       /* Affects PORTE_PCR6 register */
       PORT_HAL_SetMuxMode(PORTE_BASE,6u,kPortMuxAsGpio);
       /* Affects PORTE_PCR26 register */
-      PORT_HAL_SetDriveStrengthMode(PORTE_BASE,26u,kPortLowDriveStrength);  
+      PORT_HAL_SetDriveStrengthMode(PORTE_BASE,26u,kPortLowDriveStrength);
       PORT_HAL_SetMuxMode(PORTE_BASE,26u,kPortMuxAsGpio);
       PORT_HAL_SetSlewRateMode(PORTE_BASE,26u,kPortSlowSlewRate);
       break;
@@ -174,7 +174,7 @@ void configure_gpio_pins(uint32_t instance)
 
 void configure_i2c_pins(uint32_t instance)
 {
-  switch(instance) {    
+  switch(instance) {
     case HW_I2C0:                       /* I2C0 */
       /* Affects PORTE_PCR24 register */
       PORT_HAL_SetMuxMode(PORTE_BASE,24u,kPortMuxAlt5);
@@ -256,7 +256,7 @@ void configure_sdhc_pins(uint32_t instance)
 
 void configure_spi_pins(uint32_t instance)
 {
-  switch(instance) {    
+  switch(instance) {
     case HW_SPI0:                       /* SPI0 */
       /* Affects PORTD_PCR0 register */
       PORT_HAL_SetMuxMode(PORTD_BASE,0u,kPortMuxAlt2);
@@ -284,18 +284,12 @@ void configure_spi_pins(uint32_t instance)
 
 void configure_uart_pins(uint32_t instance)
 {
-  switch(instance) {    
-    case HW_UART0:                      /* UART0 */
-      /* Affects PORTB_PCR16 register */
-      PORT_HAL_SetMuxMode(PORTB_BASE,16u,kPortMuxAlt3);
-      /* Affects PORTB_PCR17 register */
-      PORT_HAL_SetMuxMode(PORTB_BASE,17u,kPortMuxAlt3);
-      break;
-    case HW_UART4:                      /* UART4 */
-      /* Affects PORTC_PCR14 register */
-      PORT_HAL_SetMuxMode(PORTC_BASE,14u,kPortMuxAlt3);
-      /* Affects PORTC_PCR15 register */
-      PORT_HAL_SetMuxMode(PORTC_BASE,15u,kPortMuxAlt3);
+  switch(instance) {
+    case HW_UART2:                      /* UART2 */
+      /* Affects PORTD_PCR2 register */
+      PORT_HAL_SetMuxMode(PORTD_BASE,2u,kPortMuxAlt3); //uart2_rx
+      /* Affects PORTD_PCR3 register */
+      PORT_HAL_SetMuxMode(PORTD_BASE,3u,kPortMuxAlt3);//uart2_tx
       break;
     default:
       break;
@@ -320,7 +314,7 @@ void configure_gpio_i2c_pins(uint32_t instance)
 
 void configure_ftm_pins(uint32_t instance)
 {
-  switch(instance) {    
+  switch(instance) {
     case HW_FTM0:                       /* FTM0 */
       /* Affects PORTC_PCR1 register */
       PORT_HAL_SetMuxMode(PORTC_BASE,1u,kPortMuxAlt4);

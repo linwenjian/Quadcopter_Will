@@ -32,13 +32,9 @@
 //  Includes
 ///////////////////////////////////////////////////////////////////////////////
 
-// Standard C Included Files
-#include <stdio.h>
-#include <stdlib.h>
 
-// SDK Included Files
-#include "board.h"
-#include "fsl_debug_console.h"
+#include "quad_common.h"
+#include "quad_i2c_config.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 // Code
@@ -56,27 +52,21 @@ int main (void)
     // Initialize standard SDK demo application pins
     hardware_init();
     OSA_Init();
-    // Configure the UART TX/RX pins
-//    configure_uart_pins(BOARD_DEBUG_UART_INSTANCE);
 
     // Call this function to initialize the console UART. This function
     // enables the use of STDIO functions (printf, scanf, etc.)
-//    dbg_uart_init();
+    dbg_uart_init();
 
     // Print the initial banner
-//    PRINTF("\r\nHello World!\n\n\r");
+    PRINTF("\r\nHello World!\n\n\r");
 
     LED2_EN;    LED3_EN;    LED4_EN;    LED5_EN;
     LED2_OFF;   LED3_OFF;   LED4_OFF;   LED5_OFF;
+
+
+    I2C_acceInit();
     while(1)
     {
-//        // Main routine that simply echoes received characters forever
-//
-//        // First, get character
-//        receiveBuff = GETCHAR();
-//
-//        // Now echo the received character
-//        PUTCHAR(receiveBuff);
       LED2_ON;
       OSA_TimeDelay(200);
       LED3_ON;
@@ -86,13 +76,15 @@ int main (void)
       LED5_ON;
       OSA_TimeDelay(200);
 
-      LED5_OFF;
-      OSA_TimeDelay(200);
-      LED4_OFF;
+      LED2_OFF;
       OSA_TimeDelay(200);
       LED3_OFF;
       OSA_TimeDelay(200);
-      LED2_OFF;
+      LED4_OFF;
       OSA_TimeDelay(200);
+      LED5_OFF;
+      OSA_TimeDelay(200);
+
+      I2C_acceInterrupt();
     }
 }

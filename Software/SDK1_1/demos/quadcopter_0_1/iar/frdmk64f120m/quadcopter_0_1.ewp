@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
+
 <project>
   <fileVersion>2</fileVersion>
   <configuration>
@@ -29,7 +30,7 @@
         <option>
           <name>Variant</name>
           <version>20</version>
-          <state>39</state>
+          <state>40</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -42,7 +43,7 @@
         </option>
         <option>
           <name>Input description</name>
-          <state>Automatic choice of formatter.</state>
+          <state>No specifier n, no float nor long long, no scan set, no assignment suppressing.</state>
         </option>
         <option>
           <name>Output variant</name>
@@ -51,7 +52,7 @@
         </option>
         <option>
           <name>Output description</name>
-          <state>Automatic choice of formatter.</state>
+          <state>No specifier a, A, no specifier n, no float nor long long.</state>
         </option>
         <option>
           <name>GOutputBinary</name>
@@ -78,7 +79,7 @@
         </option>
         <option>
           <name>RTDescription</name>
-          <state>0</state>
+          <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
         </option>
         <option>
           <name>OGProductVersion</name>
@@ -86,7 +87,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>7.20.1.7306</state>
+          <state>7.20.2.7418</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -137,12 +138,12 @@
         <option>
           <name>GFPUCoreSlave</name>
           <version>20</version>
-          <state>39</state>
+          <state>40</state>
         </option>
         <option>
           <name>GBECoreSlave</name>
           <version>20</version>
-          <state>39</state>
+          <state>40</state>
         </option>
         <option>
           <name>OGUseCmsis</name>
@@ -167,8 +168,12 @@
         <debug>1</debug>
         <option>
           <name>CCDefines</name>
-          
-        <state>DEBUG</state><state>CPU_MK64FN1M0VMD12</state><state>IAR</state><state>FRDM_K64F120M</state><state>FREEDOM</state></option>
+          <state>DEBUG</state>
+          <state>CPU_MK64FN1M0VMD12</state>
+          <state>IAR</state>
+          <state>FRDM_K64F120M</state>
+          <state>FREEDOM</state>
+        </option>
         <option>
           <name>CCPreprocFile</name>
           <state>0</state>
@@ -211,15 +216,15 @@
         </option>
         <option>
           <name>CCDiagRemark</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CCDiagWarning</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CCDiagError</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CCObjPrefix</name>
@@ -248,7 +253,7 @@
         </option>
         <option>
           <name>IExtraOptions</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CCLangConformance</name>
@@ -288,7 +293,7 @@
         </option>
         <option>
           <name>PreInclude</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CompilerMisraOverride</name>
@@ -296,8 +301,17 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          
-        <state>$PROJ_DIR$/../../../../platform/utilities/inc</state><state>$PROJ_DIR$/../../../../platform/osa/inc</state><state>$PROJ_DIR$/../../../../platform/CMSIS/Include</state><state>$PROJ_DIR$/../../../../platform/CMSIS/Include/device</state><state>$PROJ_DIR$/../../../../platform/startup/MK64F12</state><state>$PROJ_DIR$/../../../../platform/hal/inc</state><state>$PROJ_DIR$/../../../../platform/drivers/inc</state><state>$PROJ_DIR$/../../../../platform/system/inc</state><state>$PROJ_DIR$/../../../../boards/frdmk64f120m</state></option>
+          <state>$PROJ_DIR$/../../../../platform/utilities/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/osa/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/CMSIS/Include</state>
+          <state>$PROJ_DIR$/../../../../platform/CMSIS/Include/device</state>
+          <state>$PROJ_DIR$/../../../../platform/startup/MK64F12</state>
+          <state>$PROJ_DIR$/../../../../platform/hal/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/drivers/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/drivers/src/i2c</state>
+          <state>$PROJ_DIR$/../../../../platform/system/inc</state>
+          <state>$PROJ_DIR$/../../../../boards/frdmk64f120m</state>
+        </option>
         <option>
           <name>CCStdIncCheck</name>
           <state>0</state>
@@ -442,15 +456,15 @@
         </option>
         <option>
           <name>AWarnOne</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>AWarnRange1</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>AWarnRange2</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>ADebug</name>
@@ -462,8 +476,8 @@
         </option>
         <option>
           <name>ADefines</name>
-          
-        <state>DEBUG</state></option>
+          <state>DEBUG</state>
+        </option>
         <option>
           <name>AList</name>
           <state>0</state>
@@ -558,7 +572,7 @@
         </option>
         <option>
           <name>AUserIncludes</name>
-          
+          <state></state>
         </option>
         <option>
           <name>AExtraOptionsCheckV2</name>
@@ -566,7 +580,7 @@
         </option>
         <option>
           <name>AExtraOptionsV2</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>AsmNoLiteralPool</name>
@@ -592,7 +606,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -608,8 +622,8 @@
       <name>CUSTOM</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <extensions/>
-        <cmdline/>
+        <extensions></extensions>
+        <cmdline></cmdline>
       </data>
     </settings>
     <settings>
@@ -621,8 +635,8 @@
       <name>BUILDACTION</name>
       <archiveVersion>1</archiveVersion>
       <data>
-        <prebuild/>
-        <postbuild/>
+        <prebuild></prebuild>
+        <postbuild></postbuild>
       </data>
     </settings>
     <settings>
@@ -646,7 +660,7 @@
         </option>
         <option>
           <name>IlinkOutputFile</name>
-          <state>hello_world.out</state>
+          <state>quadcopter_0_1.out</state>
         </option>
         <option>
           <name>IlinkDebugInfoEnable</name>
@@ -654,32 +668,33 @@
         </option>
         <option>
           <name>IlinkKeepSymbols</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkRawBinaryFile</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkRawBinarySymbol</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkRawBinarySegment</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkRawBinaryAlign</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkDefines</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkConfigDefines</name>
-          
-        <state>__stack_size__=0x2000</state><state>__heap_size__=0x2000</state></option>
+          <state>__stack_size__=0x2000</state>
+          <state>__heap_size__=0x2000</state>
+        </option>
         <option>
           <name>IlinkMapFile</name>
           <state>1</state>
@@ -714,7 +729,7 @@
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkEnableRemarks</name>
@@ -722,19 +737,19 @@
         </option>
         <option>
           <name>IlinkSuppressDiags</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkTreatAsRem</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkTreatAsWarn</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkTreatAsErr</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkWarningsAreErrors</name>
@@ -746,7 +761,7 @@
         </option>
         <option>
           <name>IlinkExtraOptions</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkLowLevelInterfaceSlave</name>
@@ -758,8 +773,8 @@
         </option>
         <option>
           <name>IlinkAdditionalLibs</name>
-          
-        <state>$PROJ_DIR$/../../../../lib/ksdk_platform_lib/iar/K64F12/debug/libksdk_platform.a</state></option>
+          <state>$PROJ_DIR$/../../../../lib/ksdk_platform_lib/iar/K64F12/debug/libksdk_platform.a</state>
+        </option>
         <option>
           <name>IlinkOverrideProgramEntryLabel</name>
           <state>0</state>
@@ -893,11 +908,11 @@
         </option>
         <option>
           <name>IlinkStackControlFile</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkStackCallGraphFile</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CrcAlgorithm</name>
@@ -924,7 +939,7 @@
         <debug>1</debug>
         <option>
           <name>IarchiveInputs</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IarchiveOverride</name>
@@ -1108,8 +1123,12 @@
         <debug>0</debug>
         <option>
           <name>CCDefines</name>
-          
-        <state>NDEBUG</state><state>CPU_MK64FN1M0VMD12</state><state>IAR</state><state>FRDM_K64F120M</state><state>FREEDOM</state></option>
+          <state>NDEBUG</state>
+          <state>CPU_MK64FN1M0VMD12</state>
+          <state>IAR</state>
+          <state>FRDM_K64F120M</state>
+          <state>FREEDOM</state>
+        </option>
         <option>
           <name>CCPreprocFile</name>
           <state>0</state>
@@ -1152,15 +1171,15 @@
         </option>
         <option>
           <name>CCDiagRemark</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CCDiagWarning</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CCDiagError</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CCObjPrefix</name>
@@ -1189,7 +1208,7 @@
         </option>
         <option>
           <name>IExtraOptions</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CCLangConformance</name>
@@ -1229,7 +1248,7 @@
         </option>
         <option>
           <name>PreInclude</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CompilerMisraOverride</name>
@@ -1237,8 +1256,16 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          
-        <state>$PROJ_DIR$/../../../../platform/utilities/inc</state><state>$PROJ_DIR$/../../../../platform/osa/inc</state><state>$PROJ_DIR$/../../../../platform/CMSIS/Include</state><state>$PROJ_DIR$/../../../../platform/CMSIS/Include/device</state><state>$PROJ_DIR$/../../../../platform/startup/MK64F12</state><state>$PROJ_DIR$/../../../../platform/hal/inc</state><state>$PROJ_DIR$/../../../../platform/drivers/inc</state><state>$PROJ_DIR$/../../../../platform/system/inc</state><state>$PROJ_DIR$/../../../../boards/frdmk64f120m</state></option>
+          <state>$PROJ_DIR$/../../../../platform/utilities/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/osa/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/CMSIS/Include</state>
+          <state>$PROJ_DIR$/../../../../platform/CMSIS/Include/device</state>
+          <state>$PROJ_DIR$/../../../../platform/startup/MK64F12</state>
+          <state>$PROJ_DIR$/../../../../platform/hal/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/drivers/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/system/inc</state>
+          <state>$PROJ_DIR$/../../../../boards/frdmk64f120m</state>
+        </option>
         <option>
           <name>CCStdIncCheck</name>
           <state>0</state>
@@ -1383,15 +1410,15 @@
         </option>
         <option>
           <name>AWarnOne</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>AWarnRange1</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>AWarnRange2</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>ADebug</name>
@@ -1403,7 +1430,7 @@
         </option>
         <option>
           <name>ADefines</name>
-          
+          <state></state>
         </option>
         <option>
           <name>AList</name>
@@ -1499,7 +1526,7 @@
         </option>
         <option>
           <name>AUserIncludes</name>
-          
+          <state></state>
         </option>
         <option>
           <name>AExtraOptionsCheckV2</name>
@@ -1507,7 +1534,7 @@
         </option>
         <option>
           <name>AExtraOptionsV2</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>AsmNoLiteralPool</name>
@@ -1533,7 +1560,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -1549,8 +1576,8 @@
       <name>CUSTOM</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <extensions/>
-        <cmdline/>
+        <extensions></extensions>
+        <cmdline></cmdline>
       </data>
     </settings>
     <settings>
@@ -1562,8 +1589,8 @@
       <name>BUILDACTION</name>
       <archiveVersion>1</archiveVersion>
       <data>
-        <prebuild/>
-        <postbuild/>
+        <prebuild></prebuild>
+        <postbuild></postbuild>
       </data>
     </settings>
     <settings>
@@ -1587,7 +1614,7 @@
         </option>
         <option>
           <name>IlinkOutputFile</name>
-          <state>hello_world.out</state>
+          <state>quadcopter_0_1.out</state>
         </option>
         <option>
           <name>IlinkDebugInfoEnable</name>
@@ -1595,32 +1622,33 @@
         </option>
         <option>
           <name>IlinkKeepSymbols</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkRawBinaryFile</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkRawBinarySymbol</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkRawBinarySegment</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkRawBinaryAlign</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkDefines</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkConfigDefines</name>
-          
-        <state>__stack_size__=0x2000</state><state>__heap_size__=0x2000</state></option>
+          <state>__stack_size__=0x2000</state>
+          <state>__heap_size__=0x2000</state>
+        </option>
         <option>
           <name>IlinkMapFile</name>
           <state>0</state>
@@ -1655,7 +1683,7 @@
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkEnableRemarks</name>
@@ -1663,19 +1691,19 @@
         </option>
         <option>
           <name>IlinkSuppressDiags</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkTreatAsRem</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkTreatAsWarn</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkTreatAsErr</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkWarningsAreErrors</name>
@@ -1687,7 +1715,7 @@
         </option>
         <option>
           <name>IlinkExtraOptions</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkLowLevelInterfaceSlave</name>
@@ -1699,8 +1727,8 @@
         </option>
         <option>
           <name>IlinkAdditionalLibs</name>
-          
-        <state>$PROJ_DIR$/../../../../lib/ksdk_platform_lib/iar/K64F12/release/libksdk_platform.a</state></option>
+          <state>$PROJ_DIR$/../../../../lib/ksdk_platform_lib/iar/K64F12/release/libksdk_platform.a</state>
+        </option>
         <option>
           <name>IlinkOverrideProgramEntryLabel</name>
           <state>0</state>
@@ -1834,11 +1862,11 @@
         </option>
         <option>
           <name>IlinkStackControlFile</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IlinkStackCallGraphFile</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>CrcAlgorithm</name>
@@ -1865,7 +1893,7 @@
         <debug>0</debug>
         <option>
           <name>IarchiveInputs</name>
-          <state/>
+          <state></state>
         </option>
         <option>
           <name>IarchiveOverride</name>
@@ -1873,7 +1901,7 @@
         </option>
         <option>
           <name>IarchiveOutput</name>
-          <state/>
+          <state></state>
         </option>
       </data>
     </settings>
@@ -1883,9 +1911,75 @@
       <data/>
     </settings>
   </configuration>
-  
-  
-  
-  
-  
-<group><name>startup</name><file><name>$PROJ_DIR$/../../../../platform/startup/MK64F12/iar/startup_MK64F12.s</name></file><file><name>$PROJ_DIR$/../../../../platform/startup/MK64F12/system_MK64F12.c</name></file><file><name>$PROJ_DIR$/../../../../platform/startup/startup.c</name></file><file><name>$PROJ_DIR$/../../../../platform/startup/startup.h</name></file></group><group><name>utilities</name><file><name>$PROJ_DIR$/../../../../platform/utilities/src/fsl_debug_console.c</name></file><file><name>$PROJ_DIR$/../../../../platform/utilities/inc/fsl_debug_console.h</name></file><file><name>$PROJ_DIR$/../../../../platform/utilities/src/print_scan.c</name></file><file><name>$PROJ_DIR$/../../../../platform/utilities/src/print_scan.h</name></file></group><group><name>source</name><file><name>$PROJ_DIR$/../../src/hello_world.c</name></file></group><group><name>board</name><file><name>$PROJ_DIR$/../../../../boards/frdmk64f120m/gpio_pins.c</name></file><file><name>$PROJ_DIR$/../../../../boards/frdmk64f120m/gpio_pins.h</name></file><file><name>$PROJ_DIR$/../../../../boards/frdmk64f120m/pin_mux.c</name></file><file><name>$PROJ_DIR$/../../../../boards/frdmk64f120m/pin_mux.h</name></file><file><name>$PROJ_DIR$/../../../../boards/frdmk64f120m/board.h</name></file><file><name>$PROJ_DIR$/../../../../boards/frdmk64f120m/hardware_init.c</name></file></group></project>
+  <group>
+    <name>board</name>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\boards\frdmk64f120m\board.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\boards\frdmk64f120m\gpio_pins.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\boards\frdmk64f120m\gpio_pins.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\boards\frdmk64f120m\hardware_init.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\boards\frdmk64f120m\pin_mux.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\boards\frdmk64f120m\pin_mux.h</name>
+    </file>
+  </group>
+  <group>
+    <name>source</name>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\drivers\src\i2c\fsl_i2c_irq.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\quad_common.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\quad_i2c_acce_interrupt.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\quad_i2c_config.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\quadcopter_main.c</name>
+    </file>
+  </group>
+  <group>
+    <name>startup</name>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\startup\startup.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\startup\startup.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\startup\MK64F12\iar\startup_MK64F12.s</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\startup\MK64F12\system_MK64F12.c</name>
+    </file>
+  </group>
+  <group>
+    <name>utilities</name>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\utilities\src\fsl_debug_console.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\utilities\inc\fsl_debug_console.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\utilities\src\print_scan.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\utilities\src\print_scan.h</name>
+    </file>
+  </group>
+</project>
+
+

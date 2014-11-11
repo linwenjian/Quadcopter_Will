@@ -40,11 +40,11 @@
 
 /* The UART to use for debug messages. */
 #ifndef BOARD_DEBUG_UART_INSTANCE
-    #define BOARD_DEBUG_UART_INSTANCE   0
-    #define BOARD_DEBUG_UART_BASEADDR   UART0_BASE
+    #define BOARD_DEBUG_UART_INSTANCE   (2)
+    #define BOARD_DEBUG_UART_BASEADDR   (UART2_BASE)
 #endif
 #ifndef BOARD_DEBUG_UART_BAUD
-    #define BOARD_DEBUG_UART_BAUD       115200
+    #define BOARD_DEBUG_UART_BAUD       (115200)
 #endif
 
 #define BOARD_USE_UART
@@ -67,61 +67,40 @@
 #define PRINT_STOPWATCH_SW_NUM \
   printf("SW2")
 
-/* Defines the llwu pin number for board switch which is used in power_manager_demo. */
-#define BOARD_SW_HAS_LLWU_PIN        1
-#define BOARD_SW_LLWU_EXT_PIN        kLlwuWakeupPin10
-/* Switch port base address and IRQ handler name. Used by power_manager_demo */
-#define BOARD_SW_LLWU_PIN            6
-#define BOARD_SW_LLWU_BASE           PORTC_BASE
-#define BOARD_SW_LLWU_IRQ_HANDLER    PORTC_IRQHandler
-#define BOARD_SW_LLWU_IRQ_NUM        PORTC_IRQn
+///* Defines the llwu pin number for board switch which is used in power_manager_demo. */
+//#define BOARD_SW_HAS_LLWU_PIN        1
+//#define BOARD_SW_LLWU_EXT_PIN        kLlwuWakeupPin10
+///* Switch port base address and IRQ handler name. Used by power_manager_demo */
+//#define BOARD_SW_LLWU_PIN            6
+//#define BOARD_SW_LLWU_BASE           PORTC_BASE
+//#define BOARD_SW_LLWU_IRQ_HANDLER    PORTC_IRQHandler
+//#define BOARD_SW_LLWU_IRQ_NUM        PORTC_IRQn
 
-/* The FXOS8700 i2c instance and slave address */
-#define BOARD_FXOS8700_I2C_INSTANCE        0
-#define BOARD_ACCEL_ADDR_ACTUAL         (0x1D)
-#define BOARD_FXOS8700_I2C_ADDR         (0x1D)
-#define BOARD_ACCEL_I2C_ADDR            (BOARD_ACCEL_ADDR_ACTUAL << 1)
 
-#define BOARD_I2C_GPIO_SCL              GPIO_MAKE_PIN(HW_GPIOE, 24)
-#define BOARD_I2C_GPIO_SDA              GPIO_MAKE_PIN(HW_GPIOE, 25)
-#define BOARD_I2C_DELAY \
-    do \
-    { \
-        int32_t i; \
-        for (i = 0; i < 500; i++) \
-        { \
-            __asm("nop"); \
-        } \
-    } while (0)
+///* The instances of peripherals used for dac_adc_demo */
+//#define BOARD_DAC_DEMO_DAC_INSTANCE     0U
+//#define BOARD_DAC_DEMO_ADC_INSTANCE     0U
+//#define BOARD_DAC_DEMO_ADC_CHANNEL      12U
+//
+///* The CAN instance used for board */
+//#define BOARD_CAN_INSTANCE              0
+//
+///* The i2c instance used for i2c DAC demo */
+//#define BOARD_DAC_I2C_INSTANCE          0
+//
+///* The i2c instance used for i2c communication demo */
+//#define BOARD_I2C_COMM_INSTANCE         0
+//
+///* The Flextimer instance/channel used for board */
+//#define BOARD_FTM_INSTANCE              0
+//#define BOARD_FTM_CHANNEL               0
+//
+///* The Enet instance used for board */
+//#define BOARD_ENET_INSTANCE             0
+//
+///* ADC0 input channel */
+//#define BOARD_ADC0_INPUT_CHAN           1
 
-/* The instances of peripherals used for dac_adc_demo */
-#define BOARD_DAC_DEMO_DAC_INSTANCE     0U
-#define BOARD_DAC_DEMO_ADC_INSTANCE     0U
-#define BOARD_DAC_DEMO_ADC_CHANNEL      12U
-
-/* The CAN instance used for board */
-#define BOARD_CAN_INSTANCE              0
-
-/* The i2c instance used for i2c DAC demo */
-#define BOARD_DAC_I2C_INSTANCE          0
-
-/* The i2c instance used for i2c communication demo */
-#define BOARD_I2C_COMM_INSTANCE         0
-
-/* The Flextimer instance/channel used for board */
-#define BOARD_FTM_INSTANCE              0
-#define BOARD_FTM_CHANNEL               0
-
-/* The Enet instance used for board */
-#define BOARD_ENET_INSTANCE             0
-
-/* ADC0 input channel */
-#define BOARD_ADC0_INPUT_CHAN           1
-
-/* board led color mapping */
-#define BOARD_GPIO_LED_RED              kGpioLED2
-#define BOARD_GPIO_LED_GREEN            kGpioLED1
-#define BOARD_GPIO_LED_BLUE             kGpioLED3
 
 #define DISABLE_DEBUG_CONSOLE_TX PORT_HAL_SetMuxMode(PORTB_BASE, 17, kPortPinDisabled)
 #define DISABLE_DEBUG_CONSOLE_RX PORT_HAL_SetMuxMode(PORTB_BASE, 16, kPortPinDisabled)
