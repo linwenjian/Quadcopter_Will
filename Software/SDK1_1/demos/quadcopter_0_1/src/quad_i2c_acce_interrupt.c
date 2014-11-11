@@ -37,12 +37,15 @@ i2c_device_t device =
     .address = ACCE_ADDR,
     .baudRate_kbps = ACCE_BAUDRATE
   };
+
+int16_t x = 0 ,y = 0, z = 0 ;
+
+
 i2c_status_t I2C_acceInit(void)
 {
   uint8_t write_value = 0;
   uint8_t acce_reg = 0;
   uint8_t read_temp = 0;
-  int16_t x = 0 ,y = 0, z = 0 ;
   uint8_t x_msb = 0 ,y_msb = 0, z_msb = 0 ;
   uint8_t x_lsb = 0 ,y_lsb = 0, z_lsb = 0 ;
   uint8_t show_time = 0;
@@ -103,7 +106,7 @@ i2c_status_t I2C_acceInterrupt(void)
   uint8_t write_value = 0;
   uint8_t acce_reg = 0;
   uint8_t read_temp = 0;
-  int16_t x = 0 ,y = 0, z = 0 ;
+
   uint8_t x_msb = 0 ,y_msb = 0, z_msb = 0 ;
   uint8_t x_lsb = 0 ,y_lsb = 0, z_lsb = 0 ;
   uint8_t show_time = 0;

@@ -694,6 +694,7 @@
           <name>IlinkConfigDefines</name>
           <state>__stack_size__=0x2000</state>
           <state>__heap_size__=0x2000</state>
+          <state>__ram_vector_table__=1</state>
         </option>
         <option>
           <name>IlinkMapFile</name>

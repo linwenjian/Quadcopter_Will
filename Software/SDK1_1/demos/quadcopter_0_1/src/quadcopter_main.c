@@ -35,14 +35,38 @@
 
 #include "quad_common.h"
 #include "quad_i2c_config.h"
+#include "fsl_hwtimer.h"
 
-////////////////////////////////////////////////////////////////////////////////
-// Code
-////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+// Definitions
+///////////////////////////////////////////////////////////////////////////////
+
+#define HWTIMER_LL_DEVIF    kSystickDevif
+#define HWTIMER_LL_SRCCLK   kCoreClock
+#define HWTIMER_LL_ID       0
+
+#define HWTIMER_PERIOD          100000
+
+///////////////////////////////////////////////////////////////////////////////
+// Variables
+///////////////////////////////////////////////////////////////////////////////
+
+extern const hwtimer_devif_t kSystickDevif;
+extern const hwtimer_devif_t kPitDevif;
+hwtimer_t hwtimer;
 
 /*!
  * @brief Main function
  */
+
+void hwtimer_callback(void* data)
+{static int i=0;
+    PRINTF(".");
+    I2C_acceInterrupt();
+    if(i==0) {LED2_ON;i=1;}
+    else    {LED2_OFF;i=0;}
+}
+
 int main (void)
 {
     // RX buffers
@@ -65,10 +89,31 @@ int main (void)
 
 
     I2C_acceInit();
+
+        // Hwtimer initialization
+    if (kHwtimerSuccess != HWTIMER_SYS_Init(&hwtimer, &HWTIMER_LL_DEVIF, HWTIMER_LL_ID, 5, NULL))
+    {
+        PRINTF("\r\nError: hwtimer initialization.\r\n");
+    }
+    if (kHwtimerSuccess != HWTIMER_SYS_SetPeriod(&hwtimer, HWTIMER_LL_SRCCLK, HWTIMER_PERIOD))
+    {
+        PRINTF("\r\nError: hwtimer set period.\r\n");
+    }
+    if (kHwtimerSuccess != HWTIMER_SYS_RegisterCallback(&hwtimer, hwtimer_callback, NULL))
+    {
+        PRINTF("\r\nError: hwtimer callback registration.\r\n");
+    }
+    if (kHwtimerSuccess != HWTIMER_SYS_Start(&hwtimer))
+    {
+        PRINTF("\r\nError: hwtimer start.\r\n");
+    }
+
+
+
     while(1)
     {
-      LED2_ON;
-      OSA_TimeDelay(200);
+//      LED2_ON;
+//      OSA_TimeDelay(200);
       LED3_ON;
       OSA_TimeDelay(200);
       LED4_ON;
@@ -76,15 +121,13 @@ int main (void)
       LED5_ON;
       OSA_TimeDelay(200);
 
-      LED2_OFF;
-      OSA_TimeDelay(200);
+//      LED2_OFF;
+//      OSA_TimeDelay(200);
       LED3_OFF;
       OSA_TimeDelay(200);
       LED4_OFF;
       OSA_TimeDelay(200);
       LED5_OFF;
       OSA_TimeDelay(200);
-
-      I2C_acceInterrupt();
     }
 }
