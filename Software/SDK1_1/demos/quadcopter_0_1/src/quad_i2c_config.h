@@ -32,34 +32,41 @@
 #define __QUAD_I2C_COFIG_H__
 
 //#if defined (FRDM_K64F120M)
-//    #define ACCE_ADDR       0x1DU //FXOS8700,SA0=1,SA1=0
-//    #define ACCE_WHOAMI_VAL 0xC7U //FXOS8700 Who_am_I Value
-//    #define ACCE_I2C_INSTANCE  BOARD_FXOS8700_I2C_INSTANCE
+//    #define FXOS8700_ADDR       0x1DU //FXOS8700,SA0=1,SA1=0
+//    #define FXOS8700_WHOAMI_VAL 0xC7U //FXOS8700 Who_am_I Value
+//    #define FXOS8700_I2C_INSTANCE  BOARD_FXOS8700_I2C_INSTANCE
 //#endif
 
 /* The FXOS8700 i2c instance and slave address */
-#define ACCE_I2C_INSTANCE  (0U)
-#define ACCE_ADDR             (0x1DU)
-#define ACCE_BAUDRATE (100)
+#define FXOS8700_I2C_INSTANCE  (0U)
+#define FXOS8700_ADDR      (0x1DU)
+#define FXOS8700_BAUDRATE  (200)
 
-#define ACCE_STATUS        0x00U
-#define ACCE_XYZ_DATA_CFG  0x0EU
-#define ACCE_CTRL_REG1     0x2AU
-#define ACCE_WHOAMI        0x0DU
+#define FXOS8700_STATUS        0x00
+#define FXOS8700_WHOAMI        0x0D
+#define FXOS8700_XYZ_DATA_CFG  0x0E
+#define FXOS8700_CTRL_REG1     0x2AU
 
-#define ACCE_OUT_X_MSB     0x01U
-#define ACCE_OUT_X_LSB     0x02U
-#define ACCE_OUT_Y_MSB     0x03U
-#define ACCE_OUT_Y_LSB     0x04U
-#define ACCE_OUT_Z_MSB     0x05U
-#define ACCE_OUT_Z_LSB     0x06U
+#define FXOS8700_M_CTRL_REG1    0x5B
+#define FXOS8700_M_CTRL_REG2    0x5C
+#define FXOS8700_WHOAMI_VAL     0xC7
+
+// number of bytes to be read from the FXOS8700
+#define FXOS8700_READ_LEN       13     // status plus 6 channels = 13 bytes
+
+#define FXOS8700_OUT_X_MSB     0x01U
+#define FXOS8700_OUT_X_LSB     0x02U
+#define FXOS8700_OUT_Y_MSB     0x03U
+#define FXOS8700_OUT_Y_LSB     0x04U
+#define FXOS8700_OUT_Z_MSB     0x05U
+#define FXOS8700_OUT_Z_LSB     0x06U
 
 
 /* The L3G4200D i2c instance and slave address */
 #define GYRO_I2C_INSTANCE  (0U)
-#define GYRO_ADDR              (0x68U)  //1101000b
-#define GYRO_BAUDRATE (100)
-#define GYRO_ID         0xD3            /* Gyroscope ID (Who am I value)*/
+#define GYRO_ADDR          (0x68U)  //1101000b
+#define GYRO_BAUDRATE      (200)
+#define GYRO_ID            0xD3            /* Gyroscope ID (Who am I value)*/
 
 //#define GYRO_I2C_ADDR   0x68            /* Gyroscope 7-bit I2C address        */
 //#define GYRO_ID         0xD3            /* Gyroscope ID (Who am I value)      */
@@ -68,17 +75,18 @@
 //#define GYRO_ID_2       0xD4            /* This driver also works with L3GD20 */
 
 /* Register addresses */
-#define GYRO_WHO_AM_I        0x0F
-#define GYRO_CTRL_REG1       0x20
-#define GYRO_CTRL_REG4       0x23
-#define GYRO_CTRL_REG5       0x24
-#define GYRO_OUT_X_L         0x28
-#define GYRO_OUT_X_H         0x29
-#define GYRO_OUT_Y_L         0x2A
-#define GYRO_OUT_Y_H         0x2B
-#define GYRO_OUT_Z_L         0x2C
-#define GYRO_OUT_Z_H         0x2D
+#define GYRO_WHO_AM_I        0x0FU
+#define GYRO_CTRL_REG1       0x20U
+#define GYRO_CTRL_REG4       0x23U
+#define GYRO_CTRL_REG5       0x24U
+#define GYRO_OUT_X_LSB       0x28U
+#define GYRO_OUT_X_MSB       0x29U
+#define GYRO_OUT_Y_LSB       0x2AU
+#define GYRO_OUT_Y_MSB       0x2BU
+#define GYRO_OUT_Z_LSB       0x2CU
+#define GYRO_OUT_Z_MSB       0x2DU
 
+#define GYRO_READ_LEN       6
 
 
 

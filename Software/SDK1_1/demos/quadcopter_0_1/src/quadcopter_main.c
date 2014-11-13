@@ -59,13 +59,21 @@ hwtimer_t hwtimer;
  * @brief Main function
  */
 
-void hwtimer_callback(void* data)
-{static int i=0;
-    PRINTF(".");
-    I2C_acceInterrupt();
-    if(i==0) {LED2_ON;i=1;}
-    else    {LED2_OFF;i=0;}
-}
+   void hwtimer_callback(void* data)
+   {
+     static int i=0;
+     PRINTF(".");
+     I2C_acceInterrupt();
+     I2C_gyroInterrupt();
+     if(i==0)
+     {
+       LED2_ON;i=1;
+     }
+     else
+     {
+       LED2_OFF;i=0;
+     }
+   }
 
 int main (void)
 {
@@ -87,8 +95,14 @@ int main (void)
     LED2_EN;    LED3_EN;    LED4_EN;    LED5_EN;
     LED2_OFF;   LED3_OFF;   LED4_OFF;   LED5_OFF;
 
+    PORT_HAL_SetMuxMode(PORTA_BASE, 6, kPortMuxAsGpio);
+    GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOA, 6U), kGpioDigitalInput) ;
+
+    PORT_HAL_SetMuxMode(PORTA_BASE, 7, kPortMuxAsGpio);
+    GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOA, 7U), kGpioDigitalInput) ;
 
     I2C_acceInit();
+    I2C_gyroInit();
 
         // Hwtimer initialization
     if (kHwtimerSuccess != HWTIMER_SYS_Init(&hwtimer, &HWTIMER_LL_DEVIF, HWTIMER_LL_ID, 5, NULL))
@@ -107,8 +121,6 @@ int main (void)
     {
         PRINTF("\r\nError: hwtimer start.\r\n");
     }
-
-
 
     while(1)
     {

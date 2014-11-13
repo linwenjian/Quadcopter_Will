@@ -67,9 +67,13 @@ typedef enum _i2c_mode
   kPollingMode = 1U
 } i2c_mode_t;
 
-int16_t acceDataCombine(uint8_t msb, uint8_t lsb);
+int16_t DataCombine(uint8_t msb, uint8_t lsb);
 i2c_status_t I2C_acceInterrupt(void);
 i2c_status_t I2C_acceInit(void);
+
+i2c_status_t I2C_gyroInit(void);
+i2c_status_t I2C_gyroInterrupt(void);
+
 #endif
 /*******************************************************************************
 * EOF
