@@ -47,7 +47,7 @@
 
 #include "board.h"
 #include "fsl_debug_console.h"
-
+#include "fsl_ftm_driver.h"
 
 #define I2C_WRITE 0U
 #define I2C_READ 1U
@@ -73,7 +73,10 @@ i2c_status_t I2C_acceInit(void);
 
 i2c_status_t I2C_gyroInit(void);
 i2c_status_t I2C_gyroInterrupt(void);
-
+double KalmanFilter(const double ResrcData,
+                    double ProcessNiose_Q,
+                    double MeasureNoise_R,
+                    double InitialPrediction);
 #endif
 /*******************************************************************************
 * EOF

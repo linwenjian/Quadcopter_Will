@@ -307,7 +307,7 @@ i2c_status_t I2C_acceInterrupt(void)
       acce_y = DataCombine(fxo8700_buffer[3],fxo8700_buffer[4]);
       acce_z = DataCombine(fxo8700_buffer[5],fxo8700_buffer[6]);
 
-      PRINTF("acce_x = %5d , acce_y = %5d , acce_z = %5d\r\n" ,acce_x,acce_y,acce_z);
+    //  PRINTF("acce_x = %5d , acce_y = %5d , acce_z = %5d\r\n" ,acce_x,acce_y,acce_z);
   }
 
   return kStatus_I2C_Success ;
@@ -375,7 +375,10 @@ i2c_status_t I2C_gyroInterrupt(void)
       gyro_y = DataCombine(gyro_buffer[3],gyro_buffer[2]);
       gyro_z = DataCombine(gyro_buffer[5],gyro_buffer[4]);
 
-      PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d\r\n\r\n" ,gyro_x,gyro_y,gyro_z);
+int16_t kal_gyro_x =0;
+      kal_gyro_x = (int16_t)KalmanFilter(gyro_x,1,10,1);
+
+      PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,gyro_x,gyro_y,gyro_z,kal_gyro_x);
   }
 
   return kStatus_I2C_Success ;
@@ -401,6 +404,53 @@ int16_t DataCombine(uint8_t msb, uint8_t lsb)
   value *= sign;
   return value;
 }
+
+
+
+double KalmanFilter(const double ResrcData,
+                    double ProcessNiose_Q,
+                    double MeasureNoise_R,
+                    double InitialPrediction)
+{
+        double R = MeasureNoise_R;
+        double Q = ProcessNiose_Q;
+
+        static double x_last;
+
+        double x_mid = x_last;
+        double x_now;
+
+        static double p_last;
+
+        double p_mid ;
+        double p_now;
+        double kg;
+
+        x_mid = x_last; //x_last=x(k-1|k-1),x_mid=x(k|k-1)
+
+        p_mid = p_last + Q; //p_mid=p(k|k-1),p_last=p(k-1|k-1),Q=噪声
+
+        kg = p_mid / ( p_mid + R ); //kg为kalman filter，R为噪声
+
+        x_now = x_mid + kg * ( ResrcData - x_mid );//估计出的最优值
+
+        p_now = (1 - kg) * p_mid;//最优值对应的covariance
+
+        p_last = p_now; //更新covariance值
+        x_last = x_now; //更新系统状态值
+
+        return x_now;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*******************************************************************************
  * EOF

@@ -174,6 +174,10 @@ void FTM_DRV_SetFaultIntCmd(uint32_t instance, bool faultEnable);
 void FTM_DRV_IRQHandler(uint8_t instance);
 
 
+void FTM_DRV_PwmChangeDutyCycle(uint8_t instance, ftm_pwm_param_t *param, uint8_t channel);
+
+
+
 /*Other API functions are for input capture, output compare, dual edge capture, and quadrature. */
 #if defined(__cplusplus)
 }

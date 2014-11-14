@@ -312,16 +312,27 @@ void configure_gpio_i2c_pins(uint32_t instance)
   PORT_HAL_SetMuxMode(PORTE_BASE,25u,kPortMuxAsGpio);
 }
 
-void configure_ftm_pins(uint32_t instance)
+void configure_ftm_pins()
 {
-  switch(instance) {
-    case HW_FTM0:                       /* FTM0 */
-      /* Affects PORTC_PCR1 register */
-      PORT_HAL_SetMuxMode(PORTC_BASE,1u,kPortMuxAlt4);
-      break;
-    default:
-      break;
-  }
+//  switch(instance) {
+//    case HW_FTM0:                       /* FTM0 */
+//      /* Affects PORTC_PCR1 register */
+//      PORT_HAL_SetMuxMode(PORTC_BASE,1u,kPortMuxAlt4);
+//      break;
+//    default:
+//      break;
+//  }
+
+  PORT_HAL_SetMuxMode(PORTC_BASE,1u,kPortMuxAlt4); //FTM0_CH0
+  PORT_HAL_SetMuxMode(PORTC_BASE,2u,kPortMuxAlt4); //FTM0_CH1
+  PORT_HAL_SetMuxMode(PORTC_BASE,3u,kPortMuxAlt4); //FTM0_CH2
+  PORT_HAL_SetMuxMode(PORTC_BASE,4u,kPortMuxAlt4); //FTM0_CH3
+
+  PORT_HAL_SetMuxMode(PORTB_BASE,0u,kPortMuxAlt3); //FTM1_CH0
+  PORT_HAL_SetMuxMode(PORTB_BASE,1u,kPortMuxAlt3); //FTM1_CH1
+  PORT_HAL_SetMuxMode(PORTB_BASE,18u,kPortMuxAlt3);//FTM2_CH0
+  PORT_HAL_SetMuxMode(PORTB_BASE,19u,kPortMuxAlt3);//FTM2_CH1
+
 }
 
 /* END pin_mux. */

@@ -55,16 +55,75 @@ extern const hwtimer_devif_t kSystickDevif;
 extern const hwtimer_devif_t kPitDevif;
 hwtimer_t hwtimer;
 
+
+ftm_user_config_t ftmInfo;
+ftm_pwm_param_t ftmParam0 = {
+  .mode                   = kFtmEdgeAlignedPWM,
+  .edgeMode               = kFtmLowTrue,
+  .uFrequencyHZ           = 20000,
+  .uDutyCyclePercent      = 90,
+  .uFirstEdgeDelayPercent = 0,
+};
+ftm_pwm_param_t ftmParam1 = {
+  .mode                   = kFtmEdgeAlignedPWM,
+  .edgeMode               = kFtmLowTrue,
+  .uFrequencyHZ           = 20000,
+  .uDutyCyclePercent      = 80,
+  .uFirstEdgeDelayPercent = 0,
+};
+ftm_pwm_param_t ftmParam2 = {
+  .mode                   = kFtmEdgeAlignedPWM,
+  .edgeMode               = kFtmLowTrue,
+  .uFrequencyHZ           = 20000,
+  .uDutyCyclePercent      = 70,
+  .uFirstEdgeDelayPercent = 0,
+};
+ftm_pwm_param_t ftmParam3 = {
+  .mode                   = kFtmEdgeAlignedPWM,
+  .edgeMode               = kFtmLowTrue,
+  .uFrequencyHZ           = 20000,
+  .uDutyCyclePercent      = 60,
+  .uFirstEdgeDelayPercent = 0,
+};
+
+
+
+
 /*!
  * @brief Main function
  */
 
-   void hwtimer_callback(void* data)
+void hwtimer_callback(void* data)
    {
      static int i=0;
      PRINTF(".");
      I2C_acceInterrupt();
      I2C_gyroInterrupt();
+
+
+     if (ftmParam0.uDutyCyclePercent++ >= 100)
+     {
+       ftmParam0.uDutyCyclePercent = 1;
+     }
+     if (ftmParam1.uDutyCyclePercent++ >= 100)
+     {
+       ftmParam0.uDutyCyclePercent = 1;
+     }
+     if (ftmParam2.uDutyCyclePercent++ >= 100)
+     {
+       ftmParam0.uDutyCyclePercent = 1;
+     }
+     if (ftmParam3.uDutyCyclePercent++ >= 100)
+     {
+       ftmParam0.uDutyCyclePercent = 1;
+     }
+
+
+     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
+     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
+     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
+     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
+
      if(i==0)
      {
        LED2_ON;i=1;
@@ -75,11 +134,13 @@ hwtimer_t hwtimer;
      }
    }
 
+
 int main (void)
 {
     // RX buffers
     //! @param receiveBuff Buffer used to hold received data
     uint8_t receiveBuff;
+
 
     // Initialize standard SDK demo application pins
     hardware_init();
@@ -88,6 +149,13 @@ int main (void)
     // Call this function to initialize the console UART. This function
     // enables the use of STDIO functions (printf, scanf, etc.)
     dbg_uart_init();
+
+    memset(&ftmInfo, 0, sizeof(ftmInfo));
+
+    ftmInfo.syncMethod = kFtmUseSoftwareTrig;
+    configure_ftm_pins();
+
+    FTM_DRV_Init(0, &ftmInfo);
 
     // Print the initial banner
     PRINTF("\r\nHello World!\n\n\r");
@@ -121,6 +189,12 @@ int main (void)
     {
         PRINTF("\r\nError: hwtimer start.\r\n");
     }
+
+    FTM_DRV_PwmStart(0, &ftmParam0, 0);
+    FTM_DRV_PwmStart(0, &ftmParam1, 1);
+    FTM_DRV_PwmStart(0, &ftmParam2, 2);
+    FTM_DRV_PwmStart(0, &ftmParam3, 3);
+    FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
 
     while(1)
     {
