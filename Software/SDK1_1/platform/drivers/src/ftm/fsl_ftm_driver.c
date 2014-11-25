@@ -319,72 +319,99 @@ void FTM_DRV_PwmChangeDutyCycle(uint8_t instance, ftm_pwm_param_t *param, uint8_
 
     uint32_t ftmBaseAddr = g_ftmBaseAddr[instance];
 
-    /* Clear the overflow flag */
-    FTM_HAL_ClearTimerOverflow(g_ftmBaseAddr[instance]);
 
-    FTM_HAL_EnablePwmMode(ftmBaseAddr, param, channel);
+    uMod = FTM_HAL_GetMod(ftmBaseAddr);
 
-#if FSL_FEATURE_FTM_BUS_CLOCK
-    CLOCK_SYS_GetFreq(kBusClock, &uFTMhz);
-#else
-    CLOCK_SYS_GetFreq(kSystemClock, &uFTMhz);
-#endif
-
-    /* Based on Ref manual, in PWM mode CNTIN is to be set 0*/
-    FTM_HAL_SetCounterInitVal(ftmBaseAddr, 0);
-
-    uFTMhz = uFTMhz / (1 << FTM_HAL_GetClockPs(ftmBaseAddr));
-
-    switch(param->mode)
+    uCnv = uMod * param->uDutyCyclePercent / 100;
+    /* For 100% duty cycle */
+    if(uCnv >= uMod)
     {
-        case kFtmEdgeAlignedPWM:
-            uMod = uFTMhz / (param->uFrequencyHZ) - 1;
-            uCnv = uMod * param->uDutyCyclePercent / 100;
-            /* For 100% duty cycle */
-            if(uCnv >= uMod)
-            {
-                uCnv = uMod + 1;
-            }
-            FTM_HAL_SetMod(ftmBaseAddr, uMod);
-            FTM_HAL_SetChnCountVal(ftmBaseAddr, channel, uCnv);
-            break;
-        case kFtmCenterAlignedPWM:
-            uMod = uFTMhz / (param->uFrequencyHZ * 2);
-            uCnv = uMod * param->uDutyCyclePercent / 100;
-            /* For 100% duty cycle */
-            if(uCnv >= uMod)
-            {
-                uCnv = uMod + 1;
-            }
-            FTM_HAL_SetMod(ftmBaseAddr, uMod);
-            FTM_HAL_SetChnCountVal(ftmBaseAddr, channel, uCnv);
-            break;
-        case kFtmCombinedPWM:
-            uMod = uFTMhz / (param->uFrequencyHZ) - 1;
-            uCnv = uMod * param->uDutyCyclePercent / 100;
-            uCnvFirstEdge = uMod * param->uFirstEdgeDelayPercent / 100;
-            /* For 100% duty cycle */
-            if(uCnv >= uMod)
-            {
-                uCnv = uMod + 1;
-            }
-            FTM_HAL_SetMod(ftmBaseAddr, uMod);
-            FTM_HAL_SetChnCountVal(ftmBaseAddr, FTM_HAL_GetChnPairIndex(channel) * 2,
-                                   uCnvFirstEdge);
-            FTM_HAL_SetChnCountVal(ftmBaseAddr, FTM_HAL_GetChnPairIndex(channel) * 2 + 1,
-                                   uCnv + uCnvFirstEdge);
-            break;
-        default:
-            assert(0);
-            break;
+      uCnv = uMod + 1;
     }
-
-    FTM_HAL_SetPwmLoadChnSelCmd(ftmBaseAddr,channel,1);
-    FTM_HAL_SetPwmLoadCmd(ftmBaseAddr,true);
-    /* Set clock source to start counter */
- //   FTM_HAL_SetClockSource(ftmBaseAddr, kClock_source_FTM_SystemClk);
+    FTM_HAL_SetChnCountVal(ftmBaseAddr, channel, uCnv);
 }
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//    /* Clear the overflow flag */
+//    FTM_HAL_ClearTimerOverflow(g_ftmBaseAddr[instance]);
+//
+//    FTM_HAL_EnablePwmMode(ftmBaseAddr, param, channel);
+//
+//#if FSL_FEATURE_FTM_BUS_CLOCK
+//    CLOCK_SYS_GetFreq(kBusClock, &uFTMhz);
+//#else
+//    CLOCK_SYS_GetFreq(kSystemClock, &uFTMhz);
+//#endif
+//
+//    /* Based on Ref manual, in PWM mode CNTIN is to be set 0*/
+//    FTM_HAL_SetCounterInitVal(ftmBaseAddr, 0);
+//
+//    uFTMhz = uFTMhz / (1 << FTM_HAL_GetClockPs(ftmBaseAddr));
+//
+//    switch(param->mode)
+//    {
+//        case kFtmEdgeAlignedPWM:
+//            uMod = uFTMhz / (param->uFrequencyHZ) - 1;
+//            uCnv = uMod * param->uDutyCyclePercent / 100;
+//            /* For 100% duty cycle */
+//            if(uCnv >= uMod)
+//            {
+//                uCnv = uMod + 1;
+//            }
+//            FTM_HAL_SetMod(ftmBaseAddr, uMod);
+//            FTM_HAL_SetChnCountVal(ftmBaseAddr, channel, uCnv);
+//            break;
+//        case kFtmCenterAlignedPWM:
+//            uMod = uFTMhz / (param->uFrequencyHZ * 2);
+//            uCnv = uMod * param->uDutyCyclePercent / 100;
+//            /* For 100% duty cycle */
+//            if(uCnv >= uMod)
+//            {
+//                uCnv = uMod + 1;
+//            }
+//            FTM_HAL_SetMod(ftmBaseAddr, uMod);
+//            FTM_HAL_SetChnCountVal(ftmBaseAddr, channel, uCnv);
+//            break;
+//        case kFtmCombinedPWM:
+//            uMod = uFTMhz / (param->uFrequencyHZ) - 1;
+//            uCnv = uMod * param->uDutyCyclePercent / 100;
+//            uCnvFirstEdge = uMod * param->uFirstEdgeDelayPercent / 100;
+//            /* For 100% duty cycle */
+//            if(uCnv >= uMod)
+//            {
+//                uCnv = uMod + 1;
+//            }
+//            FTM_HAL_SetMod(ftmBaseAddr, uMod);
+//            FTM_HAL_SetChnCountVal(ftmBaseAddr, FTM_HAL_GetChnPairIndex(channel) * 2,
+//                                   uCnvFirstEdge);
+//            FTM_HAL_SetChnCountVal(ftmBaseAddr, FTM_HAL_GetChnPairIndex(channel) * 2 + 1,
+//                                   uCnv + uCnvFirstEdge);
+//            break;
+//        default:
+//            assert(0);
+//            break;
+//    }
+//
+//    FTM_HAL_SetPwmLoadChnSelCmd(ftmBaseAddr,channel,1);
+//    FTM_HAL_SetPwmLoadCmd(ftmBaseAddr,true);
+//    /* Set clock source to start counter */
+// //   FTM_HAL_SetClockSource(ftmBaseAddr, kClock_source_FTM_SystemClk);
+//}
+//
 
 
 

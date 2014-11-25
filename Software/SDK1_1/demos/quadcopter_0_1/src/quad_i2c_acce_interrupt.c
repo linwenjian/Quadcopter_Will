@@ -376,7 +376,7 @@ i2c_status_t I2C_gyroInterrupt(void)
       gyro_z = DataCombine(gyro_buffer[5],gyro_buffer[4]);
 
 int16_t kal_gyro_x =0;
-      kal_gyro_x = (int16_t)KalmanFilter(gyro_x,1,10,1);
+//      kal_gyro_x = (int16_t)KalmanFilter(gyro_x,1,10,1);
 
       PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,gyro_x,gyro_y,gyro_z,kal_gyro_x);
   }

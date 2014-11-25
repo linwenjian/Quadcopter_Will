@@ -100,29 +100,35 @@ void hwtimer_callback(void* data)
      I2C_acceInterrupt();
      I2C_gyroInterrupt();
 
+     ftmParam0.uDutyCyclePercent += 50;
+     ftmParam1.uDutyCyclePercent += 50;
+     ftmParam2.uDutyCyclePercent += 50;
+     ftmParam3.uDutyCyclePercent += 50;
 
-     if (ftmParam0.uDutyCyclePercent++ >= 100)
-     {
-       ftmParam0.uDutyCyclePercent = 1;
-     }
-     if (ftmParam1.uDutyCyclePercent++ >= 100)
-     {
-       ftmParam0.uDutyCyclePercent = 1;
-     }
-     if (ftmParam2.uDutyCyclePercent++ >= 100)
-     {
-       ftmParam0.uDutyCyclePercent = 1;
-     }
-     if (ftmParam3.uDutyCyclePercent++ >= 100)
-     {
-       ftmParam0.uDutyCyclePercent = 1;
-     }
 
+     if (ftmParam0.uDutyCyclePercent >= 95)
+     {
+       ftmParam0.uDutyCyclePercent = 5;
+     }
+     if (ftmParam1.uDutyCyclePercent >= 95)
+     {
+       ftmParam1.uDutyCyclePercent = 5;
+     }
+     if (ftmParam2.uDutyCyclePercent >= 95)
+     {
+       ftmParam2.uDutyCyclePercent = 5;
+     }
+     if (ftmParam3.uDutyCyclePercent >= 95)
+     {
+       ftmParam3.uDutyCyclePercent = 5;
+     }
 
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
+
+     FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
 
      if(i==0)
      {
@@ -135,6 +141,8 @@ void hwtimer_callback(void* data)
    }
 
 
+//PTD2_UART_rx, PTD3_UART_tx
+//PTC1,2,3,4
 int main (void)
 {
     // RX buffers
