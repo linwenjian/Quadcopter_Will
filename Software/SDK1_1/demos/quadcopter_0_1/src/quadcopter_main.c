@@ -45,7 +45,7 @@
 #define HWTIMER_LL_SRCCLK   kCoreClock
 #define HWTIMER_LL_ID       0
 
-#define HWTIMER_PERIOD          100000
+#define HWTIMER_PERIOD          20000
 
 ///////////////////////////////////////////////////////////////////////////////
 // Variables
@@ -59,30 +59,30 @@ hwtimer_t hwtimer;
 ftm_user_config_t ftmInfo;
 ftm_pwm_param_t ftmParam0 = {
   .mode                   = kFtmEdgeAlignedPWM,
-  .edgeMode               = kFtmLowTrue,
-  .uFrequencyHZ           = 20000,
-  .uDutyCyclePercent      = 90,
+  .edgeMode               = kFtmHighTrue,
+  .uFrequencyHZ           = 500,
+  .uDutyCyclePercent      = 0,
   .uFirstEdgeDelayPercent = 0,
 };
 ftm_pwm_param_t ftmParam1 = {
   .mode                   = kFtmEdgeAlignedPWM,
-  .edgeMode               = kFtmLowTrue,
-  .uFrequencyHZ           = 20000,
-  .uDutyCyclePercent      = 80,
+  .edgeMode               = kFtmHighTrue,
+  .uFrequencyHZ           = 500,
+  .uDutyCyclePercent      = 50,
   .uFirstEdgeDelayPercent = 0,
 };
 ftm_pwm_param_t ftmParam2 = {
   .mode                   = kFtmEdgeAlignedPWM,
-  .edgeMode               = kFtmLowTrue,
-  .uFrequencyHZ           = 20000,
-  .uDutyCyclePercent      = 70,
+  .edgeMode               = kFtmHighTrue,
+  .uFrequencyHZ           = 500,
+  .uDutyCyclePercent      = 50,
   .uFirstEdgeDelayPercent = 0,
 };
 ftm_pwm_param_t ftmParam3 = {
   .mode                   = kFtmEdgeAlignedPWM,
-  .edgeMode               = kFtmLowTrue,
-  .uFrequencyHZ           = 20000,
-  .uDutyCyclePercent      = 60,
+  .edgeMode               = kFtmHighTrue,
+  .uFrequencyHZ           = 500,
+  .uDutyCyclePercent      = 50,
   .uFirstEdgeDelayPercent = 0,
 };
 
@@ -93,42 +93,158 @@ ftm_pwm_param_t ftmParam3 = {
  * @brief Main function
  */
 
+int temp_duty = 1;
+int temp_count = 0;
+int temp_flag = 0;
+int temp_count1 = 0;
+int temp_count_test = 0;
+int temp_count_add = 1;
+
+
+
+// 500Hz PWM£¬ start from 50% duty cylce.
+//%0 duty cycle for 2 seconds , then 50% duty cycle for 2 seconds.
 void hwtimer_callback(void* data)
    {
      static int i=0;
      PRINTF(".");
      I2C_acceInterrupt();
      I2C_gyroInterrupt();
+    
+     if(temp_count <= 100 && temp_flag ==0 )
+     {
+       temp_count++;
+     }
+     
+     if(temp_count > 100 && temp_count < 200 && temp_flag ==0 )
+     {
+       // temp_count = 0; 
+       temp_count++;
+       ftmParam0.uDutyCyclePercent = 50;
+       ftmParam1.uDutyCyclePercent = 50;
+       ftmParam2.uDutyCyclePercent = 50;
+       ftmParam3.uDutyCyclePercent = 50;
+       
+     }
+     
+     if(temp_count >= 200 && temp_flag ==0 )
+     {
+       // temp_count = 0;
+     //  ftmParam0.uDutyCyclePercent = 55;
+       temp_flag = 1;
+      // ftmParam0.uDutyCyclePercent = 60;
+      }
+     
+     if( temp_flag == 1 )
+     {
+       //             ftmParam0.uDutyCyclePercent ++;
+       //             
+       //             if (ftmParam0.uDutyCyclePercent>58)
+       //                            ftmParam0.uDutyCyclePercent = 59;
+       
+       temp_count_test++;
+       
+       if( temp_count_test > 10 )
+       {
+         temp_count_test = 0;
+         
+         
+         if (temp_count_add == 1)
+         {
+           ftmParam0.uDutyCyclePercent++;
+           ftmParam1.uDutyCyclePercent++;
+           ftmParam2.uDutyCyclePercent++;
+           ftmParam3.uDutyCyclePercent++;
+         }
+         else
+         {
+           ftmParam0.uDutyCyclePercent--;
+           ftmParam1.uDutyCyclePercent--;
+           ftmParam2.uDutyCyclePercent--;
+           ftmParam3.uDutyCyclePercent--;
+         }
+         
+         
+         if( ftmParam0.uDutyCyclePercent  > 70 )
+           
+         { 
+           temp_count_add = 0;
+         }
+         if( ftmParam0.uDutyCyclePercent  < 52)
+           
+         { temp_count_add = 1;
+         }
+       }   
+     }
+     
+     
+     
+     
+//          if( temp_flag == 1 && temp_count1 < 200)
+//     {
+//       //             ftmParam0.uDutyCyclePercent ++;
+//       //             
+//       //             if (ftmParam0.uDutyCyclePercent>58)
+//       //                            ftmParam0.uDutyCyclePercent = 59;
+//       temp_count1++;
+//       ftmParam0.uDutyCyclePercent = 70;
+//       
+//     }
+//     else if( temp_flag == 1 && temp_count1 < 400)
+//     {
+//       temp_count1++;
+//       ftmParam0.uDutyCyclePercent = 50;
+//     }
+//     else if( temp_flag == 1 && temp_count1 < 600)
+//     {
+//       temp_count1++;
+//       ftmParam0.uDutyCyclePercent = 54;
+//     }
+//     else
+//     { temp_count1 = 1000;}
+//     
+     
+       
+    
+     
+//     ftmParam0.uDutyCyclePercent += temp_duty;
+//     ftmP
+//     ftmParam2.uDutyCyclePercent += temp_duty;
+//     ftmParam3.uDutyCyclePercent += temp_duty;
+//
+//     if (ftmParam0.uDutyCyclePercent >= 70)
+//     {
+//       temp_duty = -2;
+//     }
+//     if (ftmParam0.uDutyCyclePercent <= 52)
+//     {
+//       temp_duty = 2;
+//     }
+//     
 
-     ftmParam0.uDutyCyclePercent += 50;
-     ftmParam1.uDutyCyclePercent += 50;
-     ftmParam2.uDutyCyclePercent += 50;
-     ftmParam3.uDutyCyclePercent += 50;
-
-
-     if (ftmParam0.uDutyCyclePercent >= 95)
-     {
-       ftmParam0.uDutyCyclePercent = 5;
-     }
-     if (ftmParam1.uDutyCyclePercent >= 95)
-     {
-       ftmParam1.uDutyCyclePercent = 5;
-     }
-     if (ftmParam2.uDutyCyclePercent >= 95)
-     {
-       ftmParam2.uDutyCyclePercent = 5;
-     }
-     if (ftmParam3.uDutyCyclePercent >= 95)
-     {
-       ftmParam3.uDutyCyclePercent = 5;
-     }
+//     if (ftmParam0.uDutyCyclePercent >= 70)
+//     {
+//       ftmParam0.uDutyCyclePercent = 5;
+//     }
+//     if (ftmParam1.uDutyCyclePercent >= 70)
+//     {
+//       ftmParam1.uDutyCyclePercent = 5;
+//     }
+//     if (ftmParam2.uDutyCyclePercent >= 70)
+//     {
+//       ftmParam2.uDutyCyclePercent = 5;
+//     }
+//     if (ftmParam3.uDutyCyclePercent >= 70)
+//     {
+//       ftmParam3.uDutyCyclePercent = 5;
+//     }
 
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
 
-     FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
+    FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
 
      if(i==0)
      {
