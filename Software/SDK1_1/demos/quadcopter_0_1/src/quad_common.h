@@ -45,9 +45,18 @@
 #include "fsl_i2c_slave_driver.h"
 #include "fsl_i2c_shared_function.h"
 
+#include "fsl_uart_driver.h"
+
+
 #include "board.h"
 #include "fsl_debug_console.h"
 #include "fsl_ftm_driver.h"
+
+#include "quad_i2c_config.h"
+#include "quad_send_data.h"
+
+
+
 
 #define I2C_WRITE 0U
 #define I2C_READ 1U

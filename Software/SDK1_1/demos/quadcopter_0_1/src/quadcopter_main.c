@@ -46,6 +46,7 @@
 #define HWTIMER_LL_ID       0
 
 #define HWTIMER_PERIOD          20000
+#define BSWAP_16(x)	(uint16_t)((uint16_t)(((uint16_t)(x) & (uint16_t)0xFF00) >> 0x8) | (uint16_t)(((uint16_t)(x) & (uint16_t)0xFF) << 0x8))
 
 ///////////////////////////////////////////////////////////////////////////////
 // Variables
@@ -55,8 +56,8 @@ extern const hwtimer_devif_t kSystickDevif;
 extern const hwtimer_devif_t kPitDevif;
 hwtimer_t hwtimer;
 
-
 ftm_user_config_t ftmInfo;
+
 ftm_pwm_param_t ftmParam0 = {
   .mode                   = kFtmEdgeAlignedPWM,
   .edgeMode               = kFtmHighTrue,
@@ -87,7 +88,12 @@ ftm_pwm_param_t ftmParam3 = {
 };
 
 
+const char trans_header_table[3] = {0x88, 0xAF, 0x1C};
+//char trans_header_table1[] = {0x88, 0xA1, 2,0,0,0};
+trans_packet_t packet_upper_PC ;
 
+extern int16_t acce_x ,acce_y , acce_z ;
+extern int16_t gyro_x ,gyro_y , gyro_z ;
 
 /*!
  * @brief Main function
@@ -100,33 +106,51 @@ int temp_count1 = 0;
 int temp_count_test = 0;
 int temp_count_add = 1;
 
-
-
 // 500Hz PWM， start from 50% duty cylce.
 //%0 duty cycle for 2 seconds , then 50% duty cycle for 2 seconds.
 void hwtimer_callback(void* data)
    {
      static int i=0;
+     int j=0;
      PRINTF(".");
      I2C_acceInterrupt();
      I2C_gyroInterrupt();
-    
+
+/*Start*********匿名上位机发送的串口数据***********
+     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(acce_x);
+     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(acce_y);
+     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(acce_z);
+     packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(gyro_x);
+     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(gyro_y);
+     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(gyro_z);
+
+     packet_upper_PC.user_data.trans_roll = BSWAP_16(acce_x);
+     packet_upper_PC.user_data.trans_pitch = BSWAP_16(acce_y);
+     packet_upper_PC.user_data.trans_yaw = BSWAP_16(acce_z);
+
+     uint8_t *p = (uint8_t*)&packet_upper_PC;
+
+     UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+*End*********匿名上位机发送的串口数据***********/
+
+
+
      if(temp_count <= 100 && temp_flag ==0 )
      {
        temp_count++;
      }
-     
+
      if(temp_count > 100 && temp_count < 200 && temp_flag ==0 )
      {
-       // temp_count = 0; 
+       // temp_count = 0;
        temp_count++;
        ftmParam0.uDutyCyclePercent = 50;
        ftmParam1.uDutyCyclePercent = 50;
        ftmParam2.uDutyCyclePercent = 50;
        ftmParam3.uDutyCyclePercent = 50;
-       
+
      }
-     
+
      if(temp_count >= 200 && temp_flag ==0 )
      {
        // temp_count = 0;
@@ -134,21 +158,21 @@ void hwtimer_callback(void* data)
        temp_flag = 1;
       // ftmParam0.uDutyCyclePercent = 60;
       }
-     
+
      if( temp_flag == 1 )
      {
        //             ftmParam0.uDutyCyclePercent ++;
-       //             
+       //
        //             if (ftmParam0.uDutyCyclePercent>58)
        //                            ftmParam0.uDutyCyclePercent = 59;
-       
+
        temp_count_test++;
-       
+
        if( temp_count_test > 10 )
        {
          temp_count_test = 0;
-         
-         
+
+
          if (temp_count_add == 1)
          {
            ftmParam0.uDutyCyclePercent++;
@@ -163,32 +187,32 @@ void hwtimer_callback(void* data)
            ftmParam2.uDutyCyclePercent--;
            ftmParam3.uDutyCyclePercent--;
          }
-         
-         
+
+
          if( ftmParam0.uDutyCyclePercent  > 70 )
-           
-         { 
+
+         {
            temp_count_add = 0;
          }
          if( ftmParam0.uDutyCyclePercent  < 52)
-           
+
          { temp_count_add = 1;
          }
-       }   
+       }
      }
-     
-     
-     
-     
+
+
+
+
 //          if( temp_flag == 1 && temp_count1 < 200)
 //     {
 //       //             ftmParam0.uDutyCyclePercent ++;
-//       //             
+//       //
 //       //             if (ftmParam0.uDutyCyclePercent>58)
 //       //                            ftmParam0.uDutyCyclePercent = 59;
 //       temp_count1++;
 //       ftmParam0.uDutyCyclePercent = 70;
-//       
+//
 //     }
 //     else if( temp_flag == 1 && temp_count1 < 400)
 //     {
@@ -202,11 +226,11 @@ void hwtimer_callback(void* data)
 //     }
 //     else
 //     { temp_count1 = 1000;}
-//     
-     
-       
-    
-     
+//
+
+
+
+
 //     ftmParam0.uDutyCyclePercent += temp_duty;
 //     ftmP
 //     ftmParam2.uDutyCyclePercent += temp_duty;
@@ -220,7 +244,7 @@ void hwtimer_callback(void* data)
 //     {
 //       temp_duty = 2;
 //     }
-//     
+//
 
 //     if (ftmParam0.uDutyCyclePercent >= 70)
 //     {
@@ -238,6 +262,24 @@ void hwtimer_callback(void* data)
 //     {
 //       ftmParam3.uDutyCyclePercent = 5;
 //     }
+
+
+/*Start 简化版更改占空比***************/
+//     uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
+//     uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
+//
+//     uMod = FTM_HAL_GetMod(ftmBaseAddr);
+//
+//     uCnv0 = uMod * ftmParam0.uDutyCyclePercent / 100;
+//     /* For 100% duty cycle */
+//     if(uCnv >= uMod)
+//     {
+//       uCnv = uMod + 1;
+//     }
+//     uCnv1 = uMod * ftmParam1.uDutyCyclePercent / 100;
+//     uCnv2 = uMod * ftmParam2.uDutyCyclePercent / 100;
+//     uCnv3 = uMod * ftmParam3.uDutyCyclePercent / 100;
+/*End 简化版更改占空比*************/
 
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
      FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
@@ -261,6 +303,7 @@ void hwtimer_callback(void* data)
 //PTC1,2,3,4
 int main (void)
 {
+memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
     // RX buffers
     //! @param receiveBuff Buffer used to hold received data
     uint8_t receiveBuff;

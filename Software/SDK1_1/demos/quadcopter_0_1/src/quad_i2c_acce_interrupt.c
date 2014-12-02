@@ -28,7 +28,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "quad_common.h"
-#include "quad_i2c_config.h"
+//#include "quad_i2c_config.h"
 
 
 i2c_master_state_t master;
@@ -249,11 +249,6 @@ i2c_status_t I2C_gyroInit(void)
 
    return kStatus_I2C_Success ;
 }
-
-
-
-
-
 i2c_status_t I2C_acceInterrupt(void)
 {
   uint8_t write_value = 0;
@@ -307,7 +302,7 @@ i2c_status_t I2C_acceInterrupt(void)
       acce_y = DataCombine(fxo8700_buffer[3],fxo8700_buffer[4]);
       acce_z = DataCombine(fxo8700_buffer[5],fxo8700_buffer[6]);
 
-    //  PRINTF("acce_x = %5d , acce_y = %5d , acce_z = %5d\r\n" ,acce_x,acce_y,acce_z);
+   //   PRINTF("acce_x = %5d , acce_y = %5d , acce_z = %5d\r\n" ,acce_x,acce_y,acce_z);
   }
 
   return kStatus_I2C_Success ;
@@ -378,7 +373,7 @@ i2c_status_t I2C_gyroInterrupt(void)
 int16_t kal_gyro_x =0;
 //      kal_gyro_x = (int16_t)KalmanFilter(gyro_x,1,10,1);
 
-      PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,gyro_x,gyro_y,gyro_z,kal_gyro_x);
+   //   PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,gyro_x,gyro_y,gyro_z,kal_gyro_x);
   }
 
   return kStatus_I2C_Success ;

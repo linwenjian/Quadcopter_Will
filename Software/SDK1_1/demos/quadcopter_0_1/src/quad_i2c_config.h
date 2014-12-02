@@ -40,7 +40,7 @@
 /* The FXOS8700 i2c instance and slave address */
 #define FXOS8700_I2C_INSTANCE  (0U)
 #define FXOS8700_ADDR      (0x1DU)
-#define FXOS8700_BAUDRATE  (200)
+#define FXOS8700_BAUDRATE  (400)
 
 #define FXOS8700_STATUS        0x00
 #define FXOS8700_WHOAMI        0x0D
@@ -65,7 +65,7 @@
 /* The L3G4200D i2c instance and slave address */
 #define GYRO_I2C_INSTANCE  (0U)
 #define GYRO_ADDR          (0x68U)  //1101000b
-#define GYRO_BAUDRATE      (200)
+#define GYRO_BAUDRATE      (400)
 #define GYRO_ID            0xD3            /* Gyroscope ID (Who am I value)*/
 
 //#define GYRO_I2C_ADDR   0x68            /* Gyroscope 7-bit I2C address        */
