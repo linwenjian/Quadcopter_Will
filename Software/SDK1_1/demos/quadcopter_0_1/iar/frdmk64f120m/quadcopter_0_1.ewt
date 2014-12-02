@@ -194,6 +194,9 @@
   <group>
     <name>source</name>
     <file>
+      <name>$PROJ_DIR$\..\..\..\..\platform\drivers\src\adc16\fsl_adc16_irq.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\..\..\platform\drivers\src\i2c\fsl_i2c_irq.c</name>
     </file>
     <file>

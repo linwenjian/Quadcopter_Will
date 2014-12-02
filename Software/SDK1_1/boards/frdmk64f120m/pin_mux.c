@@ -196,6 +196,18 @@ void configure_i2c_pins(uint32_t instance)
   }
 }
 
+void configure_adc_pins_for_quadcopter(void)
+{
+  PORT_HAL_SetMuxMode(PORTB_BASE,2u,kPortPinDisabled);/*!< corresponding pin is disabled as analog.*/
+  PORT_HAL_SetMuxMode(PORTB_BASE,3u,kPortPinDisabled);
+  PORT_HAL_SetMuxMode(PORTB_BASE,4u,kPortPinDisabled);
+  PORT_HAL_SetMuxMode(PORTB_BASE,5u,kPortPinDisabled);
+  PORT_HAL_SetMuxMode(PORTB_BASE,6u,kPortPinDisabled);
+  PORT_HAL_SetMuxMode(PORTB_BASE,7u,kPortPinDisabled);
+  PORT_HAL_SetMuxMode(PORTB_BASE,10u,kPortPinDisabled);
+  PORT_HAL_SetMuxMode(PORTB_BASE,11u,kPortPinDisabled);
+}
+
 void configure_i2s_pins(uint32_t instance)
 {
   /* Affects PORTC_PCR8 register */
@@ -312,7 +324,7 @@ void configure_gpio_i2c_pins(uint32_t instance)
   PORT_HAL_SetMuxMode(PORTE_BASE,25u,kPortMuxAsGpio);
 }
 
-void configure_ftm_pins()
+void configure_ftm_pins_for_quadcopter()
 {
 //  switch(instance) {
 //    case HW_FTM0:                       /* FTM0 */

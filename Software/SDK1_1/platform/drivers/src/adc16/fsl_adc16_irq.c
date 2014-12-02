@@ -28,9 +28,18 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdint.h>
-#include <stdbool.h>
-#include "fsl_adc16_driver.h"
+#include "quad_common.h"
+
+extern volatile uint32_t ADC_count_n ;
+extern volatile uint32_t ADC_value[];
+extern _ADC_Pin_Mux_Table_t kADCPinMuxTable[];
+extern volatile bool g_AdcConvIntCompleted;
+void ADC_IRQHandler_quadcopter(void)
+{
+  ADC_value[ADC_count_n] = ADC16_DRV_GetConvValueRAW(kADCPinMuxTable[ADC_count_n].instance,
+                                                     kADCPinMuxTable[ADC_count_n].chnGroup);
+  g_AdcConvIntCompleted = true;
+}
 
 /******************************************************************************
  * IRQ Handlers
@@ -38,13 +47,13 @@
 /* ADC16 IRQ handler that would cover the same name's APIs in startup code */
 void ADC0_IRQHandler(void)
 {
-    /* Add user-defined ISR for ADC0. */
+  ADC_IRQHandler_quadcopter();
 }
 
 #if (HW_ADC_INSTANCE_COUNT > 1U)
 void ADC1_IRQHandler(void)
 {
-    /* Add user-defined ISR for ADC1. */
+  ADC_IRQHandler_quadcopter();
 }
 #endif
 

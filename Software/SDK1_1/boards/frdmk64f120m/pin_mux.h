@@ -159,6 +159,7 @@ void configure_gpio_pins(uint32_t instance);
 */
 /* ===================================================================*/
 void configure_i2c_pins(uint32_t instance);
+
 /*
 ** ===================================================================
 **     Method      :  pin_mux_I2S (component PinSettings)
@@ -248,7 +249,9 @@ void configure_spi_cs1_pins(uint32_t instance);
 
 void configure_gpio_i2c_pins(uint32_t instance);
 
-void configure_ftm_pins(void);
+void configure_ftm_pins_for_quadcopter(void);
+
+void configure_adc_pins_for_quadcopter(void);
 
 /* END pin_mux. */
 #endif /* #ifndef __pin_mux_H_ */

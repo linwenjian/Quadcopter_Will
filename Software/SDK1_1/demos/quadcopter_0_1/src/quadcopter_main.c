@@ -106,187 +106,168 @@ int temp_count1 = 0;
 int temp_count_test = 0;
 int temp_count_add = 1;
 
+const _ADC_Pin_Mux_Table_t kADCPinMuxTable[] = {
+  {HW_ADC0,0,12},
+  {HW_ADC0,0,13},
+  {HW_ADC1,0,10},
+  {HW_ADC1,0,11},
+  {HW_ADC1,0,12},
+  {HW_ADC1,0,13},
+  {HW_ADC1,0,14},
+  {HW_ADC1,0,15}
+};
+
+volatile uint32_t ADC_count_n = 0;
+adc16_chn_config_t MyChnConfig;
+volatile uint32_t ADC_value[8]= {0};
+volatile uint32_t ADC_value_min[8]= { 0xffffffff,
+                                      0xffffffff,
+                                      0xffffffff,
+                                      0xffffffff,
+                                      0xffffffff,
+                                      0xffffffff,
+                                      0xffffffff,
+                                      0xffffffff};
+volatile uint32_t ADC_value_max[8]= {0};
+volatile bool g_AdcConvIntCompleted = false;
 // 500Hz PWM， start from 50% duty cylce.
 //%0 duty cycle for 2 seconds , then 50% duty cycle for 2 seconds.
 void hwtimer_callback(void* data)
    {
-     static int i=0;
-     int j=0;
-     PRINTF(".");
-     I2C_acceInterrupt();
-     I2C_gyroInterrupt();
 
-/*Start*********匿名上位机发送的串口数据***********
-     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(acce_x);
-     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(acce_y);
-     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(acce_z);
-     packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(gyro_x);
-     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(gyro_y);
-     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(gyro_z);
-
-     packet_upper_PC.user_data.trans_roll = BSWAP_16(acce_x);
-     packet_upper_PC.user_data.trans_pitch = BSWAP_16(acce_y);
-     packet_upper_PC.user_data.trans_yaw = BSWAP_16(acce_z);
-
-     uint8_t *p = (uint8_t*)&packet_upper_PC;
-
-     UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
-*End*********匿名上位机发送的串口数据***********/
-
-
-
-     if(temp_count <= 100 && temp_flag ==0 )
+//     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),0);
+//this for cycle is about 57.1us from the logic analyzer
+// 0~ 4095  <--> 0V ~ 3.3 V
+     for (ADC_count_n = 0; ADC_count_n < 8U; ADC_count_n++)
      {
-       temp_count++;
-     }
+       MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
 
-     if(temp_count > 100 && temp_count < 200 && temp_flag ==0 )
-     {
-       // temp_count = 0;
-       temp_count++;
-       ftmParam0.uDutyCyclePercent = 50;
-       ftmParam1.uDutyCyclePercent = 50;
-       ftmParam2.uDutyCyclePercent = 50;
-       ftmParam3.uDutyCyclePercent = 50;
+       MyChnConfig.diffEnable= false;
+       MyChnConfig.intEnable = true;
+       ADC16_DRV_ConfigConvChn(kADCPinMuxTable[ADC_count_n].instance,
+                               kADCPinMuxTable[ADC_count_n].chnGroup,
+                               &MyChnConfig);
+       /* Wait the interrupt for conversion completed. */
+       while (!g_AdcConvIntCompleted) {}
+       g_AdcConvIntCompleted = false;
+//       PRINTF("ADC_count_%d = %d \r\n",ADC_count_n, ADC_value[ADC_count_n]);
 
-     }
-
-     if(temp_count >= 200 && temp_flag ==0 )
-     {
-       // temp_count = 0;
-     //  ftmParam0.uDutyCyclePercent = 55;
-       temp_flag = 1;
-      // ftmParam0.uDutyCyclePercent = 60;
-      }
-
-     if( temp_flag == 1 )
-     {
-       //             ftmParam0.uDutyCyclePercent ++;
-       //
-       //             if (ftmParam0.uDutyCyclePercent>58)
-       //                            ftmParam0.uDutyCyclePercent = 59;
-
-       temp_count_test++;
-
-       if( temp_count_test > 10 )
+       if ( ADC_value_min[ADC_count_n] > ADC_value [ADC_count_n])
        {
-         temp_count_test = 0;
+         ADC_value_min[ADC_count_n] = ADC_value [ADC_count_n];
+       }
 
-
-         if (temp_count_add == 1)
-         {
-           ftmParam0.uDutyCyclePercent++;
-           ftmParam1.uDutyCyclePercent++;
-           ftmParam2.uDutyCyclePercent++;
-           ftmParam3.uDutyCyclePercent++;
-         }
-         else
-         {
-           ftmParam0.uDutyCyclePercent--;
-           ftmParam1.uDutyCyclePercent--;
-           ftmParam2.uDutyCyclePercent--;
-           ftmParam3.uDutyCyclePercent--;
-         }
-
-
-         if( ftmParam0.uDutyCyclePercent  > 70 )
-
-         {
-           temp_count_add = 0;
-         }
-         if( ftmParam0.uDutyCyclePercent  < 52)
-
-         { temp_count_add = 1;
-         }
+       if ( ADC_value_max[ADC_count_n] < ADC_value [ADC_count_n])
+       {
+         ADC_value_max[ADC_count_n] = ADC_value [ADC_count_n];
        }
      }
+//     PRINTF("\r\n");
+//     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
 
+static int i=0;
+//     int j=0;
+//     //PRINTF(".");
+//     I2C_acceInterrupt();
+//     I2C_gyroInterrupt();
 
-
-
-//          if( temp_flag == 1 && temp_count1 < 200)
-//     {
-//       //             ftmParam0.uDutyCyclePercent ++;
-//       //
-//       //             if (ftmParam0.uDutyCyclePercent>58)
-//       //                            ftmParam0.uDutyCyclePercent = 59;
-//       temp_count1++;
-//       ftmParam0.uDutyCyclePercent = 70;
+///*Start*********匿名上位机发送的串口数据***********
+//     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(acce_x);
+//     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(acce_y);
+//     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(acce_z);
+//     packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(gyro_x);
+//     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(gyro_y);
+//     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(gyro_z);
 //
-//     }
-//     else if( temp_flag == 1 && temp_count1 < 400)
+//     packet_upper_PC.user_data.trans_roll = BSWAP_16(acce_x);
+//     packet_upper_PC.user_data.trans_pitch = BSWAP_16(acce_y);
+//     packet_upper_PC.user_data.trans_yaw = BSWAP_16(acce_z);
+//
+//     uint8_t *p = (uint8_t*)&packet_upper_PC;
+//
+//     UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+//*End*********匿名上位机发送的串口数据***********/
+//
+//
+////Do not change the first 100 cylces PWM after Powen On
+////it would be better that the dutyCycle = 0%
+//     if(temp_count <= 100 && temp_flag ==0 )
 //     {
-//       temp_count1++;
+//       temp_count++;
+//     }
+//
+////All PWM duty cycle change to 50% for the next 100 cycle.
+////50% dutyCycle for the Electronic Speed Controller , the BLDC would not turning
+//     if(temp_count > 100 && temp_count < 200 && temp_flag ==0 )
+//     {
+//       // temp_count = 0;
+//       temp_count++;
 //       ftmParam0.uDutyCyclePercent = 50;
+//       ftmParam1.uDutyCyclePercent = 50;
+//       ftmParam2.uDutyCyclePercent = 50;
+//       ftmParam3.uDutyCyclePercent = 50;
 //     }
-//     else if( temp_flag == 1 && temp_count1 < 600)
+////Then, the BLDC can start to turning.
+//     if(temp_count >= 200 && temp_flag ==0 )
 //     {
-//       temp_count1++;
-//       ftmParam0.uDutyCyclePercent = 54;
-//     }
-//     else
-//     { temp_count1 = 1000;}
+//       temp_flag = 1;
+//      }
+////测试代码，电机从 52-->70-->52 占空比变化
+//     if( temp_flag == 1 )
+//     {
 //
-
-
-
-
-//     ftmParam0.uDutyCyclePercent += temp_duty;
-//     ftmP
-//     ftmParam2.uDutyCyclePercent += temp_duty;
-//     ftmParam3.uDutyCyclePercent += temp_duty;
+//       temp_count_test++;
+//       if( temp_count_test > 10 )
+//       {
+//         temp_count_test = 0;
+//         if (temp_count_add == 1)
+//         {
+//           ftmParam0.uDutyCyclePercent++;
+//           ftmParam1.uDutyCyclePercent++;
+//           ftmParam2.uDutyCyclePercent++;
+//           ftmParam3.uDutyCyclePercent++;
+//         }
+//         else
+//         {
+//           ftmParam0.uDutyCyclePercent--;
+//           ftmParam1.uDutyCyclePercent--;
+//           ftmParam2.uDutyCyclePercent--;
+//           ftmParam3.uDutyCyclePercent--;
+//         }
+//         if( ftmParam0.uDutyCyclePercent  > 70 )
+//         {
+//           temp_count_add = 0;
+//         }
+//         if( ftmParam0.uDutyCyclePercent  < 52)
+//         {
+//           temp_count_add = 1;
+//         }
+//       }
+//     }
 //
-//     if (ftmParam0.uDutyCyclePercent >= 70)
-//     {
-//       temp_duty = -2;
-//     }
-//     if (ftmParam0.uDutyCyclePercent <= 52)
-//     {
-//       temp_duty = 2;
-//     }
+///*Start 简化版更改占空比***************/
+////     uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
+////     uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
+////
+////     uMod = FTM_HAL_GetMod(ftmBaseAddr);
+////
+////     uCnv0 = uMod * ftmParam0.uDutyCyclePercent / 100;
+////     /* For 100% duty cycle */
+////     if(uCnv >= uMod)
+////     {
+////       uCnv = uMod + 1;
+////     }
+////     uCnv1 = uMod * ftmParam1.uDutyCyclePercent / 100;
+////     uCnv2 = uMod * ftmParam2.uDutyCyclePercent / 100;
+////     uCnv3 = uMod * ftmParam3.uDutyCyclePercent / 100;
+///*End 简化版更改占空比*************/
 //
-
-//     if (ftmParam0.uDutyCyclePercent >= 70)
-//     {
-//       ftmParam0.uDutyCyclePercent = 5;
-//     }
-//     if (ftmParam1.uDutyCyclePercent >= 70)
-//     {
-//       ftmParam1.uDutyCyclePercent = 5;
-//     }
-//     if (ftmParam2.uDutyCyclePercent >= 70)
-//     {
-//       ftmParam2.uDutyCyclePercent = 5;
-//     }
-//     if (ftmParam3.uDutyCyclePercent >= 70)
-//     {
-//       ftmParam3.uDutyCyclePercent = 5;
-//     }
-
-
-/*Start 简化版更改占空比***************/
-//     uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
-//     uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
+//     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
+//     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
+//     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
+//     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
 //
-//     uMod = FTM_HAL_GetMod(ftmBaseAddr);
-//
-//     uCnv0 = uMod * ftmParam0.uDutyCyclePercent / 100;
-//     /* For 100% duty cycle */
-//     if(uCnv >= uMod)
-//     {
-//       uCnv = uMod + 1;
-//     }
-//     uCnv1 = uMod * ftmParam1.uDutyCyclePercent / 100;
-//     uCnv2 = uMod * ftmParam2.uDutyCyclePercent / 100;
-//     uCnv3 = uMod * ftmParam3.uDutyCyclePercent / 100;
-/*End 简化版更改占空比*************/
-
-     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
-     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
-     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
-     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
-
-    FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
+//     FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
 
      if(i==0)
      {
@@ -303,11 +284,10 @@ void hwtimer_callback(void* data)
 //PTC1,2,3,4
 int main (void)
 {
-memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
+    memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
     // RX buffers
     //! @param receiveBuff Buffer used to hold received data
     uint8_t receiveBuff;
-
 
     // Initialize standard SDK demo application pins
     hardware_init();
@@ -317,12 +297,78 @@ memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_tab
     // enables the use of STDIO functions (printf, scanf, etc.)
     dbg_uart_init();
 
+/*Start***FTM Init*************************************************************/
     memset(&ftmInfo, 0, sizeof(ftmInfo));
-
     ftmInfo.syncMethod = kFtmUseSoftwareTrig;
-    configure_ftm_pins();
-
     FTM_DRV_Init(0, &ftmInfo);
+/*End*****FTM Init*************************************************************/
+
+/*Start***ADC Init*************************************************************/
+
+#if FSL_FEATURE_ADC16_HAS_CALIBRATION
+    adc16_calibration_param_t MyAdcCalibraitionParam0;
+    adc16_calibration_param_t MyAdcCalibraitionParam1;
+#endif /* FSL_FEATURE_ADC16_HAS_CALIBRATION */
+    adc16_user_config_t MyAdcUserConfig0;
+//    adc16_chn_config_t MyChnConfig0;
+
+    adc16_user_config_t MyAdcUserConfig1;
+//    adc16_chn_config_t MyChnConfig1;
+
+#if FSL_FEATURE_ADC16_HAS_CALIBRATION
+    /* Auto calibraion for ADC0 */
+    ADC16_DRV_GetAutoCalibrationParam(0u, &MyAdcCalibraitionParam0);
+    ADC16_DRV_SetCalibrationParam(0u, &MyAdcCalibraitionParam0);
+    /* Auto calibraion for ADC1 */
+    ADC16_DRV_GetAutoCalibrationParam(1u, &MyAdcCalibraitionParam1);
+    ADC16_DRV_SetCalibrationParam(1u, &MyAdcCalibraitionParam1);
+#endif /* FSL_FEATURE_ADC16_HAS_CALIBRATION */
+
+    /* Initialize the ADC0 converter. */
+    ADC16_DRV_StructInitUserConfigDefault(&MyAdcUserConfig0);
+    /* Initialize the ADC1 converter. */
+    ADC16_DRV_StructInitUserConfigDefault(&MyAdcUserConfig1);
+
+    MyAdcUserConfig0.intEnable = true;
+    MyAdcUserConfig1.intEnable = true;
+    ADC16_DRV_Init(0u, &MyAdcUserConfig0);
+    ADC16_DRV_Init(1u, &MyAdcUserConfig1);
+
+    /* Configuration for ADC channel. */
+    MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
+    MyChnConfig.diffEnable= false;
+    MyChnConfig.intEnable = true;
+#if FSL_FEATURE_ADC16_HAS_MUX_SELECT
+    MyChnConfig.chnMux = kAdcChnMuxOfA;
+#endif /* FSL_FEATURE_ADC16_HAS_MUX_SELECT */
+
+//void isr_20ms_vector(void)
+//{
+//    MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
+//    ADC_count_n++;
+//    if(8 == ADC_count_n++)
+//    {
+//      ADC_count_n = 0;
+//    }
+//    MyChnConfig.diffEnable= false;
+//    MyChnConfig.intEnable = true;
+//    ADC16_DRV_ConfigConvChn(kADCPinMuxTable[ADC_count_n].instance,
+//                            kADCPinMuxTable[ADC_count_n].chnGroup,
+//                            &MyChnConfig);
+//}
+//
+//void isr_adc0(void)
+//{
+//    value(n) = ADC_DRV_GetConvValueRAW(0U);
+//}
+//
+//void isr_adc0(void)
+//{
+//    value(n) = ADC_DRV_GetConvValueRAW(0U);
+//}
+
+
+/*End*****ADC Init*************************************************************/
 
     // Print the initial banner
     PRINTF("\r\nHello World!\n\n\r");
@@ -335,6 +381,14 @@ memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_tab
 
     PORT_HAL_SetMuxMode(PORTA_BASE, 7, kPortMuxAsGpio);
     GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOA, 7U), kGpioDigitalInput) ;
+
+
+    PORT_HAL_SetMuxMode(PORTD_BASE, 0, kPortMuxAsGpio);
+    GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOD, 0U), kGpioDigitalOutput) ;
+
+    GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
+
+
 
     I2C_acceInit();
     I2C_gyroInit();

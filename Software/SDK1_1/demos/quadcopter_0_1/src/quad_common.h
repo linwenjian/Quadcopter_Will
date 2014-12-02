@@ -55,7 +55,7 @@
 #include "quad_i2c_config.h"
 #include "quad_send_data.h"
 
-
+#include "fsl_adc16_driver.h"
 
 
 #define I2C_WRITE 0U
@@ -75,6 +75,12 @@ typedef enum _i2c_mode
   kInterruptMode = 0U,
   kPollingMode = 1U
 } i2c_mode_t;
+
+typedef struct ADCPinMuxTable {
+    uint32_t instance;
+    uint32_t chnGroup;
+    uint32_t chnNum;
+} _ADC_Pin_Mux_Table_t;
 
 int16_t DataCombine(uint8_t msb, uint8_t lsb);
 i2c_status_t I2C_acceInterrupt(void);
