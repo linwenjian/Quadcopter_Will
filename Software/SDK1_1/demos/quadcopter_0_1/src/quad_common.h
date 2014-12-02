@@ -56,7 +56,12 @@
 #include "quad_send_data.h"
 
 #include "fsl_adc16_driver.h"
+#include "fsl_gpio_driver.h"
 
+#include "fsl_hwtimer.h"
+#include "fsl_hwtimer_systick.h"
+#include "fsl_os_abstraction.h"
+#include "fsl_interrupt_manager.h"
 
 #define I2C_WRITE 0U
 #define I2C_READ 1U

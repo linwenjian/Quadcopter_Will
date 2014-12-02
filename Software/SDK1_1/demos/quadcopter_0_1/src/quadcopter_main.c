@@ -37,6 +37,8 @@
 #include "quad_i2c_config.h"
 #include "fsl_hwtimer.h"
 
+#include "core_cm4.h"
+
 ///////////////////////////////////////////////////////////////////////////////
 // Definitions
 ///////////////////////////////////////////////////////////////////////////////
@@ -46,7 +48,7 @@
 #define HWTIMER_LL_ID       0
 
 #define HWTIMER_PERIOD          20000
-#define BSWAP_16(x)	(uint16_t)((uint16_t)(((uint16_t)(x) & (uint16_t)0xFF00) >> 0x8) | (uint16_t)(((uint16_t)(x) & (uint16_t)0xFF) << 0x8))
+#define BSWAP_16(x) (uint16_t)((uint16_t)(((uint16_t)(x) & (uint16_t)0xFF00) >> 0x8) | (uint16_t)(((uint16_t)(x) & (uint16_t)0xFF) << 0x8))
 
 ///////////////////////////////////////////////////////////////////////////////
 // Variables
@@ -107,7 +109,8 @@ int temp_count_test = 0;
 int temp_count_add = 1;
 
 const _ADC_Pin_Mux_Table_t kADCPinMuxTable[] = {
-  {HW_ADC0,0,12},
+//  {HW_ADC0,0,12},
+  {HW_ADC0,0,5},
   {HW_ADC0,0,13},
   {HW_ADC1,0,10},
   {HW_ADC1,0,11},
@@ -130,38 +133,59 @@ volatile uint32_t ADC_value_min[8]= { 0xffffffff,
                                       0xffffffff};
 volatile uint32_t ADC_value_max[8]= {0};
 volatile bool g_AdcConvIntCompleted = false;
+
+
+volatile uint32_t remoteControlValue[8] = {0};
+volatile uint32_t remoteControlValue1st[8] = {0};
+volatile uint32_t remoteControlValue2nd[8] = {0};
+
+uint32_t remoteControlPinNum[] = {2,3,4,5,6,7,10,11};
 // 500Hz PWM， start from 50% duty cylce.
 //%0 duty cycle for 2 seconds , then 50% duty cycle for 2 seconds.
 void hwtimer_callback(void* data)
    {
 
-//     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),0);
-//this for cycle is about 57.1us from the logic analyzer
-// 0~ 4095  <--> 0V ~ 3.3 V
-     for (ADC_count_n = 0; ADC_count_n < 8U; ADC_count_n++)
-     {
-       MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
-
-       MyChnConfig.diffEnable= false;
-       MyChnConfig.intEnable = true;
-       ADC16_DRV_ConfigConvChn(kADCPinMuxTable[ADC_count_n].instance,
-                               kADCPinMuxTable[ADC_count_n].chnGroup,
-                               &MyChnConfig);
-       /* Wait the interrupt for conversion completed. */
-       while (!g_AdcConvIntCompleted) {}
-       g_AdcConvIntCompleted = false;
-//       PRINTF("ADC_count_%d = %d \r\n",ADC_count_n, ADC_value[ADC_count_n]);
-
-       if ( ADC_value_min[ADC_count_n] > ADC_value [ADC_count_n])
-       {
-         ADC_value_min[ADC_count_n] = ADC_value [ADC_count_n];
-       }
-
-       if ( ADC_value_max[ADC_count_n] < ADC_value [ADC_count_n])
-       {
-         ADC_value_max[ADC_count_n] = ADC_value [ADC_count_n];
-       }
-     }
+////     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),0);
+////this for cycle is about 57.1us from the logic analyzer
+//// 0~ 4095  <--> 0V ~ 3.3 V
+//     for (ADC_count_n = 0; ADC_count_n < 8U; ADC_count_n++)
+//     {
+//       MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
+//
+//       MyChnConfig.diffEnable= false;
+//       MyChnConfig.intEnable = true;
+//       
+//       if(ADC_count_n == 0 )
+//       {
+//#if FSL_FEATURE_ADC16_HAS_MUX_SELECT
+//         MyChnConfig.chnMux = kAdcChnMuxOfB;
+//#endif /* FSL_FEATURE_ADC16_HAS_MUX_SELECT */
+//       }
+//       else
+//       {
+//#if FSL_FEATURE_ADC16_HAS_MUX_SELECT
+//         MyChnConfig.chnMux = kAdcChnMuxOfDefault;
+//#endif /* FSL_FEATURE_ADC16_HAS_MUX_SELECT */
+//       }
+//       
+//       ADC16_DRV_ConfigConvChn(kADCPinMuxTable[ADC_count_n].instance,
+//                               kADCPinMuxTable[ADC_count_n].chnGroup,
+//                               &MyChnConfig);
+//       /* Wait the interrupt for conversion completed. */
+//       while (!g_AdcConvIntCompleted) {}
+//       g_AdcConvIntCompleted = false;
+////       PRINTF("ADC_count_%d = %d \r\n",ADC_count_n, ADC_value[ADC_count_n]);
+//
+//       if ( ADC_value_min[ADC_count_n] > ADC_value [ADC_count_n])
+//       {
+//         ADC_value_min[ADC_count_n] = ADC_value [ADC_count_n];
+//       }
+//
+//       if ( ADC_value_max[ADC_count_n] < ADC_value [ADC_count_n])
+//       {
+//         ADC_value_max[ADC_count_n] = ADC_value [ADC_count_n];
+//       }
+//     }
 //     PRINTF("\r\n");
 //     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
 
@@ -187,35 +211,41 @@ static int i=0;
 //
 //     UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
 //*End*********匿名上位机发送的串口数据***********/
-//
-//
-////Do not change the first 100 cylces PWM after Powen On
-////it would be better that the dutyCycle = 0%
-//     if(temp_count <= 100 && temp_flag ==0 )
-//     {
-//       temp_count++;
-//     }
-//
-////All PWM duty cycle change to 50% for the next 100 cycle.
-////50% dutyCycle for the Electronic Speed Controller , the BLDC would not turning
-//     if(temp_count > 100 && temp_count < 200 && temp_flag ==0 )
-//     {
-//       // temp_count = 0;
-//       temp_count++;
-//       ftmParam0.uDutyCyclePercent = 50;
-//       ftmParam1.uDutyCyclePercent = 50;
-//       ftmParam2.uDutyCyclePercent = 50;
-//       ftmParam3.uDutyCyclePercent = 50;
-//     }
-////Then, the BLDC can start to turning.
-//     if(temp_count >= 200 && temp_flag ==0 )
-//     {
-//       temp_flag = 1;
-//      }
-////测试代码，电机从 52-->70-->52 占空比变化
-//     if( temp_flag == 1 )
-//     {
-//
+
+
+//Do not change the first 100 cylces PWM after Powen On
+//it would be better that the dutyCycle = 0%
+     if(temp_count <= 100 && temp_flag ==0 )
+     {
+       temp_count++;
+     }
+
+//All PWM duty cycle change to 50% for the next 100 cycle.
+//50% dutyCycle for the Electronic Speed Controller , the BLDC would not turning
+     if(temp_count > 100 && temp_count < 200 && temp_flag ==0 )
+     {
+       // temp_count = 0;
+       temp_count++;
+       ftmParam0.uDutyCyclePercent = 50;
+       ftmParam1.uDutyCyclePercent = 50;
+       ftmParam2.uDutyCyclePercent = 50;
+       ftmParam3.uDutyCyclePercent = 50;
+     }
+//Then, the BLDC can start to turning.
+     if(temp_count >= 200 && temp_flag ==0 )
+     {
+       temp_flag = 1;
+      }
+//测试代码，电机从 52-->70-->52 占空比变化
+     if( temp_flag == 1 )
+     {
+       uint32_t uDutyCycle_add = (uint32_t)((remoteControlValue[0] - 126000)/3320) ;
+       if(uDutyCycle_add < 50)
+       {
+         ftmParam0.uDutyCyclePercent = 50 + uDutyCycle_add;
+       }
+
+//       
 //       temp_count_test++;
 //       if( temp_count_test > 10 )
 //       {
@@ -243,31 +273,31 @@ static int i=0;
 //           temp_count_add = 1;
 //         }
 //       }
+     }
+
+/*Start 简化版更改占空比***************/
+//     uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
+//     uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
+//
+//     uMod = FTM_HAL_GetMod(ftmBaseAddr);
+//
+//     uCnv0 = uMod * ftmParam0.uDutyCyclePercent / 100;
+//     /* For 100% duty cycle */
+//     if(uCnv >= uMod)
+//     {
+//       uCnv = uMod + 1;
 //     }
-//
-///*Start 简化版更改占空比***************/
-////     uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
-////     uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
-////
-////     uMod = FTM_HAL_GetMod(ftmBaseAddr);
-////
-////     uCnv0 = uMod * ftmParam0.uDutyCyclePercent / 100;
-////     /* For 100% duty cycle */
-////     if(uCnv >= uMod)
-////     {
-////       uCnv = uMod + 1;
-////     }
-////     uCnv1 = uMod * ftmParam1.uDutyCyclePercent / 100;
-////     uCnv2 = uMod * ftmParam2.uDutyCyclePercent / 100;
-////     uCnv3 = uMod * ftmParam3.uDutyCyclePercent / 100;
-///*End 简化版更改占空比*************/
-//
-//     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
-//     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
-//     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
-//     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
-//
-//     FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
+//     uCnv1 = uMod * ftmParam1.uDutyCyclePercent / 100;
+//     uCnv2 = uMod * ftmParam2.uDutyCyclePercent / 100;
+//     uCnv3 = uMod * ftmParam3.uDutyCyclePercent / 100;
+/*End 简化版更改占空比*************/
+
+     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
+     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
+     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
+     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
+
+     FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
 
      if(i==0)
      {
@@ -303,72 +333,72 @@ int main (void)
     FTM_DRV_Init(0, &ftmInfo);
 /*End*****FTM Init*************************************************************/
 
-/*Start***ADC Init*************************************************************/
-
-#if FSL_FEATURE_ADC16_HAS_CALIBRATION
-    adc16_calibration_param_t MyAdcCalibraitionParam0;
-    adc16_calibration_param_t MyAdcCalibraitionParam1;
-#endif /* FSL_FEATURE_ADC16_HAS_CALIBRATION */
-    adc16_user_config_t MyAdcUserConfig0;
-//    adc16_chn_config_t MyChnConfig0;
-
-    adc16_user_config_t MyAdcUserConfig1;
-//    adc16_chn_config_t MyChnConfig1;
-
-#if FSL_FEATURE_ADC16_HAS_CALIBRATION
-    /* Auto calibraion for ADC0 */
-    ADC16_DRV_GetAutoCalibrationParam(0u, &MyAdcCalibraitionParam0);
-    ADC16_DRV_SetCalibrationParam(0u, &MyAdcCalibraitionParam0);
-    /* Auto calibraion for ADC1 */
-    ADC16_DRV_GetAutoCalibrationParam(1u, &MyAdcCalibraitionParam1);
-    ADC16_DRV_SetCalibrationParam(1u, &MyAdcCalibraitionParam1);
-#endif /* FSL_FEATURE_ADC16_HAS_CALIBRATION */
-
-    /* Initialize the ADC0 converter. */
-    ADC16_DRV_StructInitUserConfigDefault(&MyAdcUserConfig0);
-    /* Initialize the ADC1 converter. */
-    ADC16_DRV_StructInitUserConfigDefault(&MyAdcUserConfig1);
-
-    MyAdcUserConfig0.intEnable = true;
-    MyAdcUserConfig1.intEnable = true;
-    ADC16_DRV_Init(0u, &MyAdcUserConfig0);
-    ADC16_DRV_Init(1u, &MyAdcUserConfig1);
-
-    /* Configuration for ADC channel. */
-    MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
-    MyChnConfig.diffEnable= false;
-    MyChnConfig.intEnable = true;
-#if FSL_FEATURE_ADC16_HAS_MUX_SELECT
-    MyChnConfig.chnMux = kAdcChnMuxOfA;
-#endif /* FSL_FEATURE_ADC16_HAS_MUX_SELECT */
-
-//void isr_20ms_vector(void)
-//{
+///*Start***ADC Init*************************************************************/
+//
+//#if FSL_FEATURE_ADC16_HAS_CALIBRATION
+//    adc16_calibration_param_t MyAdcCalibraitionParam0;
+//    adc16_calibration_param_t MyAdcCalibraitionParam1;
+//#endif /* FSL_FEATURE_ADC16_HAS_CALIBRATION */
+//    adc16_user_config_t MyAdcUserConfig0;
+////    adc16_chn_config_t MyChnConfig0;
+//
+//    adc16_user_config_t MyAdcUserConfig1;
+////    adc16_chn_config_t MyChnConfig1;
+//
+//#if FSL_FEATURE_ADC16_HAS_CALIBRATION
+//    /* Auto calibraion for ADC0 */
+//    ADC16_DRV_GetAutoCalibrationParam(0u, &MyAdcCalibraitionParam0);
+//    ADC16_DRV_SetCalibrationParam(0u, &MyAdcCalibraitionParam0);
+//    /* Auto calibraion for ADC1 */
+//    ADC16_DRV_GetAutoCalibrationParam(1u, &MyAdcCalibraitionParam1);
+//    ADC16_DRV_SetCalibrationParam(1u, &MyAdcCalibraitionParam1);
+//#endif /* FSL_FEATURE_ADC16_HAS_CALIBRATION */
+//
+//    /* Initialize the ADC0 converter. */
+//    ADC16_DRV_StructInitUserConfigDefault(&MyAdcUserConfig0);
+//    /* Initialize the ADC1 converter. */
+//    ADC16_DRV_StructInitUserConfigDefault(&MyAdcUserConfig1);
+//
+//    MyAdcUserConfig0.intEnable = true;
+//    MyAdcUserConfig1.intEnable = true;
+//    ADC16_DRV_Init(0u, &MyAdcUserConfig0);
+//    ADC16_DRV_Init(1u, &MyAdcUserConfig1);
+//
+//    /* Configuration for ADC channel. */
 //    MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
-//    ADC_count_n++;
-//    if(8 == ADC_count_n++)
-//    {
-//      ADC_count_n = 0;
-//    }
 //    MyChnConfig.diffEnable= false;
 //    MyChnConfig.intEnable = true;
-//    ADC16_DRV_ConfigConvChn(kADCPinMuxTable[ADC_count_n].instance,
-//                            kADCPinMuxTable[ADC_count_n].chnGroup,
-//                            &MyChnConfig);
-//}
+//#if FSL_FEATURE_ADC16_HAS_MUX_SELECT
+//    MyChnConfig.chnMux = kAdcChnMuxOfA;
+//#endif /* FSL_FEATURE_ADC16_HAS_MUX_SELECT */
 //
-//void isr_adc0(void)
-//{
-//    value(n) = ADC_DRV_GetConvValueRAW(0U);
-//}
+////void isr_20ms_vector(void)
+////{
+////    MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
+////    ADC_count_n++;
+////    if(8 == ADC_count_n++)
+////    {
+////      ADC_count_n = 0;
+////    }
+////    MyChnConfig.diffEnable= false;
+////    MyChnConfig.intEnable = true;
+////    ADC16_DRV_ConfigConvChn(kADCPinMuxTable[ADC_count_n].instance,
+////                            kADCPinMuxTable[ADC_count_n].chnGroup,
+////                            &MyChnConfig);
+////}
+////
+////void isr_adc0(void)
+////{
+////    value(n) = ADC_DRV_GetConvValueRAW(0U);
+////}
+////
+////void isr_adc0(void)
+////{
+////    value(n) = ADC_DRV_GetConvValueRAW(0U);
+////}
 //
-//void isr_adc0(void)
-//{
-//    value(n) = ADC_DRV_GetConvValueRAW(0U);
-//}
-
-
-/*End*****ADC Init*************************************************************/
+//
+///*End*****ADC Init*************************************************************/
 
     // Print the initial banner
     PRINTF("\r\nHello World!\n\n\r");
@@ -388,11 +418,17 @@ int main (void)
 
     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
 
-
-
+    PORT_HAL_SetMuxMode(PORTD_BASE,1u,kPortPinDisabled);
+           
     I2C_acceInit();
     I2C_gyroInit();
-
+    
+    FTM_DRV_PwmStart(0, &ftmParam0, 0);
+    FTM_DRV_PwmStart(0, &ftmParam1, 1);
+    FTM_DRV_PwmStart(0, &ftmParam2, 2);
+    FTM_DRV_PwmStart(0, &ftmParam3, 3);
+    FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
+    
         // Hwtimer initialization
     if (kHwtimerSuccess != HWTIMER_SYS_Init(&hwtimer, &HWTIMER_LL_DEVIF, HWTIMER_LL_ID, 5, NULL))
     {
@@ -411,12 +447,8 @@ int main (void)
         PRINTF("\r\nError: hwtimer start.\r\n");
     }
 
-    FTM_DRV_PwmStart(0, &ftmParam0, 0);
-    FTM_DRV_PwmStart(0, &ftmParam1, 1);
-    FTM_DRV_PwmStart(0, &ftmParam2, 2);
-    FTM_DRV_PwmStart(0, &ftmParam3, 3);
-    FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
-
+    GPIO_DRV_Init(remoteControlPins,NULL);
+    
     while(1)
     {
 //      LED2_ON;
@@ -437,4 +469,32 @@ int main (void)
       LED5_OFF;
       OSA_TimeDelay(200);
     }
+}
+
+
+
+void PORTB_IRQHandler(void)
+{
+  uint32_t intFlag = PORT_HAL_GetPortIntFlag(PORTB_BASE);
+  uint32_t i =  0;
+  for(i=0 ; i<8;i++)
+  {
+    if (intFlag & (1 << remoteControlPinNum[i]))
+    {
+      remoteControlValue1st[i] = remoteControlValue2nd[i] ;
+      remoteControlValue2nd[i] = SysTick_returnVal();//(sysTick->VAL);
+      //  sysTick->VAL = 0;
+      //   SysTick_Config(10);
+      if ( remoteControlValue1st[i]  > remoteControlValue2nd[i] )
+      {
+        remoteControlValue[i] = remoteControlValue1st[i] - remoteControlValue2nd[i];
+      }
+      else
+      {
+        remoteControlValue[i] = remoteControlValue1st[i] + hwtimer.divider - remoteControlValue2nd[i];
+      } 
+    }
+  }
+  /* Clear interrupt flag.*/
+    PORT_HAL_ClearPortIntFlag(PORTB_BASE);
 }

@@ -81,7 +81,9 @@ void hardware_init(void) {
 
   configure_i2c_pins(0);//FXO8700 & L3G4200d
 
-  configure_adc_pins_for_quadcopter();
+ // configure_adc_pins_for_quadcopter();
+  
+  configure_remote_control_pins_for_quadcopter() ; 
 
   configure_ftm_pins_for_quadcopter();
 }

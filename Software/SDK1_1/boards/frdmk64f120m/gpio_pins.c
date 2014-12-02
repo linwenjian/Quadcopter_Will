@@ -153,6 +153,75 @@ const gpio_output_pin_user_config_t ledPins[] = {
   }
 };
 
+const gpio_input_pin_user_config_t remoteControlPins[] = {
+  {
+    .pinName = kGpioControl0,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntEitherEdge,
+  },
+  {
+    .pinName = kGpioControl1,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntEitherEdge,
+  },
+  {
+    .pinName = kGpioControl2,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntEitherEdge,
+  },
+  {
+    .pinName = kGpioControl3,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntEitherEdge,
+  },
+  {
+    .pinName = kGpioControl4,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntEitherEdge,
+  },
+  {
+    .pinName = kGpioControl5,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntEitherEdge,
+  },
+  {
+    .pinName = kGpioControl6,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntEitherEdge,
+  },
+  {
+    .pinName = kGpioControl7,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntEitherEdge,
+  },
+  {
+    .pinName = GPIO_PINS_OUT_OF_RANGE,
+  }
+};
+
+
+
+
+
+
+
+
 //const gpio_output_pin_user_config_t spiCsPin[] = {
 //  {
 //    .pinName = kGpioSpi0Cs0,

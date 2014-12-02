@@ -1714,6 +1714,13 @@ __STATIC_INLINE uint32_t SysTick_Config(uint32_t ticks)
   return (0);                                                  /* Function successful */
 }
 
+__STATIC_INLINE uint32_t SysTick_returnVal(void)
+{
+  return (SysTick->VAL);                                               
+}
+
+
+
 #endif
 
 /*@} end of CMSIS_Core_SysTickFunctions */

@@ -253,6 +253,7 @@ void configure_ftm_pins_for_quadcopter(void);
 
 void configure_adc_pins_for_quadcopter(void);
 
+void configure_remote_control_pins_for_quadcopter(void);
 /* END pin_mux. */
 #endif /* #ifndef __pin_mux_H_ */
 /*!

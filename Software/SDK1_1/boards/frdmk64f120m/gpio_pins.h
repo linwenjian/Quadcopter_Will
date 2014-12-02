@@ -79,6 +79,8 @@ extern const gpio_input_pin_user_config_t sdhcCdPin[];
 /*! @brief Configuration structure 0 for output pins */
 extern const gpio_output_pin_user_config_t ledPins[];
 
+extern const gpio_input_pin_user_config_t remoteControlPins[];
+
 extern const gpio_output_pin_user_config_t spiCsPin[];
 
 extern const gpio_input_pin_user_config_t gpioUartDemoRxPin[];
@@ -97,7 +99,18 @@ enum _gpio_pins_pinNames{
 //  kGpioUartDemoRX = GPIO_MAKE_PIN(HW_GPIOB, 16),
 //  kGpioSpi0Cs0 = GPIO_MAKE_PIN(HW_GPIOD, 0),
 //  kGpioSpi0Cs1 = GPIO_MAKE_PIN(HW_GPIOD, 4),
+  
+  kGpioControl0 =  GPIO_MAKE_PIN(HW_GPIOB, 2U),
+  kGpioControl1 =  GPIO_MAKE_PIN(HW_GPIOB, 3U),
+  kGpioControl2 =  GPIO_MAKE_PIN(HW_GPIOB, 4U),
+  kGpioControl3 =  GPIO_MAKE_PIN(HW_GPIOB, 5U),
+  kGpioControl4 =  GPIO_MAKE_PIN(HW_GPIOB, 6U),
+  kGpioControl5 =  GPIO_MAKE_PIN(HW_GPIOB, 7U),
+  kGpioControl6 =  GPIO_MAKE_PIN(HW_GPIOB, 10U),
+  kGpioControl7 =  GPIO_MAKE_PIN(HW_GPIOB, 11U),
 };
+
+
 
 
 #endif
