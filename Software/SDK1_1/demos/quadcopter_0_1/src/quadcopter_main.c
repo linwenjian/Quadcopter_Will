@@ -138,8 +138,10 @@ volatile bool g_AdcConvIntCompleted = false;
 volatile uint32_t remoteControlValue[8] = {0};
 volatile uint32_t remoteControlValue1st[8] = {0};
 volatile uint32_t remoteControlValue2nd[8] = {0};
-
+volatile uint32_t remoteControlValueFlag[8] = {0};
 uint32_t remoteControlPinNum[] = {2,3,4,5,6,7,10,11};
+
+uint32_t uDutyCycle_add = 0;
 // 500Hz PWM， start from 50% duty cylce.
 //%0 duty cycle for 2 seconds , then 50% duty cycle for 2 seconds.
 void hwtimer_callback(void* data)
@@ -154,7 +156,7 @@ void hwtimer_callback(void* data)
 //
 //       MyChnConfig.diffEnable= false;
 //       MyChnConfig.intEnable = true;
-//       
+//
 //       if(ADC_count_n == 0 )
 //       {
 //#if FSL_FEATURE_ADC16_HAS_MUX_SELECT
@@ -167,7 +169,7 @@ void hwtimer_callback(void* data)
 //         MyChnConfig.chnMux = kAdcChnMuxOfDefault;
 //#endif /* FSL_FEATURE_ADC16_HAS_MUX_SELECT */
 //       }
-//       
+//
 //       ADC16_DRV_ConfigConvChn(kADCPinMuxTable[ADC_count_n].instance,
 //                               kADCPinMuxTable[ADC_count_n].chnGroup,
 //                               &MyChnConfig);
@@ -239,13 +241,17 @@ static int i=0;
 //测试代码，电机从 52-->70-->52 占空比变化
      if( temp_flag == 1 )
      {
-       uint32_t uDutyCycle_add = (uint32_t)((remoteControlValue[0] - 126000)/3320) ;
+
+       if(remoteControlValue[0] > 120000)
+       {
+         uDutyCycle_add = (uint32_t)((remoteControlValue[0] - 120000)/2400) ;
+       }
        if(uDutyCycle_add < 50)
        {
-         ftmParam0.uDutyCyclePercent = 50 + uDutyCycle_add;
+         ftmParam0.uDutyCyclePercent = 46 + uDutyCycle_add;
        }
 
-//       
+//
 //       temp_count_test++;
 //       if( temp_count_test > 10 )
 //       {
@@ -419,16 +425,16 @@ int main (void)
     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
 
     PORT_HAL_SetMuxMode(PORTD_BASE,1u,kPortPinDisabled);
-           
+
     I2C_acceInit();
     I2C_gyroInit();
-    
+
     FTM_DRV_PwmStart(0, &ftmParam0, 0);
     FTM_DRV_PwmStart(0, &ftmParam1, 1);
     FTM_DRV_PwmStart(0, &ftmParam2, 2);
     FTM_DRV_PwmStart(0, &ftmParam3, 3);
     FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
-    
+
         // Hwtimer initialization
     if (kHwtimerSuccess != HWTIMER_SYS_Init(&hwtimer, &HWTIMER_LL_DEVIF, HWTIMER_LL_ID, 5, NULL))
     {
@@ -448,7 +454,7 @@ int main (void)
     }
 
     GPIO_DRV_Init(remoteControlPins,NULL);
-    
+
     while(1)
     {
 //      LED2_ON;
@@ -471,8 +477,7 @@ int main (void)
     }
 }
 
-
-
+#define HW_DIVIDER 2400000
 void PORTB_IRQHandler(void)
 {
   uint32_t intFlag = PORT_HAL_GetPortIntFlag(PORTB_BASE);
@@ -481,18 +486,24 @@ void PORTB_IRQHandler(void)
   {
     if (intFlag & (1 << remoteControlPinNum[i]))
     {
-      remoteControlValue1st[i] = remoteControlValue2nd[i] ;
-      remoteControlValue2nd[i] = SysTick_returnVal();//(sysTick->VAL);
-      //  sysTick->VAL = 0;
-      //   SysTick_Config(10);
-      if ( remoteControlValue1st[i]  > remoteControlValue2nd[i] )
+      if (remoteControlValueFlag[i] == 0)
       {
-        remoteControlValue[i] = remoteControlValue1st[i] - remoteControlValue2nd[i];
+        remoteControlValue1st[i] = (SysTick->VAL);
+        remoteControlValueFlag[i] = 1;
       }
       else
       {
-        remoteControlValue[i] = remoteControlValue1st[i] + hwtimer.divider - remoteControlValue2nd[i];
-      } 
+        remoteControlValueFlag[i] = 0;
+        remoteControlValue2nd[i] = (SysTick->VAL);
+        if ( remoteControlValue1st[i] > remoteControlValue2nd[i] )
+        {
+          remoteControlValue[i] = remoteControlValue1st[i] - remoteControlValue2nd[i];
+        }
+        else
+        {
+          remoteControlValue[i] = remoteControlValue1st[i] + HW_DIVIDER - remoteControlValue2nd[i];//hwtimer.divider
+        }
+      }
     }
   }
   /* Clear interrupt flag.*/
