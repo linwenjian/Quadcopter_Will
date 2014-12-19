@@ -88,8 +88,18 @@
 
 #define GYRO_READ_LEN       6
 
-
-
+typedef struct _mems_date
+{
+  int16_t accel_x;
+  int16_t accel_y;
+  int16_t accel_z;
+  int16_t magn_x;
+  int16_t magn_y;
+  int16_t magn_z;
+  int16_t gyro_x;
+  int16_t gyro_y;
+  int16_t gyro_z;
+}mems_data_t;
 
 #endif
 /*******************************************************************************

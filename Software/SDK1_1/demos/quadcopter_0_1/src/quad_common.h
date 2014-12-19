@@ -88,11 +88,13 @@ typedef struct ADCPinMuxTable {
 } _ADC_Pin_Mux_Table_t;
 
 int16_t DataCombine(uint8_t msb, uint8_t lsb);
-i2c_status_t I2C_acceInterrupt(void);
-i2c_status_t I2C_acceInit(void);
 
-i2c_status_t I2C_gyroInit(void);
-i2c_status_t I2C_gyroInterrupt(void);
+i2c_status_t I2C_fxos8700Init(void);// Accelerometer & Magnetometer
+i2c_status_t I2C_l3g4200dInit(void);// Gyroscope
+
+i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData);
+i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData);
+
 double KalmanFilter(const double ResrcData,
                     double ProcessNiose_Q,
                     double MeasureNoise_R,

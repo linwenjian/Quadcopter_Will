@@ -30,9 +30,8 @@
 #include "quad_common.h"
 //#include "quad_i2c_config.h"
 
-
-i2c_master_state_t master;
-i2c_device_t acce_device =
+i2c_master_state_t i2cMaster;
+i2c_device_t accel_device =
   {
     .address = FXOS8700_ADDR,
     .baudRate_kbps = FXOS8700_BAUDRATE
@@ -43,22 +42,11 @@ i2c_device_t gyro_device =
     .baudRate_kbps = GYRO_BAUDRATE
   };
 
-int16_t acce_x = 0 ,acce_y = 0, acce_z = 0 ;
-int16_t gyro_x = 0 ,gyro_y = 0, gyro_z = 0 ;
-
-uint8_t fxo8700_buffer[FXOS8700_READ_LEN];
-uint8_t gyro_buffer[GYRO_READ_LEN];
-
-
-
-i2c_status_t I2C_acceInit(void)
+i2c_status_t I2C_fxos8700Init(void)
 {
   uint8_t write_value = 0;
-  uint8_t acce_reg = 0;
+  uint8_t accel_reg = 0;
   uint8_t read_temp = 0;
-  uint8_t x_msb = 0 ,y_msb = 0, z_msb = 0 ;
-  uint8_t x_lsb = 0 ,y_lsb = 0, z_lsb = 0 ;
-  uint8_t show_time = 0;
 
 //  i2c_status_t run_result = kStatus_I2C_Fail;
 
@@ -67,11 +55,11 @@ i2c_status_t I2C_acceInit(void)
 //  PRINTF("If full-scale is 4g , then 1g = 2048 \r\n");
 //  PRINTF("If full-scale is 8g , then 1g = 1024 \r\n");
 
-  I2C_DRV_MasterInit(FXOS8700_I2C_INSTANCE, &master);
+  I2C_DRV_MasterInit(FXOS8700_I2C_INSTANCE, &i2cMaster);
 
   //who am I
-  acce_reg = FXOS8700_WHOAMI;
-  I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &read_temp, 1, 100);
+  accel_reg = FXOS8700_WHOAMI;
+  I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &read_temp, 1, 100);
   if (read_temp != FXOS8700_WHOAMI_VAL )
   {
     PRINTF("no a FXO8700 chip");
@@ -82,17 +70,16 @@ i2c_status_t I2C_acceInit(void)
   // then you can do other settings.
   // [7-1] = 0000 000
   // [0]: active=0
-  acce_reg = FXOS8700_CTRL_REG1;
+  accel_reg = FXOS8700_CTRL_REG1;
   write_value = 0x00;
 
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 100) )
+     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
   {
     //    PRINTF("fail0");
     //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
     //    return kStatus_I2C_Fail;
   }
-
 
   // write 0001 1111 = 0x1F to magnetometer control register 1
   // [7]: m_acal=0: auto calibration disabled
@@ -100,11 +87,11 @@ i2c_status_t I2C_acceInit(void)
   // [5]: m_ost=0: no one-shot magnetic measurement
   // [4-2]: m_os=111=7: 8x oversampling (for 200Hz) to reduce magnetometer noise
   // [1-0]: m_hms=11=3: select hybrid mode with accel and magnetometer active
-  acce_reg = FXOS8700_M_CTRL_REG1;
+  accel_reg = FXOS8700_M_CTRL_REG1;
   write_value = 0x1F;
 
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 100) )
+     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
   {
     //    PRINTF("fail0");
     //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
@@ -121,11 +108,11 @@ i2c_status_t I2C_acceInit(void)
   // [3]: m_maxmin_dis_ths=0
   // [2]: m_maxmin_rst=0
   // [1-0]: m_rst_cnt=00 to enable magnetic reset each cycle
-  acce_reg = FXOS8700_M_CTRL_REG2;
+  accel_reg = FXOS8700_M_CTRL_REG2;
   write_value = 0x20;
 
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 100) )
+     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
   {
     //    PRINTF("fail0");
     //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
@@ -140,17 +127,16 @@ i2c_status_t I2C_acceInit(void)
   // [3]: reserved
   // [2]: reserved
   // [1-0]: fs=02 for accelerometer range of +/-8g range with 0.976mg/LSB
-  acce_reg = FXOS8700_XYZ_DATA_CFG;
+  accel_reg = FXOS8700_XYZ_DATA_CFG;
   write_value = 0x02;
 
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 100) )
+     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
   {
     //    PRINTF("fail0");
     //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
     //    return kStatus_I2C_Fail;
   }
-
 
   // write 0000 1101b = 0x0D to accelerometer control register 1
   // [7-6]: aslp_rate=00
@@ -159,20 +145,20 @@ i2c_status_t I2C_acceInit(void)
   // [1]: f_read=0 for normal 16 bit reads
   // [0]: active=1 to take the part out of standby and enable sampling
 
-  acce_reg = FXOS8700_CTRL_REG1;
+  accel_reg = FXOS8700_CTRL_REG1;
   write_value = 0x0D;
 
   if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 100) )
+     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
   {
     //    PRINTF("fail0");
     //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
     //    return kStatus_I2C_Fail;
   }
 
-//  acce_reg = FXOS8700_XYZ_DATA_CFG;
+//  accel_reg = FXOS8700_XYZ_DATA_CFG;
 //  if( kStatus_I2C_Success !=
-//     I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &read_temp, 1, 1000) )
+//     I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &read_temp, 1, 1000) )
 //  {
 //    PRINTF("fail1");
 //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
@@ -180,17 +166,17 @@ i2c_status_t I2C_acceInit(void)
 //  }
 //  write_value = (read_temp & (~RANGE_MASK)) | kRange8g  ;
 //  if( kStatus_I2C_Success !=
-//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 1000) )
+//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 1000) )
 //  {
 //    PRINTF("fail2");
 //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
 //    return kStatus_I2C_Fail;
 //  }
 //
-//  acce_reg = FXOS8700_CTRL_REG1;
+//  accel_reg = FXOS8700_CTRL_REG1;
 //  write_value =  0x01 ;
 //  if( kStatus_I2C_Success !=
-//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &write_value, 1, 1000) )
+//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 1000) )
 //  {
 //    PRINTF("fail3");
 //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
@@ -199,8 +185,7 @@ i2c_status_t I2C_acceInit(void)
     return kStatus_I2C_Success ;
 }
 
-
-i2c_status_t I2C_gyroInit(void)
+i2c_status_t I2C_l3g4200dInit(void)
 {
   uint8_t write_value = 0;
   uint8_t gyro_reg = 0;
@@ -209,16 +194,12 @@ i2c_status_t I2C_gyroInit(void)
   uint8_t x_lsb = 0 ,y_lsb = 0, z_lsb = 0 ;
   uint8_t show_time = 0;
 
-//  I2C_DRV_MasterInit(GYRO_I2C_INSTANCE, &master);
-
+//  I2C_DRV_MasterInit(GYRO_I2C_INSTANCE, &i2cMaster);
 
   uint8_t who = 0;
 
   /*Init gyro chip*/
   gyro_reg = GYRO_WHO_AM_I;
-
-
-
 
   if( kStatus_I2C_Success !=
      I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &read_temp, 1, 1000) )
@@ -249,140 +230,71 @@ i2c_status_t I2C_gyroInit(void)
 
    return kStatus_I2C_Success ;
 }
-i2c_status_t I2C_acceInterrupt(void)
+
+i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData)
 {
-  uint8_t write_value = 0;
-  uint8_t acce_reg = 0;
-  uint8_t read_temp = 0;
-
-  uint8_t x_msb = 0 ,y_msb = 0, z_msb = 0 ;
-  uint8_t x_lsb = 0 ,y_lsb = 0, z_lsb = 0 ;
-  uint8_t show_time = 0;
-
-
-//    acce_reg = FXOS8700_STATUS ;
-//    if( kStatus_I2C_Success !=
-//       I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &read_temp, 1, 1000))
-//    {
-//      PRINTF("fail4");
-//      I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-//      return kStatus_I2C_Fail;
-//    }
-
- //   if( (read_temp & 0x0f )!= 0 )
-    {
-//      x = 0 ;
-//      y = 0 ;
-//      z = 0 ;
-
-      acce_reg = FXOS8700_STATUS ;
-      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1,
-                                        fxo8700_buffer, FXOS8700_READ_LEN, 100);
-
-//
-//      acce_reg = FXOS8700_OUT_X_MSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &x_msb, 1, 1000);
-//
-//      acce_reg = FXOS8700_OUT_X_LSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &x_lsb, 1, 1000);
-//
-//      acce_reg = FXOS8700_OUT_Y_MSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &y_msb, 1, 1000);
-//
-//      acce_reg = FXOS8700_OUT_Y_LSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &y_lsb, 1, 1000);
-//
-//      acce_reg = FXOS8700_OUT_Z_MSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &z_msb, 1, 1000);
-//
-//      acce_reg = FXOS8700_OUT_Z_LSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &acce_device, &acce_reg, 1, &z_lsb, 1, 1000);
-
-      acce_x = DataCombine(fxo8700_buffer[1],fxo8700_buffer[2]);
-      acce_y = DataCombine(fxo8700_buffer[3],fxo8700_buffer[4]);
-      acce_z = DataCombine(fxo8700_buffer[5],fxo8700_buffer[6]);
-
-   //   PRINTF("acce_x = %5d , acce_y = %5d , acce_z = %5d\r\n" ,acce_x,acce_y,acce_z);
-  }
-
+  uint8_t fxos8700_buffer[FXOS8700_READ_LEN];
+  uint8_t accel_reg = 0;
+  accel_reg = FXOS8700_STATUS ; //0x00
+  I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1,
+                                    fxos8700_buffer, FXOS8700_READ_LEN, 100);
+  
+  //  accel_x = DataCombine(fxos8700_buffer[1],fxos8700_buffer[2]);
+  //  accel_y = DataCombine(fxos8700_buffer[3],fxos8700_buffer[4]);
+  //  accel_z = DataCombine(fxos8700_buffer[5],fxos8700_buffer[6]);
+  //  
+  //  magn_x = DataCombine(fxos8700_buffer[7],fxos8700_buffer[8]);
+  //  magn_x = DataCombine(fxos8700_buffer[9],fxos8700_buffer[10]);
+  //  magn_x = DataCombine(fxos8700_buffer[11],fxos8700_buffer[12]);
+  
+  //OUT_X_MSB,OUT_X_LSB,OUT_Y_MSB,OUT_Y_LSB,OUT_Z_MSB,OUT_Z_LSB from 0x01 to 0x06
+  //MOUT_X_MSB,MOUT_X_LSB,MOUT_Y_MSB,MOUT_Y_LSB,MOUT_Z_MSB,OMUT_Z_LSB from 0x33 to 0x38
+  //already set the fxos8700 continuous read from 0x01 - 0x06 and 0x33 - 0x38,
+  //see detailed in I2C_fxos8700Init()
+  pMemsRawData->accel_x = ((fxos8700_buffer[1] << 8)  |  fxos8700_buffer[2]);
+  pMemsRawData->accel_y = ((fxos8700_buffer[3] << 8)  |  fxos8700_buffer[4]);
+  pMemsRawData->accel_z = ((fxos8700_buffer[5] << 8)  |  fxos8700_buffer[6]);
+  
+  pMemsRawData->magn_x  = ((fxos8700_buffer[7] << 8)  |  fxos8700_buffer[8]);
+  pMemsRawData->magn_y  = ((fxos8700_buffer[9] << 8)  |  fxos8700_buffer[10]);
+  pMemsRawData->magn_z  = ((fxos8700_buffer[11] << 8) |  fxos8700_buffer[12]);
+  
+  PRINTF("accel_x = %5d , accel_y = %5d , accel_z = %5d\r\n" ,pMemsRawData->accel_x,pMemsRawData->accel_y,pMemsRawData->accel_z);
+  PRINTF("magn_x = %5d , magn_y = %5d , magn_z = %5d\r\n" ,pMemsRawData->magn_x,pMemsRawData->magn_y,pMemsRawData->magn_z);
   return kStatus_I2C_Success ;
 }
 
-
-i2c_status_t I2C_gyroInterrupt(void)
+i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
 {
-//  uint8_t write_value = 0;
+  uint8_t gyro_buffer[GYRO_READ_LEN];
   uint8_t gyro_reg = 0;
-//  uint8_t read_temp = 0;
-
-//  uint8_t x_msb = 0 ,y_msb = 0, z_msb = 0 ;
-//  uint8_t x_lsb = 0 ,y_lsb = 0, z_lsb = 0 ;
-//  uint8_t show_time = 0;
-
-
-//    gyro_reg = gyro_STATUS ;
-//    if( kStatus_I2C_Success !=
-//       I2C_DRV_MasterReceiveDataBlocking(gyro_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &read_temp, 1, 1000))
-//    {
-//      PRINTF("fail4");
-//      I2C_DRV_MasterDeinit(gyro_I2C_INSTANCE);
-//      return kStatus_I2C_Fail;
-//    }
-
-//    if( (read_temp & 0x0f )!= 0 )
-    {
-//      x = 0 ;
-//      y = 0 ;
-//      z = 0 ;
-
-      /*******************
-      In order to read multiple bytes, it is necessary to assert the most significant bit of the sub-
-      address field. In other words, SUB(7) must be equal to 1, while SUB(6-0) represents the
-      address of the first register to be read.
-      *******************/
-      gyro_reg = (GYRO_OUT_X_LSB | 0x80) ;
-      I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1,
-                                        gyro_buffer, GYRO_READ_LEN, 100);
-
-//      gyro_reg = GYRO_OUT_X_MSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &x_msb, 1, 1000);
-//
-//      gyro_reg = GYRO_OUT_X_LSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &x_lsb, 1, 1000);
-//
-//      gyro_reg = GYRO_OUT_Y_MSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &y_msb, 1, 1000);
-//
-//      gyro_reg = GYRO_OUT_Y_LSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &y_lsb, 1, 1000);
-//
-//      gyro_reg = GYRO_OUT_Z_MSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &z_msb, 1, 1000);
-//
-//      gyro_reg = GYRO_OUT_Z_LSB ;
-//      I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &z_lsb, 1, 1000);
-
-//      gyro_x = DataCombine(x_msb,x_lsb);
-//      gyro_y = DataCombine(y_msb,y_lsb);
-//      gyro_z = DataCombine(z_msb,z_lsb);
-
-      gyro_x = DataCombine(gyro_buffer[1],gyro_buffer[0]);
-      gyro_y = DataCombine(gyro_buffer[3],gyro_buffer[2]);
-      gyro_z = DataCombine(gyro_buffer[5],gyro_buffer[4]);
-
-int16_t kal_gyro_x =0;
-//      kal_gyro_x = (int16_t)KalmanFilter(gyro_x,1,10,1);
-
-   //   PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,gyro_x,gyro_y,gyro_z,kal_gyro_x);
-  }
-
+  
+  /*******************
+  In order to read multiple bytes, it is necessary to assert the most significant bit of the sub-
+  address field. In other words, SUB(7) must be equal to 1, while SUB(6-0) represents the
+  address of the first register to be read.
+  *******************/
+  gyro_reg = (GYRO_OUT_X_LSB | 0x80) ;
+  
+  I2C_DRV_MasterReceiveDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1,
+                                    gyro_buffer, GYRO_READ_LEN, 100);
+  
+  //  gyro_x = DataCombine(gyro_buffer[1],gyro_buffer[0]);
+  //  gyro_y = DataCombine(gyro_buffer[3],gyro_buffer[2]);
+  //  gyro_z = DataCombine(gyro_buffer[5],gyro_buffer[4]);
+  
+  //OUT_X_L,OUT_X_H,OUT_Y_L,OUT_Y_H,OUT_Z_L,OUT_Z_H from 0x28 to 0x2d
+  pMemsRawData->gyro_x = ((gyro_buffer[1] << 8) | gyro_buffer[0]); 
+  pMemsRawData->gyro_y = ((gyro_buffer[3] << 8) | gyro_buffer[2]); 
+  pMemsRawData->gyro_z = ((gyro_buffer[5] << 8) | gyro_buffer[4]); 
+  
+  int16_t kal_gyro_x =0;
+  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);
+  
+  PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,pMemsRawData->gyro_x,pMemsRawData->gyro_y,pMemsRawData->gyro_z,kal_gyro_x);
+  
   return kStatus_I2C_Success ;
 }
-
-
-
-
-
 
 int16_t DataCombine(uint8_t msb, uint8_t lsb)
 {
@@ -399,8 +311,6 @@ int16_t DataCombine(uint8_t msb, uint8_t lsb)
   value *= sign;
   return value;
 }
-
-
 
 double KalmanFilter(const double ResrcData,
                     double ProcessNiose_Q,
@@ -436,16 +346,6 @@ double KalmanFilter(const double ResrcData,
 
         return x_now;
 }
-
-
-
-
-
-
-
-
-
-
 
 /*******************************************************************************
  * EOF

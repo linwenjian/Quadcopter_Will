@@ -94,8 +94,7 @@ const char trans_header_table[3] = {0x88, 0xAF, 0x1C};
 //char trans_header_table1[] = {0x88, 0xA1, 2,0,0,0};
 trans_packet_t packet_upper_PC ;
 
-extern int16_t acce_x ,acce_y , acce_z ;
-extern int16_t gyro_x ,gyro_y , gyro_z ;
+mems_data_t memsRawDate ;
 
 /*!
  * @brief Main function
@@ -194,20 +193,20 @@ void hwtimer_callback(void* data)
 static int i=0;
 //     int j=0;
 //     //PRINTF(".");
-//     I2C_acceInterrupt();
-//     I2C_gyroInterrupt();
+     I2C_getAccelMangData(&memsRawDate);
+     I2C_getGyroData(&memsRawDate);
 
 ///*Start*********匿名上位机发送的串口数据***********
-//     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(acce_x);
-//     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(acce_y);
-//     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(acce_z);
+//     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(accel_x);
+//     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(accel_y);
+//     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(accel_z);
 //     packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(gyro_x);
 //     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(gyro_y);
 //     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(gyro_z);
 //
-//     packet_upper_PC.user_data.trans_roll = BSWAP_16(acce_x);
-//     packet_upper_PC.user_data.trans_pitch = BSWAP_16(acce_y);
-//     packet_upper_PC.user_data.trans_yaw = BSWAP_16(acce_z);
+//     packet_upper_PC.user_data.trans_roll = BSWAP_16(accel_x);
+//     packet_upper_PC.user_data.trans_pitch = BSWAP_16(accel_y);
+//     packet_upper_PC.user_data.trans_yaw = BSWAP_16(accel_z);
 //
 //     uint8_t *p = (uint8_t*)&packet_upper_PC;
 //
@@ -426,8 +425,9 @@ int main (void)
 
     PORT_HAL_SetMuxMode(PORTD_BASE,1u,kPortPinDisabled);
 
-    I2C_acceInit();
-    I2C_gyroInit();
+
+    I2C_fxos8700Init();
+    I2C_l3g4200dInit();
 
     FTM_DRV_PwmStart(0, &ftmParam0, 0);
     FTM_DRV_PwmStart(0, &ftmParam1, 1);
