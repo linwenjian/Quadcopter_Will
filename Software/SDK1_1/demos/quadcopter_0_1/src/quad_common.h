@@ -63,6 +63,8 @@
 #include "fsl_os_abstraction.h"
 #include "fsl_interrupt_manager.h"
 
+#include "imu.h"
+   
 #define I2C_WRITE 0U
 #define I2C_READ 1U
 

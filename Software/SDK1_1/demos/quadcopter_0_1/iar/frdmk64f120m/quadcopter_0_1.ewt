@@ -193,6 +193,15 @@
   </group>
   <group>
     <name>source</name>
+    <group>
+      <name>imu</name>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\imu.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\imu.h</name>
+      </file>
+    </group>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\platform\drivers\src\adc16\fsl_adc16_irq.c</name>
     </file>

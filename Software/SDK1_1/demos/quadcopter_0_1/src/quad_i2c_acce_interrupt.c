@@ -156,33 +156,7 @@ i2c_status_t I2C_fxos8700Init(void)
     //    return kStatus_I2C_Fail;
   }
 
-//  accel_reg = FXOS8700_XYZ_DATA_CFG;
-//  if( kStatus_I2C_Success !=
-//     I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &read_temp, 1, 1000) )
-//  {
-//    PRINTF("fail1");
-//    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-//    return kStatus_I2C_Fail;
-//  }
-//  write_value = (read_temp & (~RANGE_MASK)) | kRange8g  ;
-//  if( kStatus_I2C_Success !=
-//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 1000) )
-//  {
-//    PRINTF("fail2");
-//    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-//    return kStatus_I2C_Fail;
-//  }
-//
-//  accel_reg = FXOS8700_CTRL_REG1;
-//  write_value =  0x01 ;
-//  if( kStatus_I2C_Success !=
-//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 1000) )
-//  {
-//    PRINTF("fail3");
-//    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-//    return kStatus_I2C_Fail;
-//  }
-    return kStatus_I2C_Success ;
+  return kStatus_I2C_Success ;
 }
 
 i2c_status_t I2C_l3g4200dInit(void)
@@ -218,9 +192,11 @@ i2c_status_t I2C_l3g4200dInit(void)
   write_value = 0x0f;
   I2C_DRV_MasterSendDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &write_value, 1, 1000);
 
-  /* Continous update,full scale 250dps */
+  /* Continous update,full scale 2000dps */
+  //FS1-FS0 bit5-bit4 Full Scale selection. Default value: 00
+  //(00: 250 dps; 01: 500 dps; 10: 2000 dps; 11: 2000 dps)
   gyro_reg = GYRO_CTRL_REG4;
-  write_value = 0x00;
+  write_value = 0x20;
   I2C_DRV_MasterSendDataBlocking(GYRO_I2C_INSTANCE, &gyro_device, &gyro_reg, 1, &write_value, 1, 1000);
 
   /* FIFO Enable                        */
@@ -259,8 +235,8 @@ i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData)
   pMemsRawData->magn_y  = ((fxos8700_buffer[9] << 8)  |  fxos8700_buffer[10]);
   pMemsRawData->magn_z  = ((fxos8700_buffer[11] << 8) |  fxos8700_buffer[12]);
   
-  PRINTF("accel_x = %5d , accel_y = %5d , accel_z = %5d\r\n" ,pMemsRawData->accel_x,pMemsRawData->accel_y,pMemsRawData->accel_z);
-  PRINTF("magn_x = %5d , magn_y = %5d , magn_z = %5d\r\n" ,pMemsRawData->magn_x,pMemsRawData->magn_y,pMemsRawData->magn_z);
+//  PRINTF("accel_x = %5d , accel_y = %5d , accel_z = %5d\r\n" ,pMemsRawData->accel_x,pMemsRawData->accel_y,pMemsRawData->accel_z);
+//  PRINTF("magn_x = %5d , magn_y = %5d , magn_z = %5d\r\n" ,pMemsRawData->magn_x,pMemsRawData->magn_y,pMemsRawData->magn_z);
   return kStatus_I2C_Success ;
 }
 
@@ -288,10 +264,10 @@ i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
   pMemsRawData->gyro_y = ((gyro_buffer[3] << 8) | gyro_buffer[2]); 
   pMemsRawData->gyro_z = ((gyro_buffer[5] << 8) | gyro_buffer[4]); 
   
-  int16_t kal_gyro_x =0;
-  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);
-  
-  PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,pMemsRawData->gyro_x,pMemsRawData->gyro_y,pMemsRawData->gyro_z,kal_gyro_x);
+//  int16_t kal_gyro_x =0;
+//  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);
+//  
+//  PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,pMemsRawData->gyro_x,pMemsRawData->gyro_y,pMemsRawData->gyro_z,kal_gyro_x);
   
   return kStatus_I2C_Success ;
 }

@@ -47,7 +47,7 @@
 #define HWTIMER_LL_SRCCLK   kCoreClock
 #define HWTIMER_LL_ID       0
 
-#define HWTIMER_PERIOD          20000
+#define HWTIMER_PERIOD          4000 //us  =4ms ,
 #define BSWAP_16(x) (uint16_t)((uint16_t)(((uint16_t)(x) & (uint16_t)0xFF00) >> 0x8) | (uint16_t)(((uint16_t)(x) & (uint16_t)0xFF) << 0x8))
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -95,7 +95,7 @@ const char trans_header_table[3] = {0x88, 0xAF, 0x1C};
 trans_packet_t packet_upper_PC ;
 
 mems_data_t memsRawDate ;
-
+imu_float_euler_angle_t quadAngle;
 /*!
  * @brief Main function
  */
@@ -195,23 +195,28 @@ static int i=0;
 //     //PRINTF(".");
      I2C_getAccelMangData(&memsRawDate);
      I2C_getGyroData(&memsRawDate);
+     
+     imu_get_euler_angle(&quadAngle,&memsRawDate);
 
-///*Start*********匿名上位机发送的串口数据***********
-//     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(accel_x);
-//     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(accel_y);
-//     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(accel_z);
-//     packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(gyro_x);
-//     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(gyro_y);
-//     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(gyro_z);
-//
-//     packet_upper_PC.user_data.trans_roll = BSWAP_16(accel_x);
-//     packet_upper_PC.user_data.trans_pitch = BSWAP_16(accel_y);
-//     packet_upper_PC.user_data.trans_yaw = BSWAP_16(accel_z);
-//
-//     uint8_t *p = (uint8_t*)&packet_upper_PC;
-//
-//     UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
-//*End*********匿名上位机发送的串口数据***********/
+/*Start*********匿名上位机发送的串口数据***********/
+     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
+     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
+     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
+     packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
+     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);
+     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
+     packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
+     packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
+     packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);     
+
+     packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
+     packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
+     packet_upper_PC.user_data.trans_yaw = BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
+
+     uint8_t *p = (uint8_t*)&packet_upper_PC;
+
+     UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+/*End*********匿名上位机发送的串口数据***********/
 
 
 //Do not change the first 100 cylces PWM after Powen On
