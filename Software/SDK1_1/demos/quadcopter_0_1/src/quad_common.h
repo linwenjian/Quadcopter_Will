@@ -101,6 +101,18 @@ double KalmanFilter(const double ResrcData,
                     double ProcessNiose_Q,
                     double MeasureNoise_R,
                     double InitialPrediction);
+double KalmanFilter1(const double ResrcData,
+                    double ProcessNiose_Q,
+                    double MeasureNoise_R,
+                    double InitialPrediction);
+double KalmanFilter2(const double ResrcData,
+                    double ProcessNiose_Q,
+                    double MeasureNoise_R,
+                    double InitialPrediction);
+double KalmanFilter3(const double ResrcData,
+                    double ProcessNiose_Q,
+                    double MeasureNoise_R,
+                    double InitialPrediction);
 #endif
 /*******************************************************************************
 * EOF

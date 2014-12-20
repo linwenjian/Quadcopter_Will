@@ -137,108 +137,6 @@ static void updateAHRS(double gx,double gy,double gz,
                        double mx,double mz,double my, 
                        imu_float_euler_angle_t * angle)
 {
-//  double norm;
-//  double hx, hy, hz, bx, bz;
-//  double vx, vy, vz, wx, wy, wz;
-//  double ex, ey, ez;
-//  
-//  static double q0 = 1.0; 
-//  static double q1 = 0.0; 
-//  static double q2 = 0.0;
-//  static double q3 = 0.0;
-//  static double exInt = 0.0, eyInt = 0.0, ezInt = 0.0;
-//  
-//  double iq0,iq1,iq2,iq3;
-//  
-//  double q0q0 = q0*q0;
-//  double q0q1 = q0*q1;
-//  double q0q2 = q0*q2;
-//  double q0q3 = q0*q3;
-//  double q1q1 = q1*q1;
-//  double q1q2 = q1*q2;
-//  double q1q3 = q1*q3;
-//  double q2q2 = q2*q2;
-//  double q2q3 = q2*q3;
-//  double q3q3 = q3*q3;
-//  
-////  if(ax*ay*az==0)
-////  {
-////    return;    
-////  }
-//  
-//  norm = sqrt(ax*ax + ay*ay + az*az);
-//  if(0 == norm)
-//  {
-//    return;    
-//  }
-//  ax = ax / norm;
-//  ay = ay / norm;
-//  az = az / norm;
-//  
-//  norm = sqrt(mx*mx + my*my + mz*mz);
-//  if(0 == norm)
-//  {
-//    return;    
-//  }
-//  mx = mx / norm;
-//  my = my / norm;
-//  mz = mz / norm;
-//  
-//  /* compute reference direction of flux */
-//  hx = 2*mx*(0.5f - q2q2 - q3q3) + 2*my*(q1q2 - q0q3) + 2*mz*(q1q3 + q0q2);
-//  hy = 2*mx*(q1q2 + q0q3) + 2*my*(0.5f - q1q1 - q3q3) + 2*mz*(q2q3 - q0q1);
-//  hz = 2*mx*(q1q3 - q0q2) + 2*my*(q2q3 + q0q1) + 2*mz*(0.5f - q1q1 - q2q2);         
-//  
-//  bx = sqrt((hx*hx) + (hy*hy));
-//  bz = hz; 
-//  
-//  /* estimated direction of gravity and flux (v and w) */
-//  vx = 2*(q1q3 - q0q2);
-//  vy = 2*(q0q1 + q2q3);
-//  vz = q0q0 - q1q1 - q2q2 + q3q3 ;
-//  
-//  wx = 2*bx*(0.5 - q2q2 - q3q3) + 2*bz*(q1q3 - q0q2);
-//  wy = 2*bx*(q1q2 - q0q3) + 2*bz*(q0q1 + q2q3);
-//  wz = 2*bx*(q0q2 + q1q3) + 2*bz*(0.5 - q1q1 - q2q2);
-//  
-//  /* error is sum of cross product between reference direction of fields and direction measured by sensors */
-//  ex = (ay*vz - az*vy) + (my*wz - mz*wy);
-//  ey = (az*vx - ax*vz) + (mz*wx - mx*wz);
-//  ez = (ax*vy - ay*vx) + (mx*wy - my*wx);
-//  
-//  exInt = exInt + ex * Ki;
-//  eyInt = eyInt + ey * Ki;
-//  ezInt = ezInt + ez * Ki;
-//  
-//  /* adjusted gyroscope measurements */
-//  gx = gx + Kp*ex + exInt;
-//  gy = gy + Kp*ey + eyInt;
-//  gz = gz + Kp*ez + ezInt;
-//  
-//  /* integrate quaternion rate and normalise */
-//  iq0 = (-q1*gx - q2*gy - q3*gz)*halfT;
-//  iq1 = (q0*gx + q2*gz - q3*gy)*halfT;
-//  iq2 = (q0*gy - q1*gz + q3*gx)*halfT;
-//  iq3 = (q0*gz + q1*gy - q2*gx)*halfT;
-//  
-//  q0 += iq0;
-//  q1 += iq1;
-//  q2 += iq2;
-//  q3 += iq3;
-//  
-//  /* normalise quaternion */
-//  norm = sqrt(q0*q0 + q1*q1 + q2*q2 + q3*q3);
-//  q0 = q0 / norm;
-//  q1 = q1 / norm;
-//  q2 = q2 / norm;
-//  q3 = q3 / norm;
-//  
-//  /* output data */
-//  angle->imu_yaw = atan2(2 * q1 * q2 + 2 * q0 * q3, -2 * q2*q2 - 2 * q3* q3 + 1)* 57.3; 
-//  angle->imu_pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3;																			// pitcho???
-//  angle->imu_roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3;
-
-
   double norm;
   double hx, hy, hz, bx, bz;
   double vx, vy, vz, wx, wy, wz;
@@ -250,64 +148,166 @@ static void updateAHRS(double gx,double gy,double gz,
   static double q3 = 0.0;
   static double exInt = 0.0, eyInt = 0.0, ezInt = 0.0;
   
-
-  //	
-	//?2¦Ì?2?¨º?:???a¨ºy3?¡¤¡§????
-	double q0q0 = q0 * q0;							
-	double q0q1 = q0 * q1;
-	double q0q2 = q0 * q2;
-	double q1q1 = q1 * q1;
-	double q1q3 = q1 * q3;
-	double q2q2 = q2 * q2;
-	double q2q3 = q2 * q3;
-	double q3q3 = q3 * q3;
-	//	
-	//?2¦Ì?2?¨º?:1¨¦¨°??¡¥¡ä|¨¤¨ª
-	norm = sqrt(ax*ax + ay*ay + az*az);     
-	if(norm==0) return ;	
-	ax = ax / norm;
-	ay = ay / norm;
-	az = az / norm;   
-  //	
-	//?2¦Ì?2?¨º?:?¡§¨¢¡éD????¨¢¡Á?¡À¨º?¦Ì	
-	vx = 2*(q1q3 - q0q2);								
-	vy = 2*(q0q1 + q2q3);
-	vz = q0q0 - q1q1 - q2q2 + q3q3;
-	//
-	//?2¦Ì?2?¨º?:¡Á?¡À¨º?¦Ìo¨ª??¨¢|2??y????
-	ex = (ay*vz - az*vy);								
-	ey = (az*vx - ax*vz);
-	ez = (ax*vy - ay*vx);
-	//
-	//?2¦Ì?2?¨º?:¡À¨¨¨¤y????
-	exInt = exInt + ex*Ki;
-	eyInt = eyInt + ey*Ki;
-	ezInt = ezInt + ez*Ki;
-	//
-	//?2¦Ì?2?¨º?:¨ª¨®?Y¨°?¨¨¨²o?
-	gx = gx + Kp*ex + exInt;
-	gy = gy + Kp*ey + eyInt;
-	gz = gz + Kp*ez + ezInt;
-	//
-	//?2¦Ì?2?¨º?:??o????a¨ºy?¨º
-	q0 = q0 + (-q1*gx - q2*gy - q3*gz)*halfT;
-	q1 = q1 + (q0*gx + q2*gz - q3*gy)*halfT;
-	q2 = q2 + (q0*gy - q1*gz + q3*gx)*halfT;
-	q3 = q3 + (q0*gz + q1*gy - q2*gx)*halfT;  
-	//
-	//?2¦Ì?2?¨º?:1¨¦¨°??¡¥¡ä|¨¤¨ª
-	norm = sqrt(q0*q0 + q1*q1 + q2*q2 + q3*q3);
-	if(norm==0) return ;	
-	q0 = q0 / norm;
-	q1 = q1 / norm;
-	q2 = q2 / norm;
-	q3 = q3 / norm;
-
-		
+  double iq0,iq1,iq2,iq3;
+  
+  double q0q0 = q0*q0;
+  double q0q1 = q0*q1;
+  double q0q2 = q0*q2;
+  double q0q3 = q0*q3;
+  double q1q1 = q1*q1;
+  double q1q2 = q1*q2;
+  double q1q3 = q1*q3;
+  double q2q2 = q2*q2;
+  double q2q3 = q2*q3;
+  double q3q3 = q3*q3;
+  
+//  if(ax*ay*az==0)
+//  {
+//    return;    
+//  }
+  
+  norm = sqrt(ax*ax + ay*ay + az*az);
+  if(0 == norm)
+  {
+    return;    
+  }
+  ax = ax / norm;
+  ay = ay / norm;
+  az = az / norm;
+  
+  norm = sqrt(mx*mx + my*my + mz*mz);
+  if(0 == norm)
+  {
+    return;    
+  }
+  mx = mx / norm;
+  my = my / norm;
+  mz = mz / norm;
+  
+  /* compute reference direction of flux */
+  hx = 2*mx*(0.5f - q2q2 - q3q3) + 2*my*(q1q2 - q0q3) + 2*mz*(q1q3 + q0q2);
+  hy = 2*mx*(q1q2 + q0q3) + 2*my*(0.5f - q1q1 - q3q3) + 2*mz*(q2q3 - q0q1);
+  hz = 2*mx*(q1q3 - q0q2) + 2*my*(q2q3 + q0q1) + 2*mz*(0.5f - q1q1 - q2q2);         
+  
+  bx = sqrt((hx*hx) + (hy*hy));
+  bz = hz; 
+  
+  /* estimated direction of gravity and flux (v and w) */
+  vx = 2*(q1q3 - q0q2);
+  vy = 2*(q0q1 + q2q3);
+  vz = q0q0 - q1q1 - q2q2 + q3q3 ;
+  
+  wx = 2*bx*(0.5 - q2q2 - q3q3) + 2*bz*(q1q3 - q0q2);
+  wy = 2*bx*(q1q2 - q0q3) + 2*bz*(q0q1 + q2q3);
+  wz = 2*bx*(q0q2 + q1q3) + 2*bz*(0.5 - q1q1 - q2q2);
+  
+  /* error is sum of cross product between reference direction of fields and direction measured by sensors */
+  ex = (ay*vz - az*vy) + (my*wz - mz*wy);
+  ey = (az*vx - ax*vz) + (mz*wx - mx*wz);
+  ez = (ax*vy - ay*vx) + (mx*wy - my*wx);
+  
+  exInt = exInt + ex * Ki;
+  eyInt = eyInt + ey * Ki;
+  ezInt = ezInt + ez * Ki;
+  
+  /* adjusted gyroscope measurements */
+  gx = gx + Kp*ex + exInt;
+  gy = gy + Kp*ey + eyInt;
+  gz = gz + Kp*ez + ezInt;
+  
+  /* integrate quaternion rate and normalise */
+  iq0 = (-q1*gx - q2*gy - q3*gz)*halfT;
+  iq1 = (q0*gx + q2*gz - q3*gy)*halfT;
+  iq2 = (q0*gy - q1*gz + q3*gx)*halfT;
+  iq3 = (q0*gz + q1*gy - q2*gx)*halfT;
+  
+  q0 += iq0;
+  q1 += iq1;
+  q2 += iq2;
+  q3 += iq3;
+  
+  /* normalise quaternion */
+  norm = sqrt(q0*q0 + q1*q1 + q2*q2 + q3*q3);
+  q0 = q0 / norm;
+  q1 = q1 / norm;
+  q2 = q2 / norm;
+  q3 = q3 / norm;
+  
   /* output data */
   angle->imu_yaw = atan2(2 * q1 * q2 + 2 * q0 * q3, -2 * q2*q2 - 2 * q3* q3 + 1)* 57.3; 
   angle->imu_pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3;																			// pitcho???
   angle->imu_roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3;
+
+
+//  double norm;
+//  double hx, hy, hz, bx, bz;
+//  double vx, vy, vz, wx, wy, wz;
+//  double ex, ey, ez;
+//  
+//  static double q0 = 1.0; 
+//  static double q1 = 0.0; 
+//  static double q2 = 0.0;
+//  static double q3 = 0.0;
+//  static double exInt = 0.0, eyInt = 0.0, ezInt = 0.0;
+//  
+//
+//  //	
+//	//?2¦Ì?2?¨º?:???a¨ºy3?¡¤¡§????
+//	double q0q0 = q0 * q0;							
+//	double q0q1 = q0 * q1;
+//	double q0q2 = q0 * q2;
+//	double q1q1 = q1 * q1;
+//	double q1q3 = q1 * q3;
+//	double q2q2 = q2 * q2;
+//	double q2q3 = q2 * q3;
+//	double q3q3 = q3 * q3;
+//	//	
+//	//?2¦Ì?2?¨º?:1¨¦¨°??¡¥¡ä|¨¤¨ª
+//	norm = sqrt(ax*ax + ay*ay + az*az);     
+//	if(norm==0) return ;	
+//	ax = ax / norm;
+//	ay = ay / norm;
+//	az = az / norm;   
+//  //	
+//	//?2¦Ì?2?¨º?:?¡§¨¢¡éD????¨¢¡Á?¡À¨º?¦Ì	
+//	vx = 2*(q1q3 - q0q2);								
+//	vy = 2*(q0q1 + q2q3);
+//	vz = q0q0 - q1q1 - q2q2 + q3q3;
+//	//
+//	//?2¦Ì?2?¨º?:¡Á?¡À¨º?¦Ìo¨ª??¨¢|2??y????
+//	ex = (ay*vz - az*vy);								
+//	ey = (az*vx - ax*vz);
+//	ez = (ax*vy - ay*vx);
+//	//
+//	//?2¦Ì?2?¨º?:¡À¨¨¨¤y????
+//	exInt = exInt + ex*Ki;
+//	eyInt = eyInt + ey*Ki;
+//	ezInt = ezInt + ez*Ki;
+//	//
+//	//?2¦Ì?2?¨º?:¨ª¨®?Y¨°?¨¨¨²o?
+//	gx = gx + Kp*ex + exInt;
+//	gy = gy + Kp*ey + eyInt;
+//	gz = gz + Kp*ez + ezInt;
+//	//
+//	//?2¦Ì?2?¨º?:??o????a¨ºy?¨º
+//	q0 = q0 + (-q1*gx - q2*gy - q3*gz)*halfT;
+//	q1 = q1 + (q0*gx + q2*gz - q3*gy)*halfT;
+//	q2 = q2 + (q0*gy - q1*gz + q3*gx)*halfT;
+//	q3 = q3 + (q0*gz + q1*gy - q2*gx)*halfT;  
+//	//
+//	//?2¦Ì?2?¨º?:1¨¦¨°??¡¥¡ä|¨¤¨ª
+//	norm = sqrt(q0*q0 + q1*q1 + q2*q2 + q3*q3);
+//	if(norm==0) return ;	
+//	q0 = q0 / norm;
+//	q1 = q1 / norm;
+//	q2 = q2 / norm;
+//	q3 = q3 / norm;
+//  /* output data */
+//  angle->imu_yaw = atan2(2 * q1 * q2 + 2 * q0 * q3, -2 * q2*q2 - 2 * q3* q3 + 1)* 57.3;
+//  
+////  angle->imu_yaw += gz*0.004f;
+//  angle->imu_pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3f;																			// pitcho???
+//  angle->imu_roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3f;
 
 return;
 

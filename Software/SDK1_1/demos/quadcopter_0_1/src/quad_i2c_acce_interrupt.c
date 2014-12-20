@@ -234,7 +234,12 @@ i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData)
   pMemsRawData->magn_x  = ((fxos8700_buffer[7] << 8)  |  fxos8700_buffer[8]);
   pMemsRawData->magn_y  = ((fxos8700_buffer[9] << 8)  |  fxos8700_buffer[10]);
   pMemsRawData->magn_z  = ((fxos8700_buffer[11] << 8) |  fxos8700_buffer[12]);
-  
+ 
+  /////////////////////////
+  pMemsRawData->magn_x  -= 200;
+  pMemsRawData->magn_y  += 100;
+  pMemsRawData->magn_z  -= 650;
+  ////////////////////////
 //  PRINTF("accel_x = %5d , accel_y = %5d , accel_z = %5d\r\n" ,pMemsRawData->accel_x,pMemsRawData->accel_y,pMemsRawData->accel_z);
 //  PRINTF("magn_x = %5d , magn_y = %5d , magn_z = %5d\r\n" ,pMemsRawData->magn_x,pMemsRawData->magn_y,pMemsRawData->magn_z);
   return kStatus_I2C_Success ;
@@ -264,6 +269,35 @@ i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
   pMemsRawData->gyro_y = ((gyro_buffer[3] << 8) | gyro_buffer[2]); 
   pMemsRawData->gyro_z = ((gyro_buffer[5] << 8) | gyro_buffer[4]); 
   
+  static int16_t gyro_aver_times = 0 ;
+  static bool gyro_aver_cal_flag = true;
+  static int16_t gyro_x_aver = 0 ;
+  static int16_t gyro_y_aver = 0 ;
+  static int16_t gyro_z_aver = 0 ;
+  
+  if(gyro_aver_times < 200)
+  {
+    gyro_x_aver += pMemsRawData->gyro_x;
+    gyro_y_aver += pMemsRawData->gyro_y;
+    gyro_z_aver += pMemsRawData->gyro_z;
+    
+    gyro_aver_times++;
+  }
+  if((gyro_aver_times >= 200) && (gyro_aver_cal_flag == true))
+  {
+    gyro_x_aver = gyro_x_aver/200;
+    gyro_y_aver = gyro_y_aver/200;
+    gyro_z_aver = gyro_z_aver/200;
+    gyro_aver_cal_flag = false;
+  }
+  pMemsRawData->gyro_x -= gyro_x_aver;
+  pMemsRawData->gyro_y -= gyro_y_aver;
+  pMemsRawData->gyro_z -= gyro_z_aver;
+  
+  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
+  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,10,10,1);
+  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
+  
 //  int16_t kal_gyro_x =0;
 //  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);
 //  
@@ -289,6 +323,113 @@ int16_t DataCombine(uint8_t msb, uint8_t lsb)
 }
 
 double KalmanFilter(const double ResrcData,
+                    double ProcessNiose_Q,
+                    double MeasureNoise_R,
+                    double InitialPrediction)
+{
+        double R = MeasureNoise_R;
+        double Q = ProcessNiose_Q;
+
+        static double x_last;
+
+        double x_mid = x_last;
+        double x_now;
+
+        static double p_last;
+
+        double p_mid ;
+        double p_now;
+        double kg;
+
+        x_mid = x_last; //x_last=x(k-1|k-1),x_mid=x(k|k-1)
+
+        p_mid = p_last + Q; //p_mid=p(k|k-1),p_last=p(k-1|k-1),Q=噪声
+
+        kg = p_mid / ( p_mid + R ); //kg为kalman filter，R为噪声
+
+        x_now = x_mid + kg * ( ResrcData - x_mid );//估计出的最优值
+
+        p_now = (1 - kg) * p_mid;//最优值对应的covariance
+
+        p_last = p_now; //更新covariance值
+        x_last = x_now; //更新系统状态值
+
+        return x_now;
+}
+
+
+double KalmanFilter1(const double ResrcData,
+                    double ProcessNiose_Q,
+                    double MeasureNoise_R,
+                    double InitialPrediction)
+{
+        double R = MeasureNoise_R;
+        double Q = ProcessNiose_Q;
+
+        static double x_last;
+
+        double x_mid = x_last;
+        double x_now;
+
+        static double p_last;
+
+        double p_mid ;
+        double p_now;
+        double kg;
+
+        x_mid = x_last; //x_last=x(k-1|k-1),x_mid=x(k|k-1)
+
+        p_mid = p_last + Q; //p_mid=p(k|k-1),p_last=p(k-1|k-1),Q=噪声
+
+        kg = p_mid / ( p_mid + R ); //kg为kalman filter，R为噪声
+
+        x_now = x_mid + kg * ( ResrcData - x_mid );//估计出的最优值
+
+        p_now = (1 - kg) * p_mid;//最优值对应的covariance
+
+        p_last = p_now; //更新covariance值
+        x_last = x_now; //更新系统状态值
+
+        return x_now;
+}
+
+
+double KalmanFilter2(const double ResrcData,
+                    double ProcessNiose_Q,
+                    double MeasureNoise_R,
+                    double InitialPrediction)
+{
+        double R = MeasureNoise_R;
+        double Q = ProcessNiose_Q;
+
+        static double x_last;
+
+        double x_mid = x_last;
+        double x_now;
+
+        static double p_last;
+
+        double p_mid ;
+        double p_now;
+        double kg;
+
+        x_mid = x_last; //x_last=x(k-1|k-1),x_mid=x(k|k-1)
+
+        p_mid = p_last + Q; //p_mid=p(k|k-1),p_last=p(k-1|k-1),Q=噪声
+
+        kg = p_mid / ( p_mid + R ); //kg为kalman filter，R为噪声
+
+        x_now = x_mid + kg * ( ResrcData - x_mid );//估计出的最优值
+
+        p_now = (1 - kg) * p_mid;//最优值对应的covariance
+
+        p_last = p_now; //更新covariance值
+        x_last = x_now; //更新系统状态值
+
+        return x_now;
+}
+
+double KalmanFilter3(const double ResrcData,
                     double ProcessNiose_Q,
                     double MeasureNoise_R,
                     double InitialPrediction)

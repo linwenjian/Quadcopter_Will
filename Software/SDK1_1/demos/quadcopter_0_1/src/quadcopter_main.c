@@ -96,6 +96,7 @@ trans_packet_t packet_upper_PC ;
 
 mems_data_t memsRawDate ;
 imu_float_euler_angle_t quadAngle;
+
 /*!
  * @brief Main function
  */
@@ -195,6 +196,9 @@ static int i=0;
 //     //PRINTF(".");
      I2C_getAccelMangData(&memsRawDate);
      I2C_getGyroData(&memsRawDate);
+     
+
+     
      
      imu_get_euler_angle(&quadAngle,&memsRawDate);
 
