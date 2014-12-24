@@ -356,6 +356,47 @@ i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData)
   pMemsRawData->magn_z  = ((fxos8700_buffer[11] << 8) |  fxos8700_buffer[12]);
  
 
+//  static int16_t magn_min_x = 32767;
+//  static int16_t magn_max_x = 0;
+//  static int16_t magn_min_y = 32767;
+//  static int16_t magn_max_y = 0;
+//  static int16_t magn_reca_times = 0;
+//  static bool reca_calculation = true;
+//  if( pMemsRawData->magn_x < magn_min_x)
+//  {
+//    magn_min_x = pMemsRawData->magn_x ;
+//  }
+//  if( pMemsRawData->magn_y < magn_min_y)
+//  {
+//    magn_min_y = pMemsRawData->magn_x ;
+//  }
+//    if( pMemsRawData->magn_x > magn_max_x)
+//  {
+//    magn_max_x = pMemsRawData->magn_x ;
+//  }
+//  if( pMemsRawData->magn_y > magn_max_y)
+//  {
+//    magn_max_y = pMemsRawData->magn_x ;
+//  }
+//  static double xb,xs,yb,ys,xout,yout,angel;
+// 
+//  if(magn_reca_times <= 200)
+//  {
+//     magn_reca_times++;
+//  }
+////  if(magn_reca_times > 200 && reca_calculation == true)
+//  {
+//    reca_calculation = false;
+//    xs=1;
+//    ys = (magn_max_x - magn_min_x) / (magn_max_y - magn_min_y);
+//    xb = -xs*(magn_max_x + magn_min_x)/2;
+//    yb = -ys * (magn_max_y + magn_min_y) /2 ;
+//  }
+//  xout = pMemsRawData->magn_x - xb;
+//  yout = ys*pMemsRawData->magn_y + yb;
+//  angel = atan2(-yout,xout) * 57.3 + 180;
+//  PRINTF("xout = %5d , yout = %5d , angel = %3d \r\n " , (int16_t)xout,(int16_t)yout,(int16_t)angel);
+  
 //  PRINTF("accel_x = %5d , accel_y = %5d , accel_z = %5d\r\n" ,pMemsRawData->accel_x,pMemsRawData->accel_y,pMemsRawData->accel_z);
 //  PRINTF("magn_x = %5d , magn_y = %5d , magn_z = %5d\r\n" ,pMemsRawData->magn_x,pMemsRawData->magn_y,pMemsRawData->magn_z);
 
