@@ -47,7 +47,7 @@
 #define HWTIMER_LL_SRCCLK   kCoreClock
 #define HWTIMER_LL_ID       0
 
-#define HWTIMER_PERIOD          4000 //us  =4ms ,
+#define HWTIMER_PERIOD       4000//   4000 //us  =4ms ,
 #define BSWAP_16(x) (uint16_t)((uint16_t)(((uint16_t)(x) & (uint16_t)0xFF00) >> 0x8) | (uint16_t)(((uint16_t)(x) & (uint16_t)0xFF) << 0x8))
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -96,6 +96,9 @@ trans_packet_t packet_upper_PC ;
 
 mems_data_t memsRawDate ;
 imu_float_euler_angle_t quadAngle;
+
+bool gyro_offset_done = false;
+bool isFXOS8700Int1Trigger = false;
 
 /*!
  * @brief Main function
@@ -198,9 +201,14 @@ static int i=0;
      I2C_getGyroData(&memsRawDate);
      
 
-     
-     
-     imu_get_euler_angle(&quadAngle,&memsRawDate);
+//     static double jiaodu;
+     if(gyro_offset_done == true)
+     {
+       imu_get_euler_angle(&quadAngle,&memsRawDate);
+       
+//       jiaodu = atan2(memsRawDate.magn_x,memsRawDate.magn_y) * 57.3;
+//       PRINTF("jiaodu = %d \r\n" ,(int16_t)jiaodu );
+       
 
 /*Start*********匿名上位机发送的串口数据***********/
      packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
@@ -220,8 +228,9 @@ static int i=0;
      uint8_t *p = (uint8_t*)&packet_upper_PC;
 
      UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
-/*End*********匿名上位机发送的串口数据***********/
 
+/*End*********匿名上位机发送的串口数据***********/
+     }
 
 //Do not change the first 100 cylces PWM after Powen On
 //it would be better that the dutyCycle = 0%
@@ -463,7 +472,8 @@ int main (void)
     }
 
     GPIO_DRV_Init(remoteControlPins,NULL);
-
+//    GPIO_DRV_Init(fxos8700IntPins,NULL);
+//    I2C_fxos8700AutoCalibration(); //cannot work , shit!
     while(1)
     {
 //      LED2_ON;
@@ -517,4 +527,18 @@ void PORTB_IRQHandler(void)
   }
   /* Clear interrupt flag.*/
     PORT_HAL_ClearPortIntFlag(PORTB_BASE);
+}
+
+
+void PORTE_IRQHandler(void)
+{
+  uint32_t intFlag = PORT_HAL_GetPortIntFlag(PORTE_BASE);
+  if (intFlag & (1 << 11))
+  {
+    isFXOS8700Int1Trigger = true;
+      PRINTF("\r\n PTE11 irq");
+  }
+
+  /* Clear interrupt flag.*/
+  PORT_HAL_ClearPortIntFlag(PORTE_BASE);
 }

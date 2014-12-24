@@ -52,5 +52,5 @@ typedef struct
 //!< API functions
 uint32_t imu_io_install(imu_io_install_t * IOInstallStruct);
 uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRawDdata);
-
+double invSqrt(double x) ;
 #endif

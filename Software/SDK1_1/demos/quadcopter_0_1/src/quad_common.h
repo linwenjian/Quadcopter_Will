@@ -97,6 +97,8 @@ i2c_status_t I2C_l3g4200dInit(void);// Gyroscope
 i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData);
 i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData);
 
+void I2C_fxos8700AutoCalibration(void);
+
 double KalmanFilter(const double ResrcData,
                     double ProcessNiose_Q,
                     double MeasureNoise_R,

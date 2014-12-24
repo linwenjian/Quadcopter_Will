@@ -30,6 +30,9 @@
 #include "quad_common.h"
 //#include "quad_i2c_config.h"
 
+extern bool gyro_offset_done;   
+   
+   
 i2c_master_state_t i2cMaster;
 i2c_device_t accel_device =
   {
@@ -82,7 +85,7 @@ i2c_status_t I2C_fxos8700Init(void)
   }
 
   // write 0001 1111 = 0x1F to magnetometer control register 1
-  // [7]: m_acal=0: auto calibration disabled
+  // [7]: m_acal=0:  0:auto calibration disabled 1:auto calibration enabled
   // [6]: m_rst=0: no one-shot magnetic reset
   // [5]: m_ost=0: no one-shot magnetic measurement
   // [4-2]: m_os=111=7: 8x oversampling (for 200Hz) to reduce magnetometer noise
@@ -158,6 +161,123 @@ i2c_status_t I2C_fxos8700Init(void)
 
   return kStatus_I2C_Success ;
 }
+
+extern bool isFXOS8700Int1Trigger ;
+void I2C_fxos8700AutoCalibration(void)
+{
+  uint8_t write_value = 0;
+  uint8_t accel_reg = 0;
+  uint8_t read_temp = 0;
+  
+  static int16_t autoCalResetCtr = 0;
+  
+  accel_reg = 0x2B;
+  write_value = 0x40;
+  
+  if( kStatus_I2C_Success !=
+     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
+  {
+    //    PRINTF("fail0");
+    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
+    //    return kStatus_I2C_Fail;
+  }
+  
+  uint32_t magThreshold = 1000;
+  uint16_t magThresholdHi = (magThreshold & 0xFF00) >> 8;
+  uint16_t magThresholdLo = magThreshold & 0xFF;
+  
+  accel_reg = 0x6A;
+  write_value = ( 0x80 | magThresholdHi ) ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  
+  accel_reg = 0x6B;
+  write_value = ( magThresholdLo ) ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  
+  accel_reg = 0x6C;
+  write_value = 0x01 ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  
+  accel_reg = 0x69;
+  write_value = 0x7B ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  // enable interrupts for DRDY using CTRL_REG4
+  accel_reg = 0x2D;
+  write_value = 0x01 ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  // route interrupts to INT1 pin using CTRL_REG5 
+  accel_reg = 0x2e;
+  write_value = 0x01 ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  
+  // Setup device
+  // via M_CTRL_REG1 (0x5B): Hybrid mode, OS = 32, Auto Cal
+  // via M_CTRL_REG2 (0x5C): Hybrid auto increment, maxmin disable
+  // threshold
+  // via CTRL_REG1 (0x2A): ODR = 50Hz, ACTIVE mode
+  accel_reg = 0x5b;
+  write_value = 0x9f ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  
+  accel_reg = 0x5c;
+  write_value = 0x20 ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  
+  accel_reg = 0x2a;
+  write_value = 0x31 ;
+  I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+  
+
+  while(1)
+  {
+    
+    if(isFXOS8700Int1Trigger == true)
+    {
+      isFXOS8700Int1Trigger = false;
+      
+      accel_reg = 0x5e;
+      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &read_temp, 1, 100);
+      if((read_temp & 0x02) == 0x02)
+      {
+        PRINTF("Interrupt due to Magnetometer Vector Magnitude feature\r\n");
+        PRINTF("Magnetic Jamming detected\r\n");
+        autoCalResetCtr++;
+      }
+      else
+      {
+        autoCalResetCtr = 0;
+      }
+      
+      accel_reg = 0x0c;
+      I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &read_temp, 1, 100);
+      if((read_temp & 0x01) == 0x01)
+      {
+        PRINTF("print Interrupt due to data ready\r\n");
+        static mems_data_t MemsRawData_cal; 
+        I2C_getAccelMangData(&MemsRawData_cal);
+        int16_t mx = MemsRawData_cal.magn_x;
+        int16_t my = MemsRawData_cal.magn_y;
+        int16_t mz = MemsRawData_cal.magn_z;
+        my = -my;
+        
+        PRINTF("Magnetic Vector Magnitude = %4.1f uT" , (sqrt(mx*mx + my*my + mz*mz) / 10) );
+        
+        PRINTF("Heading ===> %.2f degrees from NORTH" , ( atan2(-my, mx) * 57.2957795));
+      }
+      if(autoCalResetCtr > 10)
+      {
+        PRINTF("Resetting Hard Iron Estimation...\r\n");
+        accel_reg = 0x5c;
+        write_value = 0x24 ;
+        I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) ;
+        autoCalResetCtr = 0;
+        break;
+      }
+    }
+  }
+ 
+}
+
 
 i2c_status_t I2C_l3g4200dInit(void)
 {
@@ -235,13 +355,10 @@ i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData)
   pMemsRawData->magn_y  = ((fxos8700_buffer[9] << 8)  |  fxos8700_buffer[10]);
   pMemsRawData->magn_z  = ((fxos8700_buffer[11] << 8) |  fxos8700_buffer[12]);
  
-  /////////////////////////
-  pMemsRawData->magn_x  -= 200;
-  pMemsRawData->magn_y  += 100;
-  pMemsRawData->magn_z  -= 650;
-  ////////////////////////
+
 //  PRINTF("accel_x = %5d , accel_y = %5d , accel_z = %5d\r\n" ,pMemsRawData->accel_x,pMemsRawData->accel_y,pMemsRawData->accel_z);
 //  PRINTF("magn_x = %5d , magn_y = %5d , magn_z = %5d\r\n" ,pMemsRawData->magn_x,pMemsRawData->magn_y,pMemsRawData->magn_z);
+
   return kStatus_I2C_Success ;
 }
 
@@ -289,20 +406,21 @@ i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
     gyro_y_aver = gyro_y_aver/200;
     gyro_z_aver = gyro_z_aver/200;
     gyro_aver_cal_flag = false;
+    gyro_offset_done = true;
   }
   pMemsRawData->gyro_x -= gyro_x_aver;
   pMemsRawData->gyro_y -= gyro_y_aver;
   pMemsRawData->gyro_z -= gyro_z_aver;
   
-  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
-  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,10,10,1);
-  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
+//  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
+//  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,10,10,1);
+//  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
   
 //  int16_t kal_gyro_x =0;
 //  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);
 //  
 //  PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,pMemsRawData->gyro_x,pMemsRawData->gyro_y,pMemsRawData->gyro_z,kal_gyro_x);
-  
+   
   return kStatus_I2C_Success ;
 }
 

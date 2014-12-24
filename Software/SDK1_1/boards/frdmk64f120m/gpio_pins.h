@@ -81,6 +81,8 @@ extern const gpio_output_pin_user_config_t ledPins[];
 
 extern const gpio_input_pin_user_config_t remoteControlPins[];
 
+extern const gpio_input_pin_user_config_t fxos8700IntPins[];
+
 extern const gpio_output_pin_user_config_t spiCsPin[];
 
 extern const gpio_input_pin_user_config_t gpioUartDemoRxPin[];
@@ -108,6 +110,12 @@ enum _gpio_pins_pinNames{
   kGpioControl5 =  GPIO_MAKE_PIN(HW_GPIOB, 7U),
   kGpioControl6 =  GPIO_MAKE_PIN(HW_GPIOB, 10U),
   kGpioControl7 =  GPIO_MAKE_PIN(HW_GPIOB, 11U),
+  
+  kGpioFxos8700Int1 =  GPIO_MAKE_PIN(HW_GPIOE, 11U),
+  kGpioFxos8700Int2 =  GPIO_MAKE_PIN(HW_GPIOE, 12U),
+  
+  kGpioGyroInt1 =  GPIO_MAKE_PIN(HW_GPIOA, 6U),
+  kGpioGyroInt2 =  GPIO_MAKE_PIN(HW_GPIOA, 7U)
 };
 
 

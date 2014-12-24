@@ -215,7 +215,25 @@ const gpio_input_pin_user_config_t remoteControlPins[] = {
   }
 };
 
-
+const gpio_input_pin_user_config_t fxos8700IntPins[] = {
+  {
+    .pinName = kGpioFxos8700Int1,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntFallingEdge,
+  },
+  {
+    .pinName = kGpioFxos8700Int2,
+    .config.isPullEnable = false,
+    .config.pullSelect = kPortPullUp,
+    .config.isPassiveFilterEnabled = false,
+    .config.interrupt = kPortIntFallingEdge,
+  },
+  {
+    .pinName = GPIO_PINS_OUT_OF_RANGE,
+  }
+};
 
 
 

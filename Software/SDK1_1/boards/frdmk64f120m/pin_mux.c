@@ -220,6 +220,14 @@ void configure_remote_control_pins_for_quadcopter(void)
   PORT_HAL_SetMuxMode(PORTB_BASE,11U,kPortMuxAsGpio);
  }
 
+void configure_sensors_interrupt_pins_for_quadcopter(void)
+{
+  PORT_HAL_SetMuxMode(PORTA_BASE,6U,kPortMuxAsGpio);
+  PORT_HAL_SetMuxMode(PORTA_BASE,6U,kPortMuxAsGpio);
+  PORT_HAL_SetMuxMode(PORTE_BASE,11U,kPortMuxAsGpio);
+  PORT_HAL_SetMuxMode(PORTE_BASE,12U,kPortMuxAsGpio);
+ }
+
 void configure_i2s_pins(uint32_t instance)
 {
   /* Affects PORTC_PCR8 register */

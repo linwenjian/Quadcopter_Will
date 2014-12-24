@@ -84,6 +84,8 @@ void hardware_init(void) {
  // configure_adc_pins_for_quadcopter();
   
   configure_remote_control_pins_for_quadcopter() ; 
+  
+  configure_sensors_interrupt_pins_for_quadcopter();
 
   configure_ftm_pins_for_quadcopter();
 }
