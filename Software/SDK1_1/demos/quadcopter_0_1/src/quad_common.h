@@ -47,7 +47,6 @@
 
 #include "fsl_uart_driver.h"
 
-
 #include "board.h"
 #include "fsl_debug_console.h"
 #include "fsl_ftm_driver.h"
@@ -115,6 +114,21 @@ double KalmanFilter3(const double ResrcData,
                     double ProcessNiose_Q,
                     double MeasureNoise_R,
                     double InitialPrediction);
+
+typedef enum _remote_controller_channel {
+  kRoll = 0,
+  kPitch = 1,
+  kThrottle = 2,
+  kYaw = 3
+}remote_controller_channel_t;
+extern volatile bool isRCunlock;
+#define RC_THRESHOLD_H (200000U)
+#define RC_THRESHOLD_L (160000U)
+#define RC_THRESHOLD_ERROR (300000U)
+#define HW_DIVIDER (2400000U) 
+//120M core clock , 2400000 / 120 000 000 = 0.02 s , 50Hz , 
+//遥控器信号 50Hz , 范围1~2ms，周期20ms，1.5ms中值.对应 120 000 - 240 000
+
 #endif
 /*******************************************************************************
 * EOF

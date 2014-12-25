@@ -233,7 +233,7 @@
         <option>
           <name>CCAllowList</name>
           <version>1</version>
-          <state>00000000</state>
+          <state>10010100</state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -331,7 +331,7 @@
         </option>
         <option>
           <name>CCOptLevel</name>
-          <state>1</state>
+          <state>2</state>
         </option>
         <option>
           <name>CCOptStrategy</name>
@@ -340,7 +340,7 @@
         </option>
         <option>
           <name>CCOptLevelSlave</name>
-          <state>1</state>
+          <state>2</state>
         </option>
         <option>
           <name>CompilerMisraRules98</name>
@@ -607,7 +607,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state></state>
+          <state>quadcopter_0_1.srec</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -987,7 +987,7 @@
         <option>
           <name>Variant</name>
           <version>20</version>
-          <state>39</state>
+          <state>40</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -1000,7 +1000,7 @@
         </option>
         <option>
           <name>Input description</name>
-          <state>Automatic choice of formatter.</state>
+          <state>No specifier n, no float nor long long, no scan set, no assignment suppressing.</state>
         </option>
         <option>
           <name>Output variant</name>
@@ -1009,7 +1009,7 @@
         </option>
         <option>
           <name>Output description</name>
-          <state>Automatic choice of formatter.</state>
+          <state>No specifier a, A, no specifier n, no float nor long long.</state>
         </option>
         <option>
           <name>GOutputBinary</name>
@@ -1036,7 +1036,7 @@
         </option>
         <option>
           <name>RTDescription</name>
-          <state>0</state>
+          <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
         </option>
         <option>
           <name>OGProductVersion</name>
@@ -1044,7 +1044,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>7.20.1.7306</state>
+          <state>7.20.2.7418</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -1095,12 +1095,12 @@
         <option>
           <name>GFPUCoreSlave</name>
           <version>20</version>
-          <state>39</state>
+          <state>40</state>
         </option>
         <option>
           <name>GBECoreSlave</name>
           <version>20</version>
-          <state>39</state>
+          <state>40</state>
         </option>
         <option>
           <name>OGUseCmsis</name>
@@ -1190,11 +1190,11 @@
         <option>
           <name>CCAllowList</name>
           <version>1</version>
-          <state>00010000</state>
+          <state>11111110</state>
         </option>
         <option>
           <name>CCDebugInfo</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IEndianMode</name>
@@ -1258,6 +1258,7 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
+          <state>$PROJ_DIR$/../../src</state>
           <state>$PROJ_DIR$/../../../../platform/utilities/inc</state>
           <state>$PROJ_DIR$/../../../../platform/osa/inc</state>
           <state>$PROJ_DIR$/../../../../platform/CMSIS/Include</state>
@@ -1265,6 +1266,7 @@
           <state>$PROJ_DIR$/../../../../platform/startup/MK64F12</state>
           <state>$PROJ_DIR$/../../../../platform/hal/inc</state>
           <state>$PROJ_DIR$/../../../../platform/drivers/inc</state>
+          <state>$PROJ_DIR$/../../../../platform/drivers/src/i2c</state>
           <state>$PROJ_DIR$/../../../../platform/system/inc</state>
           <state>$PROJ_DIR$/../../../../boards/frdmk64f120m</state>
         </option>
@@ -1295,7 +1297,7 @@
         </option>
         <option>
           <name>CCOptLevelSlave</name>
-          <state>1</state>
+          <state>3</state>
         </option>
         <option>
           <name>CompilerMisraRules98</name>
@@ -1650,6 +1652,7 @@
           <name>IlinkConfigDefines</name>
           <state>__stack_size__=0x2000</state>
           <state>__heap_size__=0x2000</state>
+          <state>__ram_vector_table__=1</state>
         </option>
         <option>
           <name>IlinkMapFile</name>

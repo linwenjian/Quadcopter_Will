@@ -47,7 +47,9 @@
 #define HWTIMER_LL_SRCCLK   kCoreClock
 #define HWTIMER_LL_ID       0
 
-#define HWTIMER_PERIOD       4000//   4000 //us  =4ms ,
+#define HWTIMER_PERIOD       7000//   4000 //us  =4ms ,
+//要死要死要死！ 最快只能7ms 扫描姿态， 遥控器由于用IO上升下降沿中断，1~2ms触发，如果用4ms定时刚好重合...
+//要改成PIT 试试
 #define BSWAP_16(x) (uint16_t)((uint16_t)(((uint16_t)(x) & (uint16_t)0xFF00) >> 0x8) | (uint16_t)(((uint16_t)(x) & (uint16_t)0xFF) << 0x8))
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -139,9 +141,7 @@ volatile bool g_AdcConvIntCompleted = false;
 
 
 volatile uint32_t remoteControlValue[8] = {0};
-volatile uint32_t remoteControlValue1st[8] = {0};
-volatile uint32_t remoteControlValue2nd[8] = {0};
-volatile uint32_t remoteControlValueFlag[8] = {0};
+
 uint32_t remoteControlPinNum[] = {2,3,4,5,6,7,10,11};
 
 uint32_t uDutyCycle_add = 0;
@@ -345,10 +345,11 @@ int main (void)
     // Initialize standard SDK demo application pins
     hardware_init();
     OSA_Init();
-
     // Call this function to initialize the console UART. This function
     // enables the use of STDIO functions (printf, scanf, etc.)
     dbg_uart_init();
+    
+
 
 /*Start***FTM Init*************************************************************/
     memset(&ftmInfo, 0, sizeof(ftmInfo));
@@ -474,33 +475,92 @@ int main (void)
     GPIO_DRV_Init(remoteControlPins,NULL);
 //    GPIO_DRV_Init(fxos8700IntPins,NULL);
 //    I2C_fxos8700AutoCalibration(); //cannot work , shit!
+    
+    NVIC_SetPriority(SysTick_IRQn, 3);
+    NVIC_SetPriority(PORTB_IRQn,0);
     while(1)
     {
+/*Start************Remote Controller Unlock *************/      
+      if(isRCunlock == true)
+      {    
+        LED3_ON;
+      }
+      else
+      {    
+        LED3_OFF;
+      }
+      static uint32_t unlock_times = 0;
+      static uint32_t lock_times = 0;
+//      PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
+      if(isRCunlock == false)
+      {
+        if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] > RC_THRESHOLD_H))
+        {
+          unlock_times++;
+        }
+        else
+        {
+          unlock_times = 0;
+        }
+        if(unlock_times > 6)
+        {
+          isRCunlock = true; 
+        }
+      }
+      else
+      {
+        if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] < RC_THRESHOLD_L))
+        {
+          lock_times++;
+        }
+        else
+        {
+          lock_times = 0;
+        }
+        if(lock_times > 4)
+        {
+          isRCunlock = false;
+        }
+      }
+/*End************Remote Controller Unlock *************/          
+   
+      
 //      LED2_ON;
 //      OSA_TimeDelay(200);
-      LED3_ON;
-      OSA_TimeDelay(200);
-      LED4_ON;
-      OSA_TimeDelay(200);
+//      LED3_ON;
+//      OSA_TimeDelay(200);
+//      LED4_ON;
+//      OSA_TimeDelay(200);
       LED5_ON;
-      OSA_TimeDelay(200);
+      OSA_TimeDelay(100);
 
 //      LED2_OFF;
 //      OSA_TimeDelay(200);
-      LED3_OFF;
-      OSA_TimeDelay(200);
-      LED4_OFF;
-      OSA_TimeDelay(200);
+//      LED3_OFF;
+//      OSA_TimeDelay(200);
+//      LED4_OFF;
+//      OSA_TimeDelay(200);
       LED5_OFF;
-      OSA_TimeDelay(200);
+      OSA_TimeDelay(100);
     }
 }
 
-#define HW_DIVIDER 2400000
+volatile bool isRCunlock = false;
+//below define value is in quad_common.h
+//#define RC_THRESHOLD_H (220000U)
+//#define RC_THRESHOLD_L (140000U)
+//#define RC_THRESHOLD_ERROR (300000U)//由于IO采两个边沿中断，有可能算成低电平的时间，所以做一个剔除算法。
+//#define HW_DIVIDER (2400000U) 
+////120M core clock , 2400000 / 120 000 000 = 0.02 s , 50Hz , 
+////遥控器信号 50Hz , 范围1~2ms，周期20ms，1.5ms中值.对应 120 000 - 240 000
 void PORTB_IRQHandler(void)
 {
   uint32_t intFlag = PORT_HAL_GetPortIntFlag(PORTB_BASE);
   uint32_t i =  0;
+  uint32_t value = 0;
+  static  uint32_t remoteControlValue1st[8] = {0};
+  static  uint32_t remoteControlValue2nd[8] = {0};
+  static  uint32_t remoteControlValueFlag[8] = {0};
   for(i=0 ; i<8;i++)
   {
     if (intFlag & (1 << remoteControlPinNum[i]))
@@ -515,18 +575,30 @@ void PORTB_IRQHandler(void)
         remoteControlValueFlag[i] = 0;
         remoteControlValue2nd[i] = (SysTick->VAL);
         if ( remoteControlValue1st[i] > remoteControlValue2nd[i] )
-        {
-          remoteControlValue[i] = remoteControlValue1st[i] - remoteControlValue2nd[i];
+        { 
+          value = remoteControlValue1st[i] - remoteControlValue2nd[i];
         }
         else
         {
-          remoteControlValue[i] = remoteControlValue1st[i] + HW_DIVIDER - remoteControlValue2nd[i];//hwtimer.divider
+          value = remoteControlValue1st[i] + HW_DIVIDER - remoteControlValue2nd[i];//hwtimer.divider
+        }
+        if( value > RC_THRESHOLD_ERROR)
+        {
+          remoteControlValueFlag[i] = 1;
+          remoteControlValue1st[i] = (SysTick->VAL);
+        }
+        else
+        {
+          remoteControlValue[i] = value;
+//          if(((remoteControlValue[3] <180000) ||(remoteControlValue[3] > 190000))&&remoteControlValue[3]> 100)
+//            LED4_ON;
         }
       }
     }
+    PORT_HAL_ClearPinIntFlag(PORTB_BASE,remoteControlPinNum[i]);
   }
   /* Clear interrupt flag.*/
-    PORT_HAL_ClearPortIntFlag(PORTB_BASE);
+ //   PORT_HAL_ClearPortIntFlag(PORTB_BASE);
 }
 
 
