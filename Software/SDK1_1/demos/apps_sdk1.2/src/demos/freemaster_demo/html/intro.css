@@ -1,0 +1,64 @@
+/*****************************************************************************
+*
+* Freescale Semiconductor Inc.
+* (c) Copyright 2004 Freescale, Inc.
+* ALL RIGHTS RESERVED.
+*
+******************************************************************************
+*
+* $File Name: intro.css$
+* $Date: Mar-15-2006$
+* $Version: 1.0.1.0$
+*
+* Description: CSS stylesheet for HTML code in FreeMaster pages
+*
+*****************************************************************************/ 
+
+BODY
+{
+    BORDER-RIGHT: silver solid;
+    BORDER-TOP: silver solid;
+    BORDER-BOTTOM: silver solid;
+    BORDER-LEFT: silver solid;
+    PADDING-LEFT: 2mm;
+    FONT-SIZE: 11px;
+    MARGIN: 1mm;
+    PADDING-TOP: 2mm;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: white
+}
+H1
+{
+    FONT-SIZE: 24pt;
+}
+H2
+{
+    FONT-SIZE: 12pt;
+}
+P
+{
+    PADDING-TOP: 0mm;
+    PADDING-BOTTOM: 0mm;
+    MARGIN-TOP: 3mm;
+    MARGIN-BOTTOM: 1mm;
+}
+UL
+{
+    MARGIN-TOP: 1mm;
+    MARGIN-BOTTOM: 1mm;
+}
+LI
+{
+    MARGIN-TOP: 0mm;
+    MARGIN-BOTTOM: 0mm;
+}
+A:hover
+{
+    COLOR: indianred;
+    TEXT-DECORATION: none
+}
+A
+{
+    COLOR: mediumblue;
+    TEXT-DECORATION: none
+}

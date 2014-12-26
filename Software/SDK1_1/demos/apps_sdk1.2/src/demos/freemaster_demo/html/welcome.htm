@@ -1,0 +1,116 @@
+<HTML>
+<!----------------------------------------------------------------------------------
+* (c) Copyright 2004-2010 Freescale Semiconductor
+* Description: HTML page for the FreeMaster introduction pages
+!--------------------------------------------------------------------------------->
+	<HEAD>
+		<TITLE>FreeMASTER Welcome Screen</TITLE><LINK href="intro.css" rel="stylesheet"></HEAD>
+	<BODY onload="start_page()">
+		<OBJECT id="pcm" height="0" width="0" classid="clsid:48A185F1-FFDB-11D3-80E3-00C04F176153">
+		</OBJECT>
+		<DIV id="anime" style="WIDTH: 540px" align="left">
+			<SCRIPT>
+			function start_page()
+			{
+				detectswf();
+				
+				setInterval(timer_proc, 100);
+			}
+			
+			function timer_proc()
+			{
+				if(pcm.ReadVariable("var16"))
+				{
+					var16.innerText = pcm.LastVariable_vValue;
+				}
+				else
+				{
+					var16.innerText = "?";
+				}
+			}
+			
+			function openfdemo()
+			{
+				fdemowindow = window.open('flashdemo.htm', 'fdemo', 
+					'width=500,height=280,menubar=no,toolbar=no,directories=no,location=no,status=no,resizable=yes', true);
+				fdemowindow.focus();
+			}
+
+			function OnErr(msg, url, lno) 
+			{
+				return true;
+			}
+			
+			function detectswf()
+			{
+				swf = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+				if(!swf) return;
+
+				fdemo.outerHTML = 
+					'<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" \
+					 NOEXTERNALDATA="true"	\
+					 WIDTH="160" HEIGHT="83" ALIGN="middle" VIEWASTEXT>	\
+					 <PARAM NAME="movie" VALUE="fmaster.swf">	\
+					 <PARAM NAME="quality" VALUE="high">	\
+					 <PARAM NAME="bgcolor" VALUE="#FFFFFF">	\
+					 </OBJECT><br>	\
+					 <A href="welcome.htm" onclick="openfdemo()">	\
+					 <font size="1">click to enlarge</font></A>';
+			}			
+			
+			window.onerror = OnErr;
+			</SCRIPT>
+			
+			<table width="100%">
+				<tr>
+					<td align="left" valign="top">
+						<DIV id=fdemo><font size="1">
+						Get Macromedia <a href="http://www.macromedia.com/shockwave/download/triggerpages_mmcom/flash.html">
+						Flash<br> Player</a> 
+						to see FreeMaster <br>
+						Flash presentation here.</font></DIV>
+					</td>
+					<td align="right" valign="top">
+						<IMG src="fscs.png" width="234">
+					</td>
+				</tr>
+			</table>
+			<br>
+			<DIV NOWRAP>
+			<H1 id=titl><IMG id=fmlogo src="logo.gif" height=25> Demo</H1>
+			</DIV>
+			<p>
+			<b>FreeMASTER</b> is an application running on MS Windows<sup><small>TM</small></sup> operating systems and
+			enables real-time visualization, demonstration and control of the embedded application. 
+			<p>
+			Press the <img src="stopbtn.png"> button in the toolbar above to open or close the communication port. 
+            Go to menu <a href="pcmaster:appctl:options:0">Project / Options</a> to change communication port settings.
+			<p>
+			This example application demonstrates the FreeMASTER Serial Communication Driver. 
+			You can find more information about the FreeMASTER (formerly "PC Master")
+			in the <A href="pcmaster:help:pcm_um.pdf">User Manual</A> or online at  
+			<A href="http://www.freescale.com/freemaster">FreeMASTER Home Page</A>.
+			<p>
+			FreeMASTER Features:
+			<ul>
+			<li>Read-Write access to the target memory (variables in the embedded application)
+			<li>Ability to parse ELF application executable file and retrieve C-variable addresses and type information
+			<li>Ability to display the variable values in real-time graph (oscilloscope)
+			<li>Ability to record fast variable-transitions to on-board or on-chip memory and display it 
+			in the FreeMASTER graph (recorder)
+			<li>Ability to deliver "Application Commands" to the embedded application code for whatever control the 
+			application requires
+			<li>JScript or VBScript enabled HTML pages (like this one) can be used as a Graphical User Interface to 
+			the embedded application. The script code gains the same access to the embedded application as is
+			available in the FreeMASTER GUI. (for example, reading the <i>var16</i> variable: var16=<b><span id=var16>0</span></b>).
+			<li>Target-side Address Translation (TSA) as a replacement for ELF file parsing. TSA enables to encode the type 
+			and variable information directly into the embedded-side code.
+			<li>TSA Safety - the memory access can be restricted to TSA-described memory locations only. Variables
+			can be declared read-only or read-write for FreeMASTER access. Try to modify the var16 or var32 variables and 
+            you will get the "Access Denied" error displayed in the status bar.
+			<li>Application Command Callback functions can be registerred to handle the Application Commands sent by the PC.
+			</ul>
+		</DIV>
+	</BODY>
+</HTML>
+
