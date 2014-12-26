@@ -143,7 +143,9 @@
 
 /* The rtc instance used for rtc_func */
 #define BOARD_RTC_FUNC_INSTANCE         0
-
+                   
+#define BOARD_PIT_INSTANCE   (0U)
+                   
 #if defined(__cplusplus)
 extern "C" {
 #endif /* __cplusplus */

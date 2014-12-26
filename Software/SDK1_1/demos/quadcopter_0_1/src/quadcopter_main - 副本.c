@@ -47,10 +47,9 @@
 #define HWTIMER_LL_SRCCLK   kCoreClock
 #define HWTIMER_LL_ID       0
 
-#define HWTIMER_PERIOD     40000//  7000//   4000 //us  =4ms ,
-////要死要死要死！ 最快只能7ms 扫描姿态， 遥控器由于用IO上升下降沿中断，1~2ms触发，如果用4ms定时刚好重合...
-////now change to use PIT !!!!
-//现在这个值 只是随便设置一个，让systemtick知道从哪个数开始递减
+#define HWTIMER_PERIOD     20000//  7000//   4000 //us  =4ms ,
+//要死要死要死！ 最快只能7ms 扫描姿态， 遥控器由于用IO上升下降沿中断，1~2ms触发，如果用4ms定时刚好重合...
+//now change to use PIT !!!!
 #define BSWAP_16(x) (uint16_t)((uint16_t)(((uint16_t)(x) & (uint16_t)0xFF00) >> 0x8) | (uint16_t)(((uint16_t)(x) & (uint16_t)0xFF) << 0x8))
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -96,7 +95,7 @@ const char trans_header_table[3] = {0x88, 0xAF, 0x1C};
 //char trans_header_table1[] = {0x88, 0xA1, 2,0,0,0};
 trans_packet_t packet_upper_PC ;
 
-mems_data_t  memsRawDate ;
+mems_data_t memsRawDate ;
 imu_float_euler_angle_t quadAngle;
 
 bool gyro_offset_done = false;
@@ -139,6 +138,7 @@ volatile uint32_t ADC_value_min[8]= { 0xffffffff,
 volatile uint32_t ADC_value_max[8]= {0};
 volatile bool g_AdcConvIntCompleted = false;
 
+
 volatile uint32_t remoteControlValue[8] = {0};
 
 uint32_t remoteControlPinNum[] = {2,3,4,5,6,7,10,11};
@@ -149,6 +149,154 @@ uint32_t uDutyCycle_add = 0;
 
 void hwtimer_callback(void* data)
    {
+     //////     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),0);
+     //////this for cycle is about 57.1us from the logic analyzer
+     ////// 0~ 4095  <--> 0V ~ 3.3 V
+     ////     for (ADC_count_n = 0; ADC_count_n < 8U; ADC_count_n++)
+     ////     {
+     ////       MyChnConfig.chnNum = kADCPinMuxTable[ADC_count_n].chnNum;
+     ////
+     ////       MyChnConfig.diffEnable= false;
+     ////       MyChnConfig.intEnable = true;
+     ////
+     ////       if(ADC_count_n == 0 )
+     ////       {
+     ////#if FSL_FEATURE_ADC16_HAS_MUX_SELECT
+     ////         MyChnConfig.chnMux = kAdcChnMuxOfB;
+     ////#endif /* FSL_FEATURE_ADC16_HAS_MUX_SELECT */
+     ////       }
+     ////       else
+     ////       {
+     ////#if FSL_FEATURE_ADC16_HAS_MUX_SELECT
+     ////         MyChnConfig.chnMux = kAdcChnMuxOfDefault;
+     ////#endif /* FSL_FEATURE_ADC16_HAS_MUX_SELECT */
+     ////       }
+     ////
+     ////       ADC16_DRV_ConfigConvChn(kADCPinMuxTable[ADC_count_n].instance,
+     ////                               kADCPinMuxTable[ADC_count_n].chnGroup,
+     ////                               &MyChnConfig);
+     ////       /* Wait the interrupt for conversion completed. */
+     ////       while (!g_AdcConvIntCompleted) {}
+     ////       g_AdcConvIntCompleted = false;
+     //////       PRINTF("ADC_count_%d = %d \r\n",ADC_count_n, ADC_value[ADC_count_n]);
+     ////
+     ////       if ( ADC_value_min[ADC_count_n] > ADC_value [ADC_count_n])
+     ////       {
+     ////         ADC_value_min[ADC_count_n] = ADC_value [ADC_count_n];
+     ////       }
+     ////
+     ////       if ( ADC_value_max[ADC_count_n] < ADC_value [ADC_count_n])
+     ////       {
+     ////         ADC_value_max[ADC_count_n] = ADC_value [ADC_count_n];
+     ////       }
+     ////     }
+     ////     PRINTF("\r\n");
+     ////     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
+     //
+     //static int i=0;
+     ////     int j=0;
+     ////     //PRINTF(".");
+     //     I2C_getAccelMangData(&memsRawDate);
+     //     I2C_getGyroData(&memsRawDate);
+     //     
+     //
+     ////     static double jiaodu;
+     //     if(gyro_offset_done == true)
+     //     {
+     //       imu_get_euler_angle(&quadAngle,&memsRawDate);
+     //       
+     ////       jiaodu = atan2(memsRawDate.magn_x,memsRawDate.magn_y) * 57.3;
+     ////       PRINTF("jiaodu = %d \r\n" ,(int16_t)jiaodu );
+     //       
+     //
+     ///*Start*********匿名上位机发送的串口数据***********/
+     //     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
+     //     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
+     //     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
+     //     packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
+     //     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);
+     //     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
+     //     packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
+     //     packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
+     //     packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);     
+     //
+     //     packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
+     //     packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
+     //     packet_upper_PC.user_data.trans_yaw = BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
+     //
+     //     uint8_t *p = (uint8_t*)&packet_upper_PC;
+     //
+     //     UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+     //
+     ///*End*********匿名上位机发送的串口数据***********/
+     //     }
+     //
+     ////Do not change the first 100 cylces PWM after Powen On
+     ////it would be better that the dutyCycle = 0%
+     //     if(temp_count <= 100 && temp_flag ==0 )
+     //     {
+     //       temp_count++;
+     //     }
+     //
+     ////All PWM duty cycle change to 50% for the next 100 cycle.
+     ////50% dutyCycle for the Electronic Speed Controller , the BLDC would not turning
+     //     if(temp_count > 100 && temp_count < 200 && temp_flag ==0 )
+     //     {
+     //       // temp_count = 0;
+     //       temp_count++;
+     //       ftmParam0.uDutyCyclePercent = 50;
+     //       ftmParam1.uDutyCyclePercent = 50;
+     //       ftmParam2.uDutyCyclePercent = 50;
+     //       ftmParam3.uDutyCyclePercent = 50;
+     //     }
+     ////Then, the BLDC can start to turning.
+     //     if(temp_count >= 200 && temp_flag ==0 )
+     //     {
+     //       temp_flag = 1;
+     //      }
+     ////测试代码，电机从 52-->70-->52 占空比变化
+     //     if( temp_flag == 1 )
+     //     {
+     //
+     //       if(remoteControlValue[0] > 120000)
+     //       {
+     //         uDutyCycle_add = (uint32_t)((remoteControlValue[0] - 120000)/2400) ;
+     //       }
+     //       if(uDutyCycle_add < 50)
+     //       {
+     //         ftmParam0.uDutyCyclePercent = 46 + uDutyCycle_add;
+     //       }
+     //
+     ////
+     ////       temp_count_test++;
+     ////       if( temp_count_test > 10 )
+     ////       {
+     ////         temp_count_test = 0;
+     ////         if (temp_count_add == 1)
+     ////         {
+     ////           ftmParam0.uDutyCyclePercent++;
+     ////           ftmParam1.uDutyCyclePercent++;
+     ////           ftmParam2.uDutyCyclePercent++;
+     ////           ftmParam3.uDutyCyclePercent++;
+     ////         }
+     ////         else
+     ////         {
+     ////           ftmParam0.uDutyCyclePercent--;
+     ////           ftmParam1.uDutyCyclePercent--;
+     ////           ftmParam2.uDutyCyclePercent--;
+     ////           ftmParam3.uDutyCyclePercent--;
+     ////         }
+     ////         if( ftmParam0.uDutyCyclePercent  > 70 )
+     ////         {
+     ////           temp_count_add = 0;
+     ////         }
+     ////         if( ftmParam0.uDutyCyclePercent  < 52)
+     ////         {
+     ////           temp_count_add = 1;
+     ////         }
+     ////       }
+     //     }
+     //
      ///*Start 简化版更改占空比***************/
      ////     uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
      ////     uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
@@ -188,26 +336,26 @@ void hwtimer_callback(void* data)
 //PTC1,2,3,4
 int main (void)
 {
-  memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
+    memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
     // RX buffers
     //! @param receiveBuff Buffer used to hold received data
     uint8_t receiveBuff;
 
     // Initialize standard SDK demo application pins
     hardware_init();
-
     OSA_Init();
     // Call this function to initialize the console UART. This function
     // enables the use of STDIO functions (printf, scanf, etc.)
     dbg_uart_init();
-    // Print the initial banner
-    PRINTF("\r\nHello World!\n\n\r");
- 
+
 /*Start***FTM Init*************************************************************/
     memset(&ftmInfo, 0, sizeof(ftmInfo));
     ftmInfo.syncMethod = kFtmUseSoftwareTrig;
     FTM_DRV_Init(0, &ftmInfo);
 /*End*****FTM Init*************************************************************/
+
+    // Print the initial banner
+    PRINTF("\r\nHello World!\n\n\r");
 
     LED2_EN;    LED3_EN;    LED4_EN;    LED5_EN;
     LED2_OFF;   LED3_OFF;   LED4_OFF;   LED5_OFF;
@@ -238,22 +386,22 @@ int main (void)
 //    {
 //        PRINTF("\r\nError: hwtimer start.\r\n");
 //    }
+    
     /* A write of any value to current value register clears the field to 0, and also clears the SYST_CSR COUNTFLAG bit to 0. */
     SysTick->VAL = 0U;
     /* Run timer and disable interrupt */
     SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_ENABLE_Msk ;//| SysTick_CTRL_TICKINT_Msk;
 
-    
     GPIO_DRV_Init(remoteControlPins,NULL);
 //    GPIO_DRV_Init(fxos8700IntPins,NULL);
 //    I2C_fxos8700AutoCalibration(); //cannot work , shit!
     
-/*Start***********************PIT Init*****************************************/ 
+/*Start PIT init***************/    
     // Structure of initialize PIT channel No.0
     pit_user_config_t chn0Confg = {
       .isInterruptEnabled = true,
       .isTimerChained = false,
-      .periodUs = 2000u //1000000 us
+      .periodUs = 20000u //1000000 us
     };
     
     // Structure of initialize PIT channel No.1
@@ -278,93 +426,73 @@ int main (void)
 //    printf ("\n\rStarting channel No.1 ...");
 //    PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 1);
     
-/*End*************************PIT Init*****************************************/   
+/*End PIT init***************/   
 
 //    NVIC_SetPriority(SysTick_IRQn, 3);
 //    NVIC_SetPriority(PORTB_IRQn,0);
-    NVIC_SetPriority(PIT0_IRQn,3); 
-    //must set the pit isr priority low than i2c because I run the i2c interrupt in pit_isr.
-
-//PTD0 to measure the cycle with the oscilloscope  or logic analyzer    
-    PORT_HAL_SetMuxMode(PORTD_BASE, 0, kPortMuxAsGpio);
-    GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOD, 0U), kGpioDigitalOutput) ;
-    GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
-    
     while(1)
     {
-      static uint16_t led5_i =0;
-      if(led5_i==0)
-      {
-        LED5_ON;led5_i=1;
-      }
-      else
-      {
-        LED5_OFF;led5_i=0;
-      }
-/*Start*********匿名上位机发送的串口数据***********/
-    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
-    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
-    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
-    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
-    packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);
-    packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
-    packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
-    packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
-    packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);     
-    
-    packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
-    packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
-    packet_upper_PC.user_data.trans_yaw = BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
-    
-    uint8_t *p = (uint8_t*)&packet_upper_PC;
-    
-    UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
-/*End*********匿名上位机发送的串口数据***********/
-      
-/*Start************Remote Controller Unlock *************/      
-      if(isRCunlock == true)
-      {    
-        LED3_ON;
-      }
-      else
-      {    
-        LED3_OFF;
-      }
-      static uint32_t unlock_times = 0;
-      static uint32_t lock_times = 0;
-      PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
-      if(isRCunlock == false)
-      {
-        if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] > RC_THRESHOLD_H))
-        {
-          unlock_times++;
-        }
-        else
-        {
-          unlock_times = 0;
-        }
-        if(unlock_times > 50)
-        {
-          isRCunlock = true; 
-        }
-      }
-      else
-      {
-        if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] < RC_THRESHOLD_L))
-        {
-          lock_times++;
-        }
-        else
-        {
-          lock_times = 0;
-        }
-        if(lock_times > 40)
-        {
-          isRCunlock = false;
-        }
-      }
-/*End************Remote Controller Unlock *************/          
+///*Start************Remote Controller Unlock *************/      
+//      if(isRCunlock == true)
+//      {    
+//        LED3_ON;
+//      }
+//      else
+//      {    
+//        LED3_OFF;
+//      }
+//      static uint32_t unlock_times = 0;
+//      static uint32_t lock_times = 0;
+//      PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
+//      if(isRCunlock == false)
+//      {
+//        if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] > RC_THRESHOLD_H))
+//        {
+//          unlock_times++;
+//        }
+//        else
+//        {
+//          unlock_times = 0;
+//        }
+//        if(unlock_times > 6)
+//        {
+//          isRCunlock = true; 
+//        }
+//      }
+//      else
+//      {
+//        if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] < RC_THRESHOLD_L))
+//        {
+//          lock_times++;
+//        }
+//        else
+//        {
+//          lock_times = 0;
+//        }
+//        if(lock_times > 4)
+//        {
+//          isRCunlock = false;
+//        }
+//      }
+///*End************Remote Controller Unlock *************/          
 
+//      LED2_ON;
+//      OSA_TimeDelay(200);
+//      LED3_ON;
+//      OSA_TimeDelay(200);
+//      LED4_ON;
+//      OSA_TimeDelay(200);
+      LED5_ON;
+      OSA_TimeDelay(100);
+
+//      LED2_OFF;
+//      OSA_TimeDelay(200);
+//      LED3_OFF;
+//      OSA_TimeDelay(200);
+//      LED4_OFF;
+//      OSA_TimeDelay(200);
+      LED5_OFF;
+      OSA_TimeDelay(100);
     }
 }
 
@@ -405,7 +533,6 @@ void PORTB_IRQHandler(void)
         {
           value = remoteControlValue1st[i] + HW_DIVIDER - remoteControlValue2nd[i];//hwtimer.divider
         }
-        //防止不小心从下降沿开始采样，算成低电平的占空比。
         if( value > RC_THRESHOLD_ERROR)
         {
           remoteControlValueFlag[i] = 1;
@@ -424,6 +551,7 @@ void PORTB_IRQHandler(void)
   /* Clear interrupt flag.*/
  //   PORT_HAL_ClearPortIntFlag(PORTB_BASE);
 }
+
 
 void PORTE_IRQHandler(void)
 {
@@ -444,21 +572,46 @@ void PIT0_IRQHandler(void)
   /* Clear interrupt flag.*/
   PIT_HAL_ClearIntFlag(PIT_BASE, 0U);
 
-  I2C_getAccelMangData(&memsRawDate);
-  I2C_getGyroData(&memsRawDate);
-
-  if(gyro_offset_done == true)
-  {  
-    imu_get_euler_angle(&quadAngle,&memsRawDate);
-  }
-  static uint16_t led2_i =0;
-  if(led2_i==0)
+//  I2C_getAccelMangData(&memsRawDate);
+//  I2C_getGyroData(&memsRawDate);
+// 
+//  //     static double jiaodu;
+//  if(gyro_offset_done == true)
+//  {
+//    imu_get_euler_angle(&quadAngle,&memsRawDate);
+//    
+//    //       jiaodu = atan2(memsRawDate.magn_x,memsRawDate.magn_y) * 57.3;
+//    //       PRINTF("jiaodu = %d \r\n" ,(int16_t)jiaodu );
+//
+//    /*Start*********匿名上位机发送的串口数据***********/
+//    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
+//    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
+//    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
+//    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
+//    packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);
+//    packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
+//    packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
+//    packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
+//    packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);     
+//    
+//    packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
+//    packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
+//    packet_upper_PC.user_data.trans_yaw = BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
+//    
+//    uint8_t *p = (uint8_t*)&packet_upper_PC;
+//    
+//  //  UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+//    
+//    /*End*********匿名上位机发送的串口数据***********/
+//  }
+  static uint16_t i =0;
+  if(i==0)
   {
-    LED2_ON;led2_i=1;
+    LED2_ON;i=1;
   }
   else
   {
-    LED2_OFF;led2_i=0;
+    LED2_OFF;i=0;
   }
 }
 

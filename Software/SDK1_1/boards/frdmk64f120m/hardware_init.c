@@ -88,6 +88,8 @@ void hardware_init(void) {
   configure_sensors_interrupt_pins_for_quadcopter();
 
   configure_ftm_pins_for_quadcopter();
+  
+  configure_uart_pins(BOARD_DEBUG_UART_INSTANCE);
 }
 
 void dbg_uart_init(void)

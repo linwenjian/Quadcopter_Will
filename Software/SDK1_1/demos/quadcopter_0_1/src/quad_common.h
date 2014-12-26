@@ -54,6 +54,9 @@
 #include "quad_i2c_config.h"
 #include "quad_send_data.h"
 
+#include "fsl_edma_driver.h"
+#include "fsl_uart_edma_driver.h"
+
 #include "fsl_adc16_driver.h"
 #include "fsl_gpio_driver.h"
 
@@ -61,6 +64,8 @@
 #include "fsl_hwtimer_systick.h"
 #include "fsl_os_abstraction.h"
 #include "fsl_interrupt_manager.h"
+
+#include "fsl_pit_driver.h"
 
 #include "imu.h"
    
