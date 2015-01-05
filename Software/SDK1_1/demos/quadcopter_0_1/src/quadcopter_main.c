@@ -202,7 +202,7 @@ int main (void)
     dbg_uart_init();
     // Print the initial banner
     PRINTF("\r\nHello World!\n\n\r");
- 
+
 /*Start***FTM Init*************************************************************/
     memset(&ftmInfo, 0, sizeof(ftmInfo));
     ftmInfo.syncMethod = kFtmUseSoftwareTrig;
@@ -243,55 +243,56 @@ int main (void)
     /* Run timer and disable interrupt */
     SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_ENABLE_Msk ;//| SysTick_CTRL_TICKINT_Msk;
 
-    
+
     GPIO_DRV_Init(remoteControlPins,NULL);
 //    GPIO_DRV_Init(fxos8700IntPins,NULL);
 //    I2C_fxos8700AutoCalibration(); //cannot work , shit!
-    
-/*Start***********************PIT Init*****************************************/ 
+
+/*Start***********************PIT Init*****************************************/
     // Structure of initialize PIT channel No.0
     pit_user_config_t chn0Confg = {
       .isInterruptEnabled = true,
       .isTimerChained = false,
       .periodUs = 2000u //1000000 us
     };
-    
+
     // Structure of initialize PIT channel No.1
     pit_user_config_t chn1Confg = {
       .isInterruptEnabled = true,
       .isTimerChained = false,
       .periodUs = 2000000u
-    };  
-    
+    };
+
     // Init pit module and enable run in debug
     PIT_DRV_Init(BOARD_PIT_INSTANCE, false);
-    
+
     // Initialize PIT timer instance for channel 0 and 1
     PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 0, &chn0Confg);
 //    PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 1, &chn1Confg);
-    
+
     // Start channel 0
 //    printf ("\n\rStarting channel No.0 ...");
     PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 0);
-    
+
     // Start channel 1
 //    printf ("\n\rStarting channel No.1 ...");
 //    PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 1);
-    
-/*End*************************PIT Init*****************************************/   
+
+/*End*************************PIT Init*****************************************/
 
 //    NVIC_SetPriority(SysTick_IRQn, 3);
 //    NVIC_SetPriority(PORTB_IRQn,0);
-    NVIC_SetPriority(PIT0_IRQn,3); 
-    //must set the pit isr priority low than i2c because I run the i2c interrupt in pit_isr.
+    NVIC_SetPriority(PIT0_IRQn,3);
+    //must set the pit isr priority lower than i2c because I run the i2c interrupt in pit_isr.
 
-//PTD0 to measure the cycle with the oscilloscope  or logic analyzer    
+//PTD0 to measure the cycle with the oscilloscope  or logic analyzer
     PORT_HAL_SetMuxMode(PORTD_BASE, 0, kPortMuxAsGpio);
     GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOD, 0U), kGpioDigitalOutput) ;
     GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
-    
+
     while(1)
     {
+      /*****start while(1) in mian loop*****/
       static uint16_t led5_i =0;
       if(led5_i==0)
       {
@@ -310,24 +311,24 @@ int main (void)
     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
     packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
     packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
-    packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);     
-    
+    packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);
+
     packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
     packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
     packet_upper_PC.user_data.trans_yaw = BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
-    
+
     uint8_t *p = (uint8_t*)&packet_upper_PC;
-    
+
     UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
 /*End*********匿名上位机发送的串口数据***********/
-      
-/*Start************Remote Controller Unlock *************/      
+
+/*Start************Remote Controller Unlock *************/
       if(isRCunlock == true)
-      {    
+      {
         LED3_ON;
       }
       else
-      {    
+      {
         LED3_OFF;
       }
       static uint32_t unlock_times = 0;
@@ -345,7 +346,7 @@ int main (void)
         }
         if(unlock_times > 50)
         {
-          isRCunlock = true; 
+          isRCunlock = true;
         }
       }
       else
@@ -363,8 +364,17 @@ int main (void)
           isRCunlock = false;
         }
       }
-/*End************Remote Controller Unlock *************/          
+/*End************Remote Controller Unlock *************/
 
+/*Start*********** Reflash the motor PWM **************/
+      static uint32_t test_throttle_pwm = 50;
+      test_throttle_pwm = remoteControlValue[kThrottle] / 2400 ;
+      motor_pwm_reflash(test_throttle_pwm,
+                        test_throttle_pwm,
+                        test_throttle_pwm,
+                        test_throttle_pwm);
+/*End************* Reflash the motor PWM **************/
+     /*****end while(1) in mian loop*****/
     }
 }
 
@@ -373,8 +383,8 @@ volatile bool isRCunlock = false;
 //#define RC_THRESHOLD_H (220000U)
 //#define RC_THRESHOLD_L (140000U)
 //#define RC_THRESHOLD_ERROR (300000U)//由于IO采两个边沿中断，有可能算成低电平的时间，所以做一个剔除算法。
-//#define HW_DIVIDER (2400000U) 
-////120M core clock , 2400000 / 120 000 000 = 0.02 s , 50Hz , 
+//#define HW_DIVIDER (2400000U)
+////120M core clock , 2400000 / 120 000 000 = 0.02 s , 50Hz ,
 ////遥控器信号 50Hz , 范围1~2ms，周期20ms，1.5ms中值.对应 120 000 - 240 000
 void PORTB_IRQHandler(void)
 {
@@ -398,7 +408,7 @@ void PORTB_IRQHandler(void)
         remoteControlValueFlag[i] = 0;
         remoteControlValue2nd[i] = (SysTick->VAL);
         if ( remoteControlValue1st[i] > remoteControlValue2nd[i] )
-        { 
+        {
           value = remoteControlValue1st[i] - remoteControlValue2nd[i];
         }
         else
@@ -448,7 +458,7 @@ void PIT0_IRQHandler(void)
   I2C_getGyroData(&memsRawDate);
 
   if(gyro_offset_done == true)
-  {  
+  {
     imu_get_euler_angle(&quadAngle,&memsRawDate);
   }
   static uint16_t led2_i =0;
@@ -463,7 +473,7 @@ void PIT0_IRQHandler(void)
 }
 
 void PIT1_IRQHandler(void)
-{   
+{
   static bool led_flag = true;
   /* Clear interrupt flag.*/
   PIT_HAL_ClearIntFlag(PIT_BASE, 1U);

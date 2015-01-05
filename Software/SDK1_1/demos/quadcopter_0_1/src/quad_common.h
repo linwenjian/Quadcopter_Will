@@ -68,7 +68,7 @@
 #include "fsl_pit_driver.h"
 
 #include "imu.h"
-   
+
 #define I2C_WRITE 0U
 #define I2C_READ 1U
 
@@ -126,13 +126,24 @@ typedef enum _remote_controller_channel {
   kThrottle = 2,
   kYaw = 3
 }remote_controller_channel_t;
+
 extern volatile bool isRCunlock;
+
 #define RC_THRESHOLD_H (200000U)
 #define RC_THRESHOLD_L (160000U)
 #define RC_THRESHOLD_ERROR (300000U)
-#define HW_DIVIDER (2400000U) 
-//120M core clock , 2400000 / 120 000 000 = 0.02 s , 50Hz , 
+#define HW_DIVIDER (2400000U)
+//120M core clock , 2400000 / 120 000 000 = 0.02 s , 50Hz ,
 //遥控器信号 50Hz , 范围1~2ms，周期20ms，1.5ms中值.对应 120 000 - 240 000
+
+
+extern ftm_pwm_param_t ftmParam0;
+extern ftm_pwm_param_t ftmParam1;
+extern ftm_pwm_param_t ftmParam2;
+extern ftm_pwm_param_t ftmParam3;
+
+void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
+                       uint32_t uDutyCyclePercent2 ,uint32_t uDutyCyclePercent3 );
 
 #endif
 /*******************************************************************************

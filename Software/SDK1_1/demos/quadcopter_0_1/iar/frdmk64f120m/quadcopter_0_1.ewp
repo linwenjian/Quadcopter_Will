@@ -1964,6 +1964,9 @@
       <name>$PROJ_DIR$\..\..\src\quad_i2c_config.h</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\..\src\quad_moter_control.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\src\quad_send_data.h</name>
     </file>
     <file>
