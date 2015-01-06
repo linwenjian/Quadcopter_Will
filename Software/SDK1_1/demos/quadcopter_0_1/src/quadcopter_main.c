@@ -333,7 +333,7 @@ int main (void)
       }
       static uint32_t unlock_times = 0;
       static uint32_t lock_times = 0;
-      PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
+//      PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
       if(isRCunlock == false)
       {
         if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] > RC_THRESHOLD_H))

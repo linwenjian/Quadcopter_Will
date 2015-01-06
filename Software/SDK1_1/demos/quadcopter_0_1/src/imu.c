@@ -347,12 +347,17 @@ uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRaw
 //                  float_data.mz,
 //                  angle);
     
-  double gx = ((double)pRawDdata->gyro_x)* Gyro_Gr;
-  double gy = ((double)pRawDdata->gyro_y)* Gyro_Gr;
+  
+  
+  
+  double gx = (double)(0.70710678 *(double)(pRawDdata->gyro_x - pRawDdata->gyro_y))* Gyro_Gr;
+  double gy = (double)(0.70710678 *(double)(pRawDdata->gyro_x + pRawDdata->gyro_y))* Gyro_Gr;
   double gz = ((double)pRawDdata->gyro_z)* Gyro_Gr;
-  double ax = (double)pRawDdata->accel_x;
-  double ay = (double)pRawDdata->accel_y;
+  
+  double ax = (double)(0.70710678 *(double)(pRawDdata->accel_x - pRawDdata->accel_y));
+  double ay = (double)(0.70710678 *(double)(pRawDdata->accel_x + pRawDdata->accel_y));
   double az = (double)pRawDdata->accel_z;
+  
   double mx = (double)pRawDdata->magn_x;
   double my = (double)pRawDdata->magn_y;
   double mz = (double)pRawDdata->magn_z;
