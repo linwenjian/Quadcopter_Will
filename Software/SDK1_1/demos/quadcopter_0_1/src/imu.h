@@ -16,7 +16,7 @@ typedef struct
     int (*imu_get_mag)(int16_t * mx, int16_t * my, int16_t * mz);
 }imu_io_install_t;
 
-typedef struct 
+typedef struct _imu_float_euler_angle
 {
     double imu_pitch;
     double imu_roll;

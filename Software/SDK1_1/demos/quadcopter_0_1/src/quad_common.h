@@ -145,6 +145,31 @@ extern ftm_pwm_param_t ftmParam3;
 void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
                        uint32_t uDutyCyclePercent2 ,uint32_t uDutyCyclePercent3 );
 
+
+typedef struct _pid 
+{ 
+  double  ExpectPoint;              //设定目标 Desired Value 
+  long SumError;              //误差累计  
+  
+  double  Proportion;         //比例常数 Proportional Const 
+  double  Integral;           //积分常数 Integral Const 
+  double  Derivative;         //微分常数 Derivative Const 
+  
+  double LastError;              //Error[-1] 
+  double PrevError;              //Error[-2] 
+} pid_t; 
+
+extern pid_t pitch_pid;
+extern pid_t roll_pid;
+extern pid_t yaw_pid;
+
+void motor_pid_control(uint32_t throttleDutyCycle,
+                       imu_float_euler_angle_t * expectAngel,
+                       imu_float_euler_angle_t * currentAngel,
+                       pid_t *pitch_pid,
+                       pid_t *yaw_pid,
+                       pid_t *roll_pid,
+                       bool RCunlock );
 #endif
 /*******************************************************************************
 * EOF

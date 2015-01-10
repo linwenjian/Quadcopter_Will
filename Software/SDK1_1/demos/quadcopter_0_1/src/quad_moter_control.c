@@ -48,7 +48,7 @@ void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
 
 //void motor_pid_control(uint32_t throttleDutyCycle,
 //                       imu_float_euler_angle_t * expectAngel,
-//                       imu_float_euler_angle_t * actualAngel,
+//                       imu_float_euler_angle_t * currentAngel,
 //                       bool RCunlock )  //unfinished.20150105
 //{
 //  pitch_p,pitch_i,pitch_d;
@@ -76,6 +76,173 @@ void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
 //  motor_pwm_reflash(motor_pwm0,motor_pwm1,motor_pwm2,motor_pwm3);
 //}
 
+
+void IncPIDInit(pid_t *sptr) 
+{ 
+  sptr->SumError   = 0;     
+  sptr->LastError = 0;    //Error[-1] 
+  sptr->PrevError = 0;    //Error[-2] 
+  
+  sptr->Proportion = 0;    //比例常数 Proportional Const 
+  sptr->Integral   = 0;    //积分常数 Integral Const 
+  sptr->Derivative = 0;    //微分常数 Derivative Const 
+  sptr->ExpectPoint   = 0;         
+} 
+
+
+////IncPIDCalc ( ) 
+////原        形  int IncPIDCalc(int) 
+////描        述  增量式 PID 计算 
+////输入参数  PID 调节当前采样值 
+////输出参数  计算增量 
+////头  文  件  Spmc75_PID.h 
+////库  文  件  DigitalPID_V100 
+////注意事项  （式 2－5）增量式 PID 算法的实现。 
+////例        子  uiGoalvalue  ＋＝  IncPIDCalc  (1998);  //位置式 PID 控制算法通过增量式控
+////制算法递推实现，当前采样得到转速 1998rpm。    
+////增量式 PID 控制设计 
+//int IncPIDCalc(int CurrentPoint) //
+//{ 
+//  register int iError, iIncpid; 
+//  //当前误差 
+//  iError = sptr->ExpectPoint - CurrentPoint; 
+//  //增量计算 
+//  iIncpid = sptr->Proportion * iError               //E[k]项 
+//    - sptr->Integral   * sptr->LastError     //E[k－1]项 
+//      + sptr->Derivative * sptr->PrevError;   //E[k－2]项 
+//  //存储误差，用于下次计算 
+//  sptr->PrevError = sptr->LastError; 
+//  sptr->LastError = iError; 
+//  //返回增量值 
+//  return(iIncpid); 
+//} 
+
+int16_t IncPIDCalc(double CurrentPoint , pid_t *sptr)
+{ 
+  int16_t  iIncpid;   //当前误差 
+  double iError;
+  iError = sptr->ExpectPoint - CurrentPoint; 
+  
+  //增量计算 
+  iIncpid =(int16_t)(sptr->Proportion * iError              //E[k]项 
+          - sptr->Integral   * sptr->LastError     //E[k－1]项 
+          + sptr->Derivative * sptr->PrevError);    //E[k－2]项 
+  
+  //存储误差，用于下次计算 
+  sptr->PrevError = sptr->LastError; 
+  sptr->LastError = iError; 
+ 
+  //返回增量值 
+  return(iIncpid); 
+} 
+
+
+pid_t pitch_pid = {
+  .ExpectPoint = 0,       
+  .SumError    = 0,          
+  
+  .Proportion = 0.25,        
+  .Integral   = 0  ,
+  .Derivative = 0.75,    
+  
+  .LastError = 0,         
+  .PrevError = 0,        
+};
+
+pid_t roll_pid = {
+  .ExpectPoint = 0,       
+  .SumError    = 0,          
+  
+  .Proportion = 0.25,        
+  .Integral   = 0  ,
+  .Derivative = 0.75,    
+  
+  .LastError = 0,         
+  .PrevError = 0,        
+};
+
+pid_t yaw_pid = {
+  .ExpectPoint = 0,       
+  .SumError    = 0,          
+  
+  .Proportion = 0.5,        
+  .Integral   = 0  ,
+  .Derivative = 1.5,    
+  
+  .LastError = 0,         
+  .PrevError = 0,        
+};
+
+void motor_pid_control(uint32_t throttleDutyCycle,
+                       imu_float_euler_angle_t * expectAngel,
+                       imu_float_euler_angle_t * currentAngel,
+                       pid_t *pitch_pid,
+                       pid_t *yaw_pid,
+                       pid_t *roll_pid,
+                       bool RCunlock )//unfinished.20150105
+{
+/*          这个是ROLL轴，左低右高，ROLL值为正，差距越大值越大。翻过180度后变为-179...
+*               |
+*      Motor3   |    Motor2
+*         ╲    |    ／
+*           ╲  |  ／
+*   __________╲|／___________这个是pitch轴，前（上）高，（下）低，pitch值为正，差距越大值越大。翻过180度后变为-179...
+*             ／|╲
+*           ／  |  ╲
+*         ／    |    ╲
+*      Motor0   |    Motor1
+*               |
+*/ 
+  
+  static int16_t pitch_out = 0,roll_out = 0,yaw_out = 0;
+  static int16_t motor_pwm0_duty  = 0;
+  static int16_t motor_pwm1_duty  = 0;
+  static int16_t motor_pwm2_duty  = 0;
+  static int16_t motor_pwm3_duty  = 0;
+  
+  pitch_pid->ExpectPoint = expectAngel->imu_pitch;
+  roll_pid->ExpectPoint  = expectAngel->imu_roll;
+  
+  pitch_out += IncPIDCalc(currentAngel->imu_pitch , pitch_pid);
+  roll_out  += IncPIDCalc(currentAngel->imu_roll  , roll_pid);
+  
+  if(pitch_out > 48) pitch_out = 49;
+  if(roll_out > 48) roll_out = 49;
+  if(pitch_out < -48) pitch_out = -49;
+  if(roll_out < -48) roll_out = -49;
+  
+  if(RCunlock == true)
+  {
+    motor_pwm0_duty  = throttleDutyCycle + pitch_out + roll_out - yaw_out ;
+    motor_pwm1_duty  = throttleDutyCycle + pitch_out - roll_out + yaw_out ;
+    motor_pwm2_duty  = throttleDutyCycle - pitch_out - roll_out - yaw_out ;
+    motor_pwm3_duty  = throttleDutyCycle - pitch_out + roll_out + yaw_out ;
+    
+    if(motor_pwm0_duty > 98){ motor_pwm0_duty = 98;}
+    if(motor_pwm1_duty > 98){ motor_pwm1_duty = 98;}
+    if(motor_pwm2_duty > 98){ motor_pwm2_duty = 98;}
+    if(motor_pwm3_duty > 98){ motor_pwm3_duty = 98;}
+    
+    if(motor_pwm0_duty < 50){ motor_pwm0_duty = 50;}
+    if(motor_pwm1_duty < 50){ motor_pwm1_duty = 50;}
+    if(motor_pwm2_duty < 50){ motor_pwm2_duty = 50;}
+    if(motor_pwm3_duty < 50){ motor_pwm3_duty = 50;}
+  }
+  else
+  {
+    motor_pwm0_duty  = 50 ;
+    motor_pwm1_duty  = 50 ;
+    motor_pwm2_duty  = 50 ;
+    motor_pwm3_duty  = 50 ;
+  }
+
+  PRINTF("pwm0 = %3d ,pwm1 = %3d ,pwm2 = %3d ,pwm3 = %3d\r\n" ,motor_pwm0_duty,motor_pwm1_duty,motor_pwm2_duty,motor_pwm3_duty);
+  
+  motor_pwm_reflash(motor_pwm0_duty ,
+                    motor_pwm1_duty ,
+                    motor_pwm2_duty ,
+                    motor_pwm3_duty );
+}
 /*******************************************************************************
  * EOF
  ******************************************************************************/

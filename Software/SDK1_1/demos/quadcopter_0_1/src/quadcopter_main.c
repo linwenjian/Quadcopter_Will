@@ -140,7 +140,7 @@ volatile uint32_t ADC_value_max[8]= {0};
 volatile bool g_AdcConvIntCompleted = false;
 
 volatile uint32_t remoteControlValue[8] = {0};
-
+volatile uint32_t remoteControlIntTimes[8] = {0};
 uint32_t remoteControlPinNum[] = {2,3,4,5,6,7,10,11};
 
 uint32_t uDutyCycle_add = 0;
@@ -260,7 +260,7 @@ int main (void)
     pit_user_config_t chn1Confg = {
       .isInterruptEnabled = true,
       .isTimerChained = false,
-      .periodUs = 2000000u
+      .periodUs = 20000u
     };
 
     // Init pit module and enable run in debug
@@ -268,7 +268,7 @@ int main (void)
 
     // Initialize PIT timer instance for channel 0 and 1
     PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 0, &chn0Confg);
-//    PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 1, &chn1Confg);
+    PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 1, &chn1Confg);
 
     // Start channel 0
 //    printf ("\n\rStarting channel No.0 ...");
@@ -276,7 +276,7 @@ int main (void)
 
     // Start channel 1
 //    printf ("\n\rStarting channel No.1 ...");
-//    PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 1);
+    PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 1);
 
 /*End*************************PIT Init*****************************************/
 
@@ -315,11 +315,11 @@ int main (void)
 
     packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
     packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
-    packet_upper_PC.user_data.trans_yaw = BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
+    packet_upper_PC.user_data.trans_yaw = 0;// BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
 
     uint8_t *p = (uint8_t*)&packet_upper_PC;
 
-    UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+  //  UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
 /*End*********匿名上位机发送的串口数据***********/
 
 /*Start************Remote Controller Unlock *************/
@@ -333,7 +333,7 @@ int main (void)
       }
       static uint32_t unlock_times = 0;
       static uint32_t lock_times = 0;
-//      PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
+//     PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
       if(isRCunlock == false)
       {
         if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] > RC_THRESHOLD_H))
@@ -369,10 +369,23 @@ int main (void)
 /*Start*********** Reflash the motor PWM **************/
       static uint32_t test_throttle_pwm = 50;
       test_throttle_pwm = remoteControlValue[kThrottle] / 2400 ;
-      motor_pwm_reflash(test_throttle_pwm,
-                        test_throttle_pwm,
-                        test_throttle_pwm,
-                        test_throttle_pwm);
+//      motor_pwm_reflash(test_throttle_pwm,
+//                        test_throttle_pwm,
+//                        test_throttle_pwm,
+//                        test_throttle_pwm);
+      static imu_float_euler_angle_t expectAngel = {
+        .imu_pitch = 0,
+        .imu_roll = 0,
+        .imu_yaw = 0,
+      };
+        
+      motor_pid_control(test_throttle_pwm,
+                        &expectAngel,
+                        &quadAngle,
+                        &pitch_pid,
+                        &yaw_pid,
+                        &roll_pid,
+                        isRCunlock);
 /*End************* Reflash the motor PWM **************/
      /*****end while(1) in mian loop*****/
     }
@@ -398,6 +411,7 @@ void PORTB_IRQHandler(void)
   {
     if (intFlag & (1 << remoteControlPinNum[i]))
     {
+      remoteControlIntTimes[i] = 0;//进入中断，就把这个值清零
       if (remoteControlValueFlag[i] == 0)
       {
         remoteControlValue1st[i] = (SysTick->VAL);
@@ -450,7 +464,6 @@ void PORTE_IRQHandler(void)
 
 void PIT0_IRQHandler(void)
 {
-  static bool led_flag = true;
   /* Clear interrupt flag.*/
   PIT_HAL_ClearIntFlag(PIT_BASE, 0U);
 
@@ -474,16 +487,27 @@ void PIT0_IRQHandler(void)
 
 void PIT1_IRQHandler(void)
 {
-  static bool led_flag = true;
   /* Clear interrupt flag.*/
   PIT_HAL_ClearIntFlag(PIT_BASE, 1U);
-  if(led_flag == true)
+  static uint16_t led4_i =0;
+  if(led4_i==0)
   {
-    LED3_ON;led_flag=false;
+    LED4_ON;led4_i=1;
   }
   else
   {
-    LED3_OFF;led_flag=true;
+    LED4_OFF;led4_i=0;
+  }
+  uint32_t i = 0;
+  for(i=0;i<8;i++)
+  {
+    remoteControlIntTimes[i] += 1; 
+    if(remoteControlIntTimes[i] > 3) //20ms，4个周期都没有中断，说明没有遥控器信号，清零。
+                                     //貌似 遥控器 掉电了 也继续有信号发出，得示波器量一下
+    { 
+      remoteControlIntTimes[i] = 10;
+      remoteControlValue[i] = 0;
+    }
   }
   //    pitIsrFlag[1] = true;
 }
