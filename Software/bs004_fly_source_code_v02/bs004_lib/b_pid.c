@@ -1,8 +1,8 @@
-
+ï»¿
 #include "b_pid.h" 
 //
-extern unsigned int pid_setting_P_value[3];		//Ô²µã²©Ê¿:PIDµÄP²ÎÊı£¬º¬XÖá , YÖá , ZÖá
-extern unsigned int pid_setting_D_value[3];		//Ô²µã²©Ê¿:PIDµÄI²ÎÊı£¬º¬XÖá , YÖá , ZÖá
+extern unsigned int pid_setting_P_value[3];		//åœ†ç‚¹åšå£«:PIDçš„På‚æ•°ï¼Œå«Xè½´ , Yè½´ , Zè½´
+extern unsigned int pid_setting_D_value[3];		//åœ†ç‚¹åšå£«:PIDçš„Iå‚æ•°ï¼Œå«Xè½´ , Yè½´ , Zè½´
 float b_pitch_p , b_roll_p , b_yaw_p;
 float b_pitch_i , b_roll_i , b_yaw_i;
 float b_pitch_d , b_roll_d , b_yaw_d;
@@ -26,7 +26,7 @@ void B_PID_Control(void)
 	b_pitch_d = pid_setting_D_value[1] * 1.0f;
 	b_yaw_d   = pid_setting_D_value[2] * 1.0f;
 	//
-	//Ô²µã²©Ê¿:ÈÚºÏÒ£¿ØÆ÷¿ØÖÆĞÅºÅ
+	//åœ†ç‚¹åšå£«:èåˆé¥æ§å™¨æ§åˆ¶ä¿¡å·
 	b_fly_m1 = b_fly_gas * b_fly_gas_scale - b_fly_pitch * b_fly_pitch_scale  +  b_fly_yaw * b_fly_yaw_scale;
 	b_fly_m3 = b_fly_gas * b_fly_gas_scale + b_fly_pitch * b_fly_pitch_scale  +  b_fly_yaw * b_fly_yaw_scale;
 	b_fly_m2 = b_fly_gas * b_fly_gas_scale - b_fly_roll  * b_fly_roll_scale   -  b_fly_yaw * b_fly_yaw_scale;
@@ -36,7 +36,7 @@ void B_PID_Control(void)
 	b_angle_cur_roll  = b_imu_roll;
 	b_angle_cur_yaw   = b_imu_yaw;
 	//
-	//Ô²µã²©Ê¿:ÈÚºÏ½Ç¶È±ÈÀı¿ØÖÆ
+	//åœ†ç‚¹åšå£«:èåˆè§’åº¦æ¯”ä¾‹æ§åˆ¶
 	b_fly_m1 = b_fly_m1 + b_pitch_p * b_angle_cur_pitch - b_roll_p * b_angle_cur_roll - b_yaw_p * b_angle_cur_yaw;
 	b_fly_m2 = b_fly_m2 - b_pitch_p * b_angle_cur_pitch - b_roll_p * b_angle_cur_roll + b_yaw_p * b_angle_cur_yaw;
 	b_fly_m3 = b_fly_m3 - b_pitch_p * b_angle_cur_pitch + b_roll_p * b_angle_cur_roll - b_yaw_p * b_angle_cur_yaw;

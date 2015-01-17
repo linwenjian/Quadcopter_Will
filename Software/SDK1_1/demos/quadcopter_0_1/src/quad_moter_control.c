@@ -22,7 +22,7 @@ void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
   uCnv3 = uMod * uDutyCyclePercent3 / 100;
 
   /* For 100% duty cycle */
-  if(uCnv0 >= uMod)
+  if(uCnv0 >= uMod) 
   {
     uCnv0 = uMod + 1;
   }
@@ -119,9 +119,9 @@ void IncPIDInit(pid_t *sptr)
 
 int16_t IncPIDCalc(double CurrentPoint , pid_t *sptr)
 { 
-  int16_t  iIncpid;   //当前误差 
+  int16_t  iIncpid;    
   double iError;
-  iError = sptr->ExpectPoint - CurrentPoint; 
+  iError = sptr->ExpectPoint - CurrentPoint;    //当前误差
   
   //增量计算 
   iIncpid =(int16_t)(sptr->Proportion * iError              //E[k]项 
@@ -136,14 +136,29 @@ int16_t IncPIDCalc(double CurrentPoint , pid_t *sptr)
   return(iIncpid); 
 } 
 
+int32_t LocPIDCalc(int16_t CurrentPoint , pid_t *sptr) 
+{ 
+  double  iError,dError; 
+  int16_t re_value;
+  iError = sptr->ExpectPoint - CurrentPoint;       //偏差 
+  sptr->SumError += iError;               //积分 
+  dError = iError - sptr->LastError;     //微分 
+  sptr->LastError = iError; 
+     
+  re_value = (int32_t)(sptr->Proportion * iError  //比例项 
+           + sptr->Integral * sptr->SumError   //积分项 
+           + sptr->Derivative * dError);
+  return(re_value);      //微分项 
+} 
+
 
 pid_t pitch_pid = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 0.25,        
-  .Integral   = 0  ,
-  .Derivative = 0.75,    
+  .Proportion = 10,        
+  .Integral   = 0 ,
+  .Derivative = 3 ,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        
@@ -153,9 +168,9 @@ pid_t roll_pid = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 0.25,        
-  .Integral   = 0  ,
-  .Derivative = 0.75,    
+  .Proportion = 10,        
+  .Integral   = 0 ,
+  .Derivative = 3 ,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        
@@ -194,7 +209,8 @@ void motor_pid_control(uint32_t throttleDutyCycle,
 *               |
 */ 
   
-  static int16_t pitch_out = 0,roll_out = 0,yaw_out = 0;
+  static int32_t pitch_out = 0,roll_out = 0,yaw_out = 0;
+//  static uint16_t pitch_out = 0,roll_out = 0,yaw_out = 0;
   static int16_t motor_pwm0_duty  = 0;
   static int16_t motor_pwm1_duty  = 0;
   static int16_t motor_pwm2_duty  = 0;
@@ -203,20 +219,27 @@ void motor_pid_control(uint32_t throttleDutyCycle,
   pitch_pid->ExpectPoint = expectAngel->imu_pitch;
   roll_pid->ExpectPoint  = expectAngel->imu_roll;
   
-  pitch_out += IncPIDCalc(currentAngel->imu_pitch , pitch_pid);
-  roll_out  += IncPIDCalc(currentAngel->imu_roll  , roll_pid);
+//  pitch_out += IncPIDCalc(currentAngel->imu_pitch , pitch_pid);
+//  roll_out  += IncPIDCalc(currentAngel->imu_roll  , roll_pid);
   
-  if(pitch_out > 48) pitch_out = 49;
-  if(roll_out > 48) roll_out = 49;
-  if(pitch_out < -48) pitch_out = -49;
-  if(roll_out < -48) roll_out = -49;
+  pitch_out =(int32_t)((LocPIDCalc(currentAngel->imu_pitch ,pitch_pid)) / 100) ;
+  roll_out  =(int32_t)((LocPIDCalc(currentAngel->imu_roll ,roll_pid )) / 100);
   
-  if(RCunlock == true)
+//  if(pitch_out > 3) pitch_out = 3;
+ // if(roll_out > 3) roll_out = 3;
+//  if(pitch_out < -5) pitch_out = -5;
+//  if(roll_out < -5) roll_out = -5;
+  
+  if(throttleDutyCycle > 75) throttleDutyCycle = 75; ////临时调小做保护
+  
+  if((RCunlock == true) && (throttleDutyCycle > 60) )
+//  throttleDutyCycle = 65;
+//    if(1)
   {
-    motor_pwm0_duty  = throttleDutyCycle + pitch_out + roll_out - yaw_out ;
-    motor_pwm1_duty  = throttleDutyCycle + pitch_out - roll_out + yaw_out ;
-    motor_pwm2_duty  = throttleDutyCycle - pitch_out - roll_out - yaw_out ;
-    motor_pwm3_duty  = throttleDutyCycle - pitch_out + roll_out + yaw_out ;
+    motor_pwm0_duty  = throttleDutyCycle - pitch_out - roll_out - yaw_out ;
+    motor_pwm1_duty  = throttleDutyCycle - pitch_out + roll_out + yaw_out ;
+    motor_pwm2_duty  = throttleDutyCycle + pitch_out + roll_out - yaw_out ;
+    motor_pwm3_duty  = throttleDutyCycle + pitch_out - roll_out + yaw_out ;
     
     if(motor_pwm0_duty > 98){ motor_pwm0_duty = 98;}
     if(motor_pwm1_duty > 98){ motor_pwm1_duty = 98;}

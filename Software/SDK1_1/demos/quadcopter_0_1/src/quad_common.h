@@ -148,7 +148,7 @@ void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
 
 typedef struct _pid 
 { 
-  double  ExpectPoint;              //设定目标 Desired Value 
+  double  ExpectPoint;        //设定目标 Desired Value 
   long SumError;              //误差累计  
   
   double  Proportion;         //比例常数 Proportional Const 
@@ -170,6 +170,7 @@ void motor_pid_control(uint32_t throttleDutyCycle,
                        pid_t *yaw_pid,
                        pid_t *roll_pid,
                        bool RCunlock );
+extern bool pitIsrFlag1;
 #endif
 /*******************************************************************************
 * EOF

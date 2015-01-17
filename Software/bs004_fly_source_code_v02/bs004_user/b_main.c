@@ -68,7 +68,7 @@ int main()
 				case UPDATE_MOTOR:
 					B_Get_MPU6050_Data();
 					B_Quad_Calculation();
-				  B_PID_Control();
+				    B_PID_Control();
 					B_Motor_Control();
 					//
 					system_timer_state=UPDATE_COMMAND;

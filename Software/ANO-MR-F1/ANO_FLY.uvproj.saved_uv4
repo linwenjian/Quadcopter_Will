@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_projx.xsd">
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_proj.xsd">
 
-  <SchemaVersion>2.1</SchemaVersion>
+  <SchemaVersion>1.1</SchemaVersion>
 
   <Header>### uVision Project, (C) Keil Software</Header>
 
   <Targets>
     <Target>
-      <TargetName>BS004X_Fly_With_BL</TargetName>
+      <TargetName>ANO_FLY</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32F103RC</Device>
+          <Device>STM32F103C8</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IROM(0x08000000,0x40000) IRAM(0x20000000,0xC000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
+          <Cpu>IROM(0x08000000,0x10000) IRAM(0x20000000,0x5000) CPUTYPE("Cortex-M3") CLOCK(72000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
-          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000 -FP0($$Device:STM32F103RC$Flash\STM32F10x_512.FLM))</FlashDriverDll>
-          <DeviceId>4230</DeviceId>
-          <RegisterFile>$$Device:STM32F103RC$Device\Include\stm32f10x.h</RegisterFile>
+          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F10x_128 -FS08000000 -FL010000 -FP0($$Device:STM32F103C8$Flash\STM32F10x_128.FLM))</FlashDriverDll>
+          <DeviceId>4235</DeviceId>
+          <RegisterFile>$$Device:STM32F103C8$Device\Include\stm32f10x.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -29,7 +29,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:STM32F103RC$SVD\STM32F103xx.svd</SFDFile>
+          <SFDFile>$$Device:STM32F103C8$SVD\STM32F103xx.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -44,14 +44,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\output\</OutputDirectory>
-          <OutputName>AnBT_Main_FWH</OutputName>
+          <OutputDirectory>.\Build\</OutputDirectory>
+          <OutputName>ANO_FLY</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\</ListingPath>
+          <ListingPath>.\Build\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -72,13 +72,11 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
-            <nStopB1X>0</nStopB1X>
-            <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
-            <RunUserProg1>1</RunUserProg1>
+            <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name>fromelf.exe --bin -o .\output\release\anbt_main_fwh.bin .\output\anbt_main_fwh.axf</UserProg1Name>
+            <UserProg1Name></UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
@@ -108,7 +106,7 @@
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments></TargetDllArguments>
+          <TargetDllArguments>-REMAP</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -121,7 +119,7 @@
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
           <Simulator>
-            <UseSimulator>1</UseSimulator>
+            <UseSimulator>0</UseSimulator>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -130,22 +128,22 @@
             <RestoreFunctions>1</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
-            <UseTarget>0</UseTarget>
+            <UseTarget>1</UseTarget>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>0</RunToMain>
+            <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
             <RestoreWatchpoints>1</RestoreWatchpoints>
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
+            <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreTracepoints>1</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>5</TargetSelection>
+          <TargetSelection>6</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -173,7 +171,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>Segger\JL2CM3.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -278,12 +276,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0xc000</Size>
+                <Size>0x5000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x40000</Size>
+                <Size>0x10000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -308,7 +306,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x40000</Size>
+                <Size>0x10000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -333,7 +331,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0xc000</Size>
+                <Size>0x5000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -360,10 +358,10 @@
             <uC99>0</uC99>
             <useXO>0</useXO>
             <VariousControls>
-              <MiscControls></MiscControls>
-              <Define></Define>
+              <MiscControls>--c99</MiscControls>
+              <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\stm32_lib\inc;.\bs004_lib;.\bs004_user</IncludePath>
+              <IncludePath>.\LIB;.\APP;.\BSP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,7 +391,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\output\AnBT_Main_FWH.sct</ScatterFile>
+            <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -404,197 +402,262 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>stm32_lib</GroupName>
+          <GroupName>SYS</GroupName>
           <Files>
             <File>
-              <FileName>stm32f10x_adc.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_adc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_bkp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_bkp.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_can.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_crc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dac.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_dac.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dbgmcu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_dbgmcu.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_exti.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_fsmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_fsmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_iwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_iwdg.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_lib.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_lib.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_nvic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_nvic.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_sdio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_sdio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_systick.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_wwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_wwdg.c</FilePath>
-            </File>
-            <File>
-              <FileName>cortexm3_macro.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\stm32_lib\startup\cortexm3_macro.s</FilePath>
+              <FilePath>.\APP\main.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_it.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\stm32_lib\src\stm32f10x_it.c</FilePath>
+              <FilePath>.\APP\stm32f10x_it.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_vector.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\stm32_lib\startup\stm32f10x_vector.s</FilePath>
+              <FileName>sysconfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\APP\sysconfig.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>user</GroupName>
+          <GroupName>APP</GroupName>
           <Files>
             <File>
-              <FileName>b_adc.c</FileName>
+              <FileName>Imu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_adc.c</FilePath>
+              <FilePath>.\APP\Imu.c</FilePath>
             </File>
             <File>
-              <FileName>b_bluetooth.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_bluetooth.c</FilePath>
+              <FileName>Imu.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\APP\Imu.h</FilePath>
             </File>
             <File>
-              <FileName>b_imu.c</FileName>
+              <FileName>Control.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_imu.c</FilePath>
+              <FilePath>.\APP\Control.c</FilePath>
             </File>
             <File>
-              <FileName>b_led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_led.c</FilePath>
+              <FileName>Control.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\APP\Control.h</FilePath>
             </File>
             <File>
-              <FileName>b_motor.c</FileName>
+              <FileName>Rc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_motor.c</FilePath>
+              <FilePath>.\APP\Rc.c</FilePath>
             </File>
             <File>
-              <FileName>b_mpu6050.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_mpu6050.c</FilePath>
+              <FileName>Rc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\APP\Rc.h</FilePath>
             </File>
             <File>
-              <FileName>b_parameter.c</FileName>
+              <FileName>Data_Transfer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_parameter.c</FilePath>
+              <FilePath>.\APP\Data_Transfer.c</FilePath>
             </File>
             <File>
-              <FileName>b_pid.c</FileName>
+              <FileName>Data_Transfer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\APP\Data_Transfer.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>BSP.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_pid.c</FilePath>
+              <FilePath>.\BSP\BSP.c</FilePath>
             </File>
             <File>
-              <FileName>b_sys.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\bs004_lib\b_sys.c</FilePath>
+              <FileName>BSP.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\BSP.h</FilePath>
             </File>
             <File>
-              <FileName>b_main.c</FileName>
+              <FileName>Led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\bs004_user\b_main.c</FilePath>
+              <FilePath>.\BSP\Led.c</FilePath>
+            </File>
+            <File>
+              <FileName>Led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\Led.h</FilePath>
+            </File>
+            <File>
+              <FileName>eeprom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\eeprom.c</FilePath>
+            </File>
+            <File>
+              <FileName>eeprom.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\eeprom.h</FilePath>
+            </File>
+            <File>
+              <FileName>Tim3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\Tim3.c</FilePath>
+            </File>
+            <File>
+              <FileName>Tim3.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\Tim3.h</FilePath>
+            </File>
+            <File>
+              <FileName>Usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\Usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>Usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\Usart.h</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\MPU6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\MPU6050.h</FilePath>
+            </File>
+            <File>
+              <FileName>Moto.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\Moto.c</FilePath>
+            </File>
+            <File>
+              <FileName>Moto.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\Moto.h</FilePath>
+            </File>
+            <File>
+              <FileName>Spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\Spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>Spi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\Spi.h</FilePath>
+            </File>
+            <File>
+              <FileName>Nrf24l01.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\Nrf24l01.c</FilePath>
+            </File>
+            <File>
+              <FileName>Nrf24l01.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\Nrf24l01.h</FilePath>
+            </File>
+            <File>
+              <FileName>Tim_pwm_in.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\Tim_pwm_in.c</FilePath>
+            </File>
+            <File>
+              <FileName>Tim_pwm_in.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\Tim_pwm_in.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LIB</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32f10x_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LIB\stm32f10x_conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>startup_stm32f10x_md.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\LIB\startup_stm32f10x_md.s</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f10x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\system_stm32f10x.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_cm3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\core_cm3.c</FilePath>
+            </File>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\stm32f10x_dma.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>IICLIB</GroupName>
+          <Files>
+            <File>
+              <FileName>ANO_TC_STM32F1_I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\ANO_TC_STM32F1_I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>ANO_TC_STM32F1_I2C.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\BSP\ANO_TC_STM32F1_I2C.lib</FilePath>
             </File>
           </Files>
         </Group>
