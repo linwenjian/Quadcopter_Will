@@ -93,9 +93,10 @@ ftm_pwm_param_t ftmParam3 = {
 };
 
 const char trans_header_table[3] = {0x88, 0xAF, 0x1C};
+const char trans_header_table_pwm[3] = {0x88, 0xAE, 0x12};
 //char trans_header_table1[] = {0x88, 0xA1, 2,0,0,0};
 trans_packet_t packet_upper_PC ;
-
+trans_packet_pwm_t packet_pwm_upper_PC ;
 mems_data_t  memsRawDate ;
 imu_float_euler_angle_t quadAngle;
 
@@ -189,6 +190,7 @@ void hwtimer_callback(void* data)
 int main (void)
 {
   memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
+  memcpy(packet_pwm_upper_PC.trans_header, trans_header_table_pwm, sizeof(trans_header_table_pwm));
   // RX buffers
   //! @param receiveBuff Buffer used to hold received data
   uint8_t receiveBuff;
@@ -259,7 +261,7 @@ int main (void)
   pit_user_config_t chn1Confg = {
     .isInterruptEnabled = true,
     .isTimerChained = false,
-    .periodUs = 10000u
+    .periodUs = 20000u
   };
   
   // Init pit module and enable run in debug
@@ -291,7 +293,10 @@ int main (void)
   
   while(1)
   {
+
     /*****start while(1) in mian loop*****/
+    if (pitIsrFlag1 == true)  
+    {
     static uint16_t led5_i =0;
     if(led5_i==0)
     {
@@ -302,10 +307,16 @@ int main (void)
       LED5_OFF;led5_i=0;
     }
     /*Start*********匿名上位机发送的串口数据***********/
-    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
-    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
-    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
-    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
+//    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
+//    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
+//    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
+//    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
+    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16((uint16_t)(motor_pwm0_cnv/6));
+    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16((uint16_t)(motor_pwm1_cnv)/6);
+    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16((uint16_t)(motor_pwm2_cnv)/6);
+    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16((uint16_t)(motor_pwm3_cnv)/6);
+
+
     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);
     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
     packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
@@ -316,14 +327,42 @@ int main (void)
     packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
     packet_upper_PC.user_data.trans_yaw = 0;// BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
     
-    uint8_t *p = (uint8_t*)&packet_upper_PC;
+//        unt16_t throt;
+//    unt16_t yaw;
+//    unt16_t roll;
+//    unt16_t pitch;
+//    unt16_t aux[5];
+//    unt16_t pwm[4];
+//    unt16_t votage;
+    packet_pwm_upper_PC.user_data.throt = BSWAP_16((uint16_t)(remoteControlValue[kThrottle]/10));
+    packet_pwm_upper_PC.user_data.yaw   = BSWAP_16((uint16_t)(remoteControlValue[kYaw]/10));
+    packet_pwm_upper_PC.user_data.roll  = BSWAP_16((uint16_t)(remoteControlValue[kRoll]/10));
+    packet_pwm_upper_PC.user_data.pitch = BSWAP_16((uint16_t)(remoteControlValue[kPitch]/10));
     
-    //    UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+    packet_pwm_upper_PC.user_data.aux[0] = BSWAP_16((uint16_t)(100));
+    packet_pwm_upper_PC.user_data.aux[1] = BSWAP_16((uint16_t)(200));
+    packet_pwm_upper_PC.user_data.aux[2] = BSWAP_16((uint16_t)(300));
+    packet_pwm_upper_PC.user_data.aux[3] = BSWAP_16((uint16_t)(400));
+    packet_pwm_upper_PC.user_data.aux[4] = BSWAP_16((uint16_t)(500));
+    
+    packet_pwm_upper_PC.user_data.pwm[0] = BSWAP_16((uint16_t)(motor_pwm0_cnv / 600));
+    packet_pwm_upper_PC.user_data.pwm[1] = BSWAP_16((uint16_t)(motor_pwm1_cnv / 600));
+    packet_pwm_upper_PC.user_data.pwm[2] = BSWAP_16((uint16_t)(motor_pwm2_cnv / 600));
+    packet_pwm_upper_PC.user_data.pwm[3] = BSWAP_16((uint16_t)(motor_pwm3_cnv / 600));
+    
+    
+    uint8_t *q = (uint8_t*)&packet_pwm_upper_PC;
+    UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,q,32);
+    
+    uint8_t *p = (uint8_t*)&packet_upper_PC;
+    UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+    
+
+    
     /*End*********匿名上位机发送的串口数据***********/
     
     /*Start************Remote Controller Unlock *************/
-    if (pitIsrFlag1 == true)  
-    {
+
       pitIsrFlag1 = false;
       if(isRCunlock == true)
       {

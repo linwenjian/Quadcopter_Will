@@ -324,7 +324,8 @@ return;
 #endif
 
 
-
+double gyro_pitch_global = 0;
+double gyro_roll_global = 0;
 //!< this functino must be called about every 2ms to get accurate eular angles
 uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRawDdata)
 {
@@ -348,11 +349,14 @@ uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRaw
 //                  angle);
     
   
+  gyro_pitch_global = (double)(0.70710678 *(double)(pRawDdata->gyro_x - pRawDdata->gyro_y));
+  gyro_roll_global  = (double)(0.70710678 *(double)(pRawDdata->gyro_x + pRawDdata->gyro_y));
   
-  
-  double gx = (double)(0.70710678 *(double)(pRawDdata->gyro_x - pRawDdata->gyro_y))* Gyro_Gr;
-  double gy = (double)(0.70710678 *(double)(pRawDdata->gyro_x + pRawDdata->gyro_y))* Gyro_Gr;
+  double gx = gyro_pitch_global* Gyro_Gr;
+  double gy = gyro_roll_global * Gyro_Gr;
   double gz = ((double)pRawDdata->gyro_z)* Gyro_Gr;
+  
+
   
   double ax = (double)(0.70710678 *(double)(pRawDdata->accel_x - pRawDdata->accel_y));
   double ay = (double)(0.70710678 *(double)(pRawDdata->accel_x + pRawDdata->accel_y));

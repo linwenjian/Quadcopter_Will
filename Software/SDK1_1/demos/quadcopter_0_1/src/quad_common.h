@@ -171,6 +171,11 @@ void motor_pid_control(uint32_t throttleDutyCycle,
                        pid_t *roll_pid,
                        bool RCunlock );
 extern bool pitIsrFlag1;
+
+extern uint16_t motor_pwm0_cnv ;
+extern uint16_t motor_pwm1_cnv ;
+extern uint16_t motor_pwm2_cnv ;
+extern uint16_t motor_pwm3_cnv ;
 #endif
 /*******************************************************************************
 * EOF

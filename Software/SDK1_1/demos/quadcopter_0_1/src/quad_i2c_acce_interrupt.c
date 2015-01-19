@@ -453,9 +453,9 @@ i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
   pMemsRawData->gyro_y -= gyro_y_aver;
   pMemsRawData->gyro_z -= gyro_z_aver;
   
-//  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
-//  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,10,10,1);
-//  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
+  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
+  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,10,10,1);
+  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
   
 //  int16_t kal_gyro_x =0;
 //  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);

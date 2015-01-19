@@ -46,6 +46,53 @@ void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
   FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
 }
 
+void motor_cnv_reflash(uint16_t uCnv0 ,uint16_t uCnv1,
+                       uint16_t uCnv2 ,uint16_t uCnv3 )
+{
+//  uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
+  uint16_t uMod;
+  uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
+
+//  //set the dutyCycle to 50% (no speed on motor) if RC is lock
+//  if(isRCunlock == false)
+//  {
+//    uDutyCyclePercent0 = 50;
+//    uDutyCyclePercent1 = 50;
+//    uDutyCyclePercent2 = 50;
+//    uDutyCyclePercent3 = 50;
+//  }  //this function should be in motor_pid_control
+
+  uMod = FTM_HAL_GetMod(ftmBaseAddr);
+//  uCnv0 = uMod * uDutyCyclePercent0 / 100;
+//  uCnv1 = uMod * uDutyCyclePercent1 / 100;
+//  uCnv2 = uMod * uDutyCyclePercent2 / 100;
+//  uCnv3 = uMod * uDutyCyclePercent3 / 100;
+
+  /* For 100% duty cycle */
+  if(uCnv0 >= uMod) 
+  {
+    uCnv0 = uMod + 1;
+  }
+  if(uCnv1 >= uMod)
+  {
+    uCnv1 = uMod + 1;
+  }
+  if(uCnv2 >= uMod)
+  {
+    uCnv2 = uMod + 1;
+  }
+  if(uCnv3 >= uMod)
+  {
+    uCnv3 = uMod + 1;
+  }
+  FTM_HAL_SetChnCountVal(ftmBaseAddr, 0, uCnv0);
+  FTM_HAL_SetChnCountVal(ftmBaseAddr, 1, uCnv1);
+  FTM_HAL_SetChnCountVal(ftmBaseAddr, 2, uCnv2);
+  FTM_HAL_SetChnCountVal(ftmBaseAddr, 3, uCnv3);
+
+  FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
+}
+
 //void motor_pid_control(uint32_t throttleDutyCycle,
 //                       imu_float_euler_angle_t * expectAngel,
 //                       imu_float_euler_angle_t * currentAngel,
@@ -136,13 +183,14 @@ int16_t IncPIDCalc(double CurrentPoint , pid_t *sptr)
   return(iIncpid); 
 } 
 
-int32_t LocPIDCalc(int16_t CurrentPoint , pid_t *sptr) 
+int32_t LocPIDCalc(double CurrentPoint , pid_t *sptr , double gyro_d_value) 
 { 
   double  iError,dError; 
-  int16_t re_value;
+  int32_t re_value;
   iError = sptr->ExpectPoint - CurrentPoint;       //偏差 
-  sptr->SumError += iError;               //积分 
+ // sptr->SumError += iError;               //积分 
   dError = iError - sptr->LastError;     //微分 
+ // dError = -gyro_d_value;
   sptr->LastError = iError; 
      
   re_value = (int32_t)(sptr->Proportion * iError  //比例项 
@@ -156,9 +204,9 @@ pid_t pitch_pid = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 10,        
+  .Proportion = 80,        
   .Integral   = 0 ,
-  .Derivative = 3 ,//0.08 * 100,//0.05,    
+  .Derivative = 20 ,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        
@@ -168,9 +216,9 @@ pid_t roll_pid = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 10,        
+  .Proportion = 80,        
   .Integral   = 0 ,
-  .Derivative = 3 ,//0.08 * 100,//0.05,    
+  .Derivative = 20 ,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        
@@ -187,6 +235,11 @@ pid_t yaw_pid = {
   .LastError = 0,         
   .PrevError = 0,        
 };
+
+uint16_t motor_pwm0_cnv  = 0;
+uint16_t motor_pwm1_cnv  = 0;
+uint16_t motor_pwm2_cnv  = 0;
+uint16_t motor_pwm3_cnv  = 0;
 
 void motor_pid_control(uint32_t throttleDutyCycle,
                        imu_float_euler_angle_t * expectAngel,
@@ -211,10 +264,14 @@ void motor_pid_control(uint32_t throttleDutyCycle,
   
   static int32_t pitch_out = 0,roll_out = 0,yaw_out = 0;
 //  static uint16_t pitch_out = 0,roll_out = 0,yaw_out = 0;
-  static int16_t motor_pwm0_duty  = 0;
-  static int16_t motor_pwm1_duty  = 0;
-  static int16_t motor_pwm2_duty  = 0;
-  static int16_t motor_pwm3_duty  = 0;
+//  static int16_t motor_pwm0_duty  = 0;
+//  static int16_t motor_pwm1_duty  = 0;
+//  static int16_t motor_pwm2_duty  = 0;
+//  static int16_t motor_pwm3_duty  = 0;
+//  static uint16_t motor_pwm0_cnv  = 0;
+//  static uint16_t motor_pwm1_cnv  = 0;
+//  static uint16_t motor_pwm2_cnv  = 0;
+//  static uint16_t motor_pwm3_cnv  = 0;
   
   pitch_pid->ExpectPoint = expectAngel->imu_pitch;
   roll_pid->ExpectPoint  = expectAngel->imu_roll;
@@ -222,8 +279,8 @@ void motor_pid_control(uint32_t throttleDutyCycle,
 //  pitch_out += IncPIDCalc(currentAngel->imu_pitch , pitch_pid);
 //  roll_out  += IncPIDCalc(currentAngel->imu_roll  , roll_pid);
   
-  pitch_out =(int32_t)((LocPIDCalc(currentAngel->imu_pitch ,pitch_pid)) / 100) ;
-  roll_out  =(int32_t)((LocPIDCalc(currentAngel->imu_roll ,roll_pid )) / 100);
+  pitch_out =(int32_t)(LocPIDCalc(currentAngel->imu_pitch ,pitch_pid,gyro_pitch_global));
+  roll_out  =(int32_t)(LocPIDCalc(currentAngel->imu_roll ,roll_pid,gyro_roll_global));
   
 //  if(pitch_out > 3) pitch_out = 3;
  // if(roll_out > 3) roll_out = 3;
@@ -231,40 +288,55 @@ void motor_pid_control(uint32_t throttleDutyCycle,
 //  if(roll_out < -5) roll_out = -5;
   
   if(throttleDutyCycle > 75) throttleDutyCycle = 75; ////临时调小做保护
+  throttleDutyCycle = throttleDutyCycle * 600 ; //umod=59999;所以50%是 30000 - 60000，到时候再改。
   
-  if((RCunlock == true) && (throttleDutyCycle > 60) )
+  if((RCunlock == true) && (throttleDutyCycle > (60*600) ))
 //  throttleDutyCycle = 65;
 //    if(1)
   {
-    motor_pwm0_duty  = throttleDutyCycle - pitch_out - roll_out - yaw_out ;
-    motor_pwm1_duty  = throttleDutyCycle - pitch_out + roll_out + yaw_out ;
-    motor_pwm2_duty  = throttleDutyCycle + pitch_out + roll_out - yaw_out ;
-    motor_pwm3_duty  = throttleDutyCycle + pitch_out - roll_out + yaw_out ;
+//    motor_pwm0_duty  = throttleDutyCycle - pitch_out - roll_out - yaw_out ;
+//    motor_pwm1_duty  = throttleDutyCycle - pitch_out + roll_out + yaw_out ;
+//    motor_pwm2_duty  = throttleDutyCycle + pitch_out + roll_out - yaw_out ;
+//    motor_pwm3_duty  = throttleDutyCycle + pitch_out - roll_out + yaw_out ;
+    motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle - pitch_out - roll_out - yaw_out) ;
+    motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle - pitch_out + roll_out + yaw_out) ;
+    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle + pitch_out + roll_out - yaw_out) ;
+    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle + pitch_out - roll_out + yaw_out) ;   
     
-    if(motor_pwm0_duty > 98){ motor_pwm0_duty = 98;}
-    if(motor_pwm1_duty > 98){ motor_pwm1_duty = 98;}
-    if(motor_pwm2_duty > 98){ motor_pwm2_duty = 98;}
-    if(motor_pwm3_duty > 98){ motor_pwm3_duty = 98;}
     
-    if(motor_pwm0_duty < 50){ motor_pwm0_duty = 50;}
-    if(motor_pwm1_duty < 50){ motor_pwm1_duty = 50;}
-    if(motor_pwm2_duty < 50){ motor_pwm2_duty = 50;}
-    if(motor_pwm3_duty < 50){ motor_pwm3_duty = 50;}
+//    if(motor_pwm0_duty > 98){ motor_pwm0_duty = 98;}
+//    if(motor_pwm1_duty > 98){ motor_pwm1_duty = 98;}
+//    if(motor_pwm2_duty > 98){ motor_pwm2_duty = 98;}
+//    if(motor_pwm3_duty > 98){ motor_pwm3_duty = 98;}
+//    
+//    if(motor_pwm0_duty < 50){ motor_pwm0_duty = 50;}
+//    if(motor_pwm1_duty < 50){ motor_pwm1_duty = 50;}
+//    if(motor_pwm2_duty < 50){ motor_pwm2_duty = 50;}
+//    if(motor_pwm3_duty < 50){ motor_pwm3_duty = 50;}
   }
   else
   {
-    motor_pwm0_duty  = 50 ;
-    motor_pwm1_duty  = 50 ;
-    motor_pwm2_duty  = 50 ;
-    motor_pwm3_duty  = 50 ;
+//    motor_pwm0_duty  = 50 ;
+//    motor_pwm1_duty  = 50 ;
+//    motor_pwm2_duty  = 50 ;
+//    motor_pwm3_duty  = 50 ;
+        motor_pwm0_cnv  = 30000 ;
+        motor_pwm1_cnv  = 30000 ;
+        motor_pwm2_cnv  = 30000 ;
+        motor_pwm3_cnv  = 30000 ;
+    
   }
 
-  PRINTF("pwm0 = %3d ,pwm1 = %3d ,pwm2 = %3d ,pwm3 = %3d\r\n" ,motor_pwm0_duty,motor_pwm1_duty,motor_pwm2_duty,motor_pwm3_duty);
-  
-  motor_pwm_reflash(motor_pwm0_duty ,
-                    motor_pwm1_duty ,
-                    motor_pwm2_duty ,
-                    motor_pwm3_duty );
+//  PRINTF("pwm0 = %3d ,pwm1 = %3d ,pwm2 = %3d ,pwm3 = %3d\r\n" ,motor_pwm0_duty,motor_pwm1_duty,motor_pwm2_duty,motor_pwm3_duty);
+//   PRINTF("cnv0 = %3d ,cnv1 = %3d ,cnv2 = %3d ,cnv3 = %3d\r\n" ,motor_pwm0_cnv,motor_pwm1_cnv,motor_pwm2_cnv,motor_pwm3_cnv); 
+  motor_cnv_reflash(motor_pwm0_cnv,
+                    motor_pwm1_cnv,
+                    motor_pwm2_cnv,
+                    motor_pwm3_cnv);
+//  motor_pwm_reflash(motor_pwm0_duty ,
+//                    motor_pwm1_duty ,
+//                    motor_pwm2_duty ,
+//                    motor_pwm3_duty );
 }
 /*******************************************************************************
  * EOF
