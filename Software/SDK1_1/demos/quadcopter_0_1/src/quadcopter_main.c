@@ -261,7 +261,7 @@ int main (void)
   pit_user_config_t chn1Confg = {
     .isInterruptEnabled = true,
     .isTimerChained = false,
-    .periodUs = 20000u
+    .periodUs = 10000u
   };
   
   // Init pit module and enable run in debug
@@ -307,16 +307,10 @@ int main (void)
       LED5_OFF;led5_i=0;
     }
     /*Start*********匿名上位机发送的串口数据***********/
-//    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
-//    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
-//    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
-//    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
-    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16((uint16_t)(motor_pwm0_cnv/6));
-    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16((uint16_t)(motor_pwm1_cnv)/6);
-    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16((uint16_t)(motor_pwm2_cnv)/6);
-    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16((uint16_t)(motor_pwm3_cnv)/6);
-
-
+    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
+    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
+    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
+    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
     packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);
     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
     packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
@@ -374,6 +368,7 @@ int main (void)
       }
       static uint32_t unlock_times = 0;
       static uint32_t lock_times = 0;
+      uint32_t waitTimes2s = (3000 / (chn1Confg.periodUs / 1000) ) ;
       //     PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
       if(isRCunlock == false)
       {
@@ -385,7 +380,7 @@ int main (void)
         {
           unlock_times = 0;
         }
-        if(unlock_times > 50)
+        if(unlock_times > (waitTimes2s/2) )
         {
           isRCunlock = true;
         }
@@ -400,7 +395,7 @@ int main (void)
         {
           lock_times = 0;
         }
-        if(lock_times > 20)
+        if(lock_times > (waitTimes2s/4))
         {
           isRCunlock = false;
         }
@@ -410,9 +405,10 @@ int main (void)
       /*Start*********** Reflash the motor PWM **************/     
       static uint32_t motor_init_times = 0 ;
       motor_init_times++;
-      if(motor_init_times > 100)
+//      uint32_t waitTimes2s = (3000 / (chn1Confg.periodUs / 1000) ) ;
+      if(motor_init_times > waitTimes2s )
       { 
-        motor_init_times = 101 ; 
+        motor_init_times = (waitTimes2s+1) ; 
         static uint32_t test_throttle_pwm = 50;
         test_throttle_pwm = remoteControlValue[kThrottle] / 2400 ;
         //      motor_pwm_reflash(test_throttle_pwm,
