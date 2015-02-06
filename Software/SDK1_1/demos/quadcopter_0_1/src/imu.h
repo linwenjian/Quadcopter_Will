@@ -8,6 +8,21 @@
 
 #define SLIDING_FILTER_DEEP     (20)
 
+
+
+
+#define PI             3.1415926f
+#define Kp             10.0f     /* proportional gain governs rate of convergence to accelerometer/magnetometer */
+#define Ki             0.005f     /* integral gain governs rate of convergence of gyroscope biases */
+#define halfT          0.001f //陀螺仪采集周期的一半
+#define Gyro_G         (0.07f)
+#define Gyro_Gr        (0.00122173f) //弧度/秒 
+//L3G4200D 陀螺仪的值x * 70 / 1000 度/秒， 换算成弧度 x * 70 / 1000 *0.01745329252 = x * 0.00122173
+
+
+
+
+
 //!< return 0 if you get data succ. reutrn else if data get failed
 typedef struct
 {

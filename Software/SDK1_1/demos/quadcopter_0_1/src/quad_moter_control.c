@@ -190,10 +190,10 @@ int32_t LocPIDCalc(double CurrentPoint , pid_t *sptr , double gyro_d_value)
   iError = sptr->ExpectPoint - CurrentPoint;       //偏差 
   sptr->SumError += iError;               //积分 
   
-  if(sptr->SumError > 50)
-  { sptr->SumError  = 50 ;}
-  if(sptr->SumError < -50)
-  { sptr->SumError  = -50 ;}
+  if(sptr->SumError > 30000)
+  { sptr->SumError  = 30000 ;}
+  if(sptr->SumError < -30000)
+  { sptr->SumError  = -30000 ;}
   
 //  sptr->SumError = 0;
   
@@ -212,21 +212,33 @@ pid_t pitch_pid = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 70,        
-  .Integral   = 2 ,
-  .Derivative = 15 ,//0.08 * 100,//0.05,    
+  .Proportion = 10,        
+  .Integral   = 0.10,//0.1 ,
+  .Derivative = 9,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        
 };
 
-pid_t roll_pid = {
+pid_t roll_pid00 = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 0,        
-  .Integral   = 0 ,
-  .Derivative = 0 ,//0.08 * 100,//0.05,    
+  .Proportion = 3,        
+  .Integral   = 0,
+  .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,    
+  
+  .LastError = 0,         
+  .PrevError = 0,        
+};
+
+pid_t roll_pid11 = {
+  .ExpectPoint = 0,       
+  .SumError    = 0,          
+  
+  .Proportion = 10,//8,        
+  .Integral   = 0.1,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 50,//4.5,//,//5,//,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        
@@ -254,7 +266,8 @@ void motor_pid_control(uint32_t throttleDutyCycle,
                        imu_float_euler_angle_t * currentAngel,
                        pid_t *pitch_pid,
                        pid_t *yaw_pid,
-                       pid_t *roll_pid,
+                       pid_t *roll_pid0,
+                       pid_t *roll_pid1,                  
                        bool RCunlock )//unfinished.20150105
 {
 /*          这个是ROLL轴，左低右高，ROLL值为正，差距越大值越大。翻过180度后变为-179...
@@ -270,7 +283,7 @@ void motor_pid_control(uint32_t throttleDutyCycle,
 *               |
 */ 
   
-  static int32_t pitch_out = 0,roll_out = 0,yaw_out = 0;
+  static int32_t pitch_out = 0,roll_out0 = 0,roll_out1 = 0,yaw_out = 0;
 //  static uint16_t pitch_out = 0,roll_out = 0,yaw_out = 0;
 //  static int16_t motor_pwm0_duty  = 0;
 //  static int16_t motor_pwm1_duty  = 0;
@@ -282,13 +295,19 @@ void motor_pid_control(uint32_t throttleDutyCycle,
 //  static uint16_t motor_pwm3_cnv  = 0;
   
   pitch_pid->ExpectPoint = expectAngel->imu_pitch;
-  roll_pid->ExpectPoint  = expectAngel->imu_roll;
+  roll_pid0->ExpectPoint  = expectAngel->imu_roll;
   
 //  pitch_out += IncPIDCalc(currentAngel->imu_pitch , pitch_pid);
 //  roll_out  += IncPIDCalc(currentAngel->imu_roll  , roll_pid);
   
   pitch_out =(int32_t)(LocPIDCalc(currentAngel->imu_pitch ,pitch_pid,gyro_pitch_global));
-  roll_out  =(int32_t)(LocPIDCalc(currentAngel->imu_roll ,roll_pid,gyro_roll_global));
+  
+  
+//  roll_out0 = (int32_t)(LocPIDCalc(currentAngel->imu_roll ,roll_pid0,gyro_roll_global));
+//  
+//  roll_pid1->ExpectPoint  = roll_out0;
+//  
+//  roll_out1  =(int32_t)(LocPIDCalc( (gyro_roll_global*Gyro_G) ,roll_pid1,gyro_roll_global));
   
 //  if(pitch_out > 3) pitch_out = 3;
  // if(roll_out > 3) roll_out = 3;
@@ -302,6 +321,19 @@ void motor_pid_control(uint32_t throttleDutyCycle,
 //  throttleDutyCycle = 65;
 //    if(1)
   {
+    
+      roll_out0 = (int32_t)(LocPIDCalc(currentAngel->imu_roll ,roll_pid0,gyro_roll_global));
+  
+  roll_pid1->ExpectPoint  = roll_out0;
+  
+  roll_out1  =(int32_t)(LocPIDCalc( (gyro_roll_global*Gyro_G) ,roll_pid1,gyro_roll_global));
+    
+    
+    
+    
+    
+    
+    
 //    motor_pwm0_duty  = throttleDutyCycle - pitch_out - roll_out - yaw_out ;
 //    motor_pwm1_duty  = throttleDutyCycle - pitch_out + roll_out + yaw_out ;
 //    motor_pwm2_duty  = throttleDutyCycle + pitch_out + roll_out - yaw_out ;
@@ -312,10 +344,10 @@ void motor_pid_control(uint32_t throttleDutyCycle,
 //    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle + pitch_out + roll_out - yaw_out) ;
 //    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle + pitch_out - roll_out + yaw_out) ;   
     
-    motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle - pitch_out);// - roll_out - yaw_out) ;
-    motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle - pitch_out);// + roll_out + yaw_out) ;
-    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle + pitch_out);// + roll_out - yaw_out) ;
-    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle + pitch_out);// - roll_out + yaw_out) ; 
+//    motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle - pitch_out);// - roll_out - yaw_out) ;
+    motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle - roll_out1);// + roll_out + yaw_out) ;
+//    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle + pitch_out);// + roll_out - yaw_out) ;
+    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle + roll_out1);// - roll_out + yaw_out) ; 
     
 //    if(motor_pwm0_duty > 98){ motor_pwm0_duty = 98;}
 //    if(motor_pwm1_duty > 98){ motor_pwm1_duty = 98;}

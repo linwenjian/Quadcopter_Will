@@ -160,7 +160,8 @@ typedef struct _pid
 } pid_t; 
 
 extern pid_t pitch_pid;
-extern pid_t roll_pid;
+extern pid_t roll_pid00;
+extern pid_t roll_pid11;
 extern pid_t yaw_pid;
 
 void motor_pid_control(uint32_t throttleDutyCycle,
@@ -168,7 +169,8 @@ void motor_pid_control(uint32_t throttleDutyCycle,
                        imu_float_euler_angle_t * currentAngel,
                        pid_t *pitch_pid,
                        pid_t *yaw_pid,
-                       pid_t *roll_pid,
+                       pid_t *roll_pid0,
+                       pid_t *roll_pid1,
                        bool RCunlock );
 extern bool pitIsrFlag1;
 
@@ -176,6 +178,10 @@ extern uint16_t motor_pwm0_cnv ;
 extern uint16_t motor_pwm1_cnv ;
 extern uint16_t motor_pwm2_cnv ;
 extern uint16_t motor_pwm3_cnv ;
+
+extern int16_t gyro_y_before;
+extern int16_t gyro_y_after;
+
 #endif
 /*******************************************************************************
 * EOF

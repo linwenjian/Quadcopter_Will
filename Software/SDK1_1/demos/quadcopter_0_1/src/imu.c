@@ -14,13 +14,7 @@
 ////1° = pi / 180 = 0.01745329252 rad
 
 
-#define PI             3.1415926f
-#define Kp             10.0f     /* proportional gain governs rate of convergence to accelerometer/magnetometer */
-#define Ki             0.005f     /* integral gain governs rate of convergence of gyroscope biases */
-#define halfT          0.001f //陀螺仪采集周期的一半
-#define Gyro_G         (0.07f)
-#define Gyro_Gr        (0.00122173f) //弧度/秒 
-//L3G4200D 陀螺仪的值x * 70 / 1000 度/秒， 换算成弧度 x * 70 / 1000 *0.01745329252 = x * 0.00122173
+
 
 
 static imu_io_install_t * gpIOInstallStruct;   /* install struct	*/
@@ -349,18 +343,22 @@ uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRaw
 //                  angle);
     
   
-  gyro_pitch_global = (double)(0.70710678 *(double)(pRawDdata->gyro_x - pRawDdata->gyro_y));
-  gyro_roll_global  = (double)(0.70710678 *(double)(pRawDdata->gyro_x + pRawDdata->gyro_y));
+//  gyro_pitch_global = (double)(0.70710678 *(double)(pRawDdata->gyro_x - pRawDdata->gyro_y));
+//  gyro_roll_global  = (double)(0.70710678 *(double)(pRawDdata->gyro_x + pRawDdata->gyro_y));
   
-  double gx = gyro_pitch_global* Gyro_Gr;
-  double gy = gyro_roll_global * Gyro_Gr;
-  double gz = ((double)pRawDdata->gyro_z)* Gyro_Gr;
+  gyro_roll_global   = (double)(pRawDdata->gyro_x);
+  gyro_pitch_global  = (double)(pRawDdata->gyro_y);
   
-
+  double gx = (double)((double)(pRawDdata->gyro_x)* Gyro_Gr);
+  double gy = (double)((double)(pRawDdata->gyro_y)* Gyro_Gr);
+  double gz = (double)(((double)pRawDdata->gyro_z)* Gyro_Gr);
   
-  double ax = (double)(0.70710678 *(double)(pRawDdata->accel_x - pRawDdata->accel_y));
-  double ay = (double)(0.70710678 *(double)(pRawDdata->accel_x + pRawDdata->accel_y));
-  double az = (double)pRawDdata->accel_z;
+//  double ax = (double)(0.70710678 *(double)(pRawDdata->accel_x - pRawDdata->accel_y));
+//  double ay = (double)(0.70710678 *(double)(pRawDdata->accel_x + pRawDdata->accel_y));
+    
+  double ax = (double)(pRawDdata->accel_x);
+  double ay = (double)(pRawDdata->accel_y);
+  double az = (double)(pRawDdata->accel_z);
   
   double mx = (double)pRawDdata->magn_x;
   double my = (double)pRawDdata->magn_y;

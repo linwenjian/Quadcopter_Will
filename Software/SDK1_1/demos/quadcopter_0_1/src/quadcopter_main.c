@@ -261,7 +261,7 @@ int main (void)
   pit_user_config_t chn1Confg = {
     .isInterruptEnabled = true,
     .isTimerChained = false,
-    .periodUs = 10000u
+    .periodUs = 12000u
   };
   
   // Init pit module and enable run in debug
@@ -310,8 +310,8 @@ int main (void)
     packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
     packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
     packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
-    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);
-    packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);
+    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);//gyro_y_before);//memsRawDate.gyro_x);
+    packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);//gyro_y_after);//memsRawDate.gyro_y);
     packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
     packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
     packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
@@ -416,17 +416,19 @@ int main (void)
         //                        test_throttle_pwm,
         //                        test_throttle_pwm);
         static imu_float_euler_angle_t expectAngel = {
-          .imu_pitch = 0,
+          .imu_pitch = 0,//,
           .imu_roll = 0,
           .imu_yaw = 0,
         };
-        
+        expectAngel.imu_pitch =(int32_t)(((int32_t)(remoteControlValue[kPitch]/1000) -180)/2);
+        expectAngel.imu_roll =(int32_t)(((int32_t)(remoteControlValue[kRoll]/1000) -180)/2);   
         motor_pid_control(test_throttle_pwm,
                           &expectAngel,
                           &quadAngle,
                           &pitch_pid,
                           &yaw_pid,
-                          &roll_pid,
+                          &roll_pid00,
+                          &roll_pid11,
                           isRCunlock);
         /*End************* Reflash the motor PWM **************/
         /*****end while(1) in mian loop*****/

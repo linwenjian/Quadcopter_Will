@@ -403,6 +403,9 @@ i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData)
   return kStatus_I2C_Success ;
 }
 
+int16_t gyro_y_before;
+int16_t gyro_y_after;
+
 i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
 {
   uint8_t gyro_buffer[GYRO_READ_LEN];
@@ -449,14 +452,17 @@ i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
     gyro_aver_cal_flag = false;
     gyro_offset_done = true;
   }
-  pMemsRawData->gyro_x -= gyro_x_aver;
-  pMemsRawData->gyro_y -= gyro_y_aver;
-  pMemsRawData->gyro_z -= gyro_z_aver;
+  pMemsRawData->gyro_x -= 11;//gyro_x_aver;
+  pMemsRawData->gyro_y -= -9;//gyro_y_aver;
+  pMemsRawData->gyro_z -= -7;//gyro_z_aver;
   
-  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
-  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,10,10,1);
-  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
-  
+//  gyro_y_before =   pMemsRawData->gyro_y;
+//  
+//  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
+//  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,15,15,4);
+//  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
+//  
+//  gyro_y_after =   pMemsRawData->gyro_y;
 //  int16_t kal_gyro_x =0;
 //  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);
 //  
