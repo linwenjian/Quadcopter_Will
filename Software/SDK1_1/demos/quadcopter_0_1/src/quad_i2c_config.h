@@ -90,15 +90,15 @@
 
 typedef struct _mems_date
 {
-  int16_t accel_x;
-  int16_t accel_y;
-  int16_t accel_z;
-  int16_t magn_x;
-  int16_t magn_y;
-  int16_t magn_z;
-  int16_t gyro_x;
-  int16_t gyro_y;
-  int16_t gyro_z;
+  double accel_x;
+  double accel_y;
+  double accel_z;
+  double magn_x;
+  double magn_y;
+  double magn_z;
+  double gyro_x;
+  double gyro_y;
+  double gyro_z;
 }mems_data_t;
 
 #endif

@@ -254,7 +254,7 @@ static void updateAHRS(double gx,double gy,double gz,
   static double q2 = 0.0;
   static double q3 = 0.0;
   static double exInt = 0.0, eyInt = 0.0, ezInt = 0.0;
-	
+  double gz_original = gz;	
 	//?2¦Ì?2?¨º?:???a¨ºy3?¡¤¡§????
 	double q0q0 = q0 * q0;							
 	double q0q1 = q0 * q1;
@@ -308,7 +308,7 @@ static void updateAHRS(double gx,double gy,double gz,
   /* output data */
 //  angle->imu_yaw = atan2(2 * q1 * q2 + 2 * q0 * q3, -2 * q2*q2 - 2 * q3* q3 + 1)* 57.3;
   
-  angle->imu_yaw =  angle->imu_yaw + gz*halfT*2*57.3;
+  angle->imu_yaw =  angle->imu_yaw + gz_original*57.3*halfT*2;
   angle->imu_pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3f;																			// pitcho???
   angle->imu_roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3f;
 
@@ -341,23 +341,26 @@ uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRaw
 //                  float_data.my,
 //                  float_data.mz,
 //                  angle);
-    
   
-//  gyro_pitch_global = (double)(0.70710678 *(double)(pRawDdata->gyro_x - pRawDdata->gyro_y));
-//  gyro_roll_global  = (double)(0.70710678 *(double)(pRawDdata->gyro_x + pRawDdata->gyro_y));
-  
+#ifdef Use_X_MODE
+  gyro_roll_global   = (double)(0.70710678 *(double)(pRawDdata->gyro_x - pRawDdata->gyro_y));
+  gyro_pitch_global  = (double)(0.70710678 *(double)(pRawDdata->gyro_x + pRawDdata->gyro_y));
+#else
   gyro_roll_global   = (double)(pRawDdata->gyro_x);
   gyro_pitch_global  = (double)(pRawDdata->gyro_y);
-  
-  double gx = (double)((double)(pRawDdata->gyro_x)* Gyro_Gr);
-  double gy = (double)((double)(pRawDdata->gyro_y)* Gyro_Gr);
+#endif
+
+  double gx = (double)((double)(gyro_roll_global) * Gyro_Gr);
+  double gy = (double)((double)(gyro_pitch_global)* Gyro_Gr);
   double gz = (double)(((double)pRawDdata->gyro_z)* Gyro_Gr);
-  
-//  double ax = (double)(0.70710678 *(double)(pRawDdata->accel_x - pRawDdata->accel_y));
-//  double ay = (double)(0.70710678 *(double)(pRawDdata->accel_x + pRawDdata->accel_y));
-    
+
+#ifdef Use_X_MODE
+  double ax = (double)(0.70710678 *(double)(pRawDdata->accel_x - pRawDdata->accel_y));
+  double ay = (double)(0.70710678 *(double)(pRawDdata->accel_x + pRawDdata->accel_y));
+#else
   double ax = (double)(pRawDdata->accel_x);
   double ay = (double)(pRawDdata->accel_y);
+#endif
   double az = (double)(pRawDdata->accel_z);
   
   double mx = (double)pRawDdata->magn_x;

@@ -1,32 +1,3 @@
-/*
- * Copyright (c) 2013 - 2014, Freescale Semiconductor, Inc.
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- *
- * o Redistributions of source code must retain the above copyright notice, this list
- *   of conditions and the following disclaimer.
- *
- * o Redistributions in binary form must reproduce the above copyright notice, this
- *   list of conditions and the following disclaimer in the documentation and/or
- *   other materials provided with the distribution.
- *
- * o Neither the name of Freescale Semiconductor, Inc. nor the names of its
- *   contributors may be used to endorse or promote products derived from this
- *   software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 
 ///////////////////////////////////////////////////////////////////////////////
 //  Includes
@@ -42,6 +13,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Definitions
 ///////////////////////////////////////////////////////////////////////////////
+
+#define PWM_HZ (400)
 
 #define HWTIMER_LL_DEVIF    kSystickDevif
 #define HWTIMER_LL_SRCCLK   kCoreClock
@@ -66,29 +39,29 @@ ftm_user_config_t ftmInfo;
 ftm_pwm_param_t ftmParam0 = {
   .mode                   = kFtmEdgeAlignedPWM,
   .edgeMode               = kFtmHighTrue,
-  .uFrequencyHZ           = 500,
-  .uDutyCyclePercent      = 0,
+  .uFrequencyHZ           = PWM_HZ,
+  .uDutyCyclePercent      = 5,
   .uFirstEdgeDelayPercent = 0,
 };
 ftm_pwm_param_t ftmParam1 = {
   .mode                   = kFtmEdgeAlignedPWM,
   .edgeMode               = kFtmHighTrue,
-  .uFrequencyHZ           = 500,
-  .uDutyCyclePercent      = 0,
+  .uFrequencyHZ           = PWM_HZ,
+  .uDutyCyclePercent      = 5,
   .uFirstEdgeDelayPercent = 0,
 };
 ftm_pwm_param_t ftmParam2 = {
   .mode                   = kFtmEdgeAlignedPWM,
   .edgeMode               = kFtmHighTrue,
-  .uFrequencyHZ           = 500,
-  .uDutyCyclePercent      = 0,
+  .uFrequencyHZ           = PWM_HZ,
+  .uDutyCyclePercent      = 5,
   .uFirstEdgeDelayPercent = 0,
 };
 ftm_pwm_param_t ftmParam3 = {
   .mode                   = kFtmEdgeAlignedPWM,
   .edgeMode               = kFtmHighTrue,
-  .uFrequencyHZ           = 500,
-  .uDutyCyclePercent      = 0,
+  .uFrequencyHZ           = PWM_HZ,
+  .uDutyCyclePercent      = 5,
   .uFirstEdgeDelayPercent = 0,
 };
 
@@ -187,6 +160,53 @@ void hwtimer_callback(void* data)
 
 //PTD2_UART_rx, PTD3_UART_tx
 //PTC1,2,3,4
+uint32_t ftm_uMod_global=0;
+uint32_t ftm_cnv_max_global=0;
+uint32_t ftm_cnv_min_global=0;
+uint32_t ftm_cnv_stop_global=0;
+
+
+
+
+union
+{
+    float f32;
+    int16_t i16;
+    uint16_t u16;
+    int32_t i32;
+    uint32_t u32;
+    uint8_t send_2val[2];
+    uint8_t send_4val[4];
+}send_muxByte_Tmp;
+
+// flag = 0x1f ~ 0x6f 上位机上面代表的六条曲线
+// 如果显示不正常则在每两个发送之间添加一点延时
+void sendLineX(uint8_t flag, float val)
+{
+	send_muxByte_Tmp.f32 = val;
+//        int i =0;
+//        int j = 300;
+        uint8_t send_data[7];
+        send_data[0] = 0x55;
+        send_data[1] = flag;
+        send_data[2] = send_muxByte_Tmp.send_4val[0];       
+        send_data[3] = send_muxByte_Tmp.send_4val[1];
+        send_data[4] = send_muxByte_Tmp.send_4val[2];
+        send_data[5] = send_muxByte_Tmp.send_4val[3];
+        send_data[6] = 0xaa;
+
+        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,send_data,7);
+        
+//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,0x55);	for(i=0;i<j;i++);
+//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,flag);	for(i=0;i<j;i++);	
+//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[0]);	for(i=0;i<j;i++);
+//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[1]);	for(i=0;i<j;i++);
+//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[2]);	for(i=0;i<j;i++);
+//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[3]);	for(i=0;i<j;i++);
+//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,0xaa);	for(i=0;i<j;i++);
+}
+
+
 int main (void)
 {
   memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
@@ -221,6 +241,20 @@ int main (void)
   FTM_DRV_PwmStart(0, &ftmParam1, 1);
   FTM_DRV_PwmStart(0, &ftmParam2, 2);
   FTM_DRV_PwmStart(0, &ftmParam3, 3);
+ 
+  //SWSYNC bit is cleared at the next selected loading point after that the
+  //software trigger event occurred 
+  //SYNCMODE = 1 ; SWRSTCNT =0 ; CNTMIN=1 ; CNTMAX=1 ;
+  uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
+  ftm_uMod_global = FTM_HAL_GetMod(ftmBaseAddr);
+  ftm_cnv_max_global  = THROTTLE_DUTY_MAX *(ftm_uMod_global+1) / 100;
+  ftm_cnv_min_global  = THROTTLE_DUTY_MIN *(ftm_uMod_global+1) / 100;
+  ftm_cnv_stop_global = THROTTLE_DUTY_STOP*(ftm_uMod_global+1) / 100;
+  
+  FTM_HAL_SetCounterSoftwareSyncModeCmd(ftmBaseAddr, false);
+  FTM_HAL_SetMaxLoadingCmd(ftmBaseAddr, true);
+  FTM_HAL_SetMinLoadingCmd(ftmBaseAddr, true);
+
   FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
   
   // Hwtimer initialization
@@ -293,148 +327,167 @@ int main (void)
   
   while(1)
   {
-
     /*****start while(1) in mian loop*****/
     if (pitIsrFlag1 == true)  
     {
-    static uint16_t led5_i =0;
-    if(led5_i==0)
-    {
-      LED5_ON;led5_i=1;
-    }
-    else
-    {
-      LED5_OFF;led5_i=0;
-    }
-    /*Start*********匿名上位机发送的串口数据***********/
-    packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
-    packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
-    packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
-    packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16(memsRawDate.gyro_x);//gyro_y_before);//memsRawDate.gyro_x);
-    packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16(memsRawDate.gyro_y);//gyro_y_after);//memsRawDate.gyro_y);
-    packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
-    packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
-    packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
-    packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);
-    
-    packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
-    packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
-    packet_upper_PC.user_data.trans_yaw = 0;// BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
-    
-//        unt16_t throt;
-//    unt16_t yaw;
-//    unt16_t roll;
-//    unt16_t pitch;
-//    unt16_t aux[5];
-//    unt16_t pwm[4];
-//    unt16_t votage;
-    packet_pwm_upper_PC.user_data.throt = BSWAP_16((uint16_t)(remoteControlValue[kThrottle]/10));
-    packet_pwm_upper_PC.user_data.yaw   = BSWAP_16((uint16_t)(remoteControlValue[kYaw]/10));
-    packet_pwm_upper_PC.user_data.roll  = BSWAP_16((uint16_t)(remoteControlValue[kRoll]/10));
-    packet_pwm_upper_PC.user_data.pitch = BSWAP_16((uint16_t)(remoteControlValue[kPitch]/10));
-    
-    packet_pwm_upper_PC.user_data.aux[0] = BSWAP_16((uint16_t)(100));
-    packet_pwm_upper_PC.user_data.aux[1] = BSWAP_16((uint16_t)(200));
-    packet_pwm_upper_PC.user_data.aux[2] = BSWAP_16((uint16_t)(300));
-    packet_pwm_upper_PC.user_data.aux[3] = BSWAP_16((uint16_t)(400));
-    packet_pwm_upper_PC.user_data.aux[4] = BSWAP_16((uint16_t)(500));
-    
-    packet_pwm_upper_PC.user_data.pwm[0] = BSWAP_16((uint16_t)(motor_pwm0_cnv / 600));
-    packet_pwm_upper_PC.user_data.pwm[1] = BSWAP_16((uint16_t)(motor_pwm1_cnv / 600));
-    packet_pwm_upper_PC.user_data.pwm[2] = BSWAP_16((uint16_t)(motor_pwm2_cnv / 600));
-    packet_pwm_upper_PC.user_data.pwm[3] = BSWAP_16((uint16_t)(motor_pwm3_cnv / 600));
-    
-    
-    uint8_t *q = (uint8_t*)&packet_pwm_upper_PC;
-    UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,q,32);
-    
-    uint8_t *p = (uint8_t*)&packet_upper_PC;
-    UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
-    
-
-    
-    /*End*********匿名上位机发送的串口数据***********/
-    
-    /*Start************Remote Controller Unlock *************/
-
-      pitIsrFlag1 = false;
-      if(isRCunlock == true)
+      static uint16_t led5_i =0;
+      if(led5_i==0)
       {
-        LED3_ON;
+        LED5_ON;led5_i=1;
       }
       else
       {
-        LED3_OFF;
+        LED5_OFF;led5_i=0;
       }
-      static uint32_t unlock_times = 0;
-      static uint32_t lock_times = 0;
-      uint32_t waitTimes2s = (3000 / (chn1Confg.periodUs / 1000) ) ;
-      //     PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
-      if(isRCunlock == false)
+      
+      uint32_t waitTimes3s = (3000 / (chn1Confg.periodUs / 1000) ) ;
+      /*Start*********匿名上位机发送的串口数据***********/
       {
-        if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] > RC_THRESHOLD_H))
+        packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
+        packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
+        packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
+        packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16((int16_t)gyro_roll_global);//memsRawDate.gyro_x);//gyro_y_before);//memsRawDate.gyro_x);
+        packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16((int16_t)gyro_pitch_global);//memsRawDate.gyro_y);//gyro_y_after);//memsRawDate.gyro_y);
+        packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
+        packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
+        packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
+        packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);
+        
+        packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
+        packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
+        packet_upper_PC.user_data.trans_yaw =  BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
+        
+        //        unt16_t throt;
+        //    unt16_t yaw;
+        //    unt16_t roll;
+        //    unt16_t pitch;
+        //    unt16_t aux[5];
+        //    unt16_t pwm[4];
+        //    unt16_t votage;
+        packet_pwm_upper_PC.user_data.throt = BSWAP_16((uint16_t)(remoteControlValue[kThrottle]/10));
+        packet_pwm_upper_PC.user_data.yaw   = BSWAP_16((uint16_t)(remoteControlValue[kYaw]/10));
+        packet_pwm_upper_PC.user_data.roll  = BSWAP_16((uint16_t)(remoteControlValue[kRoll]/10));
+        packet_pwm_upper_PC.user_data.pitch = BSWAP_16((uint16_t)(remoteControlValue[kPitch]/10));
+        
+        packet_pwm_upper_PC.user_data.aux[0] = BSWAP_16((uint16_t)(100));
+        packet_pwm_upper_PC.user_data.aux[1] = BSWAP_16((uint16_t)(200));
+        packet_pwm_upper_PC.user_data.aux[2] = BSWAP_16((uint16_t)(300));
+        packet_pwm_upper_PC.user_data.aux[3] = BSWAP_16((uint16_t)(400));
+        packet_pwm_upper_PC.user_data.aux[4] = BSWAP_16((uint16_t)(500));
+        
+        packet_pwm_upper_PC.user_data.pwm[0] = BSWAP_16((uint16_t)(motor_pwm0_cnv / 600));
+        packet_pwm_upper_PC.user_data.pwm[1] = BSWAP_16((uint16_t)(motor_pwm1_cnv / 600));
+        packet_pwm_upper_PC.user_data.pwm[2] = BSWAP_16((uint16_t)(motor_pwm2_cnv / 600));
+        packet_pwm_upper_PC.user_data.pwm[3] = BSWAP_16((uint16_t)(motor_pwm3_cnv / 600));
+        
+        uint8_t *q = (uint8_t*)&packet_pwm_upper_PC;
+        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,q,32);
+        
+        uint8_t *p = (uint8_t*)&packet_upper_PC;
+        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32); 
+      
+//        sendLineX(0x1f,(((float)motor_pwm0_cnv)/ftm_uMod_global));
+//        sendLineX(0x2f,(((float)motor_pwm1_cnv)/ftm_uMod_global));
+//        sendLineX(0x3f,(((float)motor_pwm2_cnv)/ftm_uMod_global));
+//        sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
+//        sendLineX(0x4f,(float)(0.25));
+      }
+      /*End*********匿名上位机发送的串口数据***********/
+      
+      /*Start************Remote Controller Unlock *************/
+      {
+        pitIsrFlag1 = false;
+        if(isRCunlock == true)
         {
-          unlock_times++;
+          LED3_ON;
         }
         else
         {
-          unlock_times = 0;
+          LED3_OFF;
         }
-        if(unlock_times > (waitTimes2s/2) )
+        static uint32_t unlock_times = 0;
+        static uint32_t lock_times = 0;
+
+        //     PRINTF("ThrottleValue = %6d ,YawValue = %6d \r\n" ,remoteControlValue[kThrottle],remoteControlValue[kYaw]);
+        if(isRCunlock == false)
         {
-          isRCunlock = true;
-        }
-      }
-      else
-      {
-        if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] < RC_THRESHOLD_L))
-        {
-          lock_times++;
+          if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] > RC_THRESHOLD_H))
+          {
+            unlock_times++;
+          }
+          else
+          {
+            unlock_times = 0;
+          }
+          if(unlock_times > (waitTimes3s/2) )
+          {
+            isRCunlock = true;
+          }
         }
         else
         {
-          lock_times = 0;
-        }
-        if(lock_times > (waitTimes2s/4))
-        {
-          isRCunlock = false;
+          if((remoteControlValue[kThrottle] < RC_THRESHOLD_L) && (remoteControlValue[kYaw] < RC_THRESHOLD_L))
+          {
+            lock_times++;
+          }
+          else
+          {
+            lock_times = 0;
+          }
+          if(lock_times > (waitTimes3s/4))
+          {
+            isRCunlock = false;
+          }
         }
       }
       /*End************Remote Controller Unlock *************/
       
       /*Start*********** Reflash the motor PWM **************/     
-      static uint32_t motor_init_times = 0 ;
-      motor_init_times++;
-//      uint32_t waitTimes2s = (3000 / (chn1Confg.periodUs / 1000) ) ;
-      if(motor_init_times > waitTimes2s )
-      { 
-        motor_init_times = (waitTimes2s+1) ; 
-        static uint32_t test_throttle_pwm = 50;
-        test_throttle_pwm = remoteControlValue[kThrottle] / 2400 ;
-        //      motor_pwm_reflash(test_throttle_pwm,
-        //                        test_throttle_pwm,
-        //                        test_throttle_pwm,
-        //                        test_throttle_pwm);
-        static imu_float_euler_angle_t expectAngel = {
-          .imu_pitch = 0,//,
-          .imu_roll = 0,
-          .imu_yaw = 0,
-        };
-        expectAngel.imu_pitch =(int32_t)(((int32_t)(remoteControlValue[kPitch]/1000) -180)/2);
-        expectAngel.imu_roll =(int32_t)(((int32_t)(remoteControlValue[kRoll]/1000) -180)/2);   
-        motor_pid_control(test_throttle_pwm,
-                          &expectAngel,
-                          &quadAngle,
-                          &pitch_pid,
-                          &yaw_pid,
-                          &roll_pid00,
-                          &roll_pid11,
-                          isRCunlock);
-        /*End************* Reflash the motor PWM **************/
-        /*****end while(1) in mian loop*****/
+      {
+        static uint32_t motor_init_times = 0 ;
+        motor_init_times++;
+        //      uint32_t waitTimes3s = (3000 / (chn1Confg.periodUs / 1000) ) ;
+        if(motor_init_times > waitTimes3s )
+        { 
+          motor_init_times = (waitTimes3s+1) ; 
+          static uint32_t test_throttle_pwm = 50;
+          test_throttle_pwm = remoteControlValue[kThrottle] / 2400 - 8; //对应42%-92%占空比
+          ////遥控器信号 50Hz , 范围1~2ms，周期20ms，1.5ms中值.对应 120 000 - 240 000
+          //      motor_pwm_reflash(test_throttle_pwm,
+          //                        test_throttle_pwm,
+          //                        test_throttle_pwm,
+          //                        test_throttle_pwm);
+          static imu_float_euler_angle_t expectAngel = {
+            .imu_pitch = 0,
+            .imu_roll = 0,
+            .imu_yaw = 0,
+          };
+          expectAngel.imu_pitch =(int32_t)(((int32_t)(remoteControlValue[kPitch]/1000) -180)/2);
+          expectAngel.imu_roll =(int32_t)(((int32_t)(remoteControlValue[kRoll]/1000) -180)/2);
+          
+          static bool isAngleProtected = false;
+          if( quadAngle.imu_pitch > PROTECTED_ANGLE || quadAngle.imu_pitch < ((-1)*PROTECTED_ANGLE)
+             ||quadAngle.imu_roll > PROTECTED_ANGLE || quadAngle.imu_roll < ((-1)*PROTECTED_ANGLE) )
+          {
+            // isAngleProtected = true;
+            isRCunlock = false;
+          }
+  
+          motor_pid_control(test_throttle_pwm,
+                            &expectAngel,
+                            &quadAngle,
+                            &pitch_pid00,
+                            &pitch_pid11,
+                            &yaw_pid,
+                            &roll_pid00,
+                            &roll_pid11,
+                            isRCunlock);
+        }
       }
+      /*End************* Reflash the motor PWM **************/
     }
   }
+  /*****end while(1) in mian loop*****/
 }
 
 volatile bool isRCunlock = false;

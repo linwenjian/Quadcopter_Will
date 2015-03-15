@@ -30,7 +30,7 @@
 #include "quad_common.h"
 //#include "quad_i2c_config.h"
 
-extern bool gyro_offset_done;   
+
    
    
 i2c_master_state_t i2cMaster;
@@ -255,9 +255,9 @@ void I2C_fxos8700AutoCalibration(void)
         PRINTF("print Interrupt due to data ready\r\n");
         static mems_data_t MemsRawData_cal; 
         I2C_getAccelMangData(&MemsRawData_cal);
-        int16_t mx = MemsRawData_cal.magn_x;
-        int16_t my = MemsRawData_cal.magn_y;
-        int16_t mz = MemsRawData_cal.magn_z;
+        double mx = MemsRawData_cal.magn_x;
+        double my = MemsRawData_cal.magn_y;
+        double mz = MemsRawData_cal.magn_z;
         my = -my;
         
         PRINTF("Magnetic Vector Magnitude = %4.1f uT" , (sqrt(mx*mx + my*my + mz*mz) / 10) );
@@ -347,13 +347,13 @@ i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData)
   //MOUT_X_MSB,MOUT_X_LSB,MOUT_Y_MSB,MOUT_Y_LSB,MOUT_Z_MSB,OMUT_Z_LSB from 0x33 to 0x38
   //already set the fxos8700 continuous read from 0x01 - 0x06 and 0x33 - 0x38,
   //see detailed in I2C_fxos8700Init()
-  pMemsRawData->accel_x = ((fxos8700_buffer[1] << 8)  |  fxos8700_buffer[2]);
-  pMemsRawData->accel_y = ((fxos8700_buffer[3] << 8)  |  fxos8700_buffer[4]);
-  pMemsRawData->accel_z = ((fxos8700_buffer[5] << 8)  |  fxos8700_buffer[6]);
+  pMemsRawData->accel_x = (double)((int16_t)((fxos8700_buffer[1]  << 8)  |  fxos8700_buffer[2] ));
+  pMemsRawData->accel_y = (double)((int16_t)((fxos8700_buffer[3]  << 8)  |  fxos8700_buffer[4] ));
+  pMemsRawData->accel_z = (double)((int16_t)((fxos8700_buffer[5]  << 8)  |  fxos8700_buffer[6] ));
   
-  pMemsRawData->magn_x  = ((fxos8700_buffer[7] << 8)  |  fxos8700_buffer[8]);
-  pMemsRawData->magn_y  = ((fxos8700_buffer[9] << 8)  |  fxos8700_buffer[10]);
-  pMemsRawData->magn_z  = ((fxos8700_buffer[11] << 8) |  fxos8700_buffer[12]);
+  pMemsRawData->magn_x  = (double)((int16_t)((fxos8700_buffer[7]  << 8)  |  fxos8700_buffer[8] ));
+  pMemsRawData->magn_y  = (double)((int16_t)((fxos8700_buffer[9]  << 8)  |  fxos8700_buffer[10]));
+  pMemsRawData->magn_z  = (double)((int16_t)((fxos8700_buffer[11] << 8)  |  fxos8700_buffer[12]));
  
 
 //  static int16_t magn_min_x = 32767;
@@ -426,48 +426,75 @@ i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
   //  gyro_z = DataCombine(gyro_buffer[5],gyro_buffer[4]);
   
   //OUT_X_L,OUT_X_H,OUT_Y_L,OUT_Y_H,OUT_Z_L,OUT_Z_H from 0x28 to 0x2d
-  pMemsRawData->gyro_x = ((gyro_buffer[1] << 8) | gyro_buffer[0]); 
-  pMemsRawData->gyro_y = ((gyro_buffer[3] << 8) | gyro_buffer[2]); 
-  pMemsRawData->gyro_z = ((gyro_buffer[5] << 8) | gyro_buffer[4]); 
+  pMemsRawData->gyro_x = (double)((int16_t)((gyro_buffer[1] << 8) | gyro_buffer[0])); 
+  pMemsRawData->gyro_y = (double)((int16_t)((gyro_buffer[3] << 8) | gyro_buffer[2])); 
+  pMemsRawData->gyro_z = (double)((int16_t)((gyro_buffer[5] << 8) | gyro_buffer[4])); 
   
   static int16_t gyro_aver_times = 0 ;
   static bool gyro_aver_cal_flag = true;
-  static int16_t gyro_x_aver = 0 ;
-  static int16_t gyro_y_aver = 0 ;
-  static int16_t gyro_z_aver = 0 ;
+  static double gyro_x_aver = 0 ;
+  static double gyro_y_aver = 0 ;
+  static double gyro_z_aver = 0 ;
+
+  static double gyro_x_last = 0 ;
+  static double gyro_y_last = 0 ;
+  static double gyro_z_last = 0 ;
+
+  static double gyro_x_current = 0 ;
+  static double gyro_y_current = 0 ;
+  static double gyro_z_current = 0 ;
+
+  gyro_x_current = pMemsRawData->gyro_x;
+  gyro_y_current = pMemsRawData->gyro_y;
+  gyro_z_current = pMemsRawData->gyro_z;
   
-  if(gyro_aver_times < 200)
+  if((gyro_aver_times < 500) && (gyro_aver_cal_flag == true))
   {
-    gyro_x_aver += pMemsRawData->gyro_x;
-    gyro_y_aver += pMemsRawData->gyro_y;
-    gyro_z_aver += pMemsRawData->gyro_z;
-    
-    gyro_aver_times++;
+    if(   (gyro_x_current - gyro_x_last) < 30 && (gyro_x_current - gyro_x_last) > -30 
+       && (gyro_y_current - gyro_y_last) < 30 && (gyro_y_current - gyro_y_last) > -30
+       && (gyro_z_current - gyro_z_last) < 30 && (gyro_z_current - gyro_z_last) > -30 )
+    {
+      gyro_x_aver += gyro_x_current;
+      gyro_y_aver += gyro_y_current;
+      gyro_z_aver += gyro_z_current;
+      gyro_aver_times++;
+    }
+    else
+    {
+      gyro_x_aver = 0;
+      gyro_y_aver = 0;
+      gyro_z_aver = 0;
+      gyro_aver_times = 0;
+    }
   }
-  if((gyro_aver_times >= 200) && (gyro_aver_cal_flag == true))
+  if((gyro_aver_times >= 500) && (gyro_aver_cal_flag == true))
   {
-    gyro_x_aver = gyro_x_aver/200;
-    gyro_y_aver = gyro_y_aver/200;
-    gyro_z_aver = gyro_z_aver/200;
+    gyro_x_aver = gyro_x_aver/500;
+    gyro_y_aver = gyro_y_aver/500;
+    gyro_z_aver = gyro_z_aver/500;
     gyro_aver_cal_flag = false;
     gyro_offset_done = true;
   }
-  pMemsRawData->gyro_x -= 11;//gyro_x_aver;
-  pMemsRawData->gyro_y -= -9;//gyro_y_aver;
-  pMemsRawData->gyro_z -= -7;//gyro_z_aver;
   
-//  gyro_y_before =   pMemsRawData->gyro_y;
-//  
-//  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
-//  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,15,15,4);
-//  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
-//  
-//  gyro_y_after =   pMemsRawData->gyro_y;
-//  int16_t kal_gyro_x =0;
-//  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);
-//  
-//  PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,pMemsRawData->gyro_x,pMemsRawData->gyro_y,pMemsRawData->gyro_z,kal_gyro_x);
-   
+  pMemsRawData->gyro_x -= gyro_x_aver;//gyro_x_aver;
+  pMemsRawData->gyro_y -= gyro_y_aver;//gyro_y_aver;
+  pMemsRawData->gyro_z -= gyro_z_aver;//gyro_z_aver;
+  
+  gyro_x_last = gyro_x_current;
+  gyro_y_last = gyro_y_current;
+  gyro_z_last = gyro_z_current;
+  //  gyro_y_before =   pMemsRawData->gyro_y;
+  //  
+  //  pMemsRawData->gyro_x = (int16_t)KalmanFilter1(pMemsRawData->gyro_x,10,10,1);
+  //  pMemsRawData->gyro_y = (int16_t)KalmanFilter2(pMemsRawData->gyro_y,15,15,4);
+  //  pMemsRawData->gyro_z = (int16_t)KalmanFilter3(pMemsRawData->gyro_z,10,10,1);
+  //  
+  //  gyro_y_after =   pMemsRawData->gyro_y;
+  //  int16_t kal_gyro_x =0;
+  //  kal_gyro_x = (int16_t)KalmanFilter(pMemsRawData->gyro_x,10,10,1);
+  //  
+  //  PRINTF("gyro_x = %5d , gyro_y = %5d , gyro_z = %5d , kal_gyro_x = %d\r\n\r\n" ,pMemsRawData->gyro_x,pMemsRawData->gyro_y,pMemsRawData->gyro_z,kal_gyro_x);
+  
   return kStatus_I2C_Success ;
 }
 

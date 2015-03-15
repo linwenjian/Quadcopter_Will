@@ -36,7 +36,7 @@ void FTM_HAL_Init(uint32_t ftmBaseAddr)
 {
     /* Use FTM mode */
     FTM_HAL_Enable(ftmBaseAddr, true);
-    FTM_HAL_SetClockPs(ftmBaseAddr, kFtmDividedBy2);
+    FTM_HAL_SetClockPs(ftmBaseAddr, kFtmDividedBy32);
 }
 
 void FTM_HAL_SetSyncMode(uint32_t ftmBaseAddr, uint32_t syncMethod)

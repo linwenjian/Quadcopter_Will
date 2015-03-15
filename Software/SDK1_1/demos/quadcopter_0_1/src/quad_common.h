@@ -69,6 +69,13 @@
 
 #include "imu.h"
 
+   
+#define THROTTLE_DUTY_MAX (90)
+#define THROTTLE_DUTY_MIN (46)
+#define THROTTLE_DUTY_STOP (44)   
+
+#define PROTECTED_ANGLE (40)
+   
 #define I2C_WRITE 0U
 #define I2C_READ 1U
 
@@ -149,7 +156,7 @@ void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
 typedef struct _pid 
 { 
   double  ExpectPoint;        //设定目标 Desired Value 
-  long SumError;              //误差累计  
+  double SumError;              //误差累计  
   
   double  Proportion;         //比例常数 Proportional Const 
   double  Integral;           //积分常数 Integral Const 
@@ -157,9 +164,13 @@ typedef struct _pid
   
   double LastError;              //Error[-1] 
   double PrevError;              //Error[-2] 
+  
+  double LastDError;         //dError[-1] 
+    
 } pid_t; 
 
-extern pid_t pitch_pid;
+extern pid_t pitch_pid00;
+extern pid_t pitch_pid11;
 extern pid_t roll_pid00;
 extern pid_t roll_pid11;
 extern pid_t yaw_pid;
@@ -167,7 +178,8 @@ extern pid_t yaw_pid;
 void motor_pid_control(uint32_t throttleDutyCycle,
                        imu_float_euler_angle_t * expectAngel,
                        imu_float_euler_angle_t * currentAngel,
-                       pid_t *pitch_pid,
+                       pid_t *pitch_pid0,
+                       pid_t *pitch_pid1,
                        pid_t *yaw_pid,
                        pid_t *roll_pid0,
                        pid_t *roll_pid1,
@@ -182,6 +194,14 @@ extern uint16_t motor_pwm3_cnv ;
 extern int16_t gyro_y_before;
 extern int16_t gyro_y_after;
 
+extern uint32_t ftm_uMod_global;
+extern uint32_t ftm_cnv_max_global;
+extern uint32_t ftm_cnv_min_global;
+extern uint32_t ftm_cnv_stop_global;
+
+void sendLineX(uint8_t flag, float val);
+extern imu_float_euler_angle_t quadAngle;
+extern bool gyro_offset_done;   
 #endif
 /*******************************************************************************
 * EOF

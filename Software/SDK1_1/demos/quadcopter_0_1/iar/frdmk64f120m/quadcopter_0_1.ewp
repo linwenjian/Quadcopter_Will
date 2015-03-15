@@ -173,6 +173,7 @@
           <state>IAR</state>
           <state>FRDM_K64F120M</state>
           <state>FREEDOM</state>
+          <state>Use_X_MODE</state>
         </option>
         <option>
           <name>CCPreprocFile</name>

@@ -130,6 +130,8 @@ void IncPIDInit(pid_t *sptr)
   sptr->LastError = 0;    //Error[-1] 
   sptr->PrevError = 0;    //Error[-2] 
   
+  sptr->LastDError = 0;    //dError[-1] 
+   
   sptr->Proportion = 0;    //比例常数 Proportional Const 
   sptr->Integral   = 0;    //积分常数 Integral Const 
   sptr->Derivative = 0;    //微分常数 Derivative Const 
@@ -183,27 +185,30 @@ int16_t IncPIDCalc(double CurrentPoint , pid_t *sptr)
   return(iIncpid); 
 } 
 
-int32_t LocPIDCalc(double CurrentPoint , pid_t *sptr , double gyro_d_value) 
+int32_t LocPIDCalc(double CurrentPoint , pid_t *sptr , double gyro_d_value ,double dError_lowpass_percent) 
 { 
-  double  iError,dError; 
+  double  iError,dError,dError_for_use; 
   int32_t re_value;
   iError = sptr->ExpectPoint - CurrentPoint;       //偏差 
   sptr->SumError += iError;               //积分 
   
-  if(sptr->SumError > 30000)
-  { sptr->SumError  = 30000 ;}
-  if(sptr->SumError < -30000)
-  { sptr->SumError  = -30000 ;}
-  
-//  sptr->SumError = 0;
+  //积分限幅
+//  if(sptr->SumError > ftm_cnv_max_global)
+//  { sptr->SumError  = ftm_cnv_max_global ;}
+//  if(sptr->SumError < ((-1)*ftm_cnv_max_global))
+//  { sptr->SumError  = (-1)*ftm_cnv_max_global) ;}
+    sptr->SumError = 0; 
   
   dError = iError - sptr->LastError;     //微分 
+ 
+  dError_for_use = dError * dError_lowpass_percent + sptr->LastDError*(1-dError_lowpass_percent); 
  // dError = -gyro_d_value;
   sptr->LastError = iError; 
+  sptr->LastDError = dError; 
      
   re_value = (int32_t)(sptr->Proportion * iError  //比例项 
            + sptr->Integral * sptr->SumError   //积分项 
-           + sptr->Derivative * dError);
+           + sptr->Derivative * dError_for_use);
   return(re_value);      //微分项 
 } 
 
@@ -219,12 +224,12 @@ pid_t pitch_pid = {
   .LastError = 0,         
   .PrevError = 0,        
 };
-
+////////////////////roll
 pid_t roll_pid00 = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 3,        
+  .Proportion = 4,        
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,    
   
@@ -236,21 +241,45 @@ pid_t roll_pid11 = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 10,//8,        
-  .Integral   = 0.1,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 50,//4.5,//,//5,//,//0.08 * 100,//0.05,    
+  .Proportion = 4,//8,        
+  .Integral   = 0,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 2.5,//4.5,//,//5,//,//0.08 * 100,//0.05,    
+  
+  .LastError = 0,         
+  .PrevError = 0,        
+};
+////////////////////pitch 
+pid_t pitch_pid00 = {
+  .ExpectPoint = 0,       
+  .SumError    = 0,          
+  
+  .Proportion = 4,//3,        
+  .Integral   = 0,
+  .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        
 };
 
+pid_t pitch_pid11 = {
+  .ExpectPoint = 0,       
+  .SumError    = 0,          
+  
+  .Proportion = 4,//,//8,        
+  .Integral   = 0,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 2.5,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,    
+  
+  .LastError = 0,         
+  .PrevError = 0,        
+};
+//////////////////////////
 pid_t yaw_pid = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 0.5,        
+  .Proportion = 0,        
   .Integral   = 0  ,
-  .Derivative = 1.5,    
+  .Derivative = 0,    
   
   .LastError = 0,         
   .PrevError = 0,        
@@ -264,124 +293,94 @@ uint16_t motor_pwm3_cnv  = 0;
 void motor_pid_control(uint32_t throttleDutyCycle,
                        imu_float_euler_angle_t * expectAngel,
                        imu_float_euler_angle_t * currentAngel,
-                       pid_t *pitch_pid,
+                       pid_t *pitch_pid0,
+                       pid_t *pitch_pid1,                     
                        pid_t *yaw_pid,
                        pid_t *roll_pid0,
                        pid_t *roll_pid1,                  
-                       bool RCunlock )//unfinished.20150105
+                       bool RCunlock )
 {
-/*          这个是ROLL轴，左低右高，ROLL值为正，差距越大值越大。翻过180度后变为-179...
-*               |
-*      Motor3   |    Motor2
-*         ╲    |    ／
-*           ╲  |  ／
-*   __________╲|／___________这个是pitch轴，前（上）高，（下）低，pitch值为正，差距越大值越大。翻过180度后变为-179...
-*             ／|╲
-*           ／  |  ╲
-*         ／    |    ╲
-*      Motor0   |    Motor1
-*               |
-*/ 
-  
-  static int32_t pitch_out = 0,roll_out0 = 0,roll_out1 = 0,yaw_out = 0;
-//  static uint16_t pitch_out = 0,roll_out = 0,yaw_out = 0;
-//  static int16_t motor_pwm0_duty  = 0;
-//  static int16_t motor_pwm1_duty  = 0;
-//  static int16_t motor_pwm2_duty  = 0;
-//  static int16_t motor_pwm3_duty  = 0;
+  /*          这个是pitch轴，左低右高，pitch值为负值，差距越大值越大。翻过-180度后变为179...
+  *               |
+  *      Motor0   |    Motor1
+  *         ╲    |    ／
+  *           ╲  |  ／
+  *   __________╲|／___________这个是ROLL轴，前（上）高，（下）低，ROLL值为正，差距越大值越大。翻过180度后变为-179...
+  *             ／|╲
+  *           ／  |  ╲
+  *         ／    |    ╲
+  *      Motor3   |    Motor2
+  *               |
+  */ 
+  //  
+  static int32_t pitch_out0 = 0,pitch_out1 = 0,roll_out0 = 0,roll_out1 = 0,yaw_out = 0;
+////  static uint16_t pitch_out = 0,roll_out = 0,yaw_out = 0;
+////  static int16_t motor_pwm0_duty  = 0;
+////  static int16_t motor_pwm1_duty  = 0;
+////  static int16_t motor_pwm2_duty  = 0;
+////  static int16_t motor_pwm3_duty  = 0;
 //  static uint16_t motor_pwm0_cnv  = 0;
 //  static uint16_t motor_pwm1_cnv  = 0;
 //  static uint16_t motor_pwm2_cnv  = 0;
 //  static uint16_t motor_pwm3_cnv  = 0;
   
-  pitch_pid->ExpectPoint = expectAngel->imu_pitch;
+  pitch_pid0->ExpectPoint = expectAngel->imu_pitch;
   roll_pid0->ExpectPoint  = expectAngel->imu_roll;
   
-//  pitch_out += IncPIDCalc(currentAngel->imu_pitch , pitch_pid);
-//  roll_out  += IncPIDCalc(currentAngel->imu_roll  , roll_pid);
+  if(throttleDutyCycle > THROTTLE_DUTY_MAX) {throttleDutyCycle = THROTTLE_DUTY_MAX;} ////油门最大值限制，做保护
   
-  pitch_out =(int32_t)(LocPIDCalc(currentAngel->imu_pitch ,pitch_pid,gyro_pitch_global));
-  
-  
-//  roll_out0 = (int32_t)(LocPIDCalc(currentAngel->imu_roll ,roll_pid0,gyro_roll_global));
-//  
-//  roll_pid1->ExpectPoint  = roll_out0;
-//  
-//  roll_out1  =(int32_t)(LocPIDCalc( (gyro_roll_global*Gyro_G) ,roll_pid1,gyro_roll_global));
-  
-//  if(pitch_out > 3) pitch_out = 3;
- // if(roll_out > 3) roll_out = 3;
-//  if(pitch_out < -5) pitch_out = -5;
-//  if(roll_out < -5) roll_out = -5;
-  
-  if(throttleDutyCycle > 80) throttleDutyCycle = 80; ////临时调小做保护
-  throttleDutyCycle = throttleDutyCycle * 600 ; //umod=59999;所以50%是 30000 - 60000，到时候再改。
-  
-  if((RCunlock == true) && (throttleDutyCycle > (60*600) ))
-//  throttleDutyCycle = 65;
-//    if(1)
+  //做一个转换，比如 umod=59999;所以PWM占空比50%~100%是 30000 - 60000 ，所以要 
+  //throttleDutyCycle = throttleDutyCycle * 600 
+  uint32_t throttleDutyCycle_cnv = throttleDutyCycle * (ftm_uMod_global+1) / 100 ; 
+
+  if((gyro_offset_done == true)&&(RCunlock == true) && (throttleDutyCycle_cnv > ftm_cnv_min_global))// && (isAngleProtected == false))
   {
+    roll_out0 = (int32_t)(LocPIDCalc(currentAngel->imu_roll ,roll_pid0,gyro_roll_global,1));
+    roll_pid1->ExpectPoint  = -roll_out0;
+    roll_out1  =(int32_t)(LocPIDCalc( (double)(gyro_roll_global*Gyro_G) ,roll_pid1,gyro_roll_global,0.5));
     
-      roll_out0 = (int32_t)(LocPIDCalc(currentAngel->imu_roll ,roll_pid0,gyro_roll_global));
-  
-  roll_pid1->ExpectPoint  = roll_out0;
-  
-  roll_out1  =(int32_t)(LocPIDCalc( (gyro_roll_global*Gyro_G) ,roll_pid1,gyro_roll_global));
-    
-    
-    
+    pitch_out0 = (int32_t)(LocPIDCalc(currentAngel->imu_pitch ,pitch_pid0,gyro_pitch_global,1));
+    pitch_pid1->ExpectPoint  = -pitch_out0;
+    pitch_out1  =(int32_t)(LocPIDCalc( (double)(gyro_pitch_global*Gyro_G) ,pitch_pid1,gyro_pitch_global,0.5));
     
     
+    sendLineX(0x1f,(((float)roll_out1)/100));
+    sendLineX(0x2f,(((float)pitch_out1)/100));
+//    sendLineX(0x2f,(((float)motor_pwm1_cnv)/ftm_uMod_global));
+//    sendLineX(0x3f,(((float)motor_pwm2_cnv)/ftm_uMod_global));
+//    sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
     
     
-//    motor_pwm0_duty  = throttleDutyCycle - pitch_out - roll_out - yaw_out ;
-//    motor_pwm1_duty  = throttleDutyCycle - pitch_out + roll_out + yaw_out ;
-//    motor_pwm2_duty  = throttleDutyCycle + pitch_out + roll_out - yaw_out ;
-//    motor_pwm3_duty  = throttleDutyCycle + pitch_out - roll_out + yaw_out ;
+    motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle_cnv - pitch_out1 - roll_out1 - yaw_out) ;
+    motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle_cnv + pitch_out1 - roll_out1 + yaw_out) ;
+    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle_cnv + pitch_out1 + roll_out1 - yaw_out) ;
+    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle_cnv - pitch_out1 + roll_out1 + yaw_out) ;   
     
-//    motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle - pitch_out - roll_out - yaw_out) ;
-//    motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle - pitch_out + roll_out + yaw_out) ;
-//    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle + pitch_out + roll_out - yaw_out) ;
-//    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle + pitch_out - roll_out + yaw_out) ;   
+    if(motor_pwm0_cnv > ftm_cnv_max_global){ motor_pwm0_cnv = ftm_cnv_max_global;}
+    if(motor_pwm1_cnv > ftm_cnv_max_global){ motor_pwm1_cnv = ftm_cnv_max_global;}
+    if(motor_pwm2_cnv > ftm_cnv_max_global){ motor_pwm2_cnv = ftm_cnv_max_global;}
+    if(motor_pwm3_cnv > ftm_cnv_max_global){ motor_pwm3_cnv = ftm_cnv_max_global;}
     
-//    motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle - pitch_out);// - roll_out - yaw_out) ;
-    motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle - roll_out1);// + roll_out + yaw_out) ;
-//    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle + pitch_out);// + roll_out - yaw_out) ;
-    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle + roll_out1);// - roll_out + yaw_out) ; 
-    
-//    if(motor_pwm0_duty > 98){ motor_pwm0_duty = 98;}
-//    if(motor_pwm1_duty > 98){ motor_pwm1_duty = 98;}
-//    if(motor_pwm2_duty > 98){ motor_pwm2_duty = 98;}
-//    if(motor_pwm3_duty > 98){ motor_pwm3_duty = 98;}
-//    
-//    if(motor_pwm0_duty < 50){ motor_pwm0_duty = 50;}
-//    if(motor_pwm1_duty < 50){ motor_pwm1_duty = 50;}
-//    if(motor_pwm2_duty < 50){ motor_pwm2_duty = 50;}
-//    if(motor_pwm3_duty < 50){ motor_pwm3_duty = 50;}
-  }
+    if(motor_pwm0_cnv < ftm_cnv_min_global){ motor_pwm0_cnv = ftm_cnv_min_global;}
+    if(motor_pwm1_cnv < ftm_cnv_min_global){ motor_pwm1_cnv = ftm_cnv_min_global;}
+    if(motor_pwm2_cnv < ftm_cnv_min_global){ motor_pwm2_cnv = ftm_cnv_min_global;}
+    if(motor_pwm3_cnv < ftm_cnv_min_global){ motor_pwm3_cnv = ftm_cnv_min_global;}
+  }   
   else
   {
-//    motor_pwm0_duty  = 50 ;
-//    motor_pwm1_duty  = 50 ;
-//    motor_pwm2_duty  = 50 ;
-//    motor_pwm3_duty  = 50 ;
-        motor_pwm0_cnv  = 30000 ;
-        motor_pwm1_cnv  = 30000 ;
-        motor_pwm2_cnv  = 30000 ;
-        motor_pwm3_cnv  = 30000 ;
-    
+    motor_pwm0_cnv  = ftm_cnv_stop_global;
+    motor_pwm1_cnv  = ftm_cnv_stop_global;
+    motor_pwm2_cnv  = ftm_cnv_stop_global;
+    motor_pwm3_cnv  = ftm_cnv_stop_global;
   }
 
 //  PRINTF("pwm0 = %3d ,pwm1 = %3d ,pwm2 = %3d ,pwm3 = %3d\r\n" ,motor_pwm0_duty,motor_pwm1_duty,motor_pwm2_duty,motor_pwm3_duty);
 //   PRINTF("cnv0 = %3d ,cnv1 = %3d ,cnv2 = %3d ,cnv3 = %3d\r\n" ,motor_pwm0_cnv,motor_pwm1_cnv,motor_pwm2_cnv,motor_pwm3_cnv); 
-  motor_cnv_reflash(motor_pwm0_cnv,
-                    motor_pwm1_cnv,
-                    motor_pwm2_cnv,
-                    motor_pwm3_cnv);
-//  motor_pwm_reflash(motor_pwm0_duty ,
-//                    motor_pwm1_duty ,
-//                    motor_pwm2_duty ,
-//                    motor_pwm3_duty );
+
+  motor_cnv_reflash((uint16_t)motor_pwm0_cnv,
+                    (uint16_t)motor_pwm1_cnv,
+                    (uint16_t)motor_pwm2_cnv,
+                    (uint16_t)motor_pwm3_cnv);
 }
 /*******************************************************************************
  * EOF
