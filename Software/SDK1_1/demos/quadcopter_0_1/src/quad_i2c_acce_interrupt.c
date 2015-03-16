@@ -448,11 +448,12 @@ i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
   gyro_y_current = pMemsRawData->gyro_y;
   gyro_z_current = pMemsRawData->gyro_z;
   
-  if((gyro_aver_times < 500) && (gyro_aver_cal_flag == true))
+  static uint32_t aver_times = 1000;
+  if((gyro_aver_times < aver_times) && (gyro_aver_cal_flag == true))
   {
-    if(   (gyro_x_current - gyro_x_last) < 30 && (gyro_x_current - gyro_x_last) > -30 
-       && (gyro_y_current - gyro_y_last) < 30 && (gyro_y_current - gyro_y_last) > -30
-       && (gyro_z_current - gyro_z_last) < 30 && (gyro_z_current - gyro_z_last) > -30 )
+    if(   (gyro_x_current - gyro_x_last) < 20 && (gyro_x_current - gyro_x_last) > -20 
+       && (gyro_y_current - gyro_y_last) < 20 && (gyro_y_current - gyro_y_last) > -20
+       && (gyro_z_current - gyro_z_last) < 20 && (gyro_z_current - gyro_z_last) > -20 )
     {
       gyro_x_aver += gyro_x_current;
       gyro_y_aver += gyro_y_current;
@@ -467,11 +468,11 @@ i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData)
       gyro_aver_times = 0;
     }
   }
-  if((gyro_aver_times >= 500) && (gyro_aver_cal_flag == true))
+  if((gyro_aver_times >= aver_times) && (gyro_aver_cal_flag == true))
   {
-    gyro_x_aver = gyro_x_aver/500;
-    gyro_y_aver = gyro_y_aver/500;
-    gyro_z_aver = gyro_z_aver/500;
+    gyro_x_aver = gyro_x_aver/aver_times;
+    gyro_y_aver = gyro_y_aver/aver_times;
+    gyro_z_aver = gyro_z_aver/aver_times;
     gyro_aver_cal_flag = false;
     gyro_offset_done = true;
   }

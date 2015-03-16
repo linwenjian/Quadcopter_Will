@@ -229,7 +229,7 @@ pid_t roll_pid00 = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 4,        
+  .Proportion = 6,        
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,    
   
@@ -241,9 +241,9 @@ pid_t roll_pid11 = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 4,//8,        
+  .Proportion = 6,//8,        
   .Integral   = 0,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 2.5,//4.5,//,//5,//,//0.08 * 100,//0.05,    
+  .Derivative = 2 ,//4.5,//,//5,//,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        
@@ -253,7 +253,7 @@ pid_t pitch_pid00 = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 4,//3,        
+  .Proportion = 6,//3,        
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,    
   
@@ -265,9 +265,9 @@ pid_t pitch_pid11 = {
   .ExpectPoint = 0,       
   .SumError    = 0,          
   
-  .Proportion = 4,//,//8,        
+  .Proportion = 6,//,//8,        
   .Integral   = 0,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 2.5,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,    
+  .Derivative = 2 ,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,    
   
   .LastError = 0,         
   .PrevError = 0,        

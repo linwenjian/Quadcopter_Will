@@ -207,7 +207,7 @@ void sendLineX(uint8_t flag, float val)
 }
 
 
-int main (void)
+int main (void) 
 {
   memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
   memcpy(packet_pwm_upper_PC.trans_header, trans_header_table_pwm, sizeof(trans_header_table_pwm));

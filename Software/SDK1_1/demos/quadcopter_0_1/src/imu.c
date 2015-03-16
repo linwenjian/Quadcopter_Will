@@ -238,7 +238,7 @@ return;
 }
 
 #else
-static void updateAHRS(double gx,double gy,double gz,
+static void updateAHRS(double gx,double gy,double gz,double gz_original,
                        double ax,double ay,double az,
                        double mx,double mz,double my, 
                        imu_float_euler_angle_t * angle)
@@ -254,7 +254,7 @@ static void updateAHRS(double gx,double gy,double gz,
   static double q2 = 0.0;
   static double q3 = 0.0;
   static double exInt = 0.0, eyInt = 0.0, ezInt = 0.0;
-  double gz_original = gz;	
+//  double gz_original = gz;	
 	//?2¦Ì?2?¨º?:???a¨ºy3?¡¤¡§????
 	double q0q0 = q0 * q0;							
 	double q0q1 = q0 * q1;
@@ -308,15 +308,15 @@ static void updateAHRS(double gx,double gy,double gz,
   /* output data */
 //  angle->imu_yaw = atan2(2 * q1 * q2 + 2 * q0 * q3, -2 * q2*q2 - 2 * q3* q3 + 1)* 57.3;
   
-  angle->imu_yaw =  angle->imu_yaw + gz_original*57.3*halfT*2;
-  angle->imu_pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3f;																			// pitcho???
-  angle->imu_roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3f;
+//  angle->imu_yaw =  angle->imu_yaw + gz_original*57.3*halfT*2;
+        angle->imu_yaw =  angle->imu_yaw + gz_original*Gyro_G*halfT*2;
+        angle->imu_pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3f;																			// pitcho???
+        angle->imu_roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3f;
 
 return;
 }
 
 #endif
-
 
 double gyro_pitch_global = 0;
 double gyro_roll_global = 0;
@@ -367,7 +367,7 @@ uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRaw
   double my = (double)pRawDdata->magn_y;
   double mz = (double)pRawDdata->magn_z;
   /* I need float data I give you euler angles */
-  updateAHRS( gx,gy,gz,
+  updateAHRS( gx,gy,gz,(double)pRawDdata->gyro_z,
               ax,ay,az,
               mx,my,mz,
               angle );
