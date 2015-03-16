@@ -462,8 +462,8 @@ int main (void)
             .imu_roll = 0,
             .imu_yaw = 0,
           };
-          expectAngel.imu_pitch =(int32_t)(((int32_t)(remoteControlValue[kPitch]/1000) -180)/6);
-          expectAngel.imu_roll =(int32_t)(((int32_t)(remoteControlValue[kRoll]/1000) -180)/6);
+          expectAngel.imu_pitch =(int32_t)(((double)(remoteControlValue[kPitch]/1000) -180)/1.5);
+          expectAngel.imu_roll = (int32_t)(((double)(remoteControlValue[kRoll]/ 1000) -180)/1.5);
 
           static bool isAngleProtected = false;
           if( quadAngle.imu_pitch > PROTECTED_ANGLE || quadAngle.imu_pitch < ((-1)*PROTECTED_ANGLE)

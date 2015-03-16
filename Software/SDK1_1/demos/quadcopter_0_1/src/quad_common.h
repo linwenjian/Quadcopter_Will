@@ -128,9 +128,9 @@ double KalmanFilter3(const double ResrcData,
                     double InitialPrediction);
 
 typedef enum _remote_controller_channel {
-  kRoll = 0,
-  kPitch = 2,
-  kThrottle = 1,
+  kRoll = 1,
+  kPitch = 0,
+  kThrottle = 2,
   kYaw = 3
 }remote_controller_channel_t;
 
