@@ -189,16 +189,16 @@ void sendLineX(uint8_t flag, float val)
         uint8_t send_data[7];
         send_data[0] = 0x55;
         send_data[1] = flag;
-        send_data[2] = send_muxByte_Tmp.send_4val[0];       
+        send_data[2] = send_muxByte_Tmp.send_4val[0];
         send_data[3] = send_muxByte_Tmp.send_4val[1];
         send_data[4] = send_muxByte_Tmp.send_4val[2];
         send_data[5] = send_muxByte_Tmp.send_4val[3];
         send_data[6] = 0xaa;
 
         UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,send_data,7);
-        
+
 //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,0x55);	for(i=0;i<j;i++);
-//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,flag);	for(i=0;i<j;i++);	
+//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,flag);	for(i=0;i<j;i++);
 //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[0]);	for(i=0;i<j;i++);
 //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[1]);	for(i=0;i<j;i++);
 //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[2]);	for(i=0;i<j;i++);
@@ -207,56 +207,56 @@ void sendLineX(uint8_t flag, float val)
 }
 
 
-int main (void) 
+int main (void)
 {
   memcpy(packet_upper_PC.trans_header, trans_header_table, sizeof(trans_header_table));
   memcpy(packet_pwm_upper_PC.trans_header, trans_header_table_pwm, sizeof(trans_header_table_pwm));
   // RX buffers
   //! @param receiveBuff Buffer used to hold received data
   uint8_t receiveBuff;
-  
+
   // Initialize standard SDK demo application pins
   hardware_init();
-  
+
   OSA_Init();
   // Call this function to initialize the console UART. This function
   // enables the use of STDIO functions (printf, scanf, etc.)
   dbg_uart_init();
   // Print the initial banner
   PRINTF("\r\nHello World!\n\n\r");
-  
+
   /*Start***FTM Init*************************************************************/
   memset(&ftmInfo, 0, sizeof(ftmInfo));
   ftmInfo.syncMethod = kFtmUseSoftwareTrig;
   FTM_DRV_Init(0, &ftmInfo);
   /*End*****FTM Init*************************************************************/
-  
+
   LED2_EN;    LED3_EN;    LED4_EN;    LED5_EN;
   LED2_OFF;   LED3_OFF;   LED4_OFF;   LED5_OFF;
-  
+
   I2C_fxos8700Init();
   I2C_l3g4200dInit();
-  
+
   FTM_DRV_PwmStart(0, &ftmParam0, 0);
   FTM_DRV_PwmStart(0, &ftmParam1, 1);
   FTM_DRV_PwmStart(0, &ftmParam2, 2);
   FTM_DRV_PwmStart(0, &ftmParam3, 3);
- 
+
   //SWSYNC bit is cleared at the next selected loading point after that the
-  //software trigger event occurred 
+  //software trigger event occurred
   //SYNCMODE = 1 ; SWRSTCNT =0 ; CNTMIN=1 ; CNTMAX=1 ;
   uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
   ftm_uMod_global = FTM_HAL_GetMod(ftmBaseAddr);
   ftm_cnv_max_global  = THROTTLE_DUTY_MAX *(ftm_uMod_global+1) / 100;
   ftm_cnv_min_global  = THROTTLE_DUTY_MIN *(ftm_uMod_global+1) / 100;
   ftm_cnv_stop_global = THROTTLE_DUTY_STOP*(ftm_uMod_global+1) / 100;
-  
+
   FTM_HAL_SetCounterSoftwareSyncModeCmd(ftmBaseAddr, false);
   FTM_HAL_SetMaxLoadingCmd(ftmBaseAddr, true);
   FTM_HAL_SetMinLoadingCmd(ftmBaseAddr, true);
 
   FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
-  
+
   // Hwtimer initialization
   if (kHwtimerSuccess != HWTIMER_SYS_Init(&hwtimer, &HWTIMER_LL_DEVIF, HWTIMER_LL_ID, 5, NULL))
   {
@@ -278,11 +278,11 @@ int main (void)
   SysTick->VAL = 0U;
   /* Run timer and disable interrupt */
   SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_ENABLE_Msk ;//| SysTick_CTRL_TICKINT_Msk;
-  
+
   GPIO_DRV_Init(remoteControlPins,NULL);
   //    GPIO_DRV_Init(fxos8700IntPins,NULL);
   //    I2C_fxos8700AutoCalibration(); //cannot work , shit!
-  
+
   /*Start***********************PIT Init*****************************************/
   // Structure of initialize PIT channel No.0
   pit_user_config_t chn0Confg = {
@@ -290,45 +290,45 @@ int main (void)
     .isTimerChained = false,
     .periodUs = 2000u //1000000 us
   };
-  
+
   // Structure of initialize PIT channel No.1
   pit_user_config_t chn1Confg = {
     .isInterruptEnabled = true,
     .isTimerChained = false,
-    .periodUs = 12000u
+    .periodUs = 8000u
   };
-  
+
   // Init pit module and enable run in debug
   PIT_DRV_Init(BOARD_PIT_INSTANCE, false);
-  
+
   // Initialize PIT timer instance for channel 0 and 1
   PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 0, &chn0Confg);
   PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 1, &chn1Confg);
-  
+
   // Start channel 0
   //    printf ("\n\rStarting channel No.0 ...");
   PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 0);
-  
+
   // Start channel 1
   //    printf ("\n\rStarting channel No.1 ...");
   PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 1);
-  
+
   /*End*************************PIT Init*****************************************/
-  
+
   //    NVIC_SetPriority(SysTick_IRQn, 3);
   //    NVIC_SetPriority(PORTB_IRQn,0);
   NVIC_SetPriority(PIT0_IRQn,3);
   //must set the pit isr priority lower than i2c because I run the i2c interrupt in pit_isr.
-  
+
   //PTD0 to measure the cycle with the oscilloscope  or logic analyzer
   PORT_HAL_SetMuxMode(PORTD_BASE, 0, kPortMuxAsGpio);
   GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOD, 0U), kGpioDigitalOutput) ;
   GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
-  
+
   while(1)
   {
     /*****start while(1) in mian loop*****/
-    if (pitIsrFlag1 == true)  
+    if (pitIsrFlag1 == true)
     {
       static uint16_t led5_i =0;
       if(led5_i==0)
@@ -339,7 +339,7 @@ int main (void)
       {
         LED5_OFF;led5_i=0;
       }
-      
+
       uint32_t waitTimes3s = (3000 / (chn1Confg.periodUs / 1000) ) ;
       /*Start*********匿名上位机发送的串口数据***********/
       {
@@ -352,11 +352,11 @@ int main (void)
         packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
         packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
         packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);
-        
+
         packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
         packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
         packet_upper_PC.user_data.trans_yaw =  BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
-        
+
         //        unt16_t throt;
         //    unt16_t yaw;
         //    unt16_t roll;
@@ -368,24 +368,24 @@ int main (void)
         packet_pwm_upper_PC.user_data.yaw   = BSWAP_16((uint16_t)(remoteControlValue[kYaw]/10));
         packet_pwm_upper_PC.user_data.roll  = BSWAP_16((uint16_t)(remoteControlValue[kRoll]/10));
         packet_pwm_upper_PC.user_data.pitch = BSWAP_16((uint16_t)(remoteControlValue[kPitch]/10));
-        
+
         packet_pwm_upper_PC.user_data.aux[0] = BSWAP_16((uint16_t)(100));
         packet_pwm_upper_PC.user_data.aux[1] = BSWAP_16((uint16_t)(200));
         packet_pwm_upper_PC.user_data.aux[2] = BSWAP_16((uint16_t)(300));
         packet_pwm_upper_PC.user_data.aux[3] = BSWAP_16((uint16_t)(400));
         packet_pwm_upper_PC.user_data.aux[4] = BSWAP_16((uint16_t)(500));
-        
+
         packet_pwm_upper_PC.user_data.pwm[0] = BSWAP_16((uint16_t)(motor_pwm0_cnv / 600));
         packet_pwm_upper_PC.user_data.pwm[1] = BSWAP_16((uint16_t)(motor_pwm1_cnv / 600));
         packet_pwm_upper_PC.user_data.pwm[2] = BSWAP_16((uint16_t)(motor_pwm2_cnv / 600));
         packet_pwm_upper_PC.user_data.pwm[3] = BSWAP_16((uint16_t)(motor_pwm3_cnv / 600));
-        
-        uint8_t *q = (uint8_t*)&packet_pwm_upper_PC;
-        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,q,32);
-        
-        uint8_t *p = (uint8_t*)&packet_upper_PC;
-        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32); 
-      
+
+//        uint8_t *q = (uint8_t*)&packet_pwm_upper_PC;
+//        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,q,32);
+//
+//        uint8_t *p = (uint8_t*)&packet_upper_PC;
+//        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+
 //        sendLineX(0x1f,(((float)motor_pwm0_cnv)/ftm_uMod_global));
 //        sendLineX(0x2f,(((float)motor_pwm1_cnv)/ftm_uMod_global));
 //        sendLineX(0x3f,(((float)motor_pwm2_cnv)/ftm_uMod_global));
@@ -393,7 +393,7 @@ int main (void)
 //        sendLineX(0x4f,(float)(0.25));
       }
       /*End*********匿名上位机发送的串口数据***********/
-      
+
       /*Start************Remote Controller Unlock *************/
       {
         pitIsrFlag1 = false;
@@ -441,15 +441,15 @@ int main (void)
         }
       }
       /*End************Remote Controller Unlock *************/
-      
-      /*Start*********** Reflash the motor PWM **************/     
+
+      /*Start*********** Reflash the motor PWM **************/
       {
         static uint32_t motor_init_times = 0 ;
         motor_init_times++;
         //      uint32_t waitTimes3s = (3000 / (chn1Confg.periodUs / 1000) ) ;
         if(motor_init_times > waitTimes3s )
-        { 
-          motor_init_times = (waitTimes3s+1) ; 
+        {
+          motor_init_times = (waitTimes3s+1) ;
           static uint32_t test_throttle_pwm = 50;
           test_throttle_pwm = remoteControlValue[kThrottle] / 2400 - 8; //对应42%-92%占空比
           ////遥控器信号 50Hz , 范围1~2ms，周期20ms，1.5ms中值.对应 120 000 - 240 000
@@ -462,9 +462,9 @@ int main (void)
             .imu_roll = 0,
             .imu_yaw = 0,
           };
-          expectAngel.imu_pitch =(int32_t)(((int32_t)(remoteControlValue[kPitch]/1000) -180)/2);
-          expectAngel.imu_roll =(int32_t)(((int32_t)(remoteControlValue[kRoll]/1000) -180)/2);
-          
+          expectAngel.imu_pitch =(int32_t)(((int32_t)(remoteControlValue[kPitch]/1000) -180)/6);
+          expectAngel.imu_roll =(int32_t)(((int32_t)(remoteControlValue[kRoll]/1000) -180)/6);
+
           static bool isAngleProtected = false;
           if( quadAngle.imu_pitch > PROTECTED_ANGLE || quadAngle.imu_pitch < ((-1)*PROTECTED_ANGLE)
              ||quadAngle.imu_roll > PROTECTED_ANGLE || quadAngle.imu_roll < ((-1)*PROTECTED_ANGLE) )
@@ -472,13 +472,14 @@ int main (void)
             // isAngleProtected = true;
             isRCunlock = false;
           }
-  
+
           motor_pid_control(test_throttle_pwm,
                             &expectAngel,
                             &quadAngle,
                             &pitch_pid00,
                             &pitch_pid11,
-                            &yaw_pid,
+                            &yaw_pid00,
+                            &yaw_pid11,
                             &roll_pid00,
                             &roll_pid11,
                             isRCunlock);
@@ -587,7 +588,7 @@ void PIT0_IRQHandler(void)
 bool pitIsrFlag1 = false;
 void PIT1_IRQHandler(void)
 {
-  
+
   /* Clear interrupt flag.*/
   PIT_HAL_ClearIntFlag(PIT_BASE, 1U);
   static uint16_t led4_i =0;
@@ -602,10 +603,10 @@ void PIT1_IRQHandler(void)
 //  uint32_t i = 0;
 //  for(i=0;i<8;i++)
 //  {
-//    remoteControlIntTimes[i] += 1; 
+//    remoteControlIntTimes[i] += 1;
 //    if(remoteControlIntTimes[i] > 3) //20ms，4个周期都没有中断，说明没有遥控器信号，清零。
 //                                     //貌似 遥控器 掉电了 也继续有信号发出，得示波器量一下
-//    { 
+//    {
 //      remoteControlIntTimes[i] = 10;
 //      remoteControlValue[i] = 0;
 //    }

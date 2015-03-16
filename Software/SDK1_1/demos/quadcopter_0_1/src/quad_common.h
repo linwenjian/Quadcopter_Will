@@ -69,13 +69,13 @@
 
 #include "imu.h"
 
-   
+
 #define THROTTLE_DUTY_MAX (90)
 #define THROTTLE_DUTY_MIN (46)
-#define THROTTLE_DUTY_STOP (44)   
+#define THROTTLE_DUTY_STOP (44)
 
 #define PROTECTED_ANGLE (40)
-   
+
 #define I2C_WRITE 0U
 #define I2C_READ 1U
 
@@ -129,8 +129,8 @@ double KalmanFilter3(const double ResrcData,
 
 typedef enum _remote_controller_channel {
   kRoll = 0,
-  kPitch = 1,
-  kThrottle = 2,
+  kPitch = 2,
+  kThrottle = 1,
   kYaw = 3
 }remote_controller_channel_t;
 
@@ -153,34 +153,35 @@ void motor_pwm_reflash(uint32_t uDutyCyclePercent0 ,uint32_t uDutyCyclePercent1,
                        uint32_t uDutyCyclePercent2 ,uint32_t uDutyCyclePercent3 );
 
 
-typedef struct _pid 
-{ 
-  double  ExpectPoint;        //设定目标 Desired Value 
-  double SumError;              //误差累计  
-  
-  double  Proportion;         //比例常数 Proportional Const 
-  double  Integral;           //积分常数 Integral Const 
-  double  Derivative;         //微分常数 Derivative Const 
-  
-  double LastError;              //Error[-1] 
-  double PrevError;              //Error[-2] 
-  
-  double LastDError;         //dError[-1] 
-    
-} pid_t; 
+typedef struct _pid
+{
+  double  ExpectPoint;        //设定目标 Desired Value
+  double SumError;              //误差累计
+
+  double  Proportion;         //比例常数 Proportional Const
+  double  Integral;           //积分常数 Integral Const
+  double  Derivative;         //微分常数 Derivative Const
+
+  double LastError;              //Error[-1]
+  double PrevError;              //Error[-2]
+
+  double LastDError;         //dError[-1]
+
+} pid_t;
 
 extern pid_t pitch_pid00;
 extern pid_t pitch_pid11;
 extern pid_t roll_pid00;
 extern pid_t roll_pid11;
-extern pid_t yaw_pid;
-
+extern pid_t yaw_pid00;
+extern pid_t yaw_pid11;
 void motor_pid_control(uint32_t throttleDutyCycle,
                        imu_float_euler_angle_t * expectAngel,
                        imu_float_euler_angle_t * currentAngel,
                        pid_t *pitch_pid0,
                        pid_t *pitch_pid1,
-                       pid_t *yaw_pid,
+                       pid_t *yaw_pid0,
+                       pid_t *yaw_pid1,
                        pid_t *roll_pid0,
                        pid_t *roll_pid1,
                        bool RCunlock );
@@ -201,7 +202,7 @@ extern uint32_t ftm_cnv_stop_global;
 
 void sendLineX(uint8_t flag, float val);
 extern imu_float_euler_angle_t quadAngle;
-extern bool gyro_offset_done;   
+extern bool gyro_offset_done;
 #endif
 /*******************************************************************************
 * EOF

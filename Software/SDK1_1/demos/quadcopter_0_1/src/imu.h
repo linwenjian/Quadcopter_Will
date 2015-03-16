@@ -16,7 +16,7 @@
 #define Ki             0.005f     /* integral gain governs rate of convergence of gyroscope biases */
 #define halfT          0.001f //陀螺仪采集周期的一半
 #define Gyro_G         (0.07f)
-#define Gyro_Gr        (0.00122173f) //弧度/秒 
+#define Gyro_Gr        (0.00122173f) //弧度/秒
 //L3G4200D 陀螺仪的值x * 70 / 1000 度/秒， 换算成弧度 x * 70 / 1000 *0.01745329252 = x * 0.00122173
 
 
@@ -38,7 +38,7 @@ typedef struct _imu_float_euler_angle
     double imu_yaw;
 }imu_float_euler_angle_t;
 
-typedef struct 
+typedef struct
 {
     int16_t ax;
     int16_t ay;
@@ -51,7 +51,7 @@ typedef struct
     int16_t mz;
 }imu_raw_data_t;
 
-typedef struct 
+typedef struct
 {
     double ax;
     double ay;
@@ -71,4 +71,5 @@ double invSqrt(double x) ;
 
 extern double gyro_pitch_global;
 extern double gyro_roll_global;
+extern double gyro_yaw_global ;
 #endif
