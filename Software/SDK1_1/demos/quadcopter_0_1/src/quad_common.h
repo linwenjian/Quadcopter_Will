@@ -203,6 +203,7 @@ extern uint32_t ftm_cnv_stop_global;
 void sendLineX(uint8_t flag, float val);
 extern imu_float_euler_angle_t quadAngle;
 extern bool gyro_offset_done;
+extern volatile uint32_t remoteControlValue[8];
 #endif
 /*******************************************************************************
 * EOF

@@ -247,7 +247,7 @@ pid_t roll_pid00 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 3.0,
+  .Proportion = 2.2,
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,
 
@@ -259,9 +259,9 @@ pid_t roll_pid11 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 3.0,//8,
-  .Integral   = 0.025,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 3.0,//4.5,//,//5,//,//0.08 * 100,//0.05,
+  .Proportion = 3.6,//8,
+  .Integral   = 0.02,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
 
   .LastError = 0,
   .PrevError = 0,
@@ -271,7 +271,7 @@ pid_t pitch_pid00 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 3.0,//3,
+  .Proportion = 2.2,//3,
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,
 
@@ -283,9 +283,9 @@ pid_t pitch_pid11 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 3.0,//,//8,
-  .Integral   = 0.025,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 3.0 ,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
+  .Proportion = 3.6,//,//8,
+  .Integral   = 0.02,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 4.5 ,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
 
   .LastError = 0,
   .PrevError = 0,
@@ -296,7 +296,7 @@ pid_t yaw_pid00 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 3.0,//3,
+  .Proportion = 4.5,//3,
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,
 
@@ -308,9 +308,9 @@ pid_t yaw_pid11 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 3.0,//,//8,
-  .Integral   = 0,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 3.0 ,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
+  .Proportion = 4.5,//,//8,
+  .Integral   = 0.02,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 6,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
 
   .LastError = 0,
   .PrevError = 0,
@@ -366,8 +366,23 @@ void motor_pid_control(uint32_t throttleDutyCycle,
   //throttleDutyCycle = throttleDutyCycle * 600
   uint32_t throttleDutyCycle_cnv = throttleDutyCycle * (ftm_uMod_global+1) / 100 ;
 
+  static bool firstSumErrorFlag = false;
+  if(firstSumErrorFlag == false)
+  {
+    pitch_pid00.SumError = 0;
+    pitch_pid11.SumError = 0;
+    roll_pid00.SumError  = 0;
+    roll_pid11.SumError  = 0;
+    yaw_pid00.SumError   = 0;
+    yaw_pid11.SumError   = 0;
+  }
+
   if((gyro_offset_done == true)&&(RCunlock == true) && (throttleDutyCycle_cnv > ftm_cnv_min_global))// && (isAngleProtected == false))
   {
+    if(throttleDutyCycle_cnv > (55 * (ftm_uMod_global+1) / 100))
+    {
+      firstSumErrorFlag = true;
+    }
     roll_out0 = (double)(LocPIDCalc(currentAngel->imu_roll ,roll_pid0,gyro_roll_global,1));
     roll_pid1->ExpectPoint  = -roll_out0;
     roll_out1  =(int32_t)(LocPIDCalc( (double)(gyro_roll_global*Gyro_G) ,roll_pid1,gyro_roll_global,0.5));
@@ -380,13 +395,14 @@ void motor_pid_control(uint32_t throttleDutyCycle,
     yaw_pid1->ExpectPoint = yaw_out0;
     yaw_out1 =(int32_t)(LocPIDCalc( (double)(gyro_yaw_global*Gyro_G) ,yaw_pid1,gyro_yaw_global,0.5));
 
-
-    sendLineX(0x1f,(((float)yaw_out1)/100));
-//    sendLineX(0x2f,(((float)pitch_out1)/100));
-//    sendLineX(0x2f,(((float)motor_pwm1_cnv)/ftm_uMod_global));
-//    sendLineX(0x3f,(((float)motor_pwm2_cnv)/ftm_uMod_global));
-//    sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
-
+#if 1
+    sendLineX(0x1f,(((float)currentAngel->imu_pitch)));
+    sendLineX(0x2f,(((float)currentAngel->imu_roll)));
+//    sendLineX(0x4f,(((float)pitch_pid1->SumError)));
+    //sendLineX(0x2f,(float)((((double)((double)remoteControlValue[kPitch]/1000) -180)/1.5)));
+    //sendLineX(0x3f,(float)((((double)((double)remoteControlValue[kRoll] /1000) -180)/1.5)));
+    //sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
+#endif
 
     motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle_cnv - pitch_out1 - roll_out1 + yaw_out1) ;
     motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle_cnv + pitch_out1 - roll_out1 - yaw_out1) ;
@@ -405,16 +421,17 @@ void motor_pid_control(uint32_t throttleDutyCycle,
   }
   else
   {
+    firstSumErrorFlag = false;
     motor_pwm0_cnv  = ftm_cnv_stop_global;
     motor_pwm1_cnv  = ftm_cnv_stop_global;
     motor_pwm2_cnv  = ftm_cnv_stop_global;
     motor_pwm3_cnv  = ftm_cnv_stop_global;
-    pitch_pid00.SumError = 0;
-    pitch_pid11.SumError = 0;
-    roll_pid00.SumError  = 0;
-    roll_pid11.SumError  = 0;
-    yaw_pid00.SumError   = 0;
-    yaw_pid11.SumError   = 0;
+//    pitch_pid00.SumError = 0;
+//    pitch_pid11.SumError = 0;
+//    roll_pid00.SumError  = 0;
+//    roll_pid11.SumError  = 0;
+//    yaw_pid00.SumError   = 0;
+//    yaw_pid11.SumError   = 0;
   }
 
 //  PRINTF("pwm0 = %3d ,pwm1 = %3d ,pwm2 = %3d ,pwm3 = %3d\r\n" ,motor_pwm0_duty,motor_pwm1_duty,motor_pwm2_duty,motor_pwm3_duty);

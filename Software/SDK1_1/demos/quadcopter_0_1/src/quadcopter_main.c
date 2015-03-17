@@ -206,6 +206,9 @@ void sendLineX(uint8_t flag, float val)
 //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,0xaa);	for(i=0;i<j;i++);
 }
 
+  //fgz define
+  uint32_t checkTimes = 0;
+double checkTmpVal[2] = {0,0};
 
 int main (void)
 {
@@ -324,6 +327,8 @@ int main (void)
   PORT_HAL_SetMuxMode(PORTD_BASE, 0, kPortMuxAsGpio);
   GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOD, 0U), kGpioDigitalOutput) ;
   GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
+
+
 
   while(1)
   {
@@ -462,8 +467,59 @@ int main (void)
             .imu_roll = 0,
             .imu_yaw = 0,
           };
-          expectAngel.imu_pitch =(int32_t)(((double)(remoteControlValue[kPitch]/1000) -180)/1.5);
-          expectAngel.imu_roll = (int32_t)(((double)(remoteControlValue[kRoll]/ 1000) -180)/1.5);
+//
+          ///
+          /////////////////////////////////////////////////////
+          ///////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////
+          /////////////////////////////////////////////////////////
+
+          expectAngel.imu_pitch = (((double)((double)remoteControlValue[kPitch]/1000) -180)/3);
+          expectAngel.imu_roll = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/3);
+#if 0
+          checkTmpVal[0] = (((double)((double)remoteControlValue[kPitch]/1000) -180)/600);
+          checkTmpVal[1] = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/600);
+
+          if(checkTmpVal[0] < 0.003 && checkTmpVal[0] > -0.003)
+          {
+            checkTmpVal[0] = 0;
+          }
+          if(checkTmpVal[1] < 0.003 && checkTmpVal[1] > -0.003)
+          {
+            checkTmpVal[1] = 0;
+          }
+          expectAngel.imu_pitch += checkTmpVal[0];
+          expectAngel.imu_roll += checkTmpVal[1];
+
+          if(expectAngel.imu_pitch > 15)
+          {
+            expectAngel.imu_pitch = 15;
+          }
+          else if(expectAngel.imu_pitch < -15)
+          {
+            expectAngel.imu_pitch = -15;
+          }
+
+          if(expectAngel.imu_roll > 15)
+          {
+            expectAngel.imu_roll = 15;
+          }
+          else if(expectAngel.imu_roll < -15)
+          {
+            expectAngel.imu_roll = -15;
+          }
+#endif
+
+          //expectAngel.imu_roll += (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/600);// - checkTmpVal[1];
+
+
+
+          //sendLineX(0x1f,(((float)expectAngel.imu_pitch)));
+          //sendLineX(0x0f,(((float)checkTmpVal[0])));
+          //sendLineX(0x0f,(((float)expectAngel.imu_pitch)));
+          //sendLineX(0x4f,(((float)expectAngel.imu_roll)));
+          //sendLineX(0x5f,(((float)checkTmpVal[1])));
+          //sendLineX(0x6f,(((float)checkTmpVal[0])));
 
           static bool isAngleProtected = false;
           if( quadAngle.imu_pitch > PROTECTED_ANGLE || quadAngle.imu_pitch < ((-1)*PROTECTED_ANGLE)
