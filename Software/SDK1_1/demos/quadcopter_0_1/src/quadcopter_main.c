@@ -70,8 +70,8 @@ const char trans_header_table_pwm[3] = {0x88, 0xAE, 0x12};
 //char trans_header_table1[] = {0x88, 0xA1, 2,0,0,0};
 trans_packet_t packet_upper_PC ;
 trans_packet_pwm_t packet_pwm_upper_PC ;
-mems_data_t  memsRawDate ;
-imu_float_euler_angle_t quadAngle;
+volatile mems_data_t   memsRawDate ;
+volatile imu_float_euler_angle_t quadAngle;
 
 bool gyro_offset_done = false;
 bool isFXOS8700Int1Trigger = false;
@@ -207,7 +207,7 @@ void sendLineX(uint8_t flag, float val)
 }
 
   //fgz define
-  uint32_t checkTimes = 0;
+uint32_t checkTimes = 0;
 double checkTmpVal[2] = {0,0};
 
 int main (void)
@@ -291,14 +291,14 @@ int main (void)
   pit_user_config_t chn0Confg = {
     .isInterruptEnabled = true,
     .isTimerChained = false,
-    .periodUs = 2000u //1000000 us
+    .periodUs = 5000u //1000000 us
   };
 
   // Structure of initialize PIT channel No.1
   pit_user_config_t chn1Confg = {
     .isInterruptEnabled = true,
     .isTimerChained = false,
-    .periodUs = 8000u
+    .periodUs = 10000u
   };
 
   // Init pit module and enable run in debug
@@ -335,6 +335,7 @@ int main (void)
     /*****start while(1) in mian loop*****/
     if (pitIsrFlag1 == true)
     {
+              pitIsrFlag1 = false;
       static uint16_t led5_i =0;
       if(led5_i==0)
       {
@@ -396,12 +397,28 @@ int main (void)
 //        sendLineX(0x3f,(((float)motor_pwm2_cnv)/ftm_uMod_global));
 //        sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
 //        sendLineX(0x4f,(float)(0.25));
+
+
+#if 1
+        sendLineX(0x1f,(((float)quadAngle.imu_pitch)));
+        sendLineX(0x2f,(((float)quadAngle.imu_roll)));
+        sendLineX(0x3f,(((float)quadAngle.imu_yaw)));
+            //sendLineX(0x3f,(((float)currentAngel->imu_yaw)));
+    sendLineX(0x4f,(((float)memsRawDate.accel_x)));
+    sendLineX(0x5f,(float)memsRawDate.accel_y);
+                 //sendLineX(0x6f,(((float)memsRawDate.accel_z)));
+        //sendLineX(0x4f,(((float)pitch_pid1->SumError)));
+//        sendLineX(0x1f,(float)((((double)((double)remoteControlValue[kPitch]/1000) -180)/3)));
+//        sendLineX(0x4f,(float)((((double)((double)remoteControlValue[kRoll] /1000) -180)/3)));
+        //sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
+#endif
+
       }
       /*End*********匿名上位机发送的串口数据***********/
 
       /*Start************Remote Controller Unlock *************/
       {
-        pitIsrFlag1 = false;
+
         if(isRCunlock == true)
         {
           LED3_ON;

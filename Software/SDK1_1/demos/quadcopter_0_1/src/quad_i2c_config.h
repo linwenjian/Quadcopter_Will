@@ -45,6 +45,7 @@
 #define FXOS8700_STATUS        0x00
 #define FXOS8700_WHOAMI        0x0D
 #define FXOS8700_XYZ_DATA_CFG  0x0E
+#define FXOS8700_HP_FILTER_CUTOFF   0x0F
 #define FXOS8700_CTRL_REG1     0x2AU
 
 #define FXOS8700_M_CTRL_REG1    0x5B
@@ -99,7 +100,7 @@ typedef struct _mems_date
   double gyro_x;
   double gyro_y;
   double gyro_z;
-}mems_data_t;
+} mems_data_t;
 
 #endif
 /*******************************************************************************

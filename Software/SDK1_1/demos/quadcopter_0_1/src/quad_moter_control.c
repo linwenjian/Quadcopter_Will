@@ -94,8 +94,8 @@ void motor_cnv_reflash(uint16_t uCnv0 ,uint16_t uCnv1,
 }
 
 //void motor_pid_control(uint32_t throttleDutyCycle,
-//                       imu_float_euler_angle_t * expectAngel,
-//                       imu_float_euler_angle_t * currentAngel,
+//                       volatile imu_float_euler_angle_t * expectAngel,
+//                       volatile imu_float_euler_angle_t * currentAngel,
 //                       bool RCunlock )  //unfinished.20150105
 //{
 //  pitch_p,pitch_i,pitch_d;
@@ -247,7 +247,7 @@ pid_t roll_pid00 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 2.2,
+  .Proportion = 3.5,
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,
 
@@ -259,9 +259,9 @@ pid_t roll_pid11 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 3.6,//8,
-  .Integral   = 0.02,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
+  .Proportion = 3.0,//8,
+  .Integral   = 0.07,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 4.8,//4.5,//,//5,//,//0.08 * 100,//0.05,
 
   .LastError = 0,
   .PrevError = 0,
@@ -271,7 +271,7 @@ pid_t pitch_pid00 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 2.2,//3,
+  .Proportion = 3.5,//3,
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,
 
@@ -283,9 +283,9 @@ pid_t pitch_pid11 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 3.6,//,//8,
-  .Integral   = 0.02,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 4.5 ,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
+  .Proportion = 3.0,//,//8,
+  .Integral   = 0.07,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 4.8 ,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
 
   .LastError = 0,
   .PrevError = 0,
@@ -296,7 +296,7 @@ pid_t yaw_pid00 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 4.5,//3,
+  .Proportion = 3.5,//3,
   .Integral   = 0,
   .Derivative = 0,//,//5,//,//0.08 * 100,//0.05,
 
@@ -308,9 +308,9 @@ pid_t yaw_pid11 = {
   .ExpectPoint = 0,
   .SumError    = 0,
 
-  .Proportion = 4.5,//,//8,
-  .Integral   = 0.02,//0.1,//0.1,//0.05,//0.05 ,
-  .Derivative = 6,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
+  .Proportion = 3.5,//,//8,
+  .Integral   = 0.06,//0.1,//0.1,//0.05,//0.05 ,
+  .Derivative = 0,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
 
   .LastError = 0,
   .PrevError = 0,
@@ -322,8 +322,8 @@ uint16_t motor_pwm2_cnv  = 0;
 uint16_t motor_pwm3_cnv  = 0;
 
 void motor_pid_control(uint32_t throttleDutyCycle,
-                       imu_float_euler_angle_t * expectAngel,
-                       imu_float_euler_angle_t * currentAngel,
+                       volatile imu_float_euler_angle_t * expectAngel,
+                        volatile imu_float_euler_angle_t * currentAngel,
                        pid_t *pitch_pid0,
                        pid_t *pitch_pid1,
                        pid_t *yaw_pid0,
@@ -384,30 +384,31 @@ void motor_pid_control(uint32_t throttleDutyCycle,
       firstSumErrorFlag = true;
     }
     roll_out0 = (double)(LocPIDCalc(currentAngel->imu_roll ,roll_pid0,gyro_roll_global,1));
-    roll_pid1->ExpectPoint  = -roll_out0;
+    roll_pid1->ExpectPoint  = roll_out0;
     roll_out1  =(int32_t)(LocPIDCalc( (double)(gyro_roll_global*Gyro_G) ,roll_pid1,gyro_roll_global,0.5));
 
-    pitch_out0 = (double)(LocPIDCalc(currentAngel->imu_pitch ,pitch_pid0,gyro_pitch_global,1));
-    pitch_pid1->ExpectPoint  = -pitch_out0;
+    pitch_out0 = (double)(LocPIDCalc(currentAngel->imu_pitch + 2.25,pitch_pid0,gyro_pitch_global,1));
+    pitch_pid1->ExpectPoint  = pitch_out0;
     pitch_out1  =(int32_t)(LocPIDCalc( (double)(gyro_pitch_global*Gyro_G) ,pitch_pid1,gyro_pitch_global,0.5));
 
     yaw_out0 = (double)(LocPIDCalc(currentAngel->imu_yaw ,yaw_pid0,gyro_yaw_global,1));
     yaw_pid1->ExpectPoint = yaw_out0;
     yaw_out1 =(int32_t)(LocPIDCalc( (double)(gyro_yaw_global*Gyro_G) ,yaw_pid1,gyro_yaw_global,0.5));
 
-#if 1
-    sendLineX(0x1f,(((float)currentAngel->imu_pitch)));
-    sendLineX(0x2f,(((float)currentAngel->imu_roll)));
-//    sendLineX(0x4f,(((float)pitch_pid1->SumError)));
-    //sendLineX(0x2f,(float)((((double)((double)remoteControlValue[kPitch]/1000) -180)/1.5)));
-    //sendLineX(0x3f,(float)((((double)((double)remoteControlValue[kRoll] /1000) -180)/1.5)));
+#if 0
+    sendLineX(0x1f,(((float)currentAngel->imu_roll)));
+    sendLineX(0x2f,(((float)currentAngel->imu_pitch)));
+    sendLineX(0x3f,(((float)currentAngel->imu_yaw)));
+    sendLineX(0x4f,(((float)memsRawDate.accel_x)));
+    sendLineX(0x5f,(float)memsRawDate.accel_y);
+    //sendLineX(0x6f,(float)memsRawDate.accel_z);
     //sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
 #endif
 
-    motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle_cnv - pitch_out1 - roll_out1 + yaw_out1) ;
-    motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle_cnv + pitch_out1 - roll_out1 - yaw_out1) ;
-    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle_cnv + pitch_out1 + roll_out1 + yaw_out1) ;
-    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle_cnv - pitch_out1 + roll_out1 - yaw_out1) ;
+    motor_pwm0_cnv  = (uint16_t)(throttleDutyCycle_cnv + pitch_out1 + roll_out1 - yaw_out1) ;
+    motor_pwm1_cnv  = (uint16_t)(throttleDutyCycle_cnv - pitch_out1 + roll_out1 + yaw_out1) ;
+    motor_pwm2_cnv  = (uint16_t)(throttleDutyCycle_cnv - pitch_out1 - roll_out1 - yaw_out1) ;
+    motor_pwm3_cnv  = (uint16_t)(throttleDutyCycle_cnv + pitch_out1 - roll_out1 + yaw_out1) ;
 
     if(motor_pwm0_cnv > ftm_cnv_max_global){ motor_pwm0_cnv = ftm_cnv_max_global;}
     if(motor_pwm1_cnv > ftm_cnv_max_global){ motor_pwm1_cnv = ftm_cnv_max_global;}

@@ -74,7 +74,7 @@
 #define THROTTLE_DUTY_MIN (46)
 #define THROTTLE_DUTY_STOP (44)
 
-#define PROTECTED_ANGLE (40)
+#define PROTECTED_ANGLE (45)
 
 #define I2C_WRITE 0U
 #define I2C_READ 1U
@@ -101,12 +101,13 @@ typedef struct ADCPinMuxTable {
 } _ADC_Pin_Mux_Table_t;
 
 int16_t DataCombine(uint8_t msb, uint8_t lsb);
+int16_t DataCombine_gyro(uint8_t msb, uint8_t lsb);
 
 i2c_status_t I2C_fxos8700Init(void);// Accelerometer & Magnetometer
 i2c_status_t I2C_l3g4200dInit(void);// Gyroscope
 
-i2c_status_t I2C_getAccelMangData(mems_data_t * pMemsRawData);
-i2c_status_t I2C_getGyroData(mems_data_t * pMemsRawData);
+i2c_status_t I2C_getAccelMangData(volatile mems_data_t * pMemsRawData);
+i2c_status_t I2C_getGyroData(volatile mems_data_t * pMemsRawData);
 
 void I2C_fxos8700AutoCalibration(void);
 
@@ -176,8 +177,8 @@ extern pid_t roll_pid11;
 extern pid_t yaw_pid00;
 extern pid_t yaw_pid11;
 void motor_pid_control(uint32_t throttleDutyCycle,
-                       imu_float_euler_angle_t * expectAngel,
-                       imu_float_euler_angle_t * currentAngel,
+                       volatile imu_float_euler_angle_t * expectAngel,
+                        volatile imu_float_euler_angle_t * currentAngel,
                        pid_t *pitch_pid0,
                        pid_t *pitch_pid1,
                        pid_t *yaw_pid0,
@@ -201,7 +202,7 @@ extern uint32_t ftm_cnv_min_global;
 extern uint32_t ftm_cnv_stop_global;
 
 void sendLineX(uint8_t flag, float val);
-extern imu_float_euler_angle_t quadAngle;
+extern volatile imu_float_euler_angle_t quadAngle;
 extern bool gyro_offset_done;
 extern volatile uint32_t remoteControlValue[8];
 #endif

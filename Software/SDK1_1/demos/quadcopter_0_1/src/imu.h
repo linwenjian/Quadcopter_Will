@@ -12,9 +12,9 @@
 
 
 #define PI             3.1415926f
-#define Kp             10.0f     /* proportional gain governs rate of convergence to accelerometer/magnetometer */
-#define Ki             0.005f     /* integral gain governs rate of convergence of gyroscope biases */
-#define halfT          0.001f //陀螺仪采集周期的一半
+#define Kp             1.6f     /* proportional gain governs rate of convergence to accelerometer/magnetometer */
+#define Ki             0.001f   /* integral gain governs rate of convergence of gyroscope biases */
+#define halfT          0.0025f  //陀螺仪采集周期的一半
 #define Gyro_G         (0.07f)
 #define Gyro_Gr        (0.00122173f) //弧度/秒
 //L3G4200D 陀螺仪的值x * 70 / 1000 度/秒， 换算成弧度 x * 70 / 1000 *0.01745329252 = x * 0.00122173
@@ -66,7 +66,7 @@ typedef struct
 
 //!< API functions
 uint32_t imu_io_install(imu_io_install_t * IOInstallStruct);
-uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRawDdata);
+uint32_t imu_get_euler_angle( volatile imu_float_euler_angle_t * angle, volatile mems_data_t * pRawDdata);
 double invSqrt(double x) ;
 
 extern double gyro_pitch_global;

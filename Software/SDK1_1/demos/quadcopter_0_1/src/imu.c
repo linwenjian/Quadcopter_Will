@@ -131,7 +131,7 @@ static uint32_t imu_format_data(imu_raw_data_t * raw_data, imu_float_data_t * fl
 static void updateAHRS(double gx,double gy,double gz,
                        double ax,double ay,double az,
                        double mx,double mz,double my,
-                       imu_float_euler_angle_t * angle)
+                       volatile imu_float_euler_angle_t * angle)
 {
   double norm;
   double hx, hy, hz, bx, bz;
@@ -241,7 +241,7 @@ return;
 static void updateAHRS(double gx,double gy,double gz,double gz_original,
                        double ax,double ay,double az,
                        double mx,double mz,double my,
-                       imu_float_euler_angle_t * angle)
+                        volatile imu_float_euler_angle_t * angle)
 {
 
   double norm;
@@ -254,6 +254,7 @@ static void updateAHRS(double gx,double gy,double gz,double gz_original,
   static double q2 = 0.0;
   static double q3 = 0.0;
   static double exInt = 0.0, eyInt = 0.0, ezInt = 0.0;
+
 //  double gz_original = gz;
 	//?2¦Ì?2?¨º?:???a¨ºy3?¡¤¡§????
 	double q0q0 = q0 * q0;
@@ -322,12 +323,12 @@ double gyro_pitch_global = 0;
 double gyro_roll_global = 0;
 double gyro_yaw_global = 0;
 //!< this functino must be called about every 2ms to get accurate eular angles
-uint32_t imu_get_euler_angle(imu_float_euler_angle_t * angle, mems_data_t * pRawDdata)
+uint32_t imu_get_euler_angle( volatile imu_float_euler_angle_t * angle, volatile mems_data_t * pRawDdata)
 {
 //  static imu_raw_data_t  raw_data_for_filter;
 //  static imu_raw_data_t filter_data;
 //  static imu_float_data_t float_data;
-//  memcpy(&raw_data_for_filter,pRawDdata,sizeof(mems_data_t));
+//  memcpy(&raw_data_for_filter,pRawDdata,sizeof(volatile mems_data_t));
 //  imu_sliding_filter(raw_data_for_filter, &filter_data);
 //
 //  imu_format_data(&filter_data, &float_data);
