@@ -39,18 +39,18 @@
 
 /* The FXOS8700 i2c instance and slave address */
 #define FXOS8700_I2C_INSTANCE  (0U)
-#define FXOS8700_ADDR      (0x1DU)
-#define FXOS8700_BAUDRATE  (400)
+#define FXOS8700_ADDR      0x69//(0x1DU)
+#define FXOS8700_BAUDRATE  (100)
 
 #define FXOS8700_STATUS        0x00
-#define FXOS8700_WHOAMI        0x0D
+#define FXOS8700_WHOAMI        0x75//0x0D
 #define FXOS8700_XYZ_DATA_CFG  0x0E
 #define FXOS8700_HP_FILTER_CUTOFF   0x0F
 #define FXOS8700_CTRL_REG1     0x2AU
 
 #define FXOS8700_M_CTRL_REG1    0x5B
 #define FXOS8700_M_CTRL_REG2    0x5C
-#define FXOS8700_WHOAMI_VAL     0xC7
+#define FXOS8700_WHOAMI_VAL     0x68//0xC7
 
 // number of bytes to be read from the FXOS8700
 #define FXOS8700_READ_LEN       13     // status plus 6 channels = 13 bytes

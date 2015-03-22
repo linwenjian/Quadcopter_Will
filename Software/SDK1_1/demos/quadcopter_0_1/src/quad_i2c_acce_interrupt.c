@@ -60,104 +60,105 @@ i2c_status_t I2C_fxos8700Init(void)
 
   I2C_DRV_MasterInit(FXOS8700_I2C_INSTANCE, &i2cMaster);
 
-  //who am I
-  accel_reg = FXOS8700_WHOAMI;
-  I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &read_temp, 1, 100);
-  if (read_temp != FXOS8700_WHOAMI_VAL )
-  {
-    PRINTF("no a FXO8700 chip");
-    return kStatus_I2C_Fail;
-  }
-
-  // write 0000 0000 = 0x00 to accelerometer control register 1 to place FXOS8700 into standby mode ,
-  // then you can do other settings.
-  // [7-1] = 0000 000
-  // [0]: active=0
-  accel_reg = FXOS8700_CTRL_REG1;
-  write_value = 0x00;
-
-  if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
-  {
-    //    PRINTF("fail0");
-    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-    //    return kStatus_I2C_Fail;
-  }
-
-  // write 0001 1111 = 0x1F to magnetometer control register 1
-  // [7]: m_acal=0:  0:auto calibration disabled 1:auto calibration enabled
-  // [6]: m_rst=0: no one-shot magnetic reset
-  // [5]: m_ost=0: no one-shot magnetic measurement
-  // [4-2]: m_os=111=7: 8x oversampling (for 200Hz) to reduce magnetometer noise
-  // [1-0]: m_hms=11=3: select hybrid mode with accel and magnetometer active
-  accel_reg = FXOS8700_M_CTRL_REG1;
-  write_value = 0x1F;
-
-  if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
-  {
-    //    PRINTF("fail0");
-    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-    //    return kStatus_I2C_Fail;
-  }
-
-  // write 0010 0000 = 0x20 to magnetometer control register 2
-  // [7]: reserved
-  // [6]: reserved
-  // [5]: hyb_autoinc_mode=1 to map the magnetometer registers to follow the accelerometer registers
-  //the user may do a burst read of 12 bytes starting from OUT_X_MSB (address 0x1) to read out both
-  //the current accelerometer and magnetometer data in one contiguous operation.
-  // [4]: m_maxmin_dis=0 to retain default min/max latching even though not used
-  // [3]: m_maxmin_dis_ths=0
-  // [2]: m_maxmin_rst=0
-  // [1-0]: m_rst_cnt=00 to enable magnetic reset each cycle
-  accel_reg = FXOS8700_M_CTRL_REG2;
-  write_value = 0x20;
-
-  if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
-  {
-    //    PRINTF("fail0");
-    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-    //    return kStatus_I2C_Fail;
-  }
-
-  // write 0000 0001= 0x01 to XYZ_DATA_CFG register
-  // [7]: reserved
-  // [6]: reserved
-  // [5]: reserved
-  // [4]: hpf_out=0
-  // [3]: reserved
-  // [2]: reserved
-  // [1-0]: fs=02 for accelerometer range of +/-8g range with 0.976mg/LSB
-  accel_reg = FXOS8700_XYZ_DATA_CFG;
-  write_value = 0x02;
-
-  if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
-  {
-    //    PRINTF("fail0");
-    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-    //    return kStatus_I2C_Fail;
-  }
-
-  // write 0000 1101b = 0x0D to accelerometer control register 1
-  // [7-6]: aslp_rate=00
-  // [5-3]: dr=000 for 800Hz data rate //(when in hybrid mode)
-  // [2]: lnoise=0 for normal mode  //low noise mode
-  // [1]: f_read=0 for normal 16 bit reads
-  // [0]: active=1 to take the part out of standby and enable sampling
-
-  accel_reg = FXOS8700_CTRL_REG1;
-  write_value = 0x01;
-
-  if( kStatus_I2C_Success !=
-     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
-  {
-    //    PRINTF("fail0");
-    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
-    //    return kStatus_I2C_Fail;
-  }
+//  //who am I
+//  accel_reg = FXOS8700_WHOAMI;
+//  static i2c_status_t i2c_c_result;
+//  i2c_c_result = I2C_DRV_MasterReceiveDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &read_temp, 1, 100);
+//  if (read_temp != FXOS8700_WHOAMI_VAL )
+//  {
+//    PRINTF("no a FXO8700 chip");
+//    return kStatus_I2C_Fail;
+//  }
+//
+//  // write 0000 0000 = 0x00 to accelerometer control register 1 to place FXOS8700 into standby mode ,
+//  // then you can do other settings.
+//  // [7-1] = 0000 000
+//  // [0]: active=0
+//  accel_reg = FXOS8700_CTRL_REG1;
+//  write_value = 0x00;
+//
+//  if( kStatus_I2C_Success !=
+//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
+//  {
+//    //    PRINTF("fail0");
+//    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
+//    //    return kStatus_I2C_Fail;
+//  }
+//
+//  // write 0001 1111 = 0x1F to magnetometer control register 1
+//  // [7]: m_acal=0:  0:auto calibration disabled 1:auto calibration enabled
+//  // [6]: m_rst=0: no one-shot magnetic reset
+//  // [5]: m_ost=0: no one-shot magnetic measurement
+//  // [4-2]: m_os=111=7: 8x oversampling (for 200Hz) to reduce magnetometer noise
+//  // [1-0]: m_hms=11=3: select hybrid mode with accel and magnetometer active
+//  accel_reg = FXOS8700_M_CTRL_REG1;
+//  write_value = 0x1F;
+//
+//  if( kStatus_I2C_Success !=
+//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
+//  {
+//    //    PRINTF("fail0");
+//    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
+//    //    return kStatus_I2C_Fail;
+//  }
+//
+//  // write 0010 0000 = 0x20 to magnetometer control register 2
+//  // [7]: reserved
+//  // [6]: reserved
+//  // [5]: hyb_autoinc_mode=1 to map the magnetometer registers to follow the accelerometer registers
+//  //the user may do a burst read of 12 bytes starting from OUT_X_MSB (address 0x1) to read out both
+//  //the current accelerometer and magnetometer data in one contiguous operation.
+//  // [4]: m_maxmin_dis=0 to retain default min/max latching even though not used
+//  // [3]: m_maxmin_dis_ths=0
+//  // [2]: m_maxmin_rst=0
+//  // [1-0]: m_rst_cnt=00 to enable magnetic reset each cycle
+//  accel_reg = FXOS8700_M_CTRL_REG2;
+//  write_value = 0x20;
+//
+//  if( kStatus_I2C_Success !=
+//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
+//  {
+//    //    PRINTF("fail0");
+//    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
+//    //    return kStatus_I2C_Fail;
+//  }
+//
+//  // write 0000 0001= 0x01 to XYZ_DATA_CFG register
+//  // [7]: reserved
+//  // [6]: reserved
+//  // [5]: reserved
+//  // [4]: hpf_out=0
+//  // [3]: reserved
+//  // [2]: reserved
+//  // [1-0]: fs=02 for accelerometer range of +/-8g range with 0.976mg/LSB
+//  accel_reg = FXOS8700_XYZ_DATA_CFG;
+//  write_value = 0x02;
+//
+//  if( kStatus_I2C_Success !=
+//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
+//  {
+//    //    PRINTF("fail0");
+//    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
+//    //    return kStatus_I2C_Fail;
+//  }
+//
+//  // write 0000 1101b = 0x0D to accelerometer control register 1
+//  // [7-6]: aslp_rate=00
+//  // [5-3]: dr=000 for 800Hz data rate //(when in hybrid mode)
+//  // [2]: lnoise=0 for normal mode  //low noise mode
+//  // [1]: f_read=0 for normal 16 bit reads
+//  // [0]: active=1 to take the part out of standby and enable sampling
+//
+//  accel_reg = FXOS8700_CTRL_REG1;
+//  write_value = 0x01;
+//
+//  if( kStatus_I2C_Success !=
+//     I2C_DRV_MasterSendDataBlocking(FXOS8700_I2C_INSTANCE, &accel_device, &accel_reg, 1, &write_value, 1, 100) )
+//  {
+//    //    PRINTF("fail0");
+//    //    I2C_DRV_MasterDeinit(FXOS8700_I2C_INSTANCE);
+//    //    return kStatus_I2C_Fail;
+//  }
 //  ///fgz define
 //
 //  accel_reg = FXOS8700_HP_FILTER_CUTOFF;

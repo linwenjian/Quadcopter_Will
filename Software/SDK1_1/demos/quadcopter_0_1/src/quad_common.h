@@ -74,10 +74,12 @@
 #define THROTTLE_DUTY_MIN (46)
 #define THROTTLE_DUTY_STOP (44)
 
-#define PROTECTED_ANGLE (45)
+#define PROTECTED_ANGLE (90)
 
 #define I2C_WRITE 0U
 #define I2C_READ 1U
+
+extern uint16_t sampleTimes;
 
 typedef enum _full_scale_range
 {

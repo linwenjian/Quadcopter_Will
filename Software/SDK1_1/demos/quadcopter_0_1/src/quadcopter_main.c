@@ -10,6 +10,8 @@
 
 #include "core_cm4.h"
 
+#include "mpu6050dmp_attitude_angle_cal.h"
+
 ///////////////////////////////////////////////////////////////////////////////
 // Definitions
 ///////////////////////////////////////////////////////////////////////////////
@@ -209,6 +211,14 @@ void sendLineX(uint8_t flag, float val)
   //fgz define
 uint32_t checkTimes = 0;
 double checkTmpVal[2] = {0,0};
+/*************************************************************************************************************************************/
+  /*************************************************************************************************************************************/
+  float My_Pitch, My_Roll, My_Yaw;
+  short My_gyro[3];
+  float My_Yaw_tmp = 0;
+  uint16_t sampleTimes;
+  /*************************************************************************************************************************************/
+  /*************************************************************************************************************************************/
 
 int main (void)
 {
@@ -238,8 +248,13 @@ int main (void)
   LED2_OFF;   LED3_OFF;   LED4_OFF;   LED5_OFF;
 
   I2C_fxos8700Init();
-  I2C_l3g4200dInit();
+  //I2C_l3g4200dInit();
+    //³õÊ¼»¯MPU6050
+  init_MPU6050();
 
+  sampleTimes = 0;
+
+LED2_ON;
   FTM_DRV_PwmStart(0, &ftmParam0, 0);
   FTM_DRV_PwmStart(0, &ftmParam1, 1);
   FTM_DRV_PwmStart(0, &ftmParam2, 2);
@@ -291,26 +306,26 @@ int main (void)
   pit_user_config_t chn0Confg = {
     .isInterruptEnabled = true,
     .isTimerChained = false,
-    .periodUs = 5000u //1000000 us
+    .periodUs = 8000u //1000000 us
   };
 
   // Structure of initialize PIT channel No.1
   pit_user_config_t chn1Confg = {
     .isInterruptEnabled = true,
     .isTimerChained = false,
-    .periodUs = 10000u
+    .periodUs = 8000u
   };
 
   // Init pit module and enable run in debug
   PIT_DRV_Init(BOARD_PIT_INSTANCE, false);
 
   // Initialize PIT timer instance for channel 0 and 1
-  PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 0, &chn0Confg);
+//  PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 0, &chn0Confg);
   PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 1, &chn1Confg);
 
   // Start channel 0
   //    printf ("\n\rStarting channel No.0 ...");
-  PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 0);
+//  PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 0);
 
   // Start channel 1
   //    printf ("\n\rStarting channel No.1 ...");
@@ -328,14 +343,72 @@ int main (void)
   GPIO_DRV_SetPinDir(GPIO_MAKE_PIN(HW_GPIOD, 0U), kGpioDigitalOutput) ;
   GPIO_DRV_WritePinOutput(GPIO_MAKE_PIN(HW_GPIOD, 0U),1);
 
-
-
   while(1)
   {
     /*****start while(1) in mian loop*****/
+
+static uint32_t led2_times = 0;
+static int32_t led2_flag = 1;
+
     if (pitIsrFlag1 == true)
     {
-              pitIsrFlag1 = false;
+      pitIsrFlag1 = false;
+//      if(led2_times++ > 50)
+//      {
+//        led2_times = 0;
+//        led2_flag = led2_flag * (-1);
+//      }
+//      if(led2_flag == 1)
+//      {
+//        LED2_ON;
+//      }
+//      else
+//      {
+//        LED2_OFF;
+//      }
+
+      get_AttitudeVal(My_gyro);
+
+      quadAngle.imu_roll = (-1 * (double)My_Roll * 0.70710678) - (-1 * (double)My_Pitch * 0.70710678);
+      quadAngle.imu_pitch = (-1 * (double)My_Pitch * 0.70710678) + (-1 * (double)My_Roll * 0.70710678);
+
+
+      gyro_roll_global = ((double)My_gyro[1] * 0.70710678 + (double)My_gyro[0] * 0.70710678)/16.4;
+      gyro_pitch_global  = ((double)My_gyro[0] * 0.70710678 - (double)My_gyro[1] * 0.70710678)/16.4;
+      gyro_yaw_global   = ((double)My_gyro[2])/16.4;
+      if(isRCunlock == true)
+      {
+        LED3_ON;
+        sampleTimes++;
+      }
+      else
+      {
+        LED3_OFF;
+        LED2_OFF;
+        sampleTimes = 0;
+        My_Yaw_tmp = 0;
+      }
+      if(sampleTimes <= 400 && isRCunlock == true)
+      {
+          My_Yaw_tmp += My_Yaw;
+      }
+      else if(sampleTimes > 400)
+      {
+          //quadAngle.imu_yaw = (double)My_Yaw;
+          LED2_ON;
+          quadAngle.imu_yaw = (double)My_Yaw - My_Yaw_tmp / 400;
+      }
+
+#if 0
+      sendLineX(0x1f,(float)quadAngle.imu_pitch);
+      sendLineX(0x2f,(float)quadAngle.imu_roll);
+      sendLineX(0x3f,(float)quadAngle.imu_yaw);
+
+      sendLineX(0x4f,(float)gyro_pitch_global);
+      sendLineX(0x5f,(float)gyro_roll_global);
+      sendLineX(0x6f,(float)gyro_yaw_global);
+#endif
+
       static uint16_t led5_i =0;
       if(led5_i==0)
       {
@@ -399,13 +472,13 @@ int main (void)
 //        sendLineX(0x4f,(float)(0.25));
 
 
-#if 1
+#if 0
         sendLineX(0x1f,(((float)quadAngle.imu_pitch)));
         sendLineX(0x2f,(((float)quadAngle.imu_roll)));
         sendLineX(0x3f,(((float)quadAngle.imu_yaw)));
             //sendLineX(0x3f,(((float)currentAngel->imu_yaw)));
-    sendLineX(0x4f,(((float)memsRawDate.accel_x)));
-    sendLineX(0x5f,(float)memsRawDate.accel_y);
+    //sendLineX(0x4f,(((float)memsRawDate.accel_x)));
+    //sendLineX(0x5f,(float)memsRawDate.accel_y);
                  //sendLineX(0x6f,(((float)memsRawDate.accel_z)));
         //sendLineX(0x4f,(((float)pitch_pid1->SumError)));
 //        sendLineX(0x1f,(float)((((double)((double)remoteControlValue[kPitch]/1000) -180)/3)));
@@ -419,14 +492,16 @@ int main (void)
       /*Start************Remote Controller Unlock *************/
       {
 
-        if(isRCunlock == true)
-        {
-          LED3_ON;
-        }
-        else
-        {
-          LED3_OFF;
-        }
+//        if(isRCunlock == true)
+//        {
+//          LED3_ON;
+//        }
+//        else
+//        {
+//          LED3_OFF;
+//          sampleTimes = 0;
+//          LED2_OFF;
+//        }
         static uint32_t unlock_times = 0;
         static uint32_t lock_times = 0;
 
@@ -494,6 +569,7 @@ int main (void)
           expectAngel.imu_pitch = (((double)((double)remoteControlValue[kPitch]/1000) -180)/3);
           expectAngel.imu_roll = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/3);
 #if 0
+          {
           checkTmpVal[0] = (((double)((double)remoteControlValue[kPitch]/1000) -180)/600);
           checkTmpVal[1] = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/600);
 
@@ -525,11 +601,10 @@ int main (void)
           {
             expectAngel.imu_roll = -15;
           }
+          }
 #endif
 
           //expectAngel.imu_roll += (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/600);// - checkTmpVal[1];
-
-
 
           //sendLineX(0x1f,(((float)expectAngel.imu_pitch)));
           //sendLineX(0x0f,(((float)checkTmpVal[0])));
@@ -556,6 +631,9 @@ int main (void)
                             &roll_pid00,
                             &roll_pid11,
                             isRCunlock);
+
+
+
         }
       }
       /*End************* Reflash the motor PWM **************/
@@ -640,13 +718,16 @@ void PIT0_IRQHandler(void)
   /* Clear interrupt flag.*/
   PIT_HAL_ClearIntFlag(PIT_BASE, 0U);
 
-  I2C_getAccelMangData(&memsRawDate);
-  I2C_getGyroData(&memsRawDate);
+  //I2C_getAccelMangData(&memsRawDate);
+  //I2C_getGyroData(&memsRawDate);
 
-  if(gyro_offset_done == true)
-  {
-    imu_get_euler_angle(&quadAngle,&memsRawDate);
-  }
+//  if(gyro_offset_done == true)
+//  {
+//    imu_get_euler_angle(&quadAngle,&memsRawDate);
+//  }
+
+
+ get_AttitudeVal(My_gyro);
   static uint16_t led2_i =0;
   if(led2_i==0)
   {
@@ -661,7 +742,6 @@ void PIT0_IRQHandler(void)
 bool pitIsrFlag1 = false;
 void PIT1_IRQHandler(void)
 {
-
   /* Clear interrupt flag.*/
   PIT_HAL_ClearIntFlag(PIT_BASE, 1U);
   static uint16_t led4_i =0;

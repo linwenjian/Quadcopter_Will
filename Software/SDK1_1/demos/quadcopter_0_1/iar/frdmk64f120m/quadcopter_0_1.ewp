@@ -174,6 +174,7 @@
           <state>FRDM_K64F120M</state>
           <state>FREEDOM</state>
           <state>Use_X_MODE</state>
+          <state>SIDE_DOWN</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -303,6 +304,7 @@
         <option>
           <name>CCIncludePath2</name>
           <state>$PROJ_DIR$/../../src</state>
+          <state>$PROJ_DIR$/../../src/DMP</state>
           <state>$PROJ_DIR$/../../../../platform/utilities/inc</state>
           <state>$PROJ_DIR$/../../../../platform/osa/inc</state>
           <state>$PROJ_DIR$/../../../../platform/CMSIS/Include</state>
@@ -1942,6 +1944,33 @@
   </group>
   <group>
     <name>source</name>
+    <group>
+      <name>DMP</name>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\DMP\dmpKey.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\DMP\dmpmap.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\DMP\inv_mpu.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\DMP\inv_mpu.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\DMP\inv_mpu_dmp_motion_driver.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\DMP\inv_mpu_dmp_motion_driver.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\DMP\mpu6050dmp_attitude_angle_cal.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\src\DMP\mpu6050dmp_attitude_angle_cal.h</name>
+      </file>
+    </group>
     <group>
       <name>imu</name>
       <file>
