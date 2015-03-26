@@ -208,6 +208,14 @@ double LocPIDCalc(double CurrentPoint , pid_t *sptr , double gyro_d_value ,doubl
   double  iError,dError,dError_for_use;
   double re_value;
   iError = sptr->ExpectPoint - CurrentPoint;       //偏差
+  if(iError >= 180)
+  {
+     iError -= 360;
+  }
+  else if(iError <= -180)
+  {
+     iError += 360;
+  }
   sptr->SumError += iError;               //积分
 
   //积分限幅
@@ -361,6 +369,10 @@ void motor_pid_control(uint32_t throttleDutyCycle,
 
   pitch_pid0->ExpectPoint = expectAngel->imu_pitch;
   roll_pid0->ExpectPoint  = expectAngel->imu_roll;
+  yaw_pid0->ExpectPoint  = expectAngel->imu_yaw;
+
+  sendLineX(0x1f,(float)expectAngel->imu_yaw);
+  sendLineX(0x4f,(float)yaw_pid0->ExpectPoint);
 
   if(throttleDutyCycle > THROTTLE_DUTY_MAX) {throttleDutyCycle = THROTTLE_DUTY_MAX;} ////油门最大值限制，做保护
 

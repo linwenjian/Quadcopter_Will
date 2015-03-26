@@ -211,6 +211,7 @@ void sendLineX(uint8_t flag, float val)
   //fgz define
 uint32_t checkTimes = 0;
 double checkTmpVal[2] = {0,0};
+double X_Y_changeTmp[2] = {0,0};
 /*************************************************************************************************************************************/
   /*************************************************************************************************************************************/
   float My_Pitch, My_Roll, My_Yaw;
@@ -371,7 +372,6 @@ static int32_t led2_flag = 1;
 
       quadAngle.imu_roll = (-1 * (double)My_Roll * 0.70710678) - (-1 * (double)My_Pitch * 0.70710678);
       quadAngle.imu_pitch = (-1 * (double)My_Pitch * 0.70710678) + (-1 * (double)My_Roll * 0.70710678);
-
 
       gyro_roll_global = ((double)My_gyro[1] * 0.70710678 + (double)My_gyro[0] * 0.70710678)/16.4;
       gyro_pitch_global  = ((double)My_gyro[0] * 0.70710678 - (double)My_gyro[1] * 0.70710678)/16.4;
@@ -565,9 +565,44 @@ static int32_t led2_flag = 1;
           ///////////////////////////////////////////////////////
           ////////////////////////////////////////////////////////
           /////////////////////////////////////////////////////////
-
+#if 1
+          X_Y_changeTmp[1] = (((double)((double)remoteControlValue[kPitch]/1000) -180)/3);
+          X_Y_changeTmp[0] = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/3);
+          expectAngel.imu_roll = (X_Y_changeTmp[0]) * cos(quadAngle.imu_yaw / 180 * PI) + (X_Y_changeTmp[1]) * sin(quadAngle.imu_yaw / 180 * PI);
+          expectAngel.imu_pitch = (X_Y_changeTmp[1]) * cos(quadAngle.imu_yaw / 180 * PI) + (-1 * X_Y_changeTmp[0]) * sin(quadAngle.imu_yaw / 180 * PI);
+          //expectAngel.imu_pitch *= -1;
+#else
           expectAngel.imu_pitch = (((double)((double)remoteControlValue[kPitch]/1000) -180)/3);
           expectAngel.imu_roll = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/3);
+#endif
+
+#if 1
+          if((sampleTimes > 400) && (isRCunlock == true))
+          {
+
+              checkTmpVal[0] = ((double)remoteControlValue[kYaw] / 1000 - 180) / 75;
+              if(checkTmpVal[0] < 0.08 && checkTmpVal[0] > -0.08)
+              {
+                  checkTmpVal[0] = 0;
+              }
+
+              checkTmpVal[1] += checkTmpVal[0];
+              if(checkTmpVal[1] >= 360 || checkTmpVal[1] <= -360)
+              {
+                  checkTmpVal[1] = 0;
+              }
+              expectAngel.imu_yaw = -1 * checkTmpVal[1];
+          }
+          else
+          {
+              checkTmpVal[0] = 0;
+              checkTmpVal[1] = 0;
+              expectAngel.imu_yaw = 0;
+          }
+          sendLineX(0x5f,(float)checkTmpVal[1]);
+          //sendLineX(0x4f,(float)checkTmpVal[1]);
+#endif
+
 #if 0
           {
           checkTmpVal[0] = (((double)((double)remoteControlValue[kPitch]/1000) -180)/600);
