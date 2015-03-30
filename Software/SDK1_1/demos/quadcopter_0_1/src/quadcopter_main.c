@@ -369,9 +369,9 @@ static int32_t led2_flag = 1;
 //      }
 
       get_AttitudeVal(My_gyro);
-#if 0
+#if 1
       quadAngle.imu_roll = ((double)My_Roll * 0.70710678) - ((double)My_Pitch * 0.70710678);
-      quadAngle.imu_pitch = ((double)My_Pitch * 0.70710678) + ((double)My_Roll * 0.70710678);
+      quadAngle.imu_pitch = (double)((double)(((double)My_Pitch * 0.70710678) + ((double)My_Roll * 0.70710678)) - 1.8) ;
 
       gyro_roll_global = ((double)My_gyro[1] * -0.70710678 + (double)My_gyro[0] * 0.70710678) / 16.4;
       gyro_pitch_global  = ((double)My_gyro[0] * 0.70710678 + (double)My_gyro[1] * 0.70710678) / 16.4;

@@ -234,7 +234,7 @@ void get_AttitudeVal(short *gyroVal)
 
 
 
-#ifndef SIDE_DOWN
+#ifdef SIDE_DOWN
 
         if(My_Roll < 0)
         {
