@@ -369,17 +369,29 @@ static int32_t led2_flag = 1;
 //      }
 
       get_AttitudeVal(My_gyro);
+#if 0
+      quadAngle.imu_roll = ((double)My_Roll * 0.70710678) - ((double)My_Pitch * 0.70710678);
+      quadAngle.imu_pitch = ((double)My_Pitch * 0.70710678) + ((double)My_Roll * 0.70710678);
 
-      quadAngle.imu_roll = (-1 * (double)My_Roll * 0.70710678) - (-1 * (double)My_Pitch * 0.70710678);
-      quadAngle.imu_pitch = (-1 * (double)My_Pitch * 0.70710678) + (-1 * (double)My_Roll * 0.70710678);
+      gyro_roll_global = ((double)My_gyro[1] * -0.70710678 + (double)My_gyro[0] * 0.70710678) / 16.4;
+      gyro_pitch_global  = ((double)My_gyro[0] * 0.70710678 + (double)My_gyro[1] * 0.70710678) / 16.4;
+      gyro_yaw_global   = ((double)My_gyro[2]) / 16.4;
+#else
 
-      gyro_roll_global = ((double)My_gyro[1] * 0.70710678 + (double)My_gyro[0] * 0.70710678)/16.4;
-      gyro_pitch_global  = ((double)My_gyro[0] * 0.70710678 - (double)My_gyro[1] * 0.70710678)/16.4;
-      gyro_yaw_global   = ((double)My_gyro[2])/16.4;
+      quadAngle.imu_roll = (double)My_Roll;
+      quadAngle.imu_pitch  = (double)My_Pitch;
+      gyro_roll_global = (double)My_gyro[0] / 16.4;
+      gyro_pitch_global  = (double)My_gyro[1] / 16.4;
+      gyro_yaw_global   = (double)My_gyro[2] / 16.4;
+#endif
+
       if(isRCunlock == true)
       {
         LED3_ON;
-        sampleTimes++;
+        if(sampleTimes <= 400)
+        {
+            sampleTimes++;
+        }
       }
       else
       {
@@ -549,6 +561,7 @@ static int32_t led2_flag = 1;
           motor_init_times = (waitTimes3s+1) ;
           static uint32_t test_throttle_pwm = 50;
           test_throttle_pwm = remoteControlValue[kThrottle] / 2400 - 8; //对应42%-92%占空比
+ //         test_throttle_pwm = remoteControlValue[kThrottle] / 3600+8;// 8; //对应40%-70%占空比
           ////遥控器信号 50Hz , 范围1~2ms，周期20ms，1.5ms中值.对应 120 000 - 240 000
           //      motor_pwm_reflash(test_throttle_pwm,
           //                        test_throttle_pwm,
@@ -580,7 +593,7 @@ static int32_t led2_flag = 1;
           if((sampleTimes > 400) && (isRCunlock == true))
           {
 
-              checkTmpVal[0] = ((double)remoteControlValue[kYaw] / 1000 - 180) / 75;
+              checkTmpVal[0] = ((double)remoteControlValue[kYaw] / 1000 - 180) / 150;
               if(checkTmpVal[0] < 0.08 && checkTmpVal[0] > -0.08)
               {
                   checkTmpVal[0] = 0;
@@ -599,7 +612,7 @@ static int32_t led2_flag = 1;
               checkTmpVal[1] = 0;
               expectAngel.imu_yaw = 0;
           }
-          sendLineX(0x5f,(float)checkTmpVal[1]);
+          //sendLineX(0x5f,(float)checkTmpVal[1]);
           //sendLineX(0x4f,(float)checkTmpVal[1]);
 #endif
 

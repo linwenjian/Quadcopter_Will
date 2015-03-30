@@ -371,8 +371,8 @@ void motor_pid_control(uint32_t throttleDutyCycle,
   roll_pid0->ExpectPoint  = expectAngel->imu_roll;
   yaw_pid0->ExpectPoint  = expectAngel->imu_yaw;
 
-  sendLineX(0x1f,(float)expectAngel->imu_yaw);
-  sendLineX(0x4f,(float)yaw_pid0->ExpectPoint);
+  //sendLineX(0x1f,(float)expectAngel->imu_yaw);
+  //sendLineX(0x4f,(float)yaw_pid0->ExpectPoint);
 
   if(throttleDutyCycle > THROTTLE_DUTY_MAX) {throttleDutyCycle = THROTTLE_DUTY_MAX;} ////油门最大值限制，做保护
 
@@ -399,7 +399,7 @@ void motor_pid_control(uint32_t throttleDutyCycle,
       firstSumErrorFlag = true;
     }
     roll_out0 = (double)(LocPIDCalc(currentAngel->imu_roll ,roll_pid0,gyro_roll_global,1));
-    roll_pid1->ExpectPoint  = roll_out0;
+    roll_pid1->ExpectPoint  = -1 * roll_out0;
     roll_out1  =(int32_t)(LocPIDCalc( (double)(gyro_roll_global) ,roll_pid1,gyro_roll_global,0.5));
 
     pitch_out0 = (double)(LocPIDCalc(currentAngel->imu_pitch ,pitch_pid0,gyro_pitch_global,1));
@@ -407,17 +407,17 @@ void motor_pid_control(uint32_t throttleDutyCycle,
     pitch_out1  =(int32_t)(LocPIDCalc( (double)(gyro_pitch_global) ,pitch_pid1,gyro_pitch_global,0.5));
 
     yaw_out0 = (double)(LocPIDCalc(currentAngel->imu_yaw ,yaw_pid0,gyro_yaw_global,1));
-    yaw_pid1->ExpectPoint = (-1) * yaw_out0;
+    yaw_pid1->ExpectPoint = -1 * yaw_out0;
     yaw_out1 =(int32_t)(LocPIDCalc( (double)(gyro_yaw_global) ,yaw_pid1,gyro_yaw_global,0.5));
 
     //yaw_out1 = 0;
 
 
-#if 0
+#if 1
     sendLineX(0x1f,(((float)currentAngel->imu_roll)));
     sendLineX(0x2f,(((float)currentAngel->imu_pitch)));
     sendLineX(0x3f,(((float)currentAngel->imu_yaw)));
-    sendLineX(0x4f,(((float)roll_out1 )));
+    sendLineX(0x4f,(((float)roll_out1)));
     sendLineX(0x5f,(((float)pitch_out1)));
     sendLineX(0x6f,(((float)yaw_out1)));
     //sendLineX(0x6f,(float)memsRawDate.accel_z);

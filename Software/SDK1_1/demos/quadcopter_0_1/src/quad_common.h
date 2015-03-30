@@ -79,6 +79,8 @@
 #define I2C_WRITE 0U
 #define I2C_READ 1U
 
+//#define SIDE_DOWN
+
 extern uint16_t sampleTimes;
 
 typedef enum _full_scale_range

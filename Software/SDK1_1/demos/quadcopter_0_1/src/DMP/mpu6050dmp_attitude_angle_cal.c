@@ -233,7 +233,8 @@ void get_AttitudeVal(short *gyroVal)
         My_Yaw   = atan2(2 * (q1 * q2 + q0 * q3), q0 * q0 + q1 * q1 - q2 * q2 - q3 * q3) * 57.3f;               //Yaw
 
 
-#ifdef SIDE_DOWN
+
+#ifndef SIDE_DOWN
 
         if(My_Roll < 0)
         {
@@ -243,18 +244,21 @@ void get_AttitudeVal(short *gyroVal)
         {
             My_Roll -= 180;
         }
-
 #endif
         //sendLineX(MCU1, 0X1F, (float)accel[0]);
         //sendLineX(MCU1, 0X4F, (float)accel[1]);
 
-#if 1
-      mpu_get_gyro_reg(gyroVal, &nullVal);
-
-//      gyroVal[0] = -1 * gyroVal[0];
-//      gyroVal[1] = -1 * gyroVal[1];
-//      gyroVal[2] = -1 * gyroVal[2];
-#endif
+        mpu_get_gyro_reg(gyroVal, &nullVal);
+        //gyroVal[0] = 1 * gyroVal[0];
+        //gyroVal[1] = 1 * gyroVal[1];
+        //gyroVal[2] = 1 * gyroVal[2];
+//        sendLineX(0x1f,(((float)My_Pitch)));
+//        sendLineX(0x2f,(((float)My_Roll)));
+//        sendLineX(0x3f,(((float)My_Yaw)));
+//
+//        sendLineX(0x4f,(((float)gyroVal[0])));
+//        sendLineX(0x5f,(((float)gyroVal[1])));
+//        sendLineX(0x6f,(((float)gyroVal[2])));
 
     }
 
