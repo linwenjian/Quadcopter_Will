@@ -72,4 +72,8 @@ double invSqrt(double x) ;
 extern double gyro_pitch_global;
 extern double gyro_roll_global;
 extern double gyro_yaw_global ;
+
+extern double gyro_pitch_global_temp ;
+extern double gyro_roll_global_temp ;
+extern double gyro_yaw_global_temp ;
 #endif

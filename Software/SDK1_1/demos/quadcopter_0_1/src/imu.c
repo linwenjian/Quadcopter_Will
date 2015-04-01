@@ -322,6 +322,11 @@ return;
 double gyro_pitch_global = 0;
 double gyro_roll_global = 0;
 double gyro_yaw_global = 0;
+
+double gyro_pitch_global_temp = 0;
+double gyro_roll_global_temp = 0;
+double gyro_yaw_global_temp = 0;
+
 //!< this functino must be called about every 2ms to get accurate eular angles
 uint32_t imu_get_euler_angle( volatile imu_float_euler_angle_t * angle, volatile mems_data_t * pRawDdata)
 {

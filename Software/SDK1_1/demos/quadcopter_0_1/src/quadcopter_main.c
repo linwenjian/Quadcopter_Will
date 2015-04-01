@@ -370,8 +370,8 @@ static int32_t led2_flag = 1;
 
       get_AttitudeVal(My_gyro);
 #if 1
-      quadAngle.imu_roll = ((double)My_Roll * 0.70710678) - ((double)My_Pitch * 0.70710678);
-      quadAngle.imu_pitch = (double)((double)(((double)My_Pitch * 0.70710678) + ((double)My_Roll * 0.70710678)) - 1.8) ;
+      quadAngle.imu_roll =  (double)((double)(((double)My_Roll  * 0.70710678) - ((double)My_Pitch * 0.70710678)) + 0.6);
+      quadAngle.imu_pitch = (double)((double)(((double)My_Pitch * 0.70710678) + ((double)My_Roll  * 0.70710678)) - 0.6);
 
       gyro_roll_global = ((double)My_gyro[1] * -0.70710678 + (double)My_gyro[0] * 0.70710678) / 16.4;
       gyro_pitch_global  = ((double)My_gyro[0] * 0.70710678 + (double)My_gyro[1] * 0.70710678) / 16.4;
@@ -399,16 +399,31 @@ static int32_t led2_flag = 1;
         LED2_OFF;
         sampleTimes = 0;
         My_Yaw_tmp = 0;
+
+        gyro_pitch_global_temp = 0;
+        gyro_roll_global_temp = 0;
+        gyro_yaw_global_temp = 0;
+
+
       }
       if(sampleTimes <= 400 && isRCunlock == true)
       {
           My_Yaw_tmp += My_Yaw;
+
+          gyro_pitch_global_temp += gyro_pitch_global;
+          gyro_roll_global_temp += gyro_roll_global;
+          gyro_yaw_global_temp += gyro_yaw_global;
+
       }
       else if(sampleTimes > 400)
       {
           //quadAngle.imu_yaw = (double)My_Yaw;
           LED2_ON;
           quadAngle.imu_yaw = (double)My_Yaw - My_Yaw_tmp / 400;
+
+          gyro_pitch_global = gyro_pitch_global - gyro_pitch_global_temp/400;
+          gyro_roll_global = gyro_roll_global - gyro_roll_global_temp/400;
+          gyro_yaw_global = gyro_yaw_global - gyro_yaw_global_temp/400;
       }
 
 #if 0
@@ -434,19 +449,21 @@ static int32_t led2_flag = 1;
       uint32_t waitTimes3s = (3000 / (chn1Confg.periodUs / 1000) ) ;
       /*Start*********匿名上位机发送的串口数据***********/
       {
+
+  #if 0
         packet_upper_PC.user_data.trans_accel[0] = BSWAP_16(memsRawDate.accel_x);
         packet_upper_PC.user_data.trans_accel[1] = BSWAP_16(memsRawDate.accel_y);
         packet_upper_PC.user_data.trans_accel[2] = BSWAP_16(memsRawDate.accel_z);
-        packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16((int16_t)gyro_roll_global);//memsRawDate.gyro_x);//gyro_y_before);//memsRawDate.gyro_x);
-        packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16((int16_t)gyro_pitch_global);//memsRawDate.gyro_y);//gyro_y_after);//memsRawDate.gyro_y);
-        packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16(memsRawDate.gyro_z);
+        packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16((int16_t)(gyro_roll_global*100));//memsRawDate.gyro_x);//gyro_y_before);//memsRawDate.gyro_x);
+        packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16((int16_t)(gyro_pitch_global*100));//memsRawDate.gyro_y);//gyro_y_after);//memsRawDate.gyro_y);
+        packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16((int16_t)(gyro_yaw_global*100));
         packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
         packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
         packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);
 
         packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
         packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
-        packet_upper_PC.user_data.trans_yaw =  BSWAP_16((int16_t)(quadAngle.imu_yaw*10));
+        packet_upper_PC.user_data.trans_yaw =  BSWAP_16((int16_t)(quadAngle.imu_yaw*100));
 
         //        unt16_t throt;
         //    unt16_t yaw;
@@ -474,8 +491,10 @@ static int32_t led2_flag = 1;
 //        uint8_t *q = (uint8_t*)&packet_pwm_upper_PC;
 //        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,q,32);
 //
-//        uint8_t *p = (uint8_t*)&packet_upper_PC;
-//        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+        uint8_t *p = (uint8_t*)&packet_upper_PC;
+        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+
+#endif
 
 //        sendLineX(0x1f,(((float)motor_pwm0_cnv)/ftm_uMod_global));
 //        sendLineX(0x2f,(((float)motor_pwm1_cnv)/ftm_uMod_global));
