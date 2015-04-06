@@ -222,8 +222,10 @@ double LocPIDCalc(double CurrentPoint , pid_t *sptr , double gyro_d_value ,doubl
   sptr->SumError += iError;               //积分
 
   //积分限幅
-  sptr->SumError = List_MaxMin(sptr->SumError, (0.8* (ftm_uMod_global+1) / (sptr->Integral + 0.000001)), ((-0.8) * (ftm_uMod_global+1)/ (sptr->Integral + 0.000001)) );
-//  if(sptr->SumError > ftm_cnv_max_global)
+  sptr->SumError = List_MaxMin(sptr->SumError, ( 0.8*(ftm_uMod_global+1) / (sptr->Integral + 0.000001)), ((ftm_uMod_global+1)/(sptr->Integral + 0.000001)*(-0.8)) );
+//  sptr->SumError = List_MaxMin(sptr->SumError, 234350,-234350);
+
+  //  if(sptr->SumError > ftm_cnv_max_global)
 //  { sptr->SumError  = ftm_cnv_max_global ;}
 //  if(sptr->SumError < ((-1)*ftm_cnv_max_global))
 //  { sptr->SumError  = (-1)*ftm_cnv_max_global) ;}
@@ -273,7 +275,7 @@ pid_t roll_pid11 = {
   .SumError    = 0,
 
   .Proportion = 4.0,//8,
-  .Integral   = 0.02,//0.07,//0.1,//0.1,//0.05,//0.05 ,
+  .Integral   = 0.1,//0.07,//0.1,//0.1,//0.05,//0.05 ,
   .Derivative = 4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
 
   .LastError = 0,
@@ -297,7 +299,7 @@ pid_t pitch_pid11 = {
   .SumError    = 0,
 
   .Proportion = 4.0,//,//8,
-  .Integral   = 0.02,//0.07,//0.1,//0.1,//0.05,//0.05 ,
+  .Integral   = 0.1,//0.07,//0.1,//0.1,//0.05,//0.05 ,
   .Derivative = 4.5 ,//4.5,//4.5,//,//5,//,//0.08 * 100,//0.05,
 
   .LastError = 0,
@@ -413,7 +415,7 @@ void motor_pid_control(uint32_t throttleDutyCycle,
     yaw_pid1->ExpectPoint = yaw_out0;
     yaw_out1 =(int32_t)(LocPIDCalc( (double)(gyro_yaw_global) ,yaw_pid1,gyro_yaw_global,0.5,false));
 
- //   yaw_out1 = 0;
+ //  yaw_out1 = 0;
 
 
 #if 0
