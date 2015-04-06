@@ -79,8 +79,8 @@ bool gyro_offset_done = false;
 bool isFXOS8700Int1Trigger = false;
 
 /*!
- * @brief Main function
- */
+* @brief Main function
+*/
 
 int temp_duty = 1;
 int temp_count = 0;
@@ -90,7 +90,7 @@ int temp_count_test = 0;
 int temp_count_add = 1;
 
 const _ADC_Pin_Mux_Table_t kADCPinMuxTable[] = {
-//  {HW_ADC0,0,12},
+  //  {HW_ADC0,0,12},
   {HW_ADC0,0,5},
   {HW_ADC0,0,13},
   {HW_ADC1,0,10},
@@ -105,13 +105,13 @@ volatile uint32_t ADC_count_n = 0;
 adc16_chn_config_t MyChnConfig;
 volatile uint32_t ADC_value[8]= {0};
 volatile uint32_t ADC_value_min[8]= { 0xffffffff,
-                                      0xffffffff,
-                                      0xffffffff,
-                                      0xffffffff,
-                                      0xffffffff,
-                                      0xffffffff,
-                                      0xffffffff,
-                                      0xffffffff};
+0xffffffff,
+0xffffffff,
+0xffffffff,
+0xffffffff,
+0xffffffff,
+0xffffffff,
+0xffffffff};
 volatile uint32_t ADC_value_max[8]= {0};
 volatile bool g_AdcConvIntCompleted = false;
 
@@ -124,40 +124,40 @@ uint32_t uDutyCycle_add = 0;
 //%0 duty cycle for 2 seconds , then 50% duty cycle for 2 seconds.
 
 void hwtimer_callback(void* data)
-   {
-     ///*Start 简化版更改占空比***************/
-     ////     uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
-     ////     uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
-     ////
-     ////     uMod = FTM_HAL_GetMod(ftmBaseAddr);
-     ////
-     ////     uCnv0 = uMod * ftmParam0.uDutyCyclePercent / 100;
-     ////     /* For 100% duty cycle */
-     ////     if(uCnv >= uMod)
-     ////     {
-     ////       uCnv = uMod + 1;
-     ////     }
-     ////     uCnv1 = uMod * ftmParam1.uDutyCyclePercent / 100;
-     ////     uCnv2 = uMod * ftmParam2.uDutyCyclePercent / 100;
-     ////     uCnv3 = uMod * ftmParam3.uDutyCyclePercent / 100;
-     ///*End 简化版更改占空比*************/
-     //
-     //     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
-     //     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
-     //     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
-     //     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
-     //
-     //     FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
-     //
-     //     if(i==0)
-     //     {
-     //       LED2_ON;i=1;
-     //     }
-     //     else
-     //     {
-     //       LED2_OFF;i=0;
-     //     }
-   }
+{
+  ///*Start 简化版更改占空比***************/
+  ////     uint16_t uMod, uCnv0, uCnv1,uCnv2,uCnv3;
+  ////     uint32_t ftmBaseAddr = g_ftmBaseAddr[0];
+  ////
+  ////     uMod = FTM_HAL_GetMod(ftmBaseAddr);
+  ////
+  ////     uCnv0 = uMod * ftmParam0.uDutyCyclePercent / 100;
+  ////     /* For 100% duty cycle */
+  ////     if(uCnv >= uMod)
+  ////     {
+  ////       uCnv = uMod + 1;
+  ////     }
+  ////     uCnv1 = uMod * ftmParam1.uDutyCyclePercent / 100;
+  ////     uCnv2 = uMod * ftmParam2.uDutyCyclePercent / 100;
+  ////     uCnv3 = uMod * ftmParam3.uDutyCyclePercent / 100;
+  ///*End 简化版更改占空比*************/
+  //
+  //     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam0, 0);
+  //     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam1, 1);
+  //     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam2, 2);
+  //     FTM_DRV_PwmChangeDutyCycle(0, &ftmParam3, 3);
+  //
+  //     FTM_HAL_SetSoftwareTriggerCmd(g_ftmBaseAddr[0], true);
+  //
+  //     if(i==0)
+  //     {
+  //       LED2_ON;i=1;
+  //     }
+  //     else
+  //     {
+  //       LED2_OFF;i=0;
+  //     }
+}
 
 
 //PTD2_UART_rx, PTD3_UART_tx
@@ -167,59 +167,56 @@ uint32_t ftm_cnv_max_global=0;
 uint32_t ftm_cnv_min_global=0;
 uint32_t ftm_cnv_stop_global=0;
 
-
-
-
 union
 {
-    float f32;
-    int16_t i16;
-    uint16_t u16;
-    int32_t i32;
-    uint32_t u32;
-    uint8_t send_2val[2];
-    uint8_t send_4val[4];
+  float f32;
+  int16_t i16;
+  uint16_t u16;
+  int32_t i32;
+  uint32_t u32;
+  uint8_t send_2val[2];
+  uint8_t send_4val[4];
 }send_muxByte_Tmp;
 
 // flag = 0x1f ~ 0x6f 上位机上面代表的六条曲线
 // 如果显示不正常则在每两个发送之间添加一点延时
 void sendLineX(uint8_t flag, float val)
 {
-	send_muxByte_Tmp.f32 = val;
-//        int i =0;
-//        int j = 300;
-        uint8_t send_data[7];
-        send_data[0] = 0x55;
-        send_data[1] = flag;
-        send_data[2] = send_muxByte_Tmp.send_4val[0];
-        send_data[3] = send_muxByte_Tmp.send_4val[1];
-        send_data[4] = send_muxByte_Tmp.send_4val[2];
-        send_data[5] = send_muxByte_Tmp.send_4val[3];
-        send_data[6] = 0xaa;
+  send_muxByte_Tmp.f32 = val;
+  //        int i =0;
+  //        int j = 300;
+  uint8_t send_data[7];
+  send_data[0] = 0x55;
+  send_data[1] = flag;
+  send_data[2] = send_muxByte_Tmp.send_4val[0];
+  send_data[3] = send_muxByte_Tmp.send_4val[1];
+  send_data[4] = send_muxByte_Tmp.send_4val[2];
+  send_data[5] = send_muxByte_Tmp.send_4val[3];
+  send_data[6] = 0xaa;
 
-        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,send_data,7);
+  UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,send_data,7);
 
-//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,0x55);	for(i=0;i<j;i++);
-//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,flag);	for(i=0;i<j;i++);
-//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[0]);	for(i=0;i<j;i++);
-//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[1]);	for(i=0;i<j;i++);
-//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[2]);	for(i=0;i<j;i++);
-//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[3]);	for(i=0;i<j;i++);
-//	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,0xaa);	for(i=0;i<j;i++);
+  //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,0x55);	for(i=0;i<j;i++);
+  //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,flag);	for(i=0;i<j;i++);
+  //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[0]);	for(i=0;i<j;i++);
+  //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[1]);	for(i=0;i<j;i++);
+  //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[2]);	for(i=0;i<j;i++);
+  //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,send_muxByte_Tmp.send_4val[3]);	for(i=0;i<j;i++);
+  //	UART_HAL_Putchar(BOARD_DEBUG_UART_BASEADDR,0xaa);	for(i=0;i<j;i++);
 }
 
-  //fgz define
+//fgz define
 uint32_t checkTimes = 0;
 double checkTmpVal[2] = {0,0};
 double X_Y_changeTmp[2] = {0,0};
 /*************************************************************************************************************************************/
-  /*************************************************************************************************************************************/
-  float My_Pitch, My_Roll, My_Yaw;
-  short My_gyro[3];
-  float My_Yaw_tmp = 0;
-  uint16_t sampleTimes;
-  /*************************************************************************************************************************************/
-  /*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
+float My_Pitch, My_Roll, My_Yaw;
+short My_gyro[3];
+float My_Yaw_tmp = 0;
+uint16_t sampleTimes;
+/*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
 
 int main (void)
 {
@@ -250,12 +247,12 @@ int main (void)
 
   I2C_fxos8700Init();
   //I2C_l3g4200dInit();
-    //初始化MPU6050
+  //初始化MPU6050
   init_MPU6050();
 
   sampleTimes = 0;
 
-LED2_ON;
+  LED2_ON;
   FTM_DRV_PwmStart(0, &ftmParam0, 0);
   FTM_DRV_PwmStart(0, &ftmParam1, 1);
   FTM_DRV_PwmStart(0, &ftmParam2, 2);
@@ -321,12 +318,12 @@ LED2_ON;
   PIT_DRV_Init(BOARD_PIT_INSTANCE, false);
 
   // Initialize PIT timer instance for channel 0 and 1
-//  PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 0, &chn0Confg);
+  //  PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 0, &chn0Confg);
   PIT_DRV_InitChannel(BOARD_PIT_INSTANCE, 1, &chn1Confg);
 
   // Start channel 0
   //    printf ("\n\rStarting channel No.0 ...");
-//  PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 0);
+  //  PIT_DRV_StartTimer(BOARD_PIT_INSTANCE, 0);
 
   // Start channel 1
   //    printf ("\n\rStarting channel No.1 ...");
@@ -348,31 +345,32 @@ LED2_ON;
   {
     /*****start while(1) in mian loop*****/
 
-static uint32_t led2_times = 0;
-static int32_t led2_flag = 1;
-          static imu_float_euler_angle_t expectAngel = {
-            .imu_pitch = 0,
-            .imu_roll = 0,
-            .imu_yaw = 0,
-          };
+    static uint32_t led2_times = 0;
+    static int32_t led2_flag = 1;
+    static imu_float_euler_angle_t expectAngel = {
+      .imu_pitch = 0,
+      .imu_roll = 0,
+      .imu_yaw = 0,
+    };
     if (pitIsrFlag1 == true)
     {
       pitIsrFlag1 = false;
-//      if(led2_times++ > 50)
-//      {
-//        led2_times = 0;
-//        led2_flag = led2_flag * (-1);
-//      }
-//      if(led2_flag == 1)
-//      {
-//        LED2_ON;
-//      }
-//      else
-//      {
-//        LED2_OFF;
-//      }
+      //      if(led2_times++ > 50)
+      //      {
+      //        led2_times = 0;
+      //        led2_flag = led2_flag * (-1);
+      //      }
+      //      if(led2_flag == 1)
+      //      {
+      //        LED2_ON;
+      //      }
+      //      else
+      //      {
+      //        LED2_OFF;
+      //      }
 
       get_AttitudeVal(My_gyro);
+
 #if 1
       quadAngle.imu_roll =  (double)((double)(((double)My_Roll  * 0.70710678) - ((double)My_Pitch * 0.70710678)) + 0.6);
       quadAngle.imu_pitch = (double)((double)(((double)My_Pitch * 0.70710678) + ((double)My_Roll  * 0.70710678)) - 0.6);
@@ -381,7 +379,6 @@ static int32_t led2_flag = 1;
       gyro_pitch_global  = ((double)My_gyro[0] * 0.70710678 + (double)My_gyro[1] * 0.70710678) / 16.4;
       gyro_yaw_global   = ((double)My_gyro[2]) / 16.4;
 #else
-
       quadAngle.imu_roll = (double)My_Roll;
       quadAngle.imu_pitch  = (double)My_Pitch;
       gyro_roll_global = (double)My_gyro[0] / 16.4;
@@ -394,7 +391,7 @@ static int32_t led2_flag = 1;
         LED3_ON;
         if(sampleTimes <= 400)
         {
-            sampleTimes++;
+          sampleTimes++;
         }
       }
       else
@@ -407,27 +404,24 @@ static int32_t led2_flag = 1;
         gyro_pitch_global_temp = 0;
         gyro_roll_global_temp = 0;
         gyro_yaw_global_temp = 0;
-
-
       }
       if(sampleTimes <= 400 && isRCunlock == true)
       {
-          My_Yaw_tmp += My_Yaw;
+        My_Yaw_tmp += My_Yaw;
 
-          gyro_pitch_global_temp += gyro_pitch_global;
-          gyro_roll_global_temp += gyro_roll_global;
-          gyro_yaw_global_temp += gyro_yaw_global;
-
+        gyro_pitch_global_temp += gyro_pitch_global;
+        gyro_roll_global_temp  += gyro_roll_global;
+        gyro_yaw_global_temp   += gyro_yaw_global;
       }
       else if(sampleTimes > 400)
       {
-          //quadAngle.imu_yaw = (double)My_Yaw;
-          LED2_ON;
-          quadAngle.imu_yaw = (double)My_Yaw - My_Yaw_tmp / 400;
+        //quadAngle.imu_yaw = (double)My_Yaw;
+        LED2_ON;
+        quadAngle.imu_yaw = (double)My_Yaw - My_Yaw_tmp / 400;
 
-          gyro_pitch_global = gyro_pitch_global - gyro_pitch_global_temp/400;
-          gyro_roll_global = gyro_roll_global - gyro_roll_global_temp/400;
-          gyro_yaw_global = gyro_yaw_global - gyro_yaw_global_temp/400;
+        gyro_pitch_global = gyro_pitch_global - gyro_pitch_global_temp/400;
+        gyro_roll_global  = gyro_roll_global - gyro_roll_global_temp/400;
+        gyro_yaw_global   = gyro_yaw_global - gyro_yaw_global_temp/400;
       }
 
 #if 0
@@ -454,45 +448,41 @@ static int32_t led2_flag = 1;
       /*Start*********匿名上位机发送的串口数据***********/
       {
 
-
-
-//        sendLineX(0x1f,(((float)motor_pwm0_cnv)/ftm_uMod_global));
-//        sendLineX(0x2f,(((float)motor_pwm1_cnv)/ftm_uMod_global));
-//        sendLineX(0x3f,(((float)motor_pwm2_cnv)/ftm_uMod_global));
-//        sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
-//        sendLineX(0x4f,(float)(0.25));
-
+        //        sendLineX(0x1f,(((float)motor_pwm0_cnv)/ftm_uMod_global));
+        //        sendLineX(0x2f,(((float)motor_pwm1_cnv)/ftm_uMod_global));
+        //        sendLineX(0x3f,(((float)motor_pwm2_cnv)/ftm_uMod_global));
+        //        sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
+        //        sendLineX(0x4f,(float)(0.25));
 
 #if 0
         sendLineX(0x1f,(((float)quadAngle.imu_pitch)));
         sendLineX(0x2f,(((float)quadAngle.imu_roll)));
         sendLineX(0x3f,(((float)quadAngle.imu_yaw)));
-            //sendLineX(0x3f,(((float)currentAngel->imu_yaw)));
-    //sendLineX(0x4f,(((float)memsRawDate.accel_x)));
-    //sendLineX(0x5f,(float)memsRawDate.accel_y);
-                 //sendLineX(0x6f,(((float)memsRawDate.accel_z)));
+        //sendLineX(0x3f,(((float)currentAngel->imu_yaw)));
+        //sendLineX(0x4f,(((float)memsRawDate.accel_x)));
+        //sendLineX(0x5f,(float)memsRawDate.accel_y);
+        //sendLineX(0x6f,(((float)memsRawDate.accel_z)));
         //sendLineX(0x4f,(((float)pitch_pid1->SumError)));
-//        sendLineX(0x1f,(float)((((double)((double)remoteControlValue[kPitch]/1000) -180)/3)));
-//        sendLineX(0x4f,(float)((((double)((double)remoteControlValue[kRoll] /1000) -180)/3)));
+        //        sendLineX(0x1f,(float)((((double)((double)remoteControlValue[kPitch]/1000) -180)/3)));
+        //        sendLineX(0x4f,(float)((((double)((double)remoteControlValue[kRoll] /1000) -180)/3)));
         //sendLineX(0x4f,(((float)motor_pwm3_cnv)/ftm_uMod_global));
 #endif
-
       }
       /*End*********匿名上位机发送的串口数据***********/
 
       /*Start************Remote Controller Unlock *************/
       {
 
-//        if(isRCunlock == true)
-//        {
-//          LED3_ON;
-//        }
-//        else
-//        {
-//          LED3_OFF;
-//          sampleTimes = 0;
-//          LED2_OFF;
-//        }
+        //        if(isRCunlock == true)
+        //        {
+        //          LED3_ON;
+        //        }
+        //        else
+        //        {
+        //          LED3_OFF;
+        //          sampleTimes = 0;
+        //          LED2_OFF;
+        //        }
         static uint32_t unlock_times = 0;
         static uint32_t lock_times = 0;
 
@@ -539,7 +529,7 @@ static int32_t led2_flag = 1;
         {
           motor_init_times = (waitTimes3s+1) ;
           static uint32_t test_throttle_pwm = 50;
- //         test_throttle_pwm = remoteControlValue[kThrottle] / 2400 - 8; //对应42%-92%占空比
+          //         test_throttle_pwm = remoteControlValue[kThrottle] / 2400 - 8; //对应42%-92%占空比
           test_throttle_pwm = remoteControlValue[kThrottle] / 3600+8;// 8; //对应40%-70%占空比
           ////遥控器信号 50Hz , 范围1~2ms，周期20ms，1.5ms中值.对应 120 000 - 240 000
           //      motor_pwm_reflash(test_throttle_pwm,
@@ -547,12 +537,7 @@ static int32_t led2_flag = 1;
           //                        test_throttle_pwm,
           //                        test_throttle_pwm);
 
-//
-          ///
-          /////////////////////////////////////////////////////
-          ///////////////////////////////////////////////////////
-          ////////////////////////////////////////////////////////
-          /////////////////////////////////////////////////////////
+
 #if 1
           X_Y_changeTmp[1] = (((double)((double)remoteControlValue[kPitch]/1000) -180)/3);
           X_Y_changeTmp[0] = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/3);
@@ -569,34 +554,34 @@ static int32_t led2_flag = 1;
           {
             expectAngel.imu_pitch = 0;
           }
-
 #else
           expectAngel.imu_pitch = (((double)((double)remoteControlValue[kPitch]/1000) -180)/3);
           expectAngel.imu_roll = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/3);
 #endif
 
+
 #if 1
           if((sampleTimes > 400) && (isRCunlock == true))
           {
 
-              checkTmpVal[0] = ((double)remoteControlValue[kYaw] / 1000 - 180) / 150;
-              if(checkTmpVal[0] < 0.08 && checkTmpVal[0] > -0.08)
-              {
-                  checkTmpVal[0] = 0;
-              }
+            checkTmpVal[0] = ((double)remoteControlValue[kYaw] / 1000 - 180) / 150;
+            if(checkTmpVal[0] < 0.08 && checkTmpVal[0] > -0.08)
+            {
+              checkTmpVal[0] = 0;
+            }
 
-              checkTmpVal[1] += checkTmpVal[0];
-              if(checkTmpVal[1] >= 360 || checkTmpVal[1] <= -360)
-              {
-                  checkTmpVal[1] = 0;
-              }
-              expectAngel.imu_yaw = -1 * checkTmpVal[1];
+            checkTmpVal[1] += checkTmpVal[0];
+            if(checkTmpVal[1] >= 360 || checkTmpVal[1] <= -360)
+            {
+              checkTmpVal[1] = 0;
+            }
+            expectAngel.imu_yaw = -1 * checkTmpVal[1];
           }
           else
           {
-              checkTmpVal[0] = 0;
-              checkTmpVal[1] = 0;
-              expectAngel.imu_yaw = 0;
+            checkTmpVal[0] = 0;
+            checkTmpVal[1] = 0;
+            expectAngel.imu_yaw = 0;
           }
           //sendLineX(0x5f,(float)checkTmpVal[1]);
           //sendLineX(0x4f,(float)checkTmpVal[1]);
@@ -610,7 +595,6 @@ static int32_t led2_flag = 1;
           {
             expectAngel.imu_pitch = -15;
           }
-
           if(expectAngel.imu_roll > 15)
           {
             expectAngel.imu_roll = 15;
@@ -620,42 +604,39 @@ static int32_t led2_flag = 1;
             expectAngel.imu_roll = -15;
           }
 
-
-
-
 #if 0
           {
-          checkTmpVal[0] = (((double)((double)remoteControlValue[kPitch]/1000) -180)/600);
-          checkTmpVal[1] = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/600);
+            checkTmpVal[0] = (((double)((double)remoteControlValue[kPitch]/1000) -180)/600);
+            checkTmpVal[1] = (((double)((double)remoteControlValue[kRoll]/ 1000) -180)/600);
 
-          if(checkTmpVal[0] < 0.003 && checkTmpVal[0] > -0.003)
-          {
-            checkTmpVal[0] = 0;
-          }
-          if(checkTmpVal[1] < 0.003 && checkTmpVal[1] > -0.003)
-          {
-            checkTmpVal[1] = 0;
-          }
-          expectAngel.imu_pitch += checkTmpVal[0];
-          expectAngel.imu_roll += checkTmpVal[1];
+            if(checkTmpVal[0] < 0.003 && checkTmpVal[0] > -0.003)
+            {
+              checkTmpVal[0] = 0;
+            }
+            if(checkTmpVal[1] < 0.003 && checkTmpVal[1] > -0.003)
+            {
+              checkTmpVal[1] = 0;
+            }
+            expectAngel.imu_pitch += checkTmpVal[0];
+            expectAngel.imu_roll += checkTmpVal[1];
 
-          if(expectAngel.imu_pitch > 5)
-          {
-            expectAngel.imu_pitch = 5;
-          }
-          else if(expectAngel.imu_pitch < -5)
-          {
-            expectAngel.imu_pitch = -5;
-          }
+            if(expectAngel.imu_pitch > 5)
+            {
+              expectAngel.imu_pitch = 5;
+            }
+            else if(expectAngel.imu_pitch < -5)
+            {
+              expectAngel.imu_pitch = -5;
+            }
 
-          if(expectAngel.imu_roll > 5)
-          {
-            expectAngel.imu_roll = 5;
-          }
-          else if(expectAngel.imu_roll < -5)
-          {
-            expectAngel.imu_roll = -5;
-          }
+            if(expectAngel.imu_roll > 5)
+            {
+              expectAngel.imu_roll = 5;
+            }
+            else if(expectAngel.imu_roll < -5)
+            {
+              expectAngel.imu_roll = -5;
+            }
           }
 #endif
 
@@ -676,72 +657,64 @@ static int32_t led2_flag = 1;
             isRCunlock = false;
           }
 
+#if 0
+          packet_upper_PC.user_data.trans_accel[0] = BSWAP_16((int16_t)(expectAngel.imu_roll*100));//(memsRawDate.accel_x);
+          packet_upper_PC.user_data.trans_accel[1] = BSWAP_16((int16_t)(expectAngel.imu_pitch*100));//(memsRawDate.accel_y);
+          packet_upper_PC.user_data.trans_accel[2] = BSWAP_16((int16_t)(expectAngel.imu_yaw*100));//(memsRawDate.accel_z);
+          packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16((int16_t)(gyro_roll_global*100));//memsRawDate.gyro_x);//gyro_y_before);//memsRawDate.gyro_x);
+          packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16((int16_t)(gyro_pitch_global*100));//memsRawDate.gyro_y);//gyro_y_after);//memsRawDate.gyro_y);
+          packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16((int16_t)(gyro_yaw_global*100));
+          packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
+          packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
+          packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);
 
+          packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
+          packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
+          packet_upper_PC.user_data.trans_yaw =  BSWAP_16((int16_t)(quadAngle.imu_yaw*100));
 
+          //        unt16_t throt;
+          //    unt16_t yaw;
+          //    unt16_t roll;
+          //    unt16_t pitch;
+          //    unt16_t aux[5];
+          //    unt16_t pwm[4];
+          //    unt16_t votage;
+          packet_pwm_upper_PC.user_data.throt = BSWAP_16((uint16_t)(remoteControlValue[kThrottle]/10));
+          packet_pwm_upper_PC.user_data.yaw   = BSWAP_16((uint16_t)(remoteControlValue[kYaw]/10));
+          packet_pwm_upper_PC.user_data.roll  = BSWAP_16((uint16_t)(remoteControlValue[kRoll]/10));
+          packet_pwm_upper_PC.user_data.pitch = BSWAP_16((uint16_t)(remoteControlValue[kPitch]/10));
 
+          packet_pwm_upper_PC.user_data.aux[0] = BSWAP_16((uint16_t)(100));
+          packet_pwm_upper_PC.user_data.aux[1] = BSWAP_16((uint16_t)(200));
+          packet_pwm_upper_PC.user_data.aux[2] = BSWAP_16((uint16_t)(300));
+          packet_pwm_upper_PC.user_data.aux[3] = BSWAP_16((uint16_t)(400));
+          packet_pwm_upper_PC.user_data.aux[4] = BSWAP_16((uint16_t)(500));
 
+          packet_pwm_upper_PC.user_data.pwm[0] = BSWAP_16((uint16_t)(motor_pwm0_cnv / 600));
+          packet_pwm_upper_PC.user_data.pwm[1] = BSWAP_16((uint16_t)(motor_pwm1_cnv / 600));
+          packet_pwm_upper_PC.user_data.pwm[2] = BSWAP_16((uint16_t)(motor_pwm2_cnv / 600));
+          packet_pwm_upper_PC.user_data.pwm[3] = BSWAP_16((uint16_t)(motor_pwm3_cnv / 600));
 
-            #if 1
-        packet_upper_PC.user_data.trans_accel[0] = BSWAP_16((int16_t)(expectAngel.imu_roll*100));//(memsRawDate.accel_x);
-        packet_upper_PC.user_data.trans_accel[1] = BSWAP_16((int16_t)(expectAngel.imu_pitch*100));//(memsRawDate.accel_y);
-        packet_upper_PC.user_data.trans_accel[2] = BSWAP_16((int16_t)(expectAngel.imu_yaw*100));//(memsRawDate.accel_z);
-        packet_upper_PC.user_data.trans_gyro[0]  = BSWAP_16((int16_t)(gyro_roll_global*100));//memsRawDate.gyro_x);//gyro_y_before);//memsRawDate.gyro_x);
-        packet_upper_PC.user_data.trans_gyro[1]  = BSWAP_16((int16_t)(gyro_pitch_global*100));//memsRawDate.gyro_y);//gyro_y_after);//memsRawDate.gyro_y);
-        packet_upper_PC.user_data.trans_gyro[2]  = BSWAP_16((int16_t)(gyro_yaw_global*100));
-        packet_upper_PC.user_data.trans_mag[0]  = BSWAP_16(memsRawDate.magn_x);
-        packet_upper_PC.user_data.trans_mag[1]  = BSWAP_16(memsRawDate.magn_y);
-        packet_upper_PC.user_data.trans_mag[2]  = BSWAP_16(memsRawDate.magn_z);
-
-        packet_upper_PC.user_data.trans_roll = BSWAP_16((int16_t)(quadAngle.imu_roll*100));
-        packet_upper_PC.user_data.trans_pitch = BSWAP_16((int16_t)(quadAngle.imu_pitch*100));
-        packet_upper_PC.user_data.trans_yaw =  BSWAP_16((int16_t)(quadAngle.imu_yaw*100));
-
-        //        unt16_t throt;
-        //    unt16_t yaw;
-        //    unt16_t roll;
-        //    unt16_t pitch;
-        //    unt16_t aux[5];
-        //    unt16_t pwm[4];
-        //    unt16_t votage;
-        packet_pwm_upper_PC.user_data.throt = BSWAP_16((uint16_t)(remoteControlValue[kThrottle]/10));
-        packet_pwm_upper_PC.user_data.yaw   = BSWAP_16((uint16_t)(remoteControlValue[kYaw]/10));
-        packet_pwm_upper_PC.user_data.roll  = BSWAP_16((uint16_t)(remoteControlValue[kRoll]/10));
-        packet_pwm_upper_PC.user_data.pitch = BSWAP_16((uint16_t)(remoteControlValue[kPitch]/10));
-
-        packet_pwm_upper_PC.user_data.aux[0] = BSWAP_16((uint16_t)(100));
-        packet_pwm_upper_PC.user_data.aux[1] = BSWAP_16((uint16_t)(200));
-        packet_pwm_upper_PC.user_data.aux[2] = BSWAP_16((uint16_t)(300));
-        packet_pwm_upper_PC.user_data.aux[3] = BSWAP_16((uint16_t)(400));
-        packet_pwm_upper_PC.user_data.aux[4] = BSWAP_16((uint16_t)(500));
-
-        packet_pwm_upper_PC.user_data.pwm[0] = BSWAP_16((uint16_t)(motor_pwm0_cnv / 600));
-        packet_pwm_upper_PC.user_data.pwm[1] = BSWAP_16((uint16_t)(motor_pwm1_cnv / 600));
-        packet_pwm_upper_PC.user_data.pwm[2] = BSWAP_16((uint16_t)(motor_pwm2_cnv / 600));
-        packet_pwm_upper_PC.user_data.pwm[3] = BSWAP_16((uint16_t)(motor_pwm3_cnv / 600));
-
-//        uint8_t *q = (uint8_t*)&packet_pwm_upper_PC;
-//        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,q,32);
-//
-        uint8_t *p = (uint8_t*)&packet_upper_PC;
-        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
+          //        uint8_t *q = (uint8_t*)&packet_pwm_upper_PC;
+          //        UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,q,32);
+          //
+          uint8_t *p = (uint8_t*)&packet_upper_PC;
+          UART_HAL_SendDataPolling(BOARD_DEBUG_UART_BASEADDR,p,32);
 
 #endif
-
 
 #if 0
-      sendLineX(0x1f,(float)quadAngle.imu_roll);
-      sendLineX(0x2f,(float)expectAngel.imu_roll);
+          sendLineX(0x1f,(float)quadAngle.imu_roll);
+          sendLineX(0x2f,(float)expectAngel.imu_roll);
 
-      sendLineX(0x4f,(float)(roll_pid11.SumError * 0.02));
-            sendLineX(0x5f,(float)(roll_pid11.LastError));
-//      sendLineX(0x3f,(float)quadAngle.imu_yaw);
-//
-//      sendLineX(0x4f,(float)gyro_pitch_global);
-//      sendLineX(0x5f,(float)gyro_roll_global);
-//      sendLineX(0x6f,(float)gyro_yaw_global);
+          sendLineX(0x4f,(float)(roll_pid11.SumError * 0.02));
+          sendLineX(0x5f,(float)(roll_pid11.LastError));
+          //      sendLineX(0x3f,(float)quadAngle.imu_yaw);
+          //
+          //      sendLineX(0x4f,(float)gyro_pitch_global);
+          //      sendLineX(0x5f,(float)gyro_roll_global);
+          //      sendLineX(0x6f,(float)gyro_yaw_global);
 #endif
-
-
 
           motor_pid_control(test_throttle_pwm,
                             &expectAngel,
@@ -753,9 +726,6 @@ static int32_t led2_flag = 1;
                             &roll_pid00,
                             &roll_pid11,
                             isRCunlock);
-
-
-
         }
       }
       /*End************* Reflash the motor PWM **************/
@@ -811,15 +781,15 @@ void PORTB_IRQHandler(void)
         else
         {
           remoteControlValue[i] = value;
-//          if(((remoteControlValue[3] <180000) ||(remoteControlValue[3] > 190000))&&remoteControlValue[3]> 100)
-//            LED4_ON;
+          //          if(((remoteControlValue[3] <180000) ||(remoteControlValue[3] > 190000))&&remoteControlValue[3]> 100)
+          //            LED4_ON;
         }
       }
     }
     PORT_HAL_ClearPinIntFlag(PORTB_BASE,remoteControlPinNum[i]);
   }
   /* Clear interrupt flag.*/
- //   PORT_HAL_ClearPortIntFlag(PORTB_BASE);
+  //   PORT_HAL_ClearPortIntFlag(PORTB_BASE);
 }
 
 void PORTE_IRQHandler(void)
@@ -828,7 +798,7 @@ void PORTE_IRQHandler(void)
   if (intFlag & (1 << 11))
   {
     isFXOS8700Int1Trigger = true;
-      PRINTF("\r\n PTE11 irq");
+    PRINTF("\r\n PTE11 irq");
   }
 
   /* Clear interrupt flag.*/
@@ -843,13 +813,13 @@ void PIT0_IRQHandler(void)
   //I2C_getAccelMangData(&memsRawDate);
   //I2C_getGyroData(&memsRawDate);
 
-//  if(gyro_offset_done == true)
-//  {
-//    imu_get_euler_angle(&quadAngle,&memsRawDate);
-//  }
+  //  if(gyro_offset_done == true)
+  //  {
+  //    imu_get_euler_angle(&quadAngle,&memsRawDate);
+  //  }
 
 
- get_AttitudeVal(My_gyro);
+  get_AttitudeVal(My_gyro);
   static uint16_t led2_i =0;
   if(led2_i==0)
   {
@@ -875,17 +845,17 @@ void PIT1_IRQHandler(void)
   {
     LED4_OFF;led4_i=0;
   }
-//  uint32_t i = 0;
-//  for(i=0;i<8;i++)
-//  {
-//    remoteControlIntTimes[i] += 1;
-//    if(remoteControlIntTimes[i] > 3) //20ms，4个周期都没有中断，说明没有遥控器信号，清零。
-//                                     //貌似 遥控器 掉电了 也继续有信号发出，得示波器量一下
-//    {
-//      remoteControlIntTimes[i] = 10;
-//      remoteControlValue[i] = 0;
-//    }
-//  }
+  //  uint32_t i = 0;
+  //  for(i=0;i<8;i++)
+  //  {
+  //    remoteControlIntTimes[i] += 1;
+  //    if(remoteControlIntTimes[i] > 3) //20ms，4个周期都没有中断，说明没有遥控器信号，清零。
+  //                                     //貌似 遥控器 掉电了 也继续有信号发出，得示波器量一下
+  //    {
+  //      remoteControlIntTimes[i] = 10;
+  //      remoteControlValue[i] = 0;
+  //    }
+  //  }
   //    pitIsrFlag[1] = true;
   pitIsrFlag1 = true;
 }
